@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netlify Forms Setup</title>
+</head>
+<body>
+  <!-- This file helps Netlify detect forms during build -->
+  <!-- English Contact Form -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
+
+  <!-- French Contact Form -->
+  <form name="contact-fr" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>
