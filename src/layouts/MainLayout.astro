@@ -1,0 +1,64 @@
+---
+import '../styles/globals.css';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: 'en' | 'fr';
+  canonical?: string;
+}
+
+const { title, description, lang, canonical } = Astro.props;
+const currentUrl = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+const ogImageUrl = new URL('/og-image.png', Astro.site).toString();
+
+// Get theme from localStorage if available (handled client-side)
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={currentUrl} />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'fr_FR'} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={currentUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageUrl} />
+    
+    <!-- Theme handling -->
+    <script is:inline>
+      // Prevent flash of wrong theme
+      const theme = localStorage.getItem('theme') || 'light';
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 1rem; background: #fef3c7; color: #92400e; text-align: center;">
+        This site works best with JavaScript enabled.
+      </div>
+    </noscript>
+    <slot />
+  </body>
+</html>

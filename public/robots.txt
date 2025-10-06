@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datasciencetech.ca/sitemap-index.xml

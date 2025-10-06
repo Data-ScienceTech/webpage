@@ -1,0 +1,86 @@
+{
+  "company": "Data Science Technologies",
+  "tagline": "Nous livrons de l'IA qui fait bouger vos KPI.",
+  "hero": {
+    "title": "IA, analytique et automatisation — du prototype à la production.",
+    "subtitle": "Nous concevons des systèmes de recommandation, des plateformes de données et des workflows agentiques réellement adoptés.",
+    "cta_primary": "Réserver un appel",
+    "cta_secondary": "Voir nos cas clients"
+  },
+  "value_props": [
+    {
+      "title": "Recommandations qui convertissent",
+      "desc": "Modèles hybrides (règles + LightFM) avec re-ranking et gestion du cold-start.",
+      "icon": "Sparkles"
+    },
+    {
+      "title": "Plateformes données à l'échelle",
+      "desc": "Azure/Snowflake/Databricks avec CI/CD et maîtrise des coûts.",
+      "icon": "Server"
+    },
+    {
+      "title": "Automatisation agentique",
+      "desc": "Agents type Copilot pour orchestrer ETL, rapports et CRM.",
+      "icon": "Bot"
+    }
+  ],
+  "services": {
+    "title": "Ce que nous faisons",
+    "list": [
+      "Systèmes de recommandation (LightFM, re-ranking, bandits)",
+      "Ingénierie et entrepôts de données (Azure, Snowflake, DBX)",
+      "MLOps et gouvernance (CI/CD, télémétrie, rollback)",
+      "Tableaux de bord & KPI (Supabase, Postgres, Metabase, Power BI)"
+    ]
+  },
+  "case_studies": {
+    "title": "Études de cas",
+    "subtitle": "Résultats réels pour entreprises réelles"
+  },
+  "trust_bar": {
+    "title": "Technologies de confiance"
+  },
+  "cta_section": {
+    "title": "Prêt à passer du prototype à la production ?",
+    "subtitle": "Construisons des systèmes d'IA que votre équipe utilisera vraiment.",
+    "button": "Nous contacter"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "email": "info@datasciencetech.ca",
+    "formspree_id": "YOUR_FORM_ID",
+    "form": {
+      "name_label": "Nom",
+      "email_label": "Courriel",
+      "message_label": "Message",
+      "submit": "Envoyer",
+      "success": "Merci ! Nous vous répondrons bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  },
+  "footer": {
+    "description": "Solutions d'IA, d'analytique et d'automatisation pour entreprises prêtes à croître.",
+    "links": {
+      "company": "Entreprise",
+      "case_studies": "Études de cas",
+      "services": "Services",
+      "contact": "Contact",
+      "privacy": "Politique de confidentialité"
+    },
+    "copyright": "© 2025 Data Science Technologies. Tous droits réservés."
+  },
+  "nav": {
+    "case_studies": "Études de cas",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "meta": {
+    "description": "Data Science Technologies conçoit des systèmes de recommandation IA, des plateformes de données et des workflows d'automatisation qui génèrent des résultats mesurables.",
+    "keywords": "conseil IA, science des données, apprentissage automatique, systèmes de recommandation, ingénierie des données, MLOps, Azure, Snowflake, Databricks"
+  },
+  "social": {
+    "github": "https://github.com/Data-ScienceTech",
+    "linkedin": "https://www.linkedin.com/company/data-sciencetech/"
+  }
+}

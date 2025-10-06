@@ -1,0 +1,53 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import siteContentEn from '../content/site.en.json';
+import siteContentFr from '../content/site.fr.json';
+
+// Detect language from URL or default to English
+const urlLang = Astro.url.pathname.startsWith('/fr') ? 'fr' : 'en';
+const lang = urlLang as 'en' | 'fr';
+const content = lang === 'fr' ? siteContentFr : siteContentEn;
+
+const title = lang === 'en' ? '404 - Page Not Found' : '404 - Page non trouvée';
+const heading = lang === 'en' ? 'Page Not Found' : 'Page non trouvée';
+const message = lang === 'en' 
+  ? "Sorry, we couldn't find the page you're looking for." 
+  : "Désolé, nous n'avons pas pu trouver la page que vous recherchez.";
+const cta = lang === 'en' ? 'Go back home' : "Retour à l'accueil";
+---
+
+<MainLayout
+  title={title}
+  description={message}
+  lang={lang}
+>
+  <Header lang={lang} content={content} />
+  
+  <main>
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-2xl text-center">
+          <div class="mb-8">
+            <div class="mb-6 text-9xl font-bold text-primary-600 dark:text-primary-400">404</div>
+            <h1 class="mb-4 text-4xl font-bold text-secondary-900 dark:text-white">
+              {heading}
+            </h1>
+            <p class="mb-8 text-xl text-secondary-600 dark:text-secondary-400">
+              {message}
+            </p>
+          </div>
+          <a
+            href={`/${lang}`}
+            class="btn-primary"
+          >
+            {cta}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={content} />
+</MainLayout>

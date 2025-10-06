@@ -1,0 +1,86 @@
+{
+  "company": "Data Science Technologies",
+  "tagline": "We ship AI that moves KPIs.",
+  "hero": {
+    "title": "AI, analytics, and automation — from prototype to production.",
+    "subtitle": "We build recommendation systems, data platforms, and agentic workflows that actually get adopted.",
+    "cta_primary": "Book a discovery call",
+    "cta_secondary": "See case studies"
+  },
+  "value_props": [
+    {
+      "title": "Recommendations that convert",
+      "desc": "Hybrid models (rules + LightFM) with re-ranking and cold-start handling.",
+      "icon": "Sparkles"
+    },
+    {
+      "title": "Data platforms that scale",
+      "desc": "Azure/Snowflake/Databricks setups with CI/CD and cost controls.",
+      "icon": "Server"
+    },
+    {
+      "title": "Agentic automation",
+      "desc": "Copilot-style agents to orchestrate ETL, reporting, and CRM ops.",
+      "icon": "Bot"
+    }
+  ],
+  "services": {
+    "title": "What we do",
+    "list": [
+      "Recommendation systems (LightFM, re-ranking, bandits)",
+      "Data engineering & warehousing (Azure, Snowflake, DBX)",
+      "ML ops & governance (CI/CD, telemetry, rollback)",
+      "Dashboards & KPIs (Supabase, Postgres, Metabase, Power BI)"
+    ]
+  },
+  "case_studies": {
+    "title": "Case Studies",
+    "subtitle": "Real outcomes for real businesses"
+  },
+  "trust_bar": {
+    "title": "Trusted technologies"
+  },
+  "cta_section": {
+    "title": "Ready to move from prototype to production?",
+    "subtitle": "Let's build AI systems that your team will actually use.",
+    "button": "Get in touch"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "email": "info@datasciencetech.ca",
+    "formspree_id": "YOUR_FORM_ID",
+    "form": {
+      "name_label": "Name",
+      "email_label": "Email",
+      "message_label": "Message",
+      "submit": "Send Message",
+      "success": "Thank you! We'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "description": "AI, analytics, and automation solutions for businesses ready to scale.",
+    "links": {
+      "company": "Company",
+      "case_studies": "Case Studies",
+      "services": "Services",
+      "contact": "Contact",
+      "privacy": "Privacy Policy"
+    },
+    "copyright": "© 2025 Data Science Technologies. All rights reserved."
+  },
+  "nav": {
+    "case_studies": "Case Studies",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "meta": {
+    "description": "Data Science Technologies builds AI-powered recommendation systems, data platforms, and automation workflows that drive measurable business results.",
+    "keywords": "AI consulting, data science, machine learning, recommendation systems, data engineering, MLOps, Azure, Snowflake, Databricks"
+  },
+  "social": {
+    "github": "https://github.com/Data-ScienceTech",
+    "linkedin": "https://www.linkedin.com/company/data-sciencetech/"
+  }
+}

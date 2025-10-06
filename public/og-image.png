@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0F172A"/>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#2C7A7B" text-anchor="middle">Data Science Technologies</text>
+  <text x="600" y="360" font-family="Arial, sans-serif" font-size="36" fill="#E2E8F0" text-anchor="middle">AI, analytics, and automation — from prototype to production</text>
+</svg>

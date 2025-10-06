@@ -1,0 +1,35 @@
+{
+  "name": "data-science-technologies",
+  "version": "1.0.0",
+  "description": "Data Science Technologies - AI, analytics, and automation landing site",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,astro,json,css,md}\""
+  },
+  "packageManager": "pnpm@8.15.0",
+  "dependencies": {
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.15.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.10"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^0.34.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.5.4"
+  }
+}

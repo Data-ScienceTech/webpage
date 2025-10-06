@@ -1,0 +1,22 @@
+---
+// Redirect to preferred language or default to English
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script is:inline>
+      const preferredLang = localStorage.getItem('lang') || 'en';
+      window.location.href = `/${preferredLang}`;
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/en" />
+    </noscript>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

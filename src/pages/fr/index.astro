@@ -1,0 +1,211 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import CaseCard from '../../components/CaseCard.astro';
+import CTA from '../../components/CTA.astro';
+
+import siteContent from '../../content/site.fr.json';
+import casesData from '../../content/cases.json';
+
+const lang = 'fr';
+const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  description={siteContent.meta.description}
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/20">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-balance text-secondary-900 dark:text-white">
+            {siteContent.hero.title}
+          </h1>
+          <p class="mb-8 text-xl text-secondary-600 dark:text-secondary-300 text-balance">
+            {siteContent.hero.subtitle}
+          </p>
+          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <CTA href={`mailto:${siteContent.contact.email}`} variant="primary">
+              {siteContent.hero.cta_primary}
+            </CTA>
+            <CTA href="#case-studies" variant="secondary">
+              {siteContent.hero.cta_secondary}
+            </CTA>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="border-y border-secondary-200 bg-white py-12 dark:border-secondary-700 dark:bg-secondary-800">
+      <div class="container-custom">
+        <p class="mb-6 text-center text-sm font-semibold uppercase tracking-wide text-secondary-600 dark:text-secondary-400">
+          {siteContent.trust_bar.title}
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-8 opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+          {['Azure', 'Snowflake', 'Databricks', 'Supabase', 'Vercel', 'GitHub'].map((tech) => (
+            <div class="text-secondary-600 dark:text-secondary-400 font-semibold text-lg">
+              {tech}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">Pourquoi nous choisir</h2>
+          <p class="mx-auto max-w-2xl text-lg text-secondary-600 dark:text-secondary-400">
+            Nous livrons des systèmes d'IA de niveau production qui génèrent des résultats mesurables.
+          </p>
+        </div>
+        <div class="grid gap-8 md:grid-cols-3">
+          {siteContent.value_props.map((prop) => (
+            <FeatureCard
+              title={prop.title}
+              desc={prop.desc}
+              icon={prop.icon}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies" class="section-padding bg-secondary-50 dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+            {siteContent.case_studies.title}
+          </h2>
+          <p class="mx-auto max-w-2xl text-lg text-secondary-600 dark:text-secondary-400">
+            {siteContent.case_studies.subtitle}
+          </p>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {casesData.map((caseStudy) => (
+            <CaseCard
+              title={caseStudy.title_fr}
+              industry={caseStudy.industry_fr}
+              impactMetric={caseStudy.impact_metric_fr}
+              summary={caseStudy.summary_fr}
+              tech={caseStudy.tech}
+              ctaLabel={caseStudy.ctaLabel_fr}
+              ctaHref={caseStudy.ctaHref}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="mb-8 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+            {siteContent.services.title}
+          </h2>
+          <ul class="space-y-4">
+            {siteContent.services.list.map((service) => (
+              <li class="flex items-start">
+                <svg class="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-lg text-secondary-700 dark:text-secondary-300">{service}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="section-padding bg-gradient-to-br from-primary-600 to-primary-700 text-white dark:from-primary-700 dark:to-primary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="mb-4 text-white">
+            {siteContent.cta_section.title}
+          </h2>
+          <p class="mb-8 text-xl text-primary-100">
+            {siteContent.cta_section.subtitle}
+          </p>
+          <a
+            href={`mailto:${siteContent.contact.email}`}
+            class="btn inline-flex items-center bg-white text-primary-700 hover:bg-primary-50 focus:ring-white"
+          >
+            {siteContent.cta_section.button}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="about" class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-2xl">
+          <h2 class="mb-8 text-center text-secondary-900 dark:text-white">
+            {siteContent.contact.title}
+          </h2>
+          <form
+            name="contact-fr"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            class="space-y-6"
+          >
+            <input type="hidden" name="form-name" value="contact-fr" />
+            <p class="hidden">
+              <label>
+                Ne remplissez pas ceci si vous êtes humain: <input name="bot-field" />
+              </label>
+            </p>
+            <div>
+              <label for="name" class="label">{siteContent.contact.form.name_label}</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="input-field"
+              />
+            </div>
+            <div>
+              <label for="email" class="label">{siteContent.contact.form.email_label}</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="input-field"
+              />
+            </div>
+            <div>
+              <label for="message" class="label">{siteContent.contact.form.message_label}</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="input-field"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full">
+              {siteContent.contact.form.submit}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

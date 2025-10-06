@@ -1,0 +1,195 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout
+  title={`Politique de confidentialité | ${siteContent.company}`}
+  description="Politique de confidentialité pour Data Science Technologies"
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h1 class="mb-6 text-4xl font-bold text-secondary-900 dark:text-white">Politique de confidentialité</h1>
+          
+          <p class="mb-8 text-lg text-secondary-600 dark:text-secondary-400">
+            <strong>Date d'entrée en vigueur :</strong> 6 octobre 2025<br />
+            <strong>Dernière mise à jour :</strong> 6 octobre 2025
+          </p>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Data Science Technologies (« nous », « notre » ou « nos ») s'engage à protéger votre vie privée et vos renseignements personnels. 
+              La présente politique de confidentialité explique comment nous recueillons, utilisons, divulguons et protégeons vos renseignements 
+              conformément aux lois canadiennes sur la protection de la vie privée, y compris la Loi sur la protection des renseignements 
+              personnels dans le secteur privé du Québec (Loi 25) et la Loi sur la protection des renseignements personnels et les documents 
+              électroniques (LPRPDE).
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">1. Renseignements que nous recueillons</h2>
+            
+            <h3 class="mt-6 text-xl font-semibold text-secondary-900 dark:text-white">1.1 Renseignements personnels</h3>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous pouvons recueillir les renseignements personnels suivants lorsque vous nous contactez via notre site Web :
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Nom complet</li>
+              <li>Adresse courriel</li>
+              <li>Contenu du message et toute information que vous choisissez de fournir</li>
+              <li>Adresse IP et informations techniques (recueillies automatiquement)</li>
+            </ul>
+
+            <h3 class="mt-6 text-xl font-semibold text-secondary-900 dark:text-white">1.2 Informations recueillies automatiquement</h3>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Lorsque vous visitez notre site Web, nous pouvons recueillir automatiquement :
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Type et version du navigateur</li>
+              <li>Informations sur l'appareil</li>
+              <li>Pages visitées et temps passé sur notre site</li>
+              <li>Adresses des sites Web de référence</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">2. Comment nous utilisons vos renseignements</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous utilisons vos renseignements personnels aux fins suivantes :
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Répondre à vos demandes et fournir un support client</li>
+              <li>Communiquer avec vous au sujet de nos services</li>
+              <li>Améliorer notre site Web et nos services</li>
+              <li>Se conformer aux obligations légales</li>
+              <li>Détecter et prévenir la fraude ou les problèmes de sécurité</li>
+            </ul>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous obtiendrons votre consentement avant d'utiliser vos renseignements à toute fin non décrite dans la présente politique.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">3. Fondement juridique du traitement (Loi 25)</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous traitons vos renseignements personnels en fonction de :
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Consentement :</strong> Vous donnez votre consentement explicite lors de la soumission de notre formulaire de contact</li>
+              <li><strong>Intérêt légitime :</strong> Pour répondre à vos demandes et améliorer nos services</li>
+              <li><strong>Obligation légale :</strong> Pour se conformer aux lois et règlements applicables</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">4. Partage et divulgation des renseignements</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous ne vendons, n'échangeons ni ne louons vos renseignements personnels à des tiers. Nous pouvons partager vos renseignements uniquement dans les circonstances suivantes :
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Fournisseurs de services :</strong> Avec des fournisseurs de services tiers de confiance qui nous aident à exploiter notre site Web (p. ex., services d'hébergement, livraison de courriels)</li>
+              <li><strong>Exigences légales :</strong> Lorsque requis par la loi, une ordonnance du tribunal ou une réglementation gouvernementale</li>
+              <li><strong>Transferts commerciaux :</strong> Dans le cadre d'une fusion, acquisition ou vente d'actifs</li>
+              <li><strong>Protection :</strong> Pour protéger nos droits, notre propriété ou notre sécurité, ou ceux de nos utilisateurs</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">5. Conservation des données</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous conservons vos renseignements personnels uniquement aussi longtemps que nécessaire pour atteindre les objectifs décrits 
+              dans la présente politique de confidentialité, à moins qu'une période de conservation plus longue ne soit requise par la loi. 
+              Les soumissions de formulaires de contact sont généralement conservées pendant 2 ans ou jusqu'à ce que vous demandiez leur suppression.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">6. Sécurité des données</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos renseignements 
+              personnels contre l'accès, la modification, la divulgation ou la destruction non autorisés. Ces mesures comprennent :
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Chiffrement SSL/TLS pour la transmission des données</li>
+              <li>Stockage sécurisé des données avec contrôles d'accès</li>
+              <li>Évaluations et mises à jour de sécurité régulières</li>
+              <li>Formation des employés sur la protection des données</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">7. Vos droits en matière de vie privée</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              En vertu de la Loi 25 et de la LPRPDE, vous disposez des droits suivants :
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Droit d'accès :</strong> Demander une copie des renseignements personnels que nous détenons à votre sujet</li>
+              <li><strong>Droit de rectification :</strong> Demander la correction de renseignements inexacts ou incomplets</li>
+              <li><strong>Droit à l'effacement :</strong> Demander la suppression de vos renseignements personnels (sous réserve d'exigences légales)</li>
+              <li><strong>Droit à la portabilité :</strong> Recevoir vos données dans un format structuré et couramment utilisé</li>
+              <li><strong>Droit de retirer le consentement :</strong> Retirer votre consentement à tout moment</li>
+              <li><strong>Droit d'opposition :</strong> S'opposer à certains traitements de vos renseignements personnels</li>
+              <li><strong>Droit de déposer une plainte :</strong> Déposer une plainte auprès de la Commission d'accès à l'information du Québec (CAI)</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">8. Témoins (cookies) et technologies de suivi</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous utilisons des témoins et des technologies de suivi similaires pour améliorer votre expérience. Ceux-ci comprennent :
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Témoins essentiels :</strong> Requis pour le fonctionnement du site Web (préférence de langue, sélection du thème)</li>
+              <li><strong>Analytique :</strong> Pour comprendre comment les visiteurs utilisent notre site Web (si mis en œuvre)</li>
+            </ul>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Vous pouvez contrôler les préférences de témoins via les paramètres de votre navigateur.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">9. Transferts internationaux de données</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Vos renseignements peuvent être transférés et traités dans des pays en dehors du Canada. Lorsque nous transférons des données 
+              à l'international, nous nous assurons que des mesures de protection appropriées sont en place pour protéger vos renseignements 
+              conformément à la présente politique de confidentialité et aux lois applicables.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">10. Confidentialité des enfants</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nos services ne s'adressent pas aux personnes de moins de 18 ans. Nous ne recueillons pas sciemment de renseignements personnels 
+              auprès d'enfants. Si vous pensez que nous avons recueilli des renseignements auprès d'un enfant, veuillez nous contacter immédiatement.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">11. Modifications de cette politique</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous vous informerons de tout changement important 
+              en publiant la nouvelle politique sur cette page et en mettant à jour la date de « Dernière mise à jour ». Votre utilisation continue 
+              de nos services après de tels changements constitue l'acceptation de la politique mise à jour.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">12. Nous contacter</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Si vous avez des questions sur cette politique de confidentialité ou souhaitez exercer vos droits en matière de vie privée, veuillez nous contacter :
+            </p>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                <strong>Data Science Technologies</strong><br />
+                Courriel : <a href={`mailto:${siteContent.contact.email}`} class="text-primary-600 hover:text-primary-700 dark:text-primary-400">{siteContent.contact.email}</a><br />
+                <br />
+                <strong>Responsable de la protection de la vie privée :</strong> {siteContent.contact.email}
+              </p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">13. Autorité de réglementation</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Si vous avez des préoccupations concernant la façon dont nous traitons vos renseignements personnels, vous pouvez déposer une plainte auprès de :
+            </p>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                <strong>Commission d'accès à l'information du Québec (CAI)</strong><br />
+                Site Web : <a href="https://www.cai.gouv.qc.ca" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400">www.cai.gouv.qc.ca</a><br />
+                <br />
+                <strong>Commissariat à la protection de la vie privée du Canada</strong><br />
+                Site Web : <a href="https://www.priv.gc.ca" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400">www.priv.gc.ca</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

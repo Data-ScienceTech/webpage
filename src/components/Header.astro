@@ -1,0 +1,114 @@
+---
+import LangSwitch from './LangSwitch';
+
+interface Props {
+  lang: 'en' | 'fr';
+  content: any;
+}
+
+const { lang, content } = Astro.props;
+---
+
+<header class="sticky top-0 z-50 border-b border-secondary-200 bg-white/95 backdrop-blur-sm dark:border-secondary-700 dark:bg-secondary-900/95">
+  <nav class="container-custom py-5 md:py-6" aria-label="Main navigation">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href={`/${lang}`} class="flex items-center space-x-2 transition-opacity hover:opacity-80">
+        <img src="/logo.svg" alt={content.company} class="h-16 w-auto md:h-20 lg:h-24" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center space-x-8 md:flex">
+        <a href={`/${lang}#case-studies`} class="nav-link">{content.nav.case_studies}</a>
+        <a href={`/${lang}#services`} class="nav-link">{content.nav.services}</a>
+        <a href={`/${lang}#about`} class="nav-link">{content.nav.about}</a>
+        <a href={`/${lang}#contact`} class="nav-link">{content.nav.contact}</a>
+      </div>
+
+      <!-- Right side: Language Switch + Dark Mode -->
+      <div class="flex items-center space-x-4">
+        <LangSwitch lang={lang} client:load />
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="Toggle dark mode"
+          class="rounded-lg p-2 text-secondary-600 hover:bg-secondary-100 dark:text-secondary-300 dark:hover:bg-secondary-800"
+        >
+          <svg class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="hidden h-5 w-5 dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          class="rounded-lg p-2 text-secondary-600 hover:bg-secondary-100 md:hidden dark:text-secondary-300 dark:hover:bg-secondary-800"
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden pt-4 md:hidden">
+      <div class="flex flex-col space-y-4">
+        <a href={`/${lang}#case-studies`} class="nav-link">{content.nav.case_studies}</a>
+        <a href={`/${lang}#services`} class="nav-link">{content.nav.services}</a>
+        <a href={`/${lang}#about`} class="nav-link">{content.nav.about}</a>
+        <a href={`/${lang}#contact`} class="nav-link">{content.nav.contact}</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .nav-link {
+    @apply text-secondary-700 transition-colors hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400;
+    @apply font-medium;
+  }
+</style>
+
+<script>
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  
+  themeToggle?.addEventListener('click', () => {
+    const html = document.documentElement;
+    const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    if (newTheme === 'dark') {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+    
+    localStorage.setItem('theme', newTheme);
+  });
+
+  // Mobile menu toggle
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuToggle?.addEventListener('click', () => {
+    const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+    mobileMenuToggle.setAttribute('aria-expanded', String(!isExpanded));
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenuToggle?.contains(e.target as Node) && !mobileMenu?.contains(e.target as Node)) {
+      mobileMenu?.classList.add('hidden');
+      mobileMenuToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>

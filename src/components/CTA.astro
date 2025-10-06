@@ -1,0 +1,21 @@
+---
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  class?: string;
+}
+
+const { href, variant = 'primary', class: className = '' } = Astro.props;
+const isMailto = href.startsWith('mailto:');
+---
+
+<a
+  href={href}
+  class:list={[
+    variant === 'primary' ? 'btn-primary' : 'btn-secondary',
+    className,
+  ]}
+  {...(isMailto ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+>
+  <slot />
+</a>

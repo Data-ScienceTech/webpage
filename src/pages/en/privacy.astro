@@ -1,0 +1,193 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.en.json';
+
+const lang = 'en';
+---
+
+<MainLayout
+  title={`Privacy Policy | ${siteContent.company}`}
+  description="Privacy policy for Data Science Technologies"
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h1 class="mb-6 text-4xl font-bold text-secondary-900 dark:text-white">Privacy Policy</h1>
+          
+          <p class="mb-8 text-lg text-secondary-600 dark:text-secondary-400">
+            <strong>Effective Date:</strong> October 6, 2025<br />
+            <strong>Last Updated:</strong> October 6, 2025
+          </p>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Data Science Technologies ("we," "us," or "our") is committed to protecting your privacy and personal information. 
+              This Privacy Policy explains how we collect, use, disclose, and safeguard your information in compliance with 
+              Canadian privacy laws, including Quebec's Act respecting the protection of personal information in the private 
+              sector (Law 25) and the Personal Information Protection and Electronic Documents Act (PIPEDA).
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">1. Information We Collect</h2>
+            
+            <h3 class="mt-6 text-xl font-semibold text-secondary-900 dark:text-white">1.1 Personal Information</h3>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We may collect the following personal information when you contact us through our website:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Full name</li>
+              <li>Email address</li>
+              <li>Message content and any information you choose to provide</li>
+              <li>IP address and technical information (automatically collected)</li>
+            </ul>
+
+            <h3 class="mt-6 text-xl font-semibold text-secondary-900 dark:text-white">1.2 Automatically Collected Information</h3>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              When you visit our website, we may automatically collect:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Browser type and version</li>
+              <li>Device information</li>
+              <li>Pages visited and time spent on our site</li>
+              <li>Referring website addresses</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">2. How We Use Your Information</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We use your personal information for the following purposes:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>To respond to your inquiries and provide customer support</li>
+              <li>To communicate with you about our services</li>
+              <li>To improve our website and services</li>
+              <li>To comply with legal obligations</li>
+              <li>To detect and prevent fraud or security issues</li>
+            </ul>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We will obtain your consent before using your information for any purpose not outlined in this policy.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">3. Legal Basis for Processing (Quebec Law 25)</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We process your personal information based on:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Consent:</strong> You provide explicit consent when submitting our contact form</li>
+              <li><strong>Legitimate Interest:</strong> To respond to your inquiries and improve our services</li>
+              <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">4. Information Sharing and Disclosure</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Service Providers:</strong> With trusted third-party service providers who assist in operating our website (e.g., hosting services, email delivery)</li>
+              <li><strong>Legal Requirements:</strong> When required by law, court order, or government regulation</li>
+              <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+              <li><strong>Protection:</strong> To protect our rights, property, or safety, or that of our users</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">5. Data Retention</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, 
+              unless a longer retention period is required by law. Contact form submissions are typically retained for 2 years or until 
+              you request deletion.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">6. Data Security</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We implement appropriate technical and organizational security measures to protect your personal information against 
+              unauthorized access, alteration, disclosure, or destruction. These measures include:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>SSL/TLS encryption for data transmission</li>
+              <li>Secure data storage with access controls</li>
+              <li>Regular security assessments and updates</li>
+              <li>Employee training on data protection</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">7. Your Privacy Rights</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Under Quebec Law 25 and PIPEDA, you have the following rights:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Right to Access:</strong> Request a copy of the personal information we hold about you</li>
+              <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete information</li>
+              <li><strong>Right to Deletion:</strong> Request deletion of your personal information (subject to legal requirements)</li>
+              <li><strong>Right to Data Portability:</strong> Receive your data in a structured, commonly used format</li>
+              <li><strong>Right to Withdraw Consent:</strong> Withdraw your consent at any time</li>
+              <li><strong>Right to Object:</strong> Object to certain processing of your personal information</li>
+              <li><strong>Right to Lodge a Complaint:</strong> File a complaint with the Commission d'accès à l'information du Québec (CAI)</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">8. Cookies and Tracking Technologies</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We use cookies and similar tracking technologies to enhance your experience. These include:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Essential Cookies:</strong> Required for website functionality (language preference, theme selection)</li>
+              <li><strong>Analytics:</strong> To understand how visitors use our website (if implemented)</li>
+            </ul>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              You can control cookie preferences through your browser settings.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">9. International Data Transfers</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Your information may be transferred to and processed in countries outside of Canada. When we transfer data internationally, 
+              we ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy and applicable laws.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">10. Children's Privacy</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. 
+              If you believe we have collected information from a child, please contact us immediately.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">11. Changes to This Privacy Policy</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy 
+              on this page and updating the "Last Updated" date. Your continued use of our services after such changes constitutes acceptance 
+              of the updated policy.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">12. Contact Us</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:
+            </p>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                <strong>Data Science Technologies</strong><br />
+                Email: <a href={`mailto:${siteContent.contact.email}`} class="text-primary-600 hover:text-primary-700 dark:text-primary-400">{siteContent.contact.email}</a><br />
+                <br />
+                <strong>Privacy Officer Contact:</strong> {siteContent.contact.email}
+              </p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">13. Regulatory Authority</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              If you have concerns about how we handle your personal information, you may file a complaint with:
+            </p>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                <strong>Commission d'accès à l'information du Québec (CAI)</strong><br />
+                Website: <a href="https://www.cai.gouv.qc.ca" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400">www.cai.gouv.qc.ca</a><br />
+                <br />
+                <strong>Office of the Privacy Commissioner of Canada</strong><br />
+                Website: <a href="https://www.priv.gc.ca" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400">www.priv.gc.ca</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

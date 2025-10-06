@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+  desc: string;
+  icon: string;
+}
+
+const { title, desc, icon } = Astro.props;
+
+// Icon mapping
+const icons: Record<string, string> = {
+  Sparkles: 'M5 3l3.057 6.193L14 12l-5.943 2.807L5 21l-3.057-6.193L-4 12l5.943-2.807L5 3z M19 3l2.057 4.193L25 9l-3.943 1.807L19 15l-2.057-4.193L13 9l3.943-1.807L19 3z',
+  Server: 'M4 6h16M4 10h16M4 14h16M4 18h16M6 6v12h12V6H6z',
+  Bot: 'M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41M9 9h6v6H9V9z',
+};
+
+const iconPath = icons[icon] || icons.Sparkles;
+---
+
+<div class="card group">
+  <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white dark:bg-primary-900/30 dark:text-primary-400 dark:group-hover:bg-primary-600">
+    <svg
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d={iconPath}
+      />
+    </svg>
+  </div>
+  <h3 class="mb-2 text-xl font-semibold text-secondary-900 dark:text-white">
+    {title}
+  </h3>
+  <p class="text-secondary-600 dark:text-secondary-400">
+    {desc}
+  </p>
+</div>
