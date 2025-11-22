@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "Force Field",
+    "subtitle": "Sécurisez Votre Couche d'Inférence des Systèmes de Connaissances",
+    "description": "Force Field sert de passerelle pour sécuriser votre couche d'inférence des systèmes de connaissances. Il intercepte les prompts, applique les politiques, surveille les sorties et offre une auditabilité complète."
+  },
+  "overview": {
+    "title": "Qu'est-ce que Force Field?",
+    "description": "Force Field est une couche de sécurité qui se situe entre vos utilisateurs et vos systèmes de connaissances alimentés par LLM. Il offre une protection en temps réel contre l'injection de prompts, la manipulation de modèles et les fuites de connaissances tout en maintenant des pistes d'audit complètes de toutes les interactions.",
+    "features": [
+      "Interception et assainissement des prompts",
+      "Filtrage et contrôles basés sur les politiques",
+      "Surveillance et validation des sorties en temps réel",
+      "Journalisation d'audit complète",
+      "Intégration de la gestion des identités et des accès"
+    ]
+  },
+  "how_it_works": {
+    "title": "Comment Ça Fonctionne",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Intercepter",
+        "description": "Force Field capture tous les prompts et entrées avant qu'ils n'atteignent votre LLM ou système de connaissances."
+      },
+      {
+        "number": "02",
+        "title": "Analyser & Appliquer",
+        "description": "Applique vos politiques de sécurité, filtre les modèles malveillants et valide selon les règles de gouvernance."
+      },
+      {
+        "number": "03",
+        "title": "Surveiller les Sorties",
+        "description": "Inspecte les réponses du modèle pour détecter les fuites de données sensibles, les hallucinations ou les violations de politique."
+      },
+      {
+        "number": "04",
+        "title": "Journaliser & Auditer",
+        "description": "Enregistre chaque interaction avec le contexte complet pour la conformité, le débogage et l'amélioration continue."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Pourquoi Force Field?",
+    "items": [
+      {
+        "title": "Prévenir l'Injection de Prompts",
+        "description": "Détectez et bloquez les entrées adversariales tentant de manipuler vos systèmes d'IA.",
+        "icon": "Shield"
+      },
+      {
+        "title": "Appliquer les Politiques de Connaissances",
+        "description": "Contrôlez quelles informations peuvent être accédées, traitées et retournées par vos systèmes.",
+        "icon": "Lock"
+      },
+      {
+        "title": "Maintenir des Pistes d'Audit",
+        "description": "Visibilité complète sur chaque interaction IA pour la conformité et la responsabilité.",
+        "icon": "FileText"
+      },
+      {
+        "title": "Réduire les Risques",
+        "description": "Minimisez l'exposition à l'utilisation abusive de modèles, aux fuites de données et à la non-conformité réglementaire.",
+        "icon": "AlertTriangle"
+      }
+    ]
+  },
+  "use_cases": {
+    "title": "Cas d'Usage",
+    "list": [
+      {
+        "title": "Systèmes RAG d'Entreprise",
+        "description": "Sécurisez les pipelines de génération augmentée par récupération traitant des connaissances d'entreprise sensibles."
+      },
+      {
+        "title": "Assistants IA Client",
+        "description": "Protégez les chatbots publics contre l'injection de prompts et assurez la conformité aux politiques."
+      },
+      {
+        "title": "Support Décisionnel de Santé",
+        "description": "Surveillance et pistes d'audit conformes HIPAA pour les systèmes d'IA cliniques."
+      },
+      {
+        "title": "IA Services Financiers",
+        "description": "Conformité réglementaire et atténuation des risques pour les applications financières alimentées par IA."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Sécuriser Vos Systèmes de Connaissances?",
+    "subtitle": "Discutons de la façon dont Force Field peut protéger votre infrastructure d'IA.",
+    "button_primary": "Planifier une Démo",
+    "button_secondary": "Contacter les Ventes"
+  }
+}

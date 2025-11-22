@@ -19,6 +19,16 @@ const currentYear = new Date().getFullYear();
         <p class="mb-4 text-secondary-600 dark:text-secondary-400">
           {content.footer.description}
         </p>
+        {content.footer.tagline && (
+          <p class="mb-2 text-sm font-medium text-primary-600 dark:text-primary-400 italic">
+            {content.footer.tagline}
+          </p>
+        )}
+        {content.footer.languages && (
+          <p class="mb-4 text-sm text-secondary-500 dark:text-secondary-500">
+            {content.footer.languages}
+          </p>
+        )}
         <div class="flex space-x-4">
           <a
             href={content.social.github}

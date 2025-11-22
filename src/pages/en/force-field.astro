@@ -1,0 +1,167 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.astro';
+
+import siteContent from '../../content/site.en.json';
+import productContent from '../../content/forcefield.en.json';
+
+const lang = 'en';
+const pageTitle = `${productContent.hero.title} | ${siteContent.company}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  description={productContent.hero.description}
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/20">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-balance text-secondary-900 dark:text-white">
+            {productContent.hero.title}
+          </h1>
+          <p class="mb-4 text-2xl font-semibold text-primary-600 dark:text-primary-400">
+            {productContent.hero.subtitle}
+          </p>
+          <p class="mb-8 text-xl text-secondary-600 dark:text-secondary-300 text-balance">
+            {productContent.hero.description}
+          </p>
+          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <CTA href={`mailto:${siteContent.contact.email}?subject=Force Field Demo Request`} variant="primary">
+              {productContent.cta.button_primary}
+            </CTA>
+            <CTA href="#contact" variant="secondary">
+              {productContent.cta.button_secondary}
+            </CTA>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-6 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+            {productContent.overview.title}
+          </h2>
+          <p class="mb-8 text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed">
+            {productContent.overview.description}
+          </p>
+          <ul class="grid gap-4 md:grid-cols-2">
+            {productContent.overview.features.map((feature) => (
+              <li class="flex items-start">
+                <svg class="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-lg text-secondary-700 dark:text-secondary-300">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-800">
+      <div class="container-custom">
+        <h2 class="mb-12 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+          {productContent.how_it_works.title}
+        </h2>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {productContent.how_it_works.steps.map((step) => (
+            <div class="card">
+              <div class="mb-4 text-4xl font-bold text-primary-600 dark:text-primary-400">
+                {step.number}
+              </div>
+              <h3 class="mb-3 text-xl font-semibold text-secondary-900 dark:text-white">
+                {step.title}
+              </h3>
+              <p class="text-secondary-600 dark:text-secondary-400">
+                {step.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <h2 class="mb-12 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+          {productContent.benefits.title}
+        </h2>
+        <div class="grid gap-8 md:grid-cols-2">
+          {productContent.benefits.items.map((benefit) => (
+            <div class="card">
+              <h3 class="mb-3 text-xl font-semibold text-secondary-900 dark:text-white">
+                {benefit.title}
+              </h3>
+              <p class="text-secondary-600 dark:text-secondary-400">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-800">
+      <div class="container-custom">
+        <h2 class="mb-12 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+          {productContent.use_cases.title}
+        </h2>
+        <div class="grid gap-8 md:grid-cols-2">
+          {productContent.use_cases.list.map((useCase) => (
+            <div class="card">
+              <h3 class="mb-3 text-xl font-semibold text-secondary-900 dark:text-white">
+                {useCase.title}
+              </h3>
+              <p class="text-secondary-600 dark:text-secondary-400">
+                {useCase.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="section-padding bg-gradient-to-br from-primary-600 to-primary-700 text-white dark:from-primary-700 dark:to-primary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="mb-4 text-white">
+            {productContent.cta.title}
+          </h2>
+          <p class="mb-8 text-xl text-primary-100">
+            {productContent.cta.subtitle}
+          </p>
+          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href={`mailto:${siteContent.contact.email}?subject=Force Field Demo Request`}
+              class="btn inline-flex items-center bg-white text-primary-700 hover:bg-primary-50 focus:ring-white"
+            >
+              {productContent.cta.button_primary}
+            </a>
+            <a
+              href={`mailto:${siteContent.contact.email}?subject=Force Field Inquiry`}
+              class="btn inline-flex items-center border-2 border-white text-white hover:bg-white/10"
+            >
+              {productContent.cta.button_secondary}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

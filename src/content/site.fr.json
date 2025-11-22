@@ -1,49 +1,98 @@
 {
   "company": "Data Science Technologies",
-  "tagline": "Nous livrons de l'IA qui fait bouger vos KPI.",
+  "tagline": "Systèmes de Connaissances Sécurisés pour l'ère de l'IA",
   "hero": {
-    "title": "IA, analytique et automatisation — du prototype à la production.",
-    "subtitle": "Nous concevons des systèmes de recommandation, des plateformes de données et des workflows agentiques réellement adoptés.",
-    "cta_primary": "Réserver un appel",
-    "cta_secondary": "Voir nos cas clients"
+    "title": "Construire et Protéger Votre Intelligence Institutionnelle",
+    "subtitle": "Nous sécurisons les systèmes de connaissances dès la conception—livrant des solutions qui capturent, raisonnent et agissent sur les connaissances institutionnelles tout en protégeant contre l'injection de prompts, la manipulation de modèles et les fuites de connaissances.",
+    "cta_primary": "Parlons-en",
+    "cta_secondary": "En savoir plus"
   },
   "value_props": [
     {
-      "title": "Recommandations qui convertissent",
-      "desc": "Modèles hybrides (règles + LightFM) avec re-ranking et gestion du cold-start.",
-      "icon": "Sparkles"
+      "title": "Capturer & Modéliser",
+      "desc": "Extraire, structurer et gérer les connaissances de votre organisation—données, règles, expertise métier, ontologies.",
+      "icon": "Database"
     },
     {
-      "title": "Plateformes données à l'échelle",
-      "desc": "Azure/Snowflake/Databricks avec CI/CD et maîtrise des coûts.",
-      "icon": "Server"
+      "title": "Raisonner & Agir",
+      "desc": "Appliquer l'inférence, la logique hybride et l'IA pour traduire les connaissances en décisions et actions.",
+      "icon": "Brain"
     },
     {
-      "title": "Automatisation agentique",
-      "desc": "Agents type Copilot pour orchestrer ETL, rapports et CRM.",
-      "icon": "Bot"
+      "title": "Sécuriser & Gouverner",
+      "desc": "Sécurité dès la conception—de l'identité à l'audit, du prompt à la politique. Vos systèmes de connaissances restent sûrs, fiables et conformes.",
+      "icon": "Shield"
+    },
+    {
+      "title": "Opérer & Évoluer",
+      "desc": "Maintenir, surveiller et faire évoluer votre écosystème de systèmes de connaissances face aux nouvelles menaces et exigences.",
+      "icon": "Cog"
     }
   ],
   "services": {
-    "title": "Ce que nous faisons",
-    "list": [
-      "Systèmes de recommandation (LightFM, re-ranking, bandits)",
-      "Ingénierie et entrepôts de données (Azure, Snowflake, DBX)",
-      "MLOps et gouvernance (CI/CD, télémétrie, rollback)",
-      "Tableaux de bord & KPI (Supabase, Postgres, Metabase, Power BI)"
-    ]
+    "title": "Systèmes de Connaissances + Sécurité",
+    "challenge": {
+      "title": "Le Défi",
+      "description": "Les organisations modernes déploient des systèmes basés sur les connaissances pour tout alimenter, du support décisionnel aux assistants d'IA générative. Mais avec ce pouvoir viennent de nouvelles surfaces de risque :",
+      "risks": [
+        "Injection de prompts et manipulation de modèles",
+        "Fuites de connaissances cachées et attaques par inférence",
+        "Manque de pistes d'audit, de gouvernance et de contrôle des politiques dans les flux d'IA"
+      ]
+    },
+    "approach": {
+      "title": "Notre Approche",
+      "subtitle": "Nous sécurisons les systèmes de connaissances en nous concentrant sur quatre piliers"
+    },
+    "pillars": [
+      {
+        "name": "Identité & Accès",
+        "description": "Qui ou quoi interagit avec votre système de connaissances ? Nous appliquons une identité forte, une sécurité des charges de travail et une authentification à chaque agent et modèle."
+      },
+      {
+        "name": "Politique & Application",
+        "description": "Définissez quelles connaissances peuvent circuler, quelles décisions peuvent être prises et quelles sorties sont autorisées. Nous livrons un filtrage, une sanitisation et des contrôles basés sur des règles."
+      },
+      {
+        "name": "Surveillance & Audit",
+        "description": "Chaque interaction, prompt, décision et inférence est journalisé, analysé et gouverné. Vous obtenez visibilité et responsabilité."
+      },
+      {
+        "name": "Réponse & Résilience",
+        "description": "Lorsque des menaces ou anomalies surviennent—utilisation abusive de modèles, injection adversariale, fuite interne—nous vous aidons à répondre et à récupérer."
+      }
+    ],
+    "benefits": {
+      "title": "Pourquoi C'est Important",
+      "subtitle": "En sécurisant vos systèmes de connaissances, vous réduisez le risque de :",
+      "list": [
+        "Comportement de modèle non intentionnel ou utilisation abusive",
+        "Exposition de connaissances institutionnelles sensibles",
+        "Non-conformité, dommages à la réputation ou échecs d'audit"
+      ]
+    },
+    "specialisation": {
+      "title": "Notre Spécialisation",
+      "subtitle": "Nous construisons et sécurisons des systèmes de connaissances qui :",
+      "list": [
+        "Découplent la capture des connaissances de l'exécution de l'inférence",
+        "Permettent un raisonnement hybride piloté par règles + LLM",
+        "S'adaptent aux environnements multilingues et multi-domaines",
+        "Sont construits avec sécurité dès la conception, journalisation par défaut et gouvernance à chaque couche"
+      ]
+    }
   },
   "case_studies": {
-    "title": "Études de cas",
-    "subtitle": "Résultats réels pour entreprises réelles"
+    "title": "Systèmes de Connaissances en Action",
+    "subtitle": "Systèmes réels, sécurité réelle, impact réel"
   },
   "trust_bar": {
-    "title": "Technologies de confiance"
+    "title": "Construit avec des technologies éprouvées"
   },
   "cta_section": {
-    "title": "Prêt à passer du prototype à la production ?",
-    "subtitle": "Construisons des systèmes d'IA que votre équipe utilisera vraiment.",
-    "button": "Nous contacter"
+    "title": "Prêt à transformer votre couche de connaissances ?",
+    "subtitle": "De l'insight à l'action—en toute sécurité. Construisons votre système de connaissances nouvelle génération avec la sécurité aux commandes.",
+    "button": "Parlons-en aujourd'hui"
   },
   "contact": {
     "title": "Contactez-nous",
@@ -59,7 +108,9 @@
     }
   },
   "footer": {
-    "description": "Solutions d'IA, d'analytique et d'automatisation pour entreprises prêtes à croître.",
+    "description": "Systèmes de connaissances sécurisés pour l'ère de l'IA. Nous combinons l'ingénierie des connaissances, les systèmes pilotés par LLM et l'expertise en sécurité pour créer des solutions qui comptent.",
+    "tagline": "De l'insight à l'action—en toute sécurité.",
+    "languages": "Opérations multilingues : anglais, portugais, français",
     "links": {
       "company": "Entreprise",
       "case_studies": "Études de cas",
@@ -71,13 +122,13 @@
   },
   "nav": {
     "case_studies": "Études de cas",
-    "services": "Services",
+    "services": "Ce Que Nous Construisons",
     "about": "À propos",
     "contact": "Contact"
   },
   "meta": {
-    "description": "Data Science Technologies conçoit des systèmes de recommandation IA, des plateformes de données et des workflows d'automatisation qui génèrent des résultats mesurables.",
-    "keywords": "conseil IA, science des données, apprentissage automatique, systèmes de recommandation, ingénierie des données, MLOps, Azure, Snowflake, Databricks"
+    "description": "Data Science Technologies construit des systèmes de connaissances sécurisés qui capturent, raisonnent et agissent. Nous combinons l'ingénierie des connaissances, l'IA/ML et la sécurité dès la conception pour l'ère de l'IA.",
+    "keywords": "systèmes de connaissances, systèmes basés sur les connaissances, KBS, sécurité IA, sécurité LLM, ingénierie des connaissances, IA d'entreprise, IA sécurisée, ontologies, moteurs de raisonnement, gouvernance IA"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

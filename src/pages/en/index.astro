@@ -50,7 +50,7 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
           {siteContent.trust_bar.title}
         </p>
         <div class="flex flex-wrap items-center justify-center gap-8 opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0">
-          {['Azure', 'Snowflake', 'Databricks', 'Supabase', 'Vercel', 'GitHub'].map((tech) => (
+          {['Neo4j', 'PostgreSQL', 'Azure', 'OpenAI', 'LangChain', 'Python'].map((tech) => (
             <div class="text-secondary-600 dark:text-secondary-400 font-semibold text-lg">
               {tech}
             </div>
@@ -63,12 +63,12 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
     <section class="section-padding">
       <div class="container-custom">
         <div class="mb-12 text-center">
-          <h2 class="mb-4 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">Why choose us</h2>
+          <h2 class="mb-4 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">Why Knowledge Matters</h2>
           <p class="mx-auto max-w-2xl text-lg text-secondary-600 dark:text-secondary-400">
-            We deliver production-grade AI systems that drive measurable results.
+            Knowledge-based systems embed expert reasoning, decision logic, and domain intelligence into production workflows.
           </p>
         </div>
-        <div class="grid gap-8 md:grid-cols-3">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {siteContent.value_props.map((prop) => (
             <FeatureCard
               title={prop.title}
@@ -110,17 +110,92 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
     <!-- Services -->
     <section id="services" class="section-padding">
       <div class="container-custom">
-        <div class="mx-auto max-w-3xl">
+        <!-- Section Header -->
+        <div class="mx-auto max-w-4xl mb-16">
           <h2 class="mb-8 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
             {siteContent.services.title}
           </h2>
-          <ul class="space-y-4">
-            {siteContent.services.list.map((service) => (
+          
+          <!-- The Challenge -->
+          <div class="mb-12">
+            <h3 class="mb-4 text-2xl font-semibold text-secondary-900 dark:text-white">
+              {siteContent.services.challenge.title}
+            </h3>
+            <p class="mb-4 text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed">
+              {siteContent.services.challenge.description}
+            </p>
+            <ul class="space-y-2">
+              {siteContent.services.challenge.risks.map((risk) => (
+                <li class="flex items-start">
+                  <svg class="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  <span class="text-secondary-700 dark:text-secondary-300">{risk}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Our Approach -->
+          <div class="mb-12">
+            <h3 class="mb-2 text-2xl font-semibold text-secondary-900 dark:text-white">
+              {siteContent.services.approach.title}
+            </h3>
+            <p class="mb-8 text-lg text-secondary-600 dark:text-secondary-400">
+              {siteContent.services.approach.subtitle}
+            </p>
+            
+            <!-- Security Pillars -->
+            <div class="grid gap-6 md:grid-cols-2">
+              {siteContent.services.pillars.map((pillar) => (
+                <div class="card">
+                  <h4 class="mb-3 text-xl font-semibold text-primary-600 dark:text-primary-400">
+                    {pillar.name}
+                  </h4>
+                  <p class="text-secondary-600 dark:text-secondary-400">
+                    {pillar.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Why It Matters -->
+        <div class="mx-auto max-w-3xl mb-12">
+          <h3 class="mb-4 text-2xl font-semibold text-center text-secondary-900 dark:text-white">
+            {siteContent.services.benefits.title}
+          </h3>
+          <p class="mb-6 text-lg text-center text-secondary-600 dark:text-secondary-400">
+            {siteContent.services.benefits.subtitle}
+          </p>
+          <ul class="space-y-3">
+            {siteContent.services.benefits.list.map((benefit) => (
+              <li class="flex items-start">
+                <svg class="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-lg text-secondary-700 dark:text-secondary-300">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Our Specialisation -->
+        <div class="mx-auto max-w-3xl">
+          <h3 class="mb-4 text-2xl font-semibold text-center text-secondary-900 dark:text-white">
+            {siteContent.services.specialisation.title}
+          </h3>
+          <p class="mb-6 text-lg text-center text-secondary-600 dark:text-secondary-400">
+            {siteContent.services.specialisation.subtitle}
+          </p>
+          <ul class="space-y-3">
+            {siteContent.services.specialisation.list.map((item) => (
               <li class="flex items-start">
                 <svg class="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-lg text-secondary-700 dark:text-secondary-300">{service}</span>
+                <span class="text-lg text-secondary-700 dark:text-secondary-300">{item}</span>
               </li>
             ))}
           </ul>

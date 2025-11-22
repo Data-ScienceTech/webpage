@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "Force Field",
+    "subtitle": "Secure Your Knowledge-System Inference Layer",
+    "description": "Force Field serves as the gateway to secure your knowledge-system inference layer. It intercepts prompts, enforces policies, monitors output and offers full auditability."
+  },
+  "overview": {
+    "title": "What Is Force Field?",
+    "description": "Force Field is a security layer that sits between your users and your LLM-powered knowledge systems. It provides real-time protection against prompt injection, model manipulation, and knowledge leaks while maintaining full audit trails of all interactions.",
+    "features": [
+      "Prompt interception and sanitization",
+      "Policy-driven filtering and controls",
+      "Real-time output monitoring and validation",
+      "Comprehensive audit logging",
+      "Identity and access management integration"
+    ]
+  },
+  "how_it_works": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Intercept",
+        "description": "Force Field captures all prompts and inputs before they reach your LLM or knowledge system."
+      },
+      {
+        "number": "02",
+        "title": "Analyze & Enforce",
+        "description": "Applies your security policies, filters malicious patterns, and validates against governance rules."
+      },
+      {
+        "number": "03",
+        "title": "Monitor Output",
+        "description": "Inspects model responses for sensitive data leaks, hallucinations, or policy violations."
+      },
+      {
+        "number": "04",
+        "title": "Log & Audit",
+        "description": "Records every interaction with full context for compliance, debugging, and continuous improvement."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why Force Field?",
+    "items": [
+      {
+        "title": "Prevent Prompt Injection",
+        "description": "Detect and block adversarial inputs attempting to manipulate your AI systems.",
+        "icon": "Shield"
+      },
+      {
+        "title": "Enforce Knowledge Policies",
+        "description": "Control what information can be accessed, processed, and returned by your systems.",
+        "icon": "Lock"
+      },
+      {
+        "title": "Maintain Audit Trails",
+        "description": "Full visibility into every AI interaction for compliance and accountability.",
+        "icon": "FileText"
+      },
+      {
+        "title": "Reduce Risk",
+        "description": "Minimize exposure to model misuse, data leaks, and regulatory non-compliance.",
+        "icon": "AlertTriangle"
+      }
+    ]
+  },
+  "use_cases": {
+    "title": "Use Cases",
+    "list": [
+      {
+        "title": "Enterprise RAG Systems",
+        "description": "Secure retrieval-augmented generation pipelines handling sensitive corporate knowledge."
+      },
+      {
+        "title": "Customer-Facing AI Assistants",
+        "description": "Protect public-facing chatbots from prompt injection and ensure policy compliance."
+      },
+      {
+        "title": "Healthcare Decision Support",
+        "description": "HIPAA-compliant monitoring and audit trails for clinical AI systems."
+      },
+      {
+        "title": "Financial Services AI",
+        "description": "Regulatory compliance and risk mitigation for AI-powered financial applications."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Secure Your Knowledge Systems?",
+    "subtitle": "Let's discuss how Force Field can protect your AI infrastructure.",
+    "button_primary": "Schedule a Demo",
+    "button_secondary": "Contact Sales"
+  }
+}

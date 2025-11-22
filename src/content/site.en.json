@@ -1,49 +1,98 @@
 {
   "company": "Data Science Technologies",
-  "tagline": "We ship AI that moves KPIs.",
+  "tagline": "Secure Knowledge Systems for the AI Era",
   "hero": {
-    "title": "AI, analytics, and automation — from prototype to production.",
-    "subtitle": "We build recommendation systems, data platforms, and agentic workflows that actually get adopted.",
-    "cta_primary": "Book a discovery call",
-    "cta_secondary": "See case studies"
+    "title": "Building and Protecting Your Institutional Intelligence",
+    "subtitle": "We secure knowledge systems by design—delivering solutions that capture, reason, and act on institutional knowledge while protecting against prompt injection, model manipulation, and knowledge leaks.",
+    "cta_primary": "Talk to us",
+    "cta_secondary": "Learn more"
   },
   "value_props": [
     {
-      "title": "Recommendations that convert",
-      "desc": "Hybrid models (rules + LightFM) with re-ranking and cold-start handling.",
-      "icon": "Sparkles"
+      "title": "Capture & Model",
+      "desc": "Extract, structure and manage the knowledge your organisation holds—data, rules, domain expertise, ontologies.",
+      "icon": "Database"
     },
     {
-      "title": "Data platforms that scale",
-      "desc": "Azure/Snowflake/Databricks setups with CI/CD and cost controls.",
-      "icon": "Server"
+      "title": "Reason & Act",
+      "desc": "Apply inference, hybrid logic, and AI to translate knowledge into decisions and actions.",
+      "icon": "Brain"
     },
     {
-      "title": "Agentic automation",
-      "desc": "Copilot-style agents to orchestrate ETL, reporting, and CRM ops.",
-      "icon": "Bot"
+      "title": "Secure & Govern",
+      "desc": "Security by design—from identity to audit, from prompt to policy. Your knowledge systems remain safe, reliable and compliant.",
+      "icon": "Shield"
+    },
+    {
+      "title": "Operate & Evolve",
+      "desc": "Maintain, monitor and scale your knowledge-systems landscape as new threats and requirements emerge.",
+      "icon": "Cog"
     }
   ],
   "services": {
-    "title": "What we do",
-    "list": [
-      "Recommendation systems (LightFM, re-ranking, bandits)",
-      "Data engineering & warehousing (Azure, Snowflake, DBX)",
-      "ML ops & governance (CI/CD, telemetry, rollback)",
-      "Dashboards & KPIs (Supabase, Postgres, Metabase, Power BI)"
-    ]
+    "title": "Knowledge Systems + Security",
+    "challenge": {
+      "title": "The Challenge",
+      "description": "Modern organisations deploy knowledge-based systems to power everything from decision-support to generative-AI assistants. But along with that power come entirely new risk surfaces:",
+      "risks": [
+        "Prompt injection and model manipulation",
+        "Hidden knowledge leaks and inference attacks",
+        "Lack of audit trails, governance and policy control in AI flows"
+      ]
+    },
+    "approach": {
+      "title": "Our Approach",
+      "subtitle": "We secure knowledge systems by focusing on four pillars"
+    },
+    "pillars": [
+      {
+        "name": "Identity & Access",
+        "description": "Who or what is interacting with your knowledge system? We apply strong identity, workload security and authentication to every agent and model."
+      },
+      {
+        "name": "Policy & Enforcement",
+        "description": "Define what knowledge can flow, what decisions may be made, and which outputs are allowed. We deliver rule-driven filtering, sanitisation and controls."
+      },
+      {
+        "name": "Monitoring & Audit",
+        "description": "Every interaction, prompt, decision and inference is logged, analysed and governed. You get visibility and accountability."
+      },
+      {
+        "name": "Response & Resilience",
+        "description": "When threats or anomalies arise—model misuse, adversarial injection, internal leakage—we help you respond and recover."
+      }
+    ],
+    "benefits": {
+      "title": "Why It Matters",
+      "subtitle": "By securing your knowledge systems, you reduce the risk of:",
+      "list": [
+        "Unintended model behavior or misuse",
+        "Exposure of sensitive institutional knowledge",
+        "Non-compliance, reputational damage or audit failures"
+      ]
+    },
+    "specialisation": {
+      "title": "Our Specialisation",
+      "subtitle": "We build and secure knowledge systems that:",
+      "list": [
+        "Decouple knowledge capture from inference execution",
+        "Enable hybrid rule-driven + LLM-driven reasoning",
+        "Scale across multilingual and multi-domain environments",
+        "Are built with security by design, logging by default, and governance at every layer"
+      ]
+    }
   },
   "case_studies": {
-    "title": "Case Studies",
-    "subtitle": "Real outcomes for real businesses"
+    "title": "Knowledge Systems in Action",
+    "subtitle": "Real systems, real security, real impact"
   },
   "trust_bar": {
-    "title": "Trusted technologies"
+    "title": "Built with proven technologies"
   },
   "cta_section": {
-    "title": "Ready to move from prototype to production?",
-    "subtitle": "Let's build AI systems that your team will actually use.",
-    "button": "Get in touch"
+    "title": "Ready to transform your knowledge layer?",
+    "subtitle": "From insight to action—securely. Let's build your next-gen knowledge system with security in the driver's seat.",
+    "button": "Talk to us today"
   },
   "contact": {
     "title": "Contact Us",
@@ -59,7 +108,9 @@
     }
   },
   "footer": {
-    "description": "AI, analytics, and automation solutions for businesses ready to scale.",
+    "description": "Secure knowledge systems for the AI era. We combine knowledge engineering, LLM-driven systems, and security expertise to build solutions that matter.",
+    "tagline": "From insight to action—securely.",
+    "languages": "Multilingual operations: English, Portuguese, French",
     "links": {
       "company": "Company",
       "case_studies": "Case Studies",
@@ -71,13 +122,13 @@
   },
   "nav": {
     "case_studies": "Case Studies",
-    "services": "Services",
+    "services": "What We Build",
     "about": "About",
     "contact": "Contact"
   },
   "meta": {
-    "description": "Data Science Technologies builds AI-powered recommendation systems, data platforms, and automation workflows that drive measurable business results.",
-    "keywords": "AI consulting, data science, machine learning, recommendation systems, data engineering, MLOps, Azure, Snowflake, Databricks"
+    "description": "Data Science Technologies builds secure knowledge systems that capture, reason, and act. We combine knowledge engineering, AI/ML, and security-by-design for the AI era.",
+    "keywords": "knowledge systems, knowledge-based systems, KBS, AI security, LLM security, knowledge engineering, enterprise AI, secure AI, ontologies, reasoning engines, AI governance"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",
