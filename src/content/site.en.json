@@ -97,7 +97,6 @@
   "contact": {
     "title": "Contact Us",
     "email": "info@datasciencetech.ca",
-    "formspree_id": "YOUR_FORM_ID",
     "form": {
       "name_label": "Name",
       "email_label": "Email",
