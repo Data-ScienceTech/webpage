@@ -2,97 +2,120 @@
   "company": "Data Science Technologies",
   "tagline": "Systèmes de Connaissances Sécurisés pour l'ère de l'IA",
   "hero": {
-    "title": "Construire et Protéger Votre Intelligence Institutionnelle",
-    "subtitle": "Nous sécurisons les systèmes de connaissances dès la conception—livrant des solutions qui capturent, raisonnent et agissent sur les connaissances institutionnelles tout en protégeant contre l'injection de prompts, la manipulation de modèles et les fuites de connaissances.",
-    "cta_primary": "Parlons-en",
-    "cta_secondary": "En savoir plus"
+    "title": "Votre IA Est une Nouvelle Surface d'Attaque. Sécurisez-la Avant Qu'on l'Exploite.",
+    "subtitle": "Nous aidons les entreprises à verrouiller leurs LLMs, pipelines RAG et agents IA pour qu'ils ne puissent pas être détournés, empoisonnés ou manipulés pour divulguer des données sensibles.",
+    "cta_primary": "Parler à un Expert",
+    "cta_secondary": "Demander un Audit de Sécurité",
+    "trust_tagline": "Sécurité IA d'entreprise construite par une équipe avec des décennies d'expérience en IA et cybersécurité."
   },
-  "value_props": [
-    {
-      "title": "Capturer & Modéliser",
-      "desc": "Extraire, structurer et gérer les connaissances de votre organisation—données, règles, expertise métier, ontologies.",
-      "icon": "Database"
-    },
-    {
-      "title": "Raisonner & Agir",
-      "desc": "Appliquer l'inférence, la logique hybride et l'IA pour traduire les connaissances en décisions et actions.",
-      "icon": "Brain"
-    },
-    {
-      "title": "Sécuriser & Gouverner",
-      "desc": "Sécurité dès la conception—de l'identité à l'audit, du prompt à la politique. Vos systèmes de connaissances restent sûrs, fiables et conformes.",
-      "icon": "Shield"
-    },
-    {
-      "title": "Opérer & Évoluer",
-      "desc": "Maintenir, surveiller et faire évoluer votre écosystème de systèmes de connaissances face aux nouvelles menaces et exigences.",
-      "icon": "Cog"
-    }
-  ],
-  "services": {
-    "title": "Systèmes de Connaissances + Sécurité",
-    "challenge": {
-      "title": "Le Défi",
-      "description": "Les organisations modernes déploient des systèmes basés sur les connaissances pour tout alimenter, du support décisionnel aux assistants d'IA générative. Mais avec ce pouvoir viennent de nouvelles surfaces de risque :",
-      "risks": [
-        "Injection de prompts et manipulation de modèles",
-        "Fuites de connaissances cachées et attaques par inférence",
-        "Manque de pistes d'audit, de gouvernance et de contrôle des politiques dans les flux d'IA"
-      ]
-    },
-    "approach": {
-      "title": "Notre Approche",
-      "subtitle": "Nous sécurisons les systèmes de connaissances en nous concentrant sur quatre piliers"
-    },
+  "llm_firewall": {
+    "title": "MVP du Pare-feu LLM Prêt pour Évaluation",
+    "description": "Notre version initiale du Pare-feu LLM est maintenant disponible. Ce MVP fournit des contrôles de première étape pour les attaques basées sur les prompts, les risques de la couche de récupération et l'exposition des données par l'IA.",
+    "cta": "Demander une Évaluation"
+  },
+  "vulnerabilities": {
+    "title": "L'IA Introduit des Vulnérabilités Que Vous N'avez Jamais Eu à Défendre",
+    "intro": "Les systèmes d'IA ne fonctionnent pas comme les logiciels traditionnels. Ils prennent des instructions de quiconque interagit avec eux — y compris les adversaires.",
+    "subtitle": "Les entreprises font déjà face à :",
+    "threats": [
+      {
+        "title": "Injection de prompts & détournement d'instructions",
+        "desc": "Les attaquants trompent le modèle pour ignorer les politiques ou révéler des secrets",
+        "icon": "terminal"
+      },
+      {
+        "title": "Empoisonnement de la récupération & sources corrompues",
+        "desc": "Données malveillantes injectées dans les pipelines RAG pour manipuler les sorties",
+        "icon": "database"
+      },
+      {
+        "title": "Accès non autorisé & fuites d'informations silencieuses",
+        "desc": "L'IA exposant involontairement des informations confidentielles",
+        "icon": "unlock"
+      },
+      {
+        "title": "Décisions manipulées & sorties compromises",
+        "desc": "Adversaires influençant l'IA pour produire des décisions nuisibles",
+        "icon": "shuffle"
+      },
+      {
+        "title": "Zéro visibilité sur les processus de décision IA",
+        "desc": "Aucun journal clair, rendant difficile la détection des problèmes",
+        "icon": "eye-off"
+      },
+      {
+        "title": "Vol de modèle & exposition de la propriété intellectuelle",
+        "desc": "Extraction de modèles propriétaires, données d'entraînement ou logique métier",
+        "icon": "download"
+      }
+    ],
+    "conclusion": "L'IA entre dans les flux de travail critiques plus vite que les équipes de sécurité ne peuvent s'adapter. Sans défenses solides, ces systèmes exposent vos données, vos processus de raisonnement et votre entreprise."
+  },
+  "expertise": {
+    "title": "Expertise Indépendante en Sécurité IA — Sur Tout le Cycle de Vie de l'IA",
+    "intro": "Nous ne vendons pas un produit.",
+    "intro_detail": "Nous vous aidons à concevoir, implémenter et opérationnaliser des systèmes d'IA sécurisés de bout en bout. Notre équipe travaille aux côtés de la vôtre pour architec turer et protéger chaque couche où l'IA peut être compromise.",
+    "subtitle": "Notre travail couvre chaque couche où l'IA peut être compromise :",
+    "coverage": [
+      { "name": "Ingéstion des données", "icon": "Database" },
+      { "name": "Récupération & routage", "icon": "GitBranch" },
+      { "name": "Interaction & prompting", "icon": "MessageSquare" },
+      { "name": "Flux agentiques", "icon": "Workflow" },
+      { "name": "Accès, identité & permissions", "icon": "Lock" },
+      { "name": "Surveillance & gouvernance", "icon": "Eye" },
+      { "name": "Préparation aux incidents", "icon": "ShieldAlert" }
+    ],
+    "conclusion": "Vous obtenez des conseils clairs, des stratégies de durcissement, une modélisation des menaces et des protections concrètes adaptées à votre environnement."
+  },
+  "focus_areas": {
+    "title": "Nos Domaines d'Expertise Principaux",
     "pillars": [
       {
         "name": "Identité & Accès",
-        "description": "Qui ou quoi interagit avec votre système de connaissances ? Nous appliquons une identité forte, une sécurité des charges de travail et une authentification à chaque agent et modèle."
+        "description": "Vérifiez et contrôlez chaque utilisateur, agent et système touchant votre IA. Nous concevons des modèles d'accès, des permissions et des protections pour que seuls les acteurs humains et machines approuvés puissent interagir avec les connaissances sensibles.",
+        "icon": "UserCheck"
       },
       {
         "name": "Politique & Application",
-        "description": "Définissez quelles connaissances peuvent circuler, quelles décisions peuvent être prises et quelles sorties sont autorisées. Nous livrons un filtrage, une sanitisation et des contrôles basés sur des règles."
+        "description": "Définissez ce que votre IA peut voir, décider et révéler — et appliquez-le. Nous construisons des ensembles de règles, des garde-fous, des filtres d'entrée/sortie et des stratégies de segmentation des connaissances qui préviennent les accès inappropriés ou les fuites.",
+        "icon": "ShieldCheck"
       },
       {
         "name": "Surveillance & Audit",
-        "description": "Chaque interaction, prompt, décision et inférence est journalisé, analysé et gouverné. Vous obtenez visibilité et responsabilité."
+        "description": "Rendez chaque prompt, récupération et inférence observable. Nous établissons la journalisation, la détection d'anomalies et l'auditabilité pour que vous sachiez toujours comment votre IA prend ses décisions et où émergent les risques.",
+        "icon": "Eye"
       },
       {
         "name": "Réponse & Résilience",
-        "description": "Lorsque des menaces ou anomalies surviennent—utilisation abusive de modèles, injection adversariale, fuite interne—nous vous aidons à répondre et à récupérer."
+        "description": "Préparez-vous aux incidents de sécurité IA — et réagissez vite. Nous créons des playbooks de détection, des flux de confinement et des processus de récupération pour l'injection de prompts, l'utilisation abusive de modèles et les événements d'exposition de données.",
+        "icon": "Zap"
       }
+    ]
+  },
+  "weakest_link": {
+    "title": "Empêchez l'IA de Devenir Votre Maillon Faible",
+    "subtitle": "Sécuriser vos systèmes d'IA réduit la probabilité de :",
+    "risks": [
+      { "title": "Manipulation de la logique métier", "icon": "settings" },
+      { "title": "Fuites d'informations sensibles", "icon": "droplet" },
+      { "title": "Sorties ou décisions compromises", "icon": "alert-circle" },
+      { "title": "Violations réglementaires et politiques", "icon": "file-warning" },
+      { "title": "Dommages irréversibles à la réputation", "icon": "trending-down" },
+      { "title": "Violations de sécurité non détectées", "icon": "shield-off" }
     ],
-    "benefits": {
-      "title": "Pourquoi C'est Important",
-      "subtitle": "En sécurisant vos systèmes de connaissances, vous réduisez le risque de :",
-      "list": [
-        "Comportement de modèle non intentionnel ou utilisation abusive",
-        "Exposition de connaissances institutionnelles sensibles",
-        "Non-conformité, dommages à la réputation ou échecs d'audit"
-      ]
-    },
-    "specialisation": {
-      "title": "Notre Spécialisation",
-      "subtitle": "Nous construisons et sécurisons des systèmes de connaissances qui :",
-      "list": [
-        "Découplent la capture des connaissances de l'exécution de l'inférence",
-        "Permettent un raisonnement hybride piloté par règles + LLM",
-        "S'adaptent aux environnements multilingues et multi-domaines",
-        "Sont construits avec sécurité dès la conception, journalisation par défaut et gouvernance à chaque couche"
-      ]
-    }
+    "conclusion": "L'IA vous donne un levier massif — mais seulement si elle fonctionne de manière sûre et prévisible dans des conditions réelles."
   },
   "case_studies": {
-    "title": "Systèmes de Connaissances en Action",
+    "title": "Sécurité IA en Action",
     "subtitle": "Systèmes réels, sécurité réelle, impact réel"
   },
   "trust_bar": {
     "title": "Construit avec des technologies éprouvées"
   },
   "cta_section": {
-    "title": "Prêt à transformer votre couche de connaissances ?",
-    "subtitle": "De l'insight à l'action—en toute sécurité. Construisons votre système de connaissances nouvelle génération avec la sécurité aux commandes.",
-    "button": "Parlons-en aujourd'hui"
+    "title": "Prêt à Sécuriser Votre IA ?",
+    "subtitle": "De l'insight à l'action—en toute sécurité. Notre équipe combine une expertise avancée en IA avec des principes de sécurité dès la conception pour garantir que vos initiatives IA soient sûres, conformes et réussies.",
+    "button": "Parlons-en Aujourd'hui"
   },
   "contact": {
     "title": "Contactez-nous",
@@ -104,6 +127,24 @@
       "submit": "Envoyer",
       "success": "Merci ! Nous vous répondrons bientôt.",
       "error": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  },
+  "security_audit": {
+    "modal_title": "Demander un Audit de Sécurité",
+    "modal_subtitle": "Parlez-nous de vos systèmes IA et de vos préoccupations de sécurité. Notre équipe vous contactera dans les 24 heures.",
+    "form": {
+      "name_label": "Nom Complet",
+      "email_label": "Courriel Professionnel",
+      "company_label": "Entreprise",
+      "role_label": "Votre Rôle",
+      "ai_systems_label": "Systèmes IA Utilisés",
+      "ai_systems_placeholder": "ex., LLMs, pipelines RAG, agents IA, chatbots...",
+      "concerns_label": "Principales Préoccupations de Sécurité",
+      "concerns_placeholder": "Décrivez vos principales préoccupations concernant la sécurité IA...",
+      "submit": "Demander l'Audit",
+      "success": "Merci ! Notre équipe de sécurité vous contactera dans les 24 heures.",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "close": "Fermer"
     }
   },
   "footer": {

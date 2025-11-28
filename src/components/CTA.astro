@@ -1,20 +1,23 @@
 ---
 interface Props {
   href: string;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'accent';
   class?: string;
 }
 
 const { href, variant = 'primary', class: className = '' } = Astro.props;
 const isMailto = href.startsWith('mailto:');
+
+const variantClass = {
+  primary: 'btn-primary',
+  secondary: 'btn-secondary',
+  accent: 'btn-accent',
+}[variant];
 ---
 
 <a
   href={href}
-  class:list={[
-    variant === 'primary' ? 'btn-primary' : 'btn-secondary',
-    className,
-  ]}
+  class:list={[variantClass, className]}
   {...(isMailto ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
 >
   <slot />

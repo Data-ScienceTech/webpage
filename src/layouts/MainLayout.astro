@@ -59,6 +59,25 @@ const ogImageUrl = new URL('/og-image.png', Astro.site).toString();
         This site works best with JavaScript enabled.
       </div>
     </noscript>
+    
+    <!-- Hidden Netlify form placeholders for JS-driven form detection -->
+    <form name="security-audit" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="role" />
+      <input type="text" name="ai_systems" />
+      <textarea name="security_concerns"></textarea>
+    </form>
+    <form name="security-audit-fr" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="role" />
+      <input type="text" name="ai_systems" />
+      <textarea name="security_concerns"></textarea>
+    </form>
+    
     <slot />
   </body>
 </html>

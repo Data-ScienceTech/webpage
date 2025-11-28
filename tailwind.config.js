@@ -5,19 +5,22 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Teal/Emerald - security, trust, professional
         primary: {
-          DEFAULT: '#2C7A7B',
-          50: '#E6F7F7',
-          100: '#CCEEEE',
-          200: '#99DDDD',
-          300: '#66CCCC',
-          400: '#33BBBB',
-          500: '#2C7A7B',
-          600: '#236262',
-          700: '#1A4949',
-          800: '#123131',
-          900: '#091818',
+          DEFAULT: '#0D9488',
+          50: '#F0FDFA',
+          100: '#CCFBF1',
+          200: '#99F6E4',
+          300: '#5EEAD4',
+          400: '#2DD4BF',
+          500: '#14B8A6',
+          600: '#0D9488',
+          700: '#0F766E',
+          800: '#115E59',
+          900: '#134E4A',
+          950: '#042F2E',
         },
+        // Slate - professional dark theme
         secondary: {
           DEFAULT: '#0F172A',
           50: '#F8FAFC',
@@ -30,6 +33,7 @@ export default {
           700: '#334155',
           800: '#1E293B',
           900: '#0F172A',
+          950: '#020617',
         },
       },
       fontFamily: {

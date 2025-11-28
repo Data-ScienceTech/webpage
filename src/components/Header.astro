@@ -14,12 +14,12 @@ const { lang, content } = Astro.props;
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <a href={`/${lang}`} class="flex items-center space-x-2 transition-opacity hover:opacity-80">
-        <img src="/logo.svg" alt={content.company} class="h-16 w-auto md:h-20 lg:h-24" />
+        <img src="/logo.svg" alt={content.company} class="h-16 w-auto md:h-20 lg:h-24 dark:hidden" />
+        <img src="/logo-dark.svg" alt={content.company} class="hidden h-16 w-auto md:h-20 lg:h-24 dark:block" />
       </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden items-center space-x-8 md:flex">
-        <a href={`/${lang}#case-studies`} class="nav-link">{content.nav.case_studies}</a>
         <a href={`/${lang}#services`} class="nav-link">{content.nav.services}</a>
         <a href={`/${lang}#about`} class="nav-link">{content.nav.about}</a>
         <a href={`/${lang}#contact`} class="nav-link">{content.nav.contact}</a>
@@ -60,7 +60,6 @@ const { lang, content } = Astro.props;
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="hidden pt-4 md:hidden">
       <div class="flex flex-col space-y-4">
-        <a href={`/${lang}#case-studies`} class="nav-link">{content.nav.case_studies}</a>
         <a href={`/${lang}#services`} class="nav-link">{content.nav.services}</a>
         <a href={`/${lang}#about`} class="nav-link">{content.nav.about}</a>
         <a href={`/${lang}#contact`} class="nav-link">{content.nav.contact}</a>

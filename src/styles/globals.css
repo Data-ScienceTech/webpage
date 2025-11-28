@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --color-primary: 44 122 123;
+    --color-primary: 13 148 136;
     --color-secondary: 15 23 42;
   }
 
@@ -55,9 +55,23 @@
   }
 
   .btn-primary {
-    @apply btn bg-primary-500 text-white hover:bg-primary-600;
+    @apply btn bg-primary-600 text-white hover:bg-primary-700;
     @apply focus:ring-primary-500;
-    @apply dark:bg-primary-600 dark:hover:bg-primary-700;
+    @apply dark:bg-primary-500 dark:hover:bg-primary-600;
+  }
+
+  .btn-accent {
+    @apply btn text-white;
+    background-color: #0D9488;
+    box-shadow: 0 10px 15px -3px rgb(13 148 136 / 0.25);
+  }
+  
+  .btn-accent:hover {
+    background-color: #0F766E;
+  }
+  
+  .btn-accent:focus {
+    --tw-ring-color: #14B8A6;
   }
 
   .btn-secondary {

@@ -2,12 +2,10 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import FeatureCard from '../../components/FeatureCard.astro';
-import CaseCard from '../../components/CaseCard.astro';
 import CTA from '../../components/CTA.astro';
+import SecurityAuditModal from '../../components/SecurityAuditModal.astro';
 
 import siteContent from '../../content/site.fr.json';
-import casesData from '../../content/cases.json';
 
 const lang = 'fr';
 const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
@@ -21,27 +19,105 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
   <Header lang={lang} content={siteContent} />
   
   <main>
-    <!-- Hero Section -->
-    <section class="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/20">
-      <div class="container-custom">
-        <div class="mx-auto max-w-4xl text-center">
-          <h1 class="mb-6 text-balance text-secondary-900 dark:text-white">
-            {siteContent.hero.title}
-          </h1>
-          <p class="mb-8 text-xl text-secondary-600 dark:text-secondary-300 text-balance">
-            {siteContent.hero.subtitle}
-          </p>
-          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <CTA href="#contact" variant="primary">
-              {siteContent.hero.cta_primary}
-            </CTA>
-            <CTA href="#services" variant="secondary">
-              {siteContent.hero.cta_secondary}
-            </CTA>
+    <!-- Hero Section with LLM Firewall Sidebar -->
+    <section class="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/20 relative overflow-hidden">
+      <!-- Subtle security motif background -->
+      <div class="absolute inset-0 opacity-5 dark:opacity-10">
+        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]" viewBox="0 0 200 200" fill="none">
+          <path d="M100 10 L180 50 L180 110 C180 150 145 185 100 195 C55 185 20 150 20 110 L20 50 Z" stroke="currentColor" stroke-width="1" class="text-primary-600 dark:text-primary-400"/>
+          <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="0.5" class="text-secondary-600"/>
+          <circle cx="100" cy="100" r="40" stroke="currentColor" stroke-width="0.5" class="text-secondary-600"/>
+        </svg>
+      </div>
+      <div class="container-custom relative">
+        <div class="grid lg:grid-cols-[1fr_320px] gap-8 items-start">
+          <!-- Main Hero Content -->
+          <div class="text-center lg:text-left">
+            <h1 class="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-secondary-900 dark:text-white leading-tight">
+              {siteContent.hero.title}
+            </h1>
+            <p class="mb-8 text-xl md:text-2xl text-secondary-600 dark:text-secondary-300 text-balance max-w-3xl">
+              {siteContent.hero.subtitle}
+            </p>
+            <div class="flex flex-col items-center lg:items-start justify-center lg:justify-start gap-4 sm:flex-row mb-8">
+              <CTA href="#contact" variant="accent">
+                {siteContent.hero.cta_primary}
+              </CTA>
+              <button
+                type="button"
+                data-open-audit-modal
+                class="btn-secondary inline-flex items-center gap-2"
+              >
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                {siteContent.hero.cta_secondary}
+              </button>
+            </div>
+            <!-- Trust Tagline -->
+            <p class="text-sm md:text-base text-secondary-500 dark:text-secondary-400 font-medium">
+              {siteContent.hero.trust_tagline}
+            </p>
+          </div>
+          
+          <!-- LLM Firewall MVP Sidebar -->
+          <aside class="hidden lg:block">
+            <div class="bg-white dark:bg-secondary-800 rounded-xl shadow-lg border border-secondary-200 dark:border-secondary-700 p-6 sticky top-24">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/30">
+                  <svg class="h-4 w-4 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                  </svg>
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">Nouveau</span>
+              </div>
+              <h3 class="text-lg font-bold text-secondary-900 dark:text-white mb-2">
+                {siteContent.llm_firewall.title}
+              </h3>
+              <p class="text-sm text-secondary-600 dark:text-secondary-400 mb-4 leading-relaxed">
+                {siteContent.llm_firewall.description}
+              </p>
+              <button
+                type="button"
+                data-open-audit-modal
+                class="w-full btn-accent text-sm py-2.5 inline-flex items-center justify-center gap-2"
+              >
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                {siteContent.llm_firewall.cta}
+              </button>
+            </div>
+          </aside>
+        </div>
+        
+        <!-- Mobile LLM Firewall Card -->
+        <div class="lg:hidden mt-8">
+          <div class="bg-white dark:bg-secondary-800 rounded-xl shadow-lg border border-secondary-200 dark:border-secondary-700 p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">Nouveau</span>
+            </div>
+            <h3 class="text-base font-bold text-secondary-900 dark:text-white mb-2">
+              {siteContent.llm_firewall.title}
+            </h3>
+            <p class="text-sm text-secondary-600 dark:text-secondary-400 mb-3">
+              {siteContent.llm_firewall.description}
+            </p>
+            <button
+              type="button"
+              data-open-audit-modal
+              class="btn-accent text-sm py-2 w-full"
+            >
+              {siteContent.llm_firewall.cta}
+            </button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Security Audit Modal -->
+    <SecurityAuditModal content={siteContent} lang={lang} />
 
     <!-- Trust Bar -->
     <section class="border-y border-secondary-200 bg-white py-12 dark:border-secondary-700 dark:bg-secondary-800">
@@ -59,152 +135,200 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
       </div>
     </section>
 
-    <!-- Value Props -->
-    <section class="section-padding">
+    <!-- AI Vulnerabilities Section -->
+    <section id="services" class="section-padding scroll-mt-24 bg-gradient-to-b from-secondary-100 to-white dark:from-secondary-900 dark:to-secondary-800">
       <div class="container-custom">
-        <div class="mb-12 text-center">
-          <h2 class="mb-4 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">Pourquoi les Connaissances Comptent</h2>
-          <p class="mx-auto max-w-2xl text-lg text-secondary-600 dark:text-secondary-400">
-            Les systèmes basés sur les connaissances intègrent le raisonnement expert, la logique décisionnelle et l'intelligence métier dans les flux de production.
-          </p>
-        </div>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {siteContent.value_props.map((prop) => (
-            <FeatureCard
-              title={prop.title}
-              desc={prop.desc}
-              icon={prop.icon}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section id="case-studies" class="section-padding bg-secondary-50 dark:bg-secondary-800">
-      <div class="container-custom">
-        <div class="mb-12 text-center">
-          <h2 class="mb-4 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
-            {siteContent.case_studies.title}
+        <div class="mx-auto max-w-5xl">
+          <h2 class="mb-6 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+            {siteContent.vulnerabilities.title}
           </h2>
-          <p class="mx-auto max-w-2xl text-lg text-secondary-600 dark:text-secondary-400">
-            {siteContent.case_studies.subtitle}
+          <p class="mb-6 text-lg md:text-xl text-secondary-600 dark:text-secondary-400 text-center max-w-3xl mx-auto">
+            {siteContent.vulnerabilities.intro}
           </p>
-        </div>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {casesData.map((caseStudy) => (
-            <CaseCard
-              title={caseStudy.title_fr}
-              industry={caseStudy.industry_fr}
-              impactMetric={caseStudy.impact_metric_fr}
-              summary={caseStudy.summary_fr}
-              tech={caseStudy.tech}
-              ctaLabel={caseStudy.ctaLabel_fr}
-              ctaHref={caseStudy.ctaHref}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="section-padding">
-      <div class="container-custom">
-        <!-- Section Header -->
-        <div class="mx-auto max-w-4xl mb-16">
-          <h2 class="mb-8 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
-            {siteContent.services.title}
-          </h2>
-          
-          <!-- The Challenge -->
-          <div class="mb-12">
-            <h3 class="mb-4 text-2xl font-semibold text-secondary-900 dark:text-white">
-              {siteContent.services.challenge.title}
-            </h3>
-            <p class="mb-4 text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed">
-              {siteContent.services.challenge.description}
-            </p>
-            <ul class="space-y-2">
-              {siteContent.services.challenge.risks.map((risk) => (
-                <li class="flex items-start">
-                  <svg class="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  <span class="text-secondary-700 dark:text-secondary-300">{risk}</span>
-                </li>
-              ))}
-            </ul>
+          <p class="mb-8 text-lg font-semibold text-secondary-800 dark:text-secondary-200 text-center">
+            {siteContent.vulnerabilities.subtitle}
+          </p>
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-10">
+            {siteContent.vulnerabilities.threats.map((threat) => (
+              <div class="group p-5 rounded-xl bg-white dark:bg-secondary-800 border border-red-200 dark:border-red-900/30 shadow-sm hover:shadow-md hover:border-red-300 dark:hover:border-red-800 transition-all">
+                <div class="flex items-start gap-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400 group-hover:bg-red-200 dark:group-hover:bg-red-900/30 transition-colors flex-shrink-0">
+                    {threat.icon === 'terminal' && (
+                      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                    {threat.icon === 'database' && (
+                      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                      </svg>
+                    )}
+                    {threat.icon === 'unlock' && (
+                      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                    {threat.icon === 'shuffle' && (
+                      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                    )}
+                    {threat.icon === 'eye-off' && (
+                      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                      </svg>
+                    )}
+                    {threat.icon === 'download' && (
+                      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    )}
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-secondary-900 dark:text-white mb-1">{threat.title}</h4>
+                    <p class="text-sm text-secondary-600 dark:text-secondary-400">{threat.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
+          <p class="text-lg text-secondary-700 dark:text-secondary-300 text-center max-w-3xl mx-auto leading-relaxed italic border-l-4 border-red-400 pl-4 py-2 bg-red-50/50 dark:bg-red-900/10 rounded-r-lg">
+            {siteContent.vulnerabilities.conclusion}
+          </p>
+        </div>
+      </div>
+    </section>
 
-          <!-- Our Approach -->
-          <div class="mb-12">
-            <h3 class="mb-2 text-2xl font-semibold text-secondary-900 dark:text-white">
-              {siteContent.services.approach.title}
-            </h3>
-            <p class="mb-8 text-lg text-secondary-600 dark:text-secondary-400">
-              {siteContent.services.approach.subtitle}
+    <!-- Expertise Section -->
+    <section class="section-padding bg-white dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="mb-6 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+            {siteContent.expertise.title}
+          </h2>
+          <div class="mb-8 text-center max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl font-bold text-primary-600 dark:text-primary-400 mb-3">
+              {siteContent.expertise.intro}
             </p>
-            
-            <!-- Security Pillars -->
-            <div class="grid gap-6 md:grid-cols-2">
-              {siteContent.services.pillars.map((pillar) => (
-                <div class="card">
-                  <h4 class="mb-3 text-xl font-semibold text-primary-600 dark:text-primary-400">
-                    {pillar.name}
-                  </h4>
-                  <p class="text-secondary-600 dark:text-secondary-400">
-                    {pillar.description}
-                  </p>
+            <p class="text-lg text-secondary-600 dark:text-secondary-400">
+              {siteContent.expertise.intro_detail}
+            </p>
+          </div>
+          
+          <!-- Lifecycle Coverage -->
+          <div class="mb-10">
+            <p class="mb-6 text-base font-semibold text-secondary-700 dark:text-secondary-300 text-center uppercase tracking-wide">
+              {siteContent.expertise.subtitle}
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              {siteContent.expertise.coverage.map((item) => (
+                <div class="flex items-center gap-2 px-4 py-3 rounded-lg bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800 text-primary-700 dark:text-primary-300 font-medium text-sm hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
+                  <svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item.name}
                 </div>
               ))}
             </div>
           </div>
+          
+          <!-- Conclusion with emphasis -->
+          <div class="text-center max-w-2xl mx-auto p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-100 dark:border-primary-800">
+            <p class="text-lg text-secondary-700 dark:text-secondary-300 leading-relaxed">
+              {siteContent.expertise.conclusion}
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Why It Matters -->
-        <div class="mx-auto max-w-3xl mb-12">
-          <h3 class="mb-4 text-2xl font-semibold text-center text-secondary-900 dark:text-white">
-            {siteContent.services.benefits.title}
-          </h3>
-          <p class="mb-6 text-lg text-center text-secondary-600 dark:text-secondary-400">
-            {siteContent.services.benefits.subtitle}
-          </p>
-          <ul class="space-y-3">
-            {siteContent.services.benefits.list.map((benefit) => (
-              <li class="flex items-start">
-                <svg class="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span class="text-lg text-secondary-700 dark:text-secondary-300">{benefit}</span>
-              </li>
-            ))}
-          </ul>
+    <!-- Core Focus Areas (4 Pillars) -->
+    <section id="about" class="section-padding scroll-mt-24">
+      <div class="container-custom">
+        <h2 class="mb-12 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+          {siteContent.focus_areas.title}
+        </h2>
+        <div class="grid gap-8 md:grid-cols-2">
+          {siteContent.focus_areas.pillars.map((pillar, index) => (
+            <div class="card group hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                  <span class="text-xl font-bold">{index + 1}</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="mb-3 text-xl font-bold text-secondary-900 dark:text-white">
+                    {pillar.name}
+                  </h3>
+                  <p class="text-secondary-600 dark:text-secondary-400 leading-relaxed">
+                    {pillar.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>
+    </section>
 
-        <!-- Our Specialisation -->
-        <div class="mx-auto max-w-3xl">
-          <h3 class="mb-4 text-2xl font-semibold text-center text-secondary-900 dark:text-white">
-            {siteContent.services.specialisation.title}
-          </h3>
-          <p class="mb-6 text-lg text-center text-secondary-600 dark:text-secondary-400">
-            {siteContent.services.specialisation.subtitle}
+    <!-- Weakest Link Section -->
+    <section class="section-padding bg-gradient-to-br from-secondary-900 to-secondary-800 text-white">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-6 text-3xl md:text-4xl font-bold text-white">
+            {siteContent.weakest_link.title}
+          </h2>
+          <p class="mb-8 text-lg text-secondary-300">
+            {siteContent.weakest_link.subtitle}
           </p>
-          <ul class="space-y-3">
-            {siteContent.services.specialisation.list.map((item) => (
-              <li class="flex items-start">
-                <svg class="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="text-lg text-secondary-700 dark:text-secondary-300">{item}</span>
-              </li>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+            {siteContent.weakest_link.risks.map((risk) => (
+              <div class="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-500/20 flex-shrink-0">
+                  {risk.icon === 'settings' && (
+                    <svg class="h-4 w-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  )}
+                  {risk.icon === 'droplet' && (
+                    <svg class="h-4 w-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+                    </svg>
+                  )}
+                  {risk.icon === 'alert-circle' && (
+                    <svg class="h-4 w-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  )}
+                  {risk.icon === 'file-warning' && (
+                    <svg class="h-4 w-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  )}
+                  {risk.icon === 'trending-down' && (
+                    <svg class="h-4 w-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+                    </svg>
+                  )}
+                  {risk.icon === 'shield-off' && (
+                    <svg class="h-4 w-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
+                    </svg>
+                  )}
+                </div>
+                <span class="text-secondary-200">{risk.title}</span>
+              </div>
             ))}
-          </ul>
+          </div>
+          <p class="text-lg text-secondary-300 max-w-2xl mx-auto">
+            {siteContent.weakest_link.conclusion}
+          </p>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section id="contact" class="section-padding bg-gradient-to-br from-primary-600 to-primary-700 text-white dark:from-primary-700 dark:to-primary-800">
+    <section id="contact" class="section-padding scroll-mt-24 bg-gradient-to-br from-primary-600 to-primary-700 text-white dark:from-primary-700 dark:to-primary-800">
       <div class="container-custom">
         <div class="mx-auto max-w-3xl text-center">
           <h2 class="mb-4 text-white">
@@ -224,7 +348,7 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
     </section>
 
     <!-- Contact Form -->
-    <section id="about" class="section-padding">
+    <section class="section-padding scroll-mt-24">
       <div class="container-custom">
         <div class="mx-auto max-w-2xl">
           <h2 class="mb-8 text-center text-secondary-900 dark:text-white">

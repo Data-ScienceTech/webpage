@@ -9,67 +9,106 @@ const lang = 'en';
 
 <MainLayout
   title={`Privacy Policy | ${siteContent.company}`}
-  description="Privacy policy for Data Science Technologies"
+  description="Enterprise-grade privacy policy for Data Science Technologies - AI Security experts"
   lang={lang}
 >
   <Header lang={lang} content={siteContent} />
   
   <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Privacy & Compliance
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Privacy Policy</h1>
+          <p class="text-xl text-secondary-300">
+            Your data protection is our priority — built on the same security principles we apply to enterprise AI systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section-padding">
       <div class="container-custom">
         <div class="mx-auto max-w-4xl">
-          <h1 class="mb-6 text-4xl font-bold text-secondary-900 dark:text-white">Privacy Policy</h1>
           
-          <p class="mb-8 text-lg text-secondary-600 dark:text-secondary-400">
-            <strong>Effective Date:</strong> October 6, 2025<br />
-            <strong>Last Updated:</strong> October 6, 2025
-          </p>
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Effective Date:</strong> November 28, 2025<br />
+                  <strong class="text-secondary-900 dark:text-white">Last Updated:</strong> November 28, 2025<br />
+                  <strong class="text-secondary-900 dark:text-white">Version:</strong> 2.0
+                </p>
+              </div>
+            </div>
+          </div>
 
           <div class="prose prose-lg dark:prose-invert max-w-none">
-            <p class="text-secondary-700 dark:text-secondary-300">
-              Data Science Technologies ("we," "us," or "our") is committed to protecting your privacy and personal information. 
-              This Privacy Policy explains how we collect, use, disclose, and safeguard your information in compliance with 
-              Canadian privacy laws, including Quebec's Act respecting the protection of personal information in the private 
-              sector (Law 25) and the Personal Information Protection and Electronic Documents Act (PIPEDA).
-            </p>
+            
+            <!-- Our Commitment -->
+            <div class="not-prose mb-10 p-6 rounded-xl bg-secondary-900 dark:bg-secondary-800 text-white">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+                <svg class="h-6 w-6 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Our Commitment to Privacy
+              </h2>
+              <p class="text-secondary-300 mb-0">
+                As an AI security firm, we understand that trust is foundational. Data Science Technologies ("we," "us," or "our") applies the same rigorous security standards to your personal information that we recommend for enterprise AI systems. This Privacy Policy explains how we collect, use, disclose, and safeguard your information in full compliance with Canadian privacy laws, including Quebec's Act respecting the protection of personal information in the private sector (Law 25) and the Personal Information Protection and Electronic Documents Act (PIPEDA).
+              </p>
+            </div>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">1. Information We Collect</h2>
             
             <h3 class="mt-6 text-xl font-semibold text-secondary-900 dark:text-white">1.1 Personal Information</h3>
             <p class="text-secondary-700 dark:text-secondary-300">
-              We may collect the following personal information when you contact us through our website:
+              We collect only the minimum information necessary to provide our services. When you contact us through our website, we may collect:
             </p>
             <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
               <li>Full name</li>
-              <li>Email address</li>
+              <li>Business email address</li>
+              <li>Organization name (if provided)</li>
               <li>Message content and any information you choose to provide</li>
-              <li>IP address and technical information (automatically collected)</li>
+              <li>IP address and technical metadata (automatically collected for security monitoring)</li>
             </ul>
 
             <h3 class="mt-6 text-xl font-semibold text-secondary-900 dark:text-white">1.2 Automatically Collected Information</h3>
             <p class="text-secondary-700 dark:text-secondary-300">
-              When you visit our website, we may automatically collect:
+              For security monitoring and service improvement, we automatically collect:
             </p>
             <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
               <li>Browser type and version</li>
-              <li>Device information</li>
-              <li>Pages visited and time spent on our site</li>
+              <li>Device information and operating system</li>
+              <li>Pages visited and navigation patterns</li>
               <li>Referring website addresses</li>
+              <li>Timestamp and session duration</li>
             </ul>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">2. How We Use Your Information</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
-              We use your personal information for the following purposes:
+              We use your personal information exclusively for:
             </p>
             <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
-              <li>To respond to your inquiries and provide customer support</li>
-              <li>To communicate with you about our services</li>
-              <li>To improve our website and services</li>
-              <li>To comply with legal obligations</li>
-              <li>To detect and prevent fraud or security issues</li>
+              <li>Responding to your inquiries and providing consultation services</li>
+              <li>Communicating about our AI security services and assessments</li>
+              <li>Improving our website functionality and user experience</li>
+              <li>Complying with legal and regulatory obligations</li>
+              <li>Detecting, preventing, and responding to security incidents</li>
+              <li>Maintaining audit trails for compliance purposes</li>
             </ul>
             <p class="text-secondary-700 dark:text-secondary-300">
-              We will obtain your consent before using your information for any purpose not outlined in this policy.
+              <strong>We will never use your data to train AI models or share it with third parties for marketing purposes.</strong> We will obtain your explicit consent before using your information for any purpose not outlined in this policy.
             </p>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">3. Legal Basis for Processing (Quebec Law 25)</h2>
@@ -77,39 +116,45 @@ const lang = 'en';
               We process your personal information based on:
             </p>
             <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
-              <li><strong>Consent:</strong> You provide explicit consent when submitting our contact form</li>
-              <li><strong>Legitimate Interest:</strong> To respond to your inquiries and improve our services</li>
-              <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations</li>
+              <li><strong>Explicit Consent:</strong> Provided when you submit our contact form or engage our services</li>
+              <li><strong>Legitimate Business Interest:</strong> To respond to your inquiries and deliver requested services</li>
+              <li><strong>Legal Obligation:</strong> To comply with applicable laws, regulations, and legal processes</li>
+              <li><strong>Contractual Necessity:</strong> To fulfill our obligations under service agreements</li>
             </ul>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">4. Information Sharing and Disclosure</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
-              We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
+              <strong>We do not sell, trade, rent, or monetize your personal information.</strong> We may share your information only in the following limited circumstances:
             </p>
             <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
-              <li><strong>Service Providers:</strong> With trusted third-party service providers who assist in operating our website (e.g., hosting services, email delivery)</li>
+              <li><strong>Service Providers:</strong> With vetted third-party providers who assist in operating our website (e.g., secure hosting, encrypted email delivery) under strict contractual data protection obligations</li>
               <li><strong>Legal Requirements:</strong> When required by law, court order, or government regulation</li>
-              <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
-              <li><strong>Protection:</strong> To protect our rights, property, or safety, or that of our users</li>
+              <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets, with advance notice to affected parties</li>
+              <li><strong>Protection:</strong> To protect our rights, property, or safety, or that of our clients and users</li>
             </ul>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">5. Data Retention</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
-              We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, 
-              unless a longer retention period is required by law. Contact form submissions are typically retained for 2 years or until 
-              you request deletion.
+              We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy. Our retention schedule:
             </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Contact form submissions:</strong> 2 years or until you request deletion</li>
+              <li><strong>Client engagement records:</strong> 7 years (legal/regulatory requirement)</li>
+              <li><strong>Security logs:</strong> 1 year (for incident response capabilities)</li>
+              <li><strong>Marketing communications:</strong> Until consent is withdrawn</li>
+            </ul>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">6. Data Security</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
-              We implement appropriate technical and organizational security measures to protect your personal information against 
-              unauthorized access, alteration, disclosure, or destruction. These measures include:
+              As cybersecurity professionals, we implement enterprise-grade security measures to protect your personal information:
             </p>
             <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
-              <li>SSL/TLS encryption for data transmission</li>
-              <li>Secure data storage with access controls</li>
-              <li>Regular security assessments and updates</li>
-              <li>Employee training on data protection</li>
+              <li><strong>Encryption:</strong> TLS 1.3 for data in transit; AES-256 for data at rest</li>
+              <li><strong>Access Control:</strong> Role-based access with principle of least privilege</li>
+              <li><strong>Infrastructure:</strong> Secure cloud hosting with SOC 2 compliance</li>
+              <li><strong>Monitoring:</strong> Continuous security monitoring and anomaly detection</li>
+              <li><strong>Incident Response:</strong> Documented procedures for breach notification within 72 hours</li>
+              <li><strong>Personnel:</strong> Background checks and security awareness training for all staff</li>
             </ul>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">7. Your Privacy Rights</h2>
@@ -126,38 +171,37 @@ const lang = 'en';
               <li><strong>Right to Lodge a Complaint:</strong> File a complaint with the Commission d'accès à l'information du Québec (CAI)</li>
             </ul>
 
-            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">8. Cookies and Tracking Technologies</h2>
+            <!-- No Cookies Notice -->
+            <div class="not-prose mt-10 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2 text-secondary-900 dark:text-white">
+                <svg class="h-6 w-6 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                No Cookies, No Tracking
+              </h2>
+              <p class="text-secondary-700 dark:text-secondary-300 mb-0">
+                <strong>We do not use cookies or tracking technologies.</strong> Your language and theme preferences are stored locally on your device using browser localStorage — this data never leaves your browser and is not transmitted to our servers. We do not use Google Analytics, marketing pixels, or any third-party tracking tools. The only data we collect is what you explicitly provide through our contact form.
+              </p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">8. International Data Transfers</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
-              We use cookies and similar tracking technologies to enhance your experience. These include:
-            </p>
-            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
-              <li><strong>Essential Cookies:</strong> Required for website functionality (language preference, theme selection)</li>
-              <li><strong>Analytics:</strong> To understand how visitors use our website (if implemented)</li>
-            </ul>
-            <p class="text-secondary-700 dark:text-secondary-300">
-              You can control cookie preferences through your browser settings.
+              Our website is hosted on Netlify, which may process data in the United States. Contact form submissions are stored securely with appropriate safeguards in place to protect your information in accordance with this Privacy Policy and applicable Canadian laws.
             </p>
 
-            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">9. International Data Transfers</h2>
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">9. Children's Privacy</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
-              Your information may be transferred to and processed in countries outside of Canada. When we transfer data internationally, 
-              we ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy and applicable laws.
+              Our services are directed to businesses and professionals. We do not knowingly collect personal information from individuals under the age of 18.
             </p>
 
-            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">10. Children's Privacy</h2>
-            <p class="text-secondary-700 dark:text-secondary-300">
-              Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. 
-              If you believe we have collected information from a child, please contact us immediately.
-            </p>
-
-            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">11. Changes to This Privacy Policy</h2>
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">10. Changes to This Privacy Policy</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
               We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy 
               on this page and updating the "Last Updated" date. Your continued use of our services after such changes constitutes acceptance 
               of the updated policy.
             </p>
 
-            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">12. Contact Us</h2>
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">11. Contact Us</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
               If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:
             </p>
@@ -170,7 +214,7 @@ const lang = 'en';
               </p>
             </div>
 
-            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">13. Regulatory Authority</h2>
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">12. Regulatory Authority</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
               If you have concerns about how we handle your personal information, you may file a complaint with:
             </p>
