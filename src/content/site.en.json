@@ -9,9 +9,9 @@
     "trust_tagline": "Enterprise AI security built by a team with decades of AI and cybersecurity experience."
   },
   "llm_firewall": {
-    "title": "LLM Firewall MVP Ready for Evaluation",
-    "description": "Our initial release of the LLM Firewall is now available. This MVP provides early-stage controls for prompt-based attacks, retrieval-layer risks, and AI-driven data exposure.",
-    "cta": "Request a Review"
+    "title": "Force Field: LLM Firewall",
+    "description": "Real-time protection against prompt injection with 87% accuracy, 0% false positives, and <1ms latency. Security audit passed, production ready.",
+    "cta": "Learn More"
   },
   "vulnerabilities": {
     "title": "AI Introduces Vulnerabilities You've Never Had to Defend Before",

@@ -1,0 +1,235 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout
+  title={`Politique de Confidentialite | ${siteContent.company}`}
+  description="Politique de confidentialite de niveau entreprise pour Data Science Technologies - Experts en securite IA"
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Confidentialite et Conformite
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Politique de Confidentialite</h1>
+          <p class="text-xl text-secondary-300">
+            La protection de vos donnees est notre priorite - construite sur les memes principes de securite que nous appliquons aux systemes d'IA d'entreprise.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Date d'entree en vigueur:</strong> 28 novembre 2025<br />
+                  <strong class="text-secondary-900 dark:text-white">Derniere mise a jour:</strong> 28 novembre 2025<br />
+                  <strong class="text-secondary-900 dark:text-white">Version:</strong> 2.0
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            
+            <!-- Our Commitment -->
+            <div class="not-prose mb-10 p-6 rounded-xl bg-secondary-900 dark:bg-secondary-800 text-white">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+                <svg class="h-6 w-6 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Notre Engagement envers la Confidentialite
+              </h2>
+              <p class="text-secondary-300 mb-0">
+                En tant qu'entreprise de securite IA, nous comprenons que la confiance est fondamentale. Data Science Technologies ("nous", "notre" ou "nos") applique les memes normes de securite rigoureuses a vos informations personnelles que celles que nous recommandons pour les systemes d'IA d'entreprise. Cette Politique de Confidentialite explique comment nous collectons, utilisons, divulguons et protegeons vos informations en pleine conformite avec les lois canadiennes sur la vie privee, y compris la Loi sur la protection des renseignements personnels dans le secteur prive du Quebec (Loi 25) et la Loi sur la protection des renseignements personnels et les documents electroniques (LPRPDE).
+              </p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">1. Informations que Nous Collectons</h2>
+            
+            <h3 class="mt-6 text-xl font-semibold text-secondary-900 dark:text-white">1.1 Informations Personnelles</h3>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous ne collectons que le minimum d'informations necessaires pour fournir nos services. Lorsque vous nous contactez via notre site web, nous pouvons collecter:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Nom complet</li>
+              <li>Adresse email professionnelle</li>
+              <li>Nom de l'organisation (si fourni)</li>
+              <li>Contenu du message et toute information que vous choisissez de fournir</li>
+              <li>Adresse IP et metadonnees techniques (collectees automatiquement pour la surveillance de securite)</li>
+            </ul>
+
+            <h3 class="mt-6 text-xl font-semibold text-secondary-900 dark:text-white">1.2 Informations Collectees Automatiquement</h3>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Pour la surveillance de securite et l'amelioration du service, nous collectons automatiquement:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Type et version du navigateur</li>
+              <li>Informations sur l'appareil et systeme d'exploitation</li>
+              <li>Pages visitees et modeles de navigation</li>
+              <li>Adresses des sites web referents</li>
+              <li>Horodatage et duree de session</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">2. Comment Nous Utilisons Vos Informations</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous utilisons vos informations personnelles exclusivement pour:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li>Repondre a vos demandes et fournir des services de consultation</li>
+              <li>Communiquer sur nos services de securite IA et evaluations</li>
+              <li>Ameliorer la fonctionnalite de notre site web et l'experience utilisateur</li>
+              <li>Se conformer aux obligations legales et reglementaires</li>
+              <li>Detecter, prevenir et repondre aux incidents de securite</li>
+              <li>Maintenir des pistes d'audit a des fins de conformite</li>
+            </ul>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              <strong>Nous n'utiliserons jamais vos donnees pour entrainer des modeles d'IA ou les partager avec des tiers a des fins marketing.</strong> Nous obtiendrons votre consentement explicite avant d'utiliser vos informations a toute fin non decrite dans cette politique.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">3. Base Legale du Traitement (Loi 25 du Quebec)</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous traitons vos informations personnelles sur la base de:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Consentement Explicite:</strong> Fourni lorsque vous soumettez notre formulaire de contact ou engagez nos services</li>
+              <li><strong>Interet Commercial Legitime:</strong> Pour repondre a vos demandes et fournir les services demandes</li>
+              <li><strong>Obligation Legale:</strong> Pour se conformer aux lois, reglements et processus juridiques applicables</li>
+              <li><strong>Necessite Contractuelle:</strong> Pour remplir nos obligations en vertu des accords de service</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">4. Partage et Divulgation des Informations</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              <strong>Nous ne vendons, n'echangeons, ne louons ni ne monetisons vos informations personnelles.</strong> Nous pouvons partager vos informations uniquement dans les circonstances limitees suivantes:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Fournisseurs de Services:</strong> Avec des fournisseurs tiers verifies qui aident a exploiter notre site web (par exemple, hebergement securise, livraison d'emails chiffres) sous des obligations contractuelles strictes de protection des donnees</li>
+              <li><strong>Exigences Legales:</strong> Lorsque requis par la loi, une ordonnance du tribunal ou une reglementation gouvernementale</li>
+              <li><strong>Transferts d'Entreprise:</strong> En relation avec une fusion, acquisition ou vente d'actifs, avec preavis aux parties concernees</li>
+              <li><strong>Protection:</strong> Pour proteger nos droits, propriete ou securite, ou ceux de nos clients et utilisateurs</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">5. Conservation des Donnees</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous conservons vos informations personnelles uniquement aussi longtemps que necessaire pour atteindre les objectifs decrits dans cette Politique de Confidentialite. Notre calendrier de conservation:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Soumissions de formulaire de contact:</strong> 2 ans ou jusqu'a ce que vous demandiez la suppression</li>
+              <li><strong>Dossiers d'engagement client:</strong> 7 ans (exigence legale/reglementaire)</li>
+              <li><strong>Journaux de securite:</strong> 1 an (pour les capacites de reponse aux incidents)</li>
+              <li><strong>Communications marketing:</strong> Jusqu'au retrait du consentement</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">6. Securite des Donnees</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              En tant que professionnels de la cybersecurite, nous mettons en oeuvre des mesures de securite de niveau entreprise pour proteger vos informations personnelles:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Chiffrement:</strong> TLS 1.3 pour les donnees en transit; AES-256 pour les donnees au repos</li>
+              <li><strong>Controle d'Acces:</strong> Acces base sur les roles avec principe du moindre privilege</li>
+              <li><strong>Infrastructure:</strong> Hebergement cloud securise avec conformite SOC 2</li>
+              <li><strong>Surveillance:</strong> Surveillance de securite continue et detection d'anomalies</li>
+              <li><strong>Reponse aux Incidents:</strong> Procedures documentees pour notification de violation dans les 72 heures</li>
+              <li><strong>Personnel:</strong> Verifications des antecedents et formation de sensibilisation a la securite pour tout le personnel</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">7. Vos Droits en Matiere de Confidentialite</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              En vertu de la Loi 25 du Quebec et de la LPRPDE, vous avez les droits suivants:
+            </p>
+            <ul class="list-disc pl-6 text-secondary-700 dark:text-secondary-300">
+              <li><strong>Droit d'Acces:</strong> Demander une copie des informations personnelles que nous detenons a votre sujet</li>
+              <li><strong>Droit de Rectification:</strong> Demander la correction d'informations inexactes ou incompletes</li>
+              <li><strong>Droit a l'Effacement:</strong> Demander la suppression de vos informations personnelles (sous reserve des exigences legales)</li>
+              <li><strong>Droit a la Portabilite des Donnees:</strong> Recevoir vos donnees dans un format structure et couramment utilise</li>
+              <li><strong>Droit de Retrait du Consentement:</strong> Retirer votre consentement a tout moment</li>
+              <li><strong>Droit d'Opposition:</strong> S'opposer a certains traitements de vos informations personnelles</li>
+              <li><strong>Droit de Deposer une Plainte:</strong> Deposer une plainte aupres de la Commission d'acces a l'information du Quebec (CAI)</li>
+            </ul>
+
+            <!-- No Cookies Notice -->
+            <div class="not-prose mt-10 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2 text-secondary-900 dark:text-white">
+                <svg class="h-6 w-6 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Pas de Cookies, Pas de Suivi
+              </h2>
+              <p class="text-secondary-700 dark:text-secondary-300 mb-0">
+                <strong>Nous n'utilisons pas de cookies ni de technologies de suivi.</strong> Vos preferences de langue et de theme sont stockees localement sur votre appareil en utilisant le localStorage du navigateur - ces donnees ne quittent jamais votre navigateur et ne sont pas transmises a nos serveurs. Nous n'utilisons pas Google Analytics, de pixels marketing ou d'outils de suivi tiers. Les seules donnees que nous collectons sont celles que vous fournissez explicitement via notre formulaire de contact.
+              </p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">8. Transferts Internationaux de Donnees</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Notre site web est heberge sur Netlify, qui peut traiter des donnees aux Etats-Unis. Les soumissions de formulaire de contact sont stockees de maniere securisee avec des garanties appropriees en place pour proteger vos informations conformement a cette Politique de Confidentialite et aux lois canadiennes applicables.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">9. Confidentialite des Enfants</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nos services s'adressent aux entreprises et aux professionnels. Nous ne collectons pas sciemment d'informations personnelles aupres de personnes de moins de 18 ans.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">10. Modifications de Cette Politique de Confidentialite</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous pouvons mettre a jour cette Politique de Confidentialite de temps a autre. Nous vous informerons de tout changement important en publiant la nouvelle Politique de Confidentialite sur cette page et en mettant a jour la date de "Derniere mise a jour". Votre utilisation continue de nos services apres de tels changements constitue l'acceptation de la politique mise a jour.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">11. Nous Contacter</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Si vous avez des questions sur cette Politique de Confidentialite ou souhaitez exercer vos droits en matiere de confidentialite, veuillez nous contacter:
+            </p>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                <strong>Data Science Technologies</strong><br />
+                Email: <a href={`mailto:${siteContent.contact.email}`} class="text-primary-600 hover:text-primary-700 dark:text-primary-400">{siteContent.contact.email}</a><br />
+                <br />
+                <strong>Contact du Responsable de la Confidentialite:</strong> {siteContent.contact.email}
+              </p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">12. Autorite de Regulation</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Si vous avez des preoccupations concernant la facon dont nous traitons vos informations personnelles, vous pouvez deposer une plainte aupres de:
+            </p>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                <strong>Commission d'acces a l'information du Quebec (CAI)</strong><br />
+                Site web: <a href="https://www.cai.gouv.qc.ca" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400">www.cai.gouv.qc.ca</a><br />
+                <br />
+                <strong>Commissariat a la protection de la vie privee du Canada</strong><br />
+                Site web: <a href="https://www.priv.gc.ca" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400">www.priv.gc.ca</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

@@ -9,9 +9,9 @@
     "trust_tagline": "Sécurité IA d'entreprise construite par une équipe avec des décennies d'expérience en IA et cybersécurité."
   },
   "llm_firewall": {
-    "title": "MVP du Pare-feu LLM Prêt pour Évaluation",
-    "description": "Notre version initiale du Pare-feu LLM est maintenant disponible. Ce MVP fournit des contrôles de première étape pour les attaques basées sur les prompts, les risques de la couche de récupération et l'exposition des données par l'IA.",
-    "cta": "Demander une Évaluation"
+    "title": "Force Field: Pare-feu LLM",
+    "description": "Protection en temps reel contre l'injection de prompts avec 87% de precision, 0% de faux positifs et latence <1ms. Audit de securite reussi, pret pour la production.",
+    "cta": "En Savoir Plus"
   },
   "vulnerabilities": {
     "title": "L'IA Introduit des Vulnérabilités Que Vous N'avez Jamais Eu à Défendre",

@@ -78,6 +78,24 @@ const ogImageUrl = new URL('/og-image.png', Astro.site).toString();
       <textarea name="security_concerns"></textarea>
     </form>
     
+    <!-- Force Field Lead Capture Forms -->
+    <form name="forcefield-access" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="first_name" />
+      <input type="text" name="last_name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="text" name="job_title" />
+      <textarea name="message"></textarea>
+    </form>
+    <form name="forcefield-access-fr" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="first_name" />
+      <input type="text" name="last_name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="text" name="job_title" />
+      <textarea name="message"></textarea>
+    </form>
+    
     <slot />
   </body>
 </html>

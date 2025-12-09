@@ -1,67 +1,130 @@
 {
+  "meta": {
+    "title": "Force Field - Real-Time LLM Firewall | AI Security",
+    "description": "Sub-millisecond protection against prompt injection, model manipulation, and knowledge leaks for any LLM. Security audit passed, production ready.",
+    "keywords": "LLM Firewall, AI Security, Prompt Injection Prevention, LLM Security, AI Governance"
+  },
   "hero": {
     "title": "Force Field",
-    "subtitle": "Secure Your Knowledge-System Inference Layer",
-    "description": "Force Field serves as the gateway to secure your knowledge-system inference layer. It intercepts prompts, enforces policies, monitors output and offers full auditability."
+    "tagline": "Your Real-Time LLM Firewall",
+    "subtitle": "Sub-millisecond protection against prompt injection, model manipulation, and knowledge leaks - for any LLM.",
+    "trust_badges": ["Security Audit Passed", "Production Ready", "<1ms Latency"],
+    "cta_primary": "Book a Demo with the CTO",
+    "cta_secondary": "Request Access to Test the MVP"
   },
-  "overview": {
-    "title": "What Is Force Field?",
-    "description": "Force Field is a security layer that sits between your users and your LLM-powered knowledge systems. It provides real-time protection against prompt injection, model manipulation, and knowledge leaks while maintaining full audit trails of all interactions.",
-    "features": [
-      "Prompt interception and sanitization",
-      "Policy-driven filtering and controls",
-      "Real-time output monitoring and validation",
-      "Comprehensive audit logging",
-      "Identity and access management integration"
+  "problem": {
+    "title": "LLMs Are Vulnerable. Enterprises Need Real-Time Defense.",
+    "description": "Attack success rates in common LLMs exceed 65%. Prompt injection, schema manipulation, and retrieval exploits bypass traditional tools. Enterprises lack visibility into prompt-level interactions and cannot enforce governance or prevent unintended model behavior.",
+    "conclusion": "A real-time inspection and control layer is now essential for keeping AI secure, compliant, and aligned with business rules.",
+    "risks": [
+      { "title": "Data Leaks", "icon": "Database" },
+      { "title": "Uncontrolled Outputs", "icon": "AlertTriangle" },
+      { "title": "Regulatory Exposure", "icon": "FileWarning" }
+    ]
+  },
+  "solution": {
+    "title": "The LLM Firewall Built for Production",
+    "description": "Force Field is a security layer that sits between users and your LLM-powered knowledge systems. It intercepts prompts, inspects outputs, enforces policies, and logs everything.",
+    "highlight": "It uses a multi-phase defense pipeline - normalization, signature detection, semantic screening, and OR-fusion - to stop known attacks with 87% accuracy and 0% false positives, all with <1ms latency.",
+    "cta": "Request Access to Test the MVP"
+  },
+  "capabilities": {
+    "title": "Key Capabilities",
+    "items": [
+      {
+        "title": "Prompt Interception & Sanitation",
+        "description": "Force Field captures and filters inputs before they reach your model.",
+        "icon": "Shield"
+      },
+      {
+        "title": "Real-Time Output Monitoring",
+        "description": "Every response is checked for leaks, hallucinations, or policy violations.",
+        "icon": "Eye"
+      },
+      {
+        "title": "Policy-Based Access Controls",
+        "description": "Use IAM to control who can ask what, and get what answers.",
+        "icon": "Lock"
+      },
+      {
+        "title": "Zero Trust Architecture",
+        "description": "Full mTLS, no shared secrets, Vault integration.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": "Comprehensive Audit Logging",
+        "description": "Every interaction is recorded for compliance, debugging, and trust.",
+        "icon": "FileText"
+      },
+      {
+        "title": "Sub-Millisecond Latency",
+        "description": "Adds <1ms, even on CPU - production safe.",
+        "icon": "Zap"
+      }
     ]
   },
   "how_it_works": {
-    "title": "How It Works",
+    "title": "Inspect. Govern. Monitor. Repeat.",
+    "subtitle": "How Force Field Protects Your LLMs",
     "steps": [
       {
         "number": "01",
         "title": "Intercept",
-        "description": "Force Field captures all prompts and inputs before they reach your LLM or knowledge system."
+        "description": "Force Field captures all prompts before they reach your LLM.",
+        "label": "Edge Proxy"
       },
       {
         "number": "02",
-        "title": "Analyze & Enforce",
-        "description": "Applies your security policies, filters malicious patterns, and validates against governance rules."
+        "title": "Analyze & Apply",
+        "description": "Sanitize inputs, apply policies, and detect threats in real-time.",
+        "label": "Detectors + Policy Engine"
       },
       {
         "number": "03",
-        "title": "Monitor Output",
-        "description": "Inspects model responses for sensitive data leaks, hallucinations, or policy violations."
+        "title": "Monitor Exits",
+        "description": "Check responses for data leaks or inappropriate content.",
+        "label": "Postprocessor"
       },
       {
         "number": "04",
-        "title": "Log & Audit",
-        "description": "Records every interaction with full context for compliance, debugging, and continuous improvement."
+        "title": "Log Everything",
+        "description": "Store full interaction trails for compliance and forensics.",
+        "label": "Audit Layer"
       }
     ]
   },
-  "benefits": {
-    "title": "Why Force Field?",
+  "differentiators": {
+    "title": "What Makes Force Field Different",
     "items": [
       {
-        "title": "Prevent Prompt Injection",
-        "description": "Detect and block adversarial inputs attempting to manipulate your AI systems.",
-        "icon": "Shield"
+        "title": "Fast Performance",
+        "description": "Adds <1ms latency to your inference pipeline.",
+        "icon": "Zap"
       },
       {
-        "title": "Enforce Knowledge Policies",
-        "description": "Control what information can be accessed, processed, and returned by your systems.",
-        "icon": "Lock"
+        "title": "Model-Agnostic",
+        "description": "Works with any LLM: OpenAI, Claude, Ollama, and more.",
+        "icon": "Layers"
       },
       {
-        "title": "Maintain Audit Trails",
-        "description": "Full visibility into every AI interaction for compliance and accountability.",
-        "icon": "FileText"
+        "title": "Threshold-Free OR-Fusion",
+        "description": "No tuning needed for strong detection performance.",
+        "icon": "Sliders"
       },
       {
-        "title": "Reduce Risk",
-        "description": "Minimize exposure to model misuse, data leaks, and regulatory non-compliance.",
-        "icon": "AlertTriangle"
+        "title": "IAM Integration",
+        "description": "Enforce policy by user, role, or group.",
+        "icon": "Users"
+      },
+      {
+        "title": "Audit-First Design",
+        "description": "Logs everything for compliance and incident response.",
+        "icon": "ClipboardList"
+      },
+      {
+        "title": "Flexible Deployment",
+        "description": "SaaS, Hybrid, or On-Prem - your call.",
+        "icon": "Cloud"
       }
     ]
   },
@@ -70,26 +133,47 @@
     "list": [
       {
         "title": "Enterprise RAG Systems",
-        "description": "Secure retrieval-augmented generation pipelines handling sensitive corporate knowledge."
+        "description": "Protect internal knowledge during retrieval and generation.",
+        "icon": "Building"
       },
       {
-        "title": "Customer-Facing AI Assistants",
-        "description": "Protect public-facing chatbots from prompt injection and ensure policy compliance."
+        "title": "Public-Facing AI Assistants",
+        "description": "Stop jailbreaks and brand-damaging outputs.",
+        "icon": "MessageCircle"
       },
       {
-        "title": "Healthcare Decision Support",
-        "description": "HIPAA-compliant monitoring and audit trails for clinical AI systems."
+        "title": "Health Decision Support",
+        "description": "Enforce HIPAA-compliant audits on AI-driven insights.",
+        "icon": "Heart"
       },
       {
-        "title": "Financial Services AI",
-        "description": "Regulatory compliance and risk mitigation for AI-powered financial applications."
+        "title": "Financial AI Workflows",
+        "description": "Support regulatory compliance and detect risky prompts.",
+        "icon": "DollarSign"
       }
     ]
   },
   "cta": {
-    "title": "Ready to Secure Your Knowledge Systems?",
-    "subtitle": "Let's discuss how Force Field can protect your AI infrastructure.",
-    "button_primary": "Schedule a Demo",
-    "button_secondary": "Contact Sales"
+    "title": "See the LLM Firewall in Action",
+    "subtitle": "Get hands-on with Force Field and see how it protects your AI infrastructure.",
+    "button_primary": "Book a Demo with the CTO",
+    "button_secondary": "Request Access to Test the MVP"
+  },
+  "form": {
+    "title": "Request Access",
+    "fields": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "company": "Company",
+      "email": "Business Email",
+      "job_title": "Job Title (optional)",
+      "message": "Message or use-case (optional)"
+    },
+    "submit": "Submit Request",
+    "success": "Thank you! We'll be in touch within 24 hours.",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "badges": ["Security Audited", "Open Source", "SOC 2 In Progress"]
   }
 }

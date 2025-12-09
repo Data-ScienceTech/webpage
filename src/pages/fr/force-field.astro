@@ -2,89 +2,171 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import CTA from '../../components/CTA.astro';
 
 import siteContent from '../../content/site.fr.json';
 import productContent from '../../content/forcefield.fr.json';
 
 const lang = 'fr';
-const pageTitle = `${productContent.hero.title} | ${siteContent.company}`;
+const pageTitle = productContent.meta.title;
+const pageDescription = productContent.meta.description;
+
+const iconMap: Record<string, string> = {
+  Shield: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`,
+  Eye: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />`,
+  Lock: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />`,
+  ShieldCheck: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`,
+  FileText: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />`,
+  Zap: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />`,
+  Layers: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />`,
+  Sliders: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />`,
+  Users: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />`,
+  ClipboardList: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />`,
+  Cloud: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />`,
+  Building: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />`,
+  MessageCircle: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />`,
+  Heart: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />`,
+  DollarSign: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
+  Database: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />`,
+  AlertTriangle: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />`,
+  FileWarning: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />`
+};
+
+function getIcon(iconName: string): string {
+  return iconMap[iconName] || iconMap['Shield'];
+}
 ---
 
 <MainLayout
   title={pageTitle}
-  description={productContent.hero.description}
+  description={pageDescription}
   lang={lang}
 >
   <Header lang={lang} content={siteContent} />
   
   <main>
     <!-- Hero Section -->
-    <section class="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/20">
-      <div class="container-custom">
+    <section class="relative overflow-hidden py-20 md:py-28 lg:py-36 bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxNEI4QTYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-40"></div>
+      <div class="container-custom relative">
         <div class="mx-auto max-w-4xl text-center">
-          <h1 class="mb-6 text-balance text-secondary-900 dark:text-white">
+          <p class="mb-4 text-lg font-semibold text-primary-400 tracking-wide uppercase">
+            {productContent.hero.tagline}
+          </p>
+          <h1 class="mb-6 text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
             {productContent.hero.title}
           </h1>
-          <p class="mb-4 text-2xl font-semibold text-primary-600 dark:text-primary-400">
+          <p class="mb-8 text-xl md:text-2xl text-secondary-300 text-balance max-w-3xl mx-auto">
             {productContent.hero.subtitle}
           </p>
-          <p class="mb-8 text-xl text-secondary-600 dark:text-secondary-300 text-balance">
-            {productContent.hero.description}
-          </p>
+          
+          <!-- Trust Badges -->
+          <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+            {productContent.hero.trust_badges.map((badge: string) => (
+              <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-sm font-medium">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {badge}
+              </span>
+            ))}
+          </div>
+          
+          <!-- CTA Buttons -->
           <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <CTA href={`mailto:${siteContent.contact.email}?subject=Demande de Démo Force Field`} variant="primary">
-              {productContent.cta.button_primary}
-            </CTA>
-            <CTA href="#contact" variant="secondary">
-              {productContent.cta.button_secondary}
-            </CTA>
+            <a
+              href="#contact"
+              class="btn-primary text-lg px-8 py-4 shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transition-all"
+            >
+              {productContent.hero.cta_primary}
+            </a>
+            <a
+              href="#contact"
+              class="btn-secondary text-lg px-8 py-4 border-secondary-500 text-white hover:bg-secondary-700"
+            >
+              {productContent.hero.cta_secondary}
+            </a>
           </div>
         </div>
       </div>
+      
+      <!-- Decorative gradient orbs -->
+      <div class="absolute top-1/4 left-0 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl -translate-x-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
     </section>
 
-    <!-- Overview -->
-    <section class="section-padding">
+    <!-- Problem Section -->
+    <section class="section-padding bg-white dark:bg-secondary-900">
       <div class="container-custom">
         <div class="mx-auto max-w-4xl">
-          <h2 class="mb-6 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
-            {productContent.overview.title}
+          <h2 class="mb-8 text-center text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">
+            {productContent.problem.title}
           </h2>
-          <p class="mb-8 text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed">
-            {productContent.overview.description}
+          <p class="mb-8 text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed text-center">
+            {productContent.problem.description}
           </p>
-          <ul class="grid gap-4 md:grid-cols-2">
-            {productContent.overview.features.map((feature) => (
-              <li class="flex items-start">
-                <svg class="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="text-lg text-secondary-700 dark:text-secondary-300">{feature}</span>
-              </li>
+          
+          <!-- Risk Cards -->
+          <div class="grid gap-6 md:grid-cols-3 mb-8">
+            {productContent.problem.risks.map((risk: {title: string; icon: string}) => (
+              <div class="flex flex-col items-center p-6 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
+                <svg class="w-10 h-10 text-red-500 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={getIcon(risk.icon)} />
+                <span class="text-lg font-semibold text-red-700 dark:text-red-400">{risk.title}</span>
+              </div>
             ))}
-          </ul>
+          </div>
+          
+          <p class="text-lg text-secondary-700 dark:text-secondary-300 text-center font-medium bg-secondary-100 dark:bg-secondary-800 p-6 rounded-xl">
+            {productContent.problem.conclusion}
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="section-padding bg-secondary-50 dark:bg-secondary-800">
+    <!-- Solution Section -->
+    <section class="section-padding bg-gradient-to-br from-primary-50 to-white dark:from-secondary-800 dark:to-secondary-900">
       <div class="container-custom">
-        <h2 class="mb-12 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
-          {productContent.how_it_works.title}
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-6 text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+            {productContent.solution.title}
+          </h2>
+          <p class="mb-6 text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed">
+            {productContent.solution.description}
+          </p>
+          <div class="mb-8 p-6 rounded-xl bg-primary-100 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-700">
+            <p class="text-lg text-primary-800 dark:text-primary-300 font-medium">
+              {productContent.solution.highlight}
+            </p>
+          </div>
+          <a
+            href="#contact"
+            class="btn-primary inline-flex items-center gap-2"
+          >
+            {productContent.solution.cta}
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Capabilities -->
+    <section class="section-padding bg-white dark:bg-secondary-900">
+      <div class="container-custom">
+        <h2 class="mb-12 text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+          {productContent.capabilities.title}
         </h2>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {productContent.how_it_works.steps.map((step) => (
-            <div class="card">
-              <div class="mb-4 text-4xl font-bold text-primary-600 dark:text-primary-400">
-                {step.number}
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {productContent.capabilities.items.map((item: {title: string; description: string; icon: string}) => (
+            <div class="card group hover:border-primary-500 dark:hover:border-primary-400 border border-transparent transition-all">
+              <div class="mb-4 w-12 h-12 rounded-lg bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center group-hover:bg-primary-500 transition-colors">
+                <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={getIcon(item.icon)} />
               </div>
-              <h3 class="mb-3 text-xl font-semibold text-secondary-900 dark:text-white">
-                {step.title}
+              <h3 class="mb-2 text-xl font-semibold text-secondary-900 dark:text-white">
+                {item.title}
               </h3>
               <p class="text-secondary-600 dark:text-secondary-400">
-                {step.description}
+                {item.description}
               </p>
             </div>
           ))}
@@ -92,21 +174,65 @@ const pageTitle = `${productContent.hero.title} | ${siteContent.company}`;
       </div>
     </section>
 
-    <!-- Benefits -->
-    <section class="section-padding">
+    <!-- How It Works -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-800">
       <div class="container-custom">
-        <h2 class="mb-12 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
-          {productContent.benefits.title}
+        <div class="text-center mb-12">
+          <h2 class="mb-4 text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+            {productContent.how_it_works.title}
+          </h2>
+          <p class="text-lg text-secondary-600 dark:text-secondary-400">
+            {productContent.how_it_works.subtitle}
+          </p>
+        </div>
+        
+        <!-- Flow Diagram -->
+        <div class="relative max-w-5xl mx-auto">
+          <!-- Connection Line -->
+          <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-300 via-primary-500 to-primary-300 dark:from-primary-700 dark:via-primary-500 dark:to-primary-700 -translate-y-1/2 z-0"></div>
+          
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 relative z-10">
+            {productContent.how_it_works.steps.map((step: {number: string; title: string; description: string; label: string}) => (
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-primary-600 dark:bg-primary-500 flex items-center justify-center text-2xl font-bold text-white mb-4 shadow-lg shadow-primary-500/30">
+                  {step.number}
+                </div>
+                <span class="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wide mb-2">
+                  {step.label}
+                </span>
+                <h3 class="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
+                  {step.title}
+                </h3>
+                <p class="text-secondary-600 dark:text-secondary-400 text-sm">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section class="section-padding bg-white dark:bg-secondary-900">
+      <div class="container-custom">
+        <h2 class="mb-12 text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+          {productContent.differentiators.title}
         </h2>
-        <div class="grid gap-8 md:grid-cols-2">
-          {productContent.benefits.items.map((benefit) => (
-            <div class="card">
-              <h3 class="mb-3 text-xl font-semibold text-secondary-900 dark:text-white">
-                {benefit.title}
-              </h3>
-              <p class="text-secondary-600 dark:text-secondary-400">
-                {benefit.description}
-              </p>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {productContent.differentiators.items.map((item: {title: string; description: string; icon: string}) => (
+            <div class="flex items-start gap-4 p-6 rounded-xl bg-secondary-50 dark:bg-secondary-800 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={getIcon(item.icon)} />
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-1">
+                  {item.title}
+                </h3>
+                <p class="text-secondary-600 dark:text-secondary-400 text-sm">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -116,47 +242,134 @@ const pageTitle = `${productContent.hero.title} | ${siteContent.company}`;
     <!-- Use Cases -->
     <section class="section-padding bg-secondary-50 dark:bg-secondary-800">
       <div class="container-custom">
-        <h2 class="mb-12 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
+        <h2 class="mb-12 text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-500">
           {productContent.use_cases.title}
         </h2>
-        <div class="grid gap-8 md:grid-cols-2">
-          {productContent.use_cases.list.map((useCase) => (
-            <div class="card">
-              <h3 class="mb-3 text-xl font-semibold text-secondary-900 dark:text-white">
-                {useCase.title}
-              </h3>
-              <p class="text-secondary-600 dark:text-secondary-400">
-                {useCase.description}
-              </p>
+        <div class="grid gap-6 md:grid-cols-2">
+          {productContent.use_cases.list.map((useCase: {title: string; description: string; icon: string}) => (
+            <div class="card flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={getIcon(useCase.icon)} />
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
+                  {useCase.title}
+                </h3>
+                <p class="text-secondary-600 dark:text-secondary-400">
+                  {useCase.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="contact" class="section-padding bg-gradient-to-br from-primary-600 to-primary-700 text-white dark:from-primary-700 dark:to-primary-800">
+    <!-- CTA Section with Form -->
+    <section id="contact" class="section-padding bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900 text-white">
       <div class="container-custom">
-        <div class="mx-auto max-w-3xl text-center">
-          <h2 class="mb-4 text-white">
-            {productContent.cta.title}
-          </h2>
-          <p class="mb-8 text-xl text-primary-100">
-            {productContent.cta.subtitle}
-          </p>
-          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href={`mailto:${siteContent.contact.email}?subject=Demande de Démo Force Field`}
-              class="btn inline-flex items-center bg-white text-primary-700 hover:bg-primary-50 focus:ring-white"
+        <div class="grid gap-12 lg:grid-cols-2 items-start">
+          <!-- Left: CTA Text -->
+          <div class="lg:sticky lg:top-8">
+            <h2 class="mb-4 text-3xl md:text-4xl font-bold text-white">
+              {productContent.cta.title}
+            </h2>
+            <p class="mb-8 text-xl text-secondary-300">
+              {productContent.cta.subtitle}
+            </p>
+            <div class="flex flex-col gap-4 sm:flex-row mb-8">
+              <a
+                href={`mailto:${siteContent.contact.email}?subject=Demande de Demo Force Field`}
+                class="btn inline-flex items-center justify-center bg-white text-primary-700 hover:bg-primary-50 focus:ring-white"
+              >
+                {productContent.cta.button_primary}
+              </a>
+              <a
+                href={`mailto:${siteContent.contact.email}?subject=Demande Acces MVP Force Field`}
+                class="btn inline-flex items-center justify-center border-2 border-white text-white hover:bg-white/10"
+              >
+                {productContent.cta.button_secondary}
+              </a>
+            </div>
+            
+            <!-- Footer Badges -->
+            <div class="flex flex-wrap gap-3">
+              {productContent.footer.badges.map((badge: string) => (
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-secondary-300 text-sm">
+                  <svg class="w-4 h-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Right: Lead Capture Form -->
+          <div class="bg-white dark:bg-secondary-800 rounded-2xl p-8 shadow-2xl">
+            <h3 class="text-2xl font-bold text-secondary-900 dark:text-white mb-6">
+              {productContent.form.title}
+            </h3>
+            <form 
+              id="forcefield-form-fr"
+              name="forcefield-access-fr" 
+              method="POST" 
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="space-y-4"
             >
-              {productContent.cta.button_primary}
-            </a>
-            <a
-              href={`mailto:${siteContent.contact.email}?subject=Question Force Field`}
-              class="btn inline-flex items-center border-2 border-white text-white hover:bg-white/10"
-            >
-              {productContent.cta.button_secondary}
-            </a>
+              <input type="hidden" name="form-name" value="forcefield-access-fr" />
+              <p class="hidden">
+                <label>Ne remplissez pas: <input name="bot-field" /></label>
+              </p>
+              
+              <div class="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label for="first_name" class="label">{productContent.form.fields.first_name}</label>
+                  <input type="text" id="first_name" name="first_name" required class="input-field" />
+                </div>
+                <div>
+                  <label for="last_name" class="label">{productContent.form.fields.last_name}</label>
+                  <input type="text" id="last_name" name="last_name" required class="input-field" />
+                </div>
+              </div>
+              
+              <div>
+                <label for="company" class="label">{productContent.form.fields.company}</label>
+                <input type="text" id="company" name="company" required class="input-field" />
+              </div>
+              
+              <div>
+                <label for="email" class="label">{productContent.form.fields.email}</label>
+                <input type="email" id="email" name="email" required class="input-field" />
+              </div>
+              
+              <div>
+                <label for="job_title" class="label">{productContent.form.fields.job_title}</label>
+                <input type="text" id="job_title" name="job_title" class="input-field" />
+              </div>
+              
+              <div>
+                <label for="message" class="label">{productContent.form.fields.message}</label>
+                <textarea id="message" name="message" rows="3" class="input-field"></textarea>
+              </div>
+              
+              <button type="submit" class="w-full btn-primary py-4 text-lg">
+                {productContent.form.submit}
+              </button>
+              
+              <p class="text-sm text-secondary-500 dark:text-secondary-400 text-center">
+                En soumettant, vous acceptez notre <a href="/fr/privacy" class="underline hover:text-primary-600 dark:hover:text-primary-400">Politique de Confidentialite</a>.
+              </p>
+            </form>
+            
+            <!-- Success/Error Messages -->
+            <div id="form-success-fr" class="hidden mt-4 p-4 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-center">
+              {productContent.form.success}
+            </div>
+            <div id="form-error-fr" class="hidden mt-4 p-4 rounded-lg bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-center">
+              {productContent.form.error}
+            </div>
           </div>
         </div>
       </div>
@@ -165,3 +378,33 @@ const pageTitle = `${productContent.hero.title} | ${siteContent.company}`;
 
   <Footer lang={lang} content={siteContent} />
 </MainLayout>
+
+<script>
+  const form = document.getElementById('forcefield-form-fr') as HTMLFormElement;
+  const successMsg = document.getElementById('form-success-fr');
+  const errorMsg = document.getElementById('form-error-fr');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+      
+      if (response.ok) {
+        form.reset();
+        successMsg?.classList.remove('hidden');
+        errorMsg?.classList.add('hidden');
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      errorMsg?.classList.remove('hidden');
+      successMsg?.classList.add('hidden');
+    }
+  });
+</script>
