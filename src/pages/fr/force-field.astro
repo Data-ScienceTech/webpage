@@ -74,13 +74,13 @@ function getIcon(iconName: string): string {
           <!-- CTA Buttons -->
           <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#contact"
+              href={`mailto:${siteContent.contact.email}?subject=Demande de Demo Force Field&body=Bonjour,%0D%0A%0D%0AJe souhaite planifier une demo de Force Field pour voir comment il peut proteger nos systemes LLM.%0D%0A%0D%0AEntreprise:%0D%0ACas d'usage:%0D%0A%0D%0AMerci!`}
               class="btn-primary text-lg px-8 py-4 shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transition-all"
             >
               {productContent.hero.cta_primary}
             </a>
             <a
-              href="#contact"
+              href={`mailto:${siteContent.contact.email}?subject=Demande Acces MVP Force Field&body=Bonjour,%0D%0A%0D%0AJe souhaite demander l'acces pour tester le MVP de Force Field.%0D%0A%0D%0AEntreprise:%0D%0ACas d'usage:%0D%0A%0D%0AMerci!`}
               class="btn-secondary text-lg px-8 py-4 border-secondary-500 text-white hover:bg-secondary-700"
             >
               {productContent.hero.cta_secondary}
@@ -279,13 +279,13 @@ function getIcon(iconName: string): string {
             </p>
             <div class="flex flex-col gap-4 sm:flex-row mb-8">
               <a
-                href={`mailto:${siteContent.contact.email}?subject=Demande de Demo Force Field`}
+                href={`mailto:${siteContent.contact.email}?subject=Demande de Demo Force Field&body=Bonjour,%0D%0A%0D%0AJe souhaite planifier une demo de Force Field pour voir comment il peut proteger nos systemes LLM.%0D%0A%0D%0AEntreprise:%0D%0ACas d'usage:%0D%0A%0D%0AMerci!`}
                 class="btn inline-flex items-center justify-center bg-white text-primary-700 hover:bg-primary-50 focus:ring-white"
               >
                 {productContent.cta.button_primary}
               </a>
               <a
-                href={`mailto:${siteContent.contact.email}?subject=Demande Acces MVP Force Field`}
+                href={`mailto:${siteContent.contact.email}?subject=Demande Acces MVP Force Field&body=Bonjour,%0D%0A%0D%0AJe souhaite demander l'acces pour tester le MVP de Force Field.%0D%0A%0D%0AEntreprise:%0D%0ACas d'usage:%0D%0A%0D%0AMerci!`}
                 class="btn inline-flex items-center justify-center border-2 border-white text-white hover:bg-white/10"
               >
                 {productContent.cta.button_secondary}
