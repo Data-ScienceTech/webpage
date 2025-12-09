@@ -20,7 +20,7 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
   
   <main>
     <!-- Hero Section with LLM Firewall Sidebar -->
-    <section class="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/20 relative overflow-hidden">
+    <section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-primary-900/20 relative overflow-hidden">
       <!-- Subtle security motif background -->
       <div class="absolute inset-0 opacity-5 dark:opacity-10">
         <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]" viewBox="0 0 200 200" fill="none">
@@ -109,6 +109,16 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
               {siteContent.llm_firewall.cta}
             </a>
           </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="mt-12 flex justify-center">
+          <a href="#services" class="scroll-indicator group flex flex-col items-center gap-2 text-secondary-400 hover:text-primary-600 dark:text-secondary-500 dark:hover:text-primary-400 transition-colors">
+            <span class="text-xs font-medium uppercase tracking-widest">Defiler</span>
+            <svg class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
