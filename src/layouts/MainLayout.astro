@@ -23,6 +23,11 @@ const ogImageUrl = new URL('/og-image.png', Astro.site).toString();
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={currentUrl} />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Brand Fonts: Space Grotesk (headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     
     <!-- Primary Meta Tags -->
     <title>{title}</title>
@@ -61,22 +66,6 @@ const ogImageUrl = new URL('/og-image.png', Astro.site).toString();
     </noscript>
     
     <!-- Hidden Netlify form placeholders for JS-driven form detection -->
-    <form name="security-audit" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="text" name="company" />
-      <input type="text" name="role" />
-      <input type="text" name="ai_systems" />
-      <textarea name="security_concerns"></textarea>
-    </form>
-    <form name="security-audit-fr" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="text" name="company" />
-      <input type="text" name="role" />
-      <input type="text" name="ai_systems" />
-      <textarea name="security_concerns"></textarea>
-    </form>
     
     <!-- Force Field Lead Capture Forms -->
     <form name="forcefield-access" netlify netlify-honeypot="bot-field" hidden>

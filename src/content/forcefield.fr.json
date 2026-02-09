@@ -1,163 +1,54 @@
 {
   "meta": {
-    "title": "Force Field - Pare-feu LLM en Temps Réel | Sécurité IA",
-    "description": "Protection sub-milliseconde contre l'injection de prompts, la manipulation de modèles et les fuites de connaissances pour tout LLM. Audit de sécurité réussi, prêt pour la production.",
-    "keywords": "Pare-feu LLM, Sécurité IA, Prévention Injection de Prompts, Sécurité LLM, Gouvernance IA"
+    "title": "Force Field Pare-feu LLM — Protection Runtime Prête pour la Production | Data Science Technologies",
+    "description": "Force Field est une passerelle de sécurité prête pour la production qui fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils.",
+    "keywords": "Pare-feu LLM, Sécurité IA, Prévention Injection de Prompts, Sécurité MCP, Protection Runtime, Sécurité IA Agnostique"
   },
   "hero": {
-    "title": "Force Field",
-    "tagline": "Votre Pare-feu LLM en Temps Réel",
-    "subtitle": "Protection sub-milliseconde contre l'injection de prompts, la manipulation de modèles et les fuites de connaissances - pour tout LLM.",
-    "trust_badges": ["Audit de Sécurité Réussi", "Prêt pour la Production", "Latence <1ms"],
-    "cta_primary": "Réserver une Démo avec le CTO",
-    "cta_secondary": "Demander l'Accès au MVP"
+    "title": "Force Field Pare-feu LLM",
+    "subtitle": "Protection Runtime Prête pour la Production des Systèmes d'IA"
   },
-  "problem": {
-    "title": "Les LLMs Sont Vulnérables. Les Entreprises Ont Besoin d'une Défense en Temps Réel.",
-    "description": "Les taux de réussite des attaques sur les LLMs courants dépassent 65%. L'injection de prompts, la manipulation de schémas et les exploits de récupération contournent les outils traditionnels. Les entreprises manquent de visibilité sur les interactions au niveau des prompts et ne peuvent pas appliquer la gouvernance ou prévenir les comportements non intentionnels des modèles.",
-    "conclusion": "Une couche d'inspection et de contrôle en temps réel est désormais essentielle pour maintenir l'IA sécurisée, conforme et alignée sur les règles métier.",
-    "risks": [
-      { "title": "Fuites de Données", "icon": "Database" },
-      { "title": "Sorties Non Contrôlées", "icon": "AlertTriangle" },
-      { "title": "Exposition Réglementaire", "icon": "FileWarning" }
-    ]
-  },
-  "solution": {
-    "title": "Le Pare-feu LLM Conçu pour la Production",
-    "description": "Force Field est une couche de sécurité qui se situe entre les utilisateurs et vos systèmes de connaissances alimentés par LLM. Il intercepte les prompts, inspecte les sorties, applique les politiques et journalise tout.",
-    "highlight": "Il utilise un pipeline de défense multi-phases - normalisation, détection de signatures, filtrage sémantique et fusion OR - pour arrêter les attaques connues avec 87% de précision et 0% de faux positifs, le tout avec une latence <1ms.",
-    "cta": "Demander l'Accès au MVP"
+  "intro": "Force Field est une passerelle de sécurité prête pour la production qui se positionne directement dans le chemin d'exécution des systèmes d'IA. Elle fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils — sans vous enfermer dans un modèle ou un fournisseur spécifique.",
+  "intro_closing": "C'est la couche fondamentale de l'autorité runtime.",
+  "mcp_onramp": {
+    "title": "Point d'Entrée MCP Obligatoire",
+    "description": "Établit une passerelle sécurisée où les agents basés sur MCP obtiennent l'autorisation et les identifiants avant d'accéder aux outils et systèmes d'entreprise — créant un point de contrôle stratégique pour gouverner le comportement des agents à l'exécution."
   },
   "capabilities": {
-    "title": "Capacités Clés",
+    "title": "Capacités Principales",
     "items": [
       {
-        "title": "Interception & Assainissement des Prompts",
-        "description": "Force Field capture et filtre les entrées avant qu'elles n'atteignent votre modèle.",
+        "title": "Détection de Menaces Multi-Modèles",
+        "items": [
+          "Bloque les tentatives d'injection de prompts et de jailbreak",
+          "Prévient les fuites de données sensibles",
+          "Détection d'anomalies zero-day utilisant des modèles comportementaux et statistiques"
+        ],
         "icon": "Shield"
       },
       {
-        "title": "Surveillance des Sorties en Temps Réel",
-        "description": "Chaque réponse est vérifiée pour les fuites, hallucinations ou violations de politique.",
-        "icon": "Eye"
-      },
-      {
-        "title": "Contrôles d'Accès Basés sur les Politiques",
-        "description": "Utilisez l'IAM pour contrôler qui peut demander quoi et obtenir quelles réponses.",
-        "icon": "Lock"
-      },
-      {
-        "title": "Architecture Zero Trust",
-        "description": "mTLS complet, pas de secrets partagés, intégration Vault.",
+        "title": "Moteur d'Application de Politiques",
+        "items": [
+          "Bloque, modifie ou assainit les prompts en temps réel",
+          "Applique des politiques runtime contextuelles",
+          "Applique les contraintes organisationnelles et de sécurité en ligne"
+        ],
         "icon": "ShieldCheck"
       },
       {
-        "title": "Journalisation d'Audit Complète",
-        "description": "Chaque interaction est enregistrée pour la conformité, le débogage et la confiance.",
-        "icon": "FileText"
-      },
-      {
-        "title": "Latence Sub-Milliseconde",
-        "description": "Ajoute <1ms, même sur CPU - sûr pour la production.",
-        "icon": "Zap"
-      }
-    ]
-  },
-  "how_it_works": {
-    "title": "Inspecter. Gouverner. Surveiller. Répéter.",
-    "subtitle": "Comment Force Field Protège Vos LLMs",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Intercepter",
-        "description": "Force Field capture tous les prompts avant qu'ils n'atteignent votre LLM.",
-        "label": "Proxy Edge"
-      },
-      {
-        "number": "02",
-        "title": "Analyser & Appliquer",
-        "description": "Assainir les entrées, appliquer les politiques et détecter les menaces en temps réel.",
-        "label": "Détecteurs + Moteur de Politiques"
-      },
-      {
-        "number": "03",
-        "title": "Surveiller les Sorties",
-        "description": "Vérifier les réponses pour les fuites de données ou le contenu inapproprié.",
-        "label": "Post-processeur"
-      },
-      {
-        "number": "04",
-        "title": "Tout Journaliser",
-        "description": "Stocker les traces d'interaction complètes pour la conformité et l'investigation.",
-        "label": "Couche d'Audit"
-      }
-    ]
-  },
-  "differentiators": {
-    "title": "Ce Qui Distingue Force Field",
-    "items": [
-      {
-        "title": "Performance Rapide",
-        "description": "Ajoute <1ms de latence à votre pipeline d'inférence.",
-        "icon": "Zap"
-      },
-      {
-        "title": "Agnostique au Modèle",
-        "description": "Fonctionne avec tout LLM : OpenAI, Claude, Ollama, et plus.",
+        "title": "Architecture Modulaire, Agnostique au Modèle",
+        "items": [
+          "Compatible avec OpenAI, Anthropic et les modèles open-source",
+          "Découple la logique de sécurité des fournisseurs de modèles",
+          "Adoptez de nouveaux modèles sans ré-architecturer la sécurité"
+        ],
         "icon": "Layers"
-      },
-      {
-        "title": "Fusion OR Sans Seuil",
-        "description": "Aucun réglage nécessaire pour une détection performante.",
-        "icon": "Sliders"
-      },
-      {
-        "title": "Intégration IAM",
-        "description": "Appliquez les politiques par utilisateur, rôle ou groupe.",
-        "icon": "Users"
-      },
-      {
-        "title": "Conception Audit-First",
-        "description": "Journalise tout pour la conformité et la réponse aux incidents.",
-        "icon": "ClipboardList"
-      },
-      {
-        "title": "Déploiement Flexible",
-        "description": "SaaS, Hybride ou On-Prem - à vous de choisir.",
-        "icon": "Cloud"
       }
     ]
   },
-  "use_cases": {
-    "title": "Cas d'Usage",
-    "list": [
-      {
-        "title": "Systèmes RAG d'Entreprise",
-        "description": "Protégez les connaissances internes pendant la récupération et la génération.",
-        "icon": "Building"
-      },
-      {
-        "title": "Assistants IA Publics",
-        "description": "Arrêtez les jailbreaks et les sorties nuisibles à la marque.",
-        "icon": "MessageCircle"
-      },
-      {
-        "title": "Support Décisionnel de Santé",
-        "description": "Appliquez des audits conformes HIPAA sur les insights pilotés par l'IA.",
-        "icon": "Heart"
-      },
-      {
-        "title": "Workflows IA Financiers",
-        "description": "Supportez la conformité réglementaire et détectez les prompts risqués.",
-        "icon": "DollarSign"
-      }
-    ]
-  },
-  "cta": {
-    "title": "Voyez le Pare-feu LLM en Action",
-    "subtitle": "Découvrez Force Field et voyez comment il protège votre infrastructure IA.",
-    "button_primary": "Réserver une Démo avec le CTO",
-    "button_secondary": "Demander l'Accès au MVP"
+  "what_this_enables": {
+    "title": "Ce Que Cela Permet",
+    "description": "Force Field offre une protection immédiate aujourd'hui tout en établissant la fondation d'application pour une gouvernance plus large au niveau de l'exécution à travers les systèmes d'IA agentiques."
   },
   "form": {
     "title": "Demander l'Accès",
@@ -165,8 +56,8 @@
       "first_name": "Prénom",
       "last_name": "Nom",
       "company": "Entreprise",
-      "email": "Email Professionnel",
-      "job_title": "Titre du Poste (optionnel)",
+      "email": "Courriel Professionnel",
+      "job_title": "Poste (optionnel)",
       "message": "Message ou cas d'usage (optionnel)"
     },
     "submit": "Soumettre la Demande",
@@ -174,6 +65,6 @@
     "error": "Une erreur s'est produite. Veuillez réessayer."
   },
   "footer": {
-    "badges": ["Audit de Sécurité", "Open Source", "SOC 2 En Cours"]
+    "badges": ["Audit de Sécurité Réussi", "Open Source", "SOC 2 En Cours"]
   }
 }

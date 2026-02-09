@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Pourquoi l'Autorité Runtime | Data Science Technologies",
+    "description": "Les systèmes d'IA modernes ne se contentent plus de répondre — ils agissent. La sécurité IA traditionnelle n'est plus suffisante lorsque les agents opèrent avec des identités autorisées dans les environnements d'entreprise.",
+    "keywords": "autorité runtime, sécurité IA agentique, contrôle d'exécution IA, sécurité agents autonomes, plan de contrôle IA"
+  },
+  "hero": {
+    "title": "Pourquoi l'Autorité Runtime",
+    "subtitle": "Sécuriser ce que les systèmes d'IA font — pas seulement ce qu'ils disent"
+  },
+  "why_it_matters": {
+    "title": "Pourquoi l'Autorité Runtime Est Essentielle",
+    "intro": "Les systèmes d'IA modernes ne se contentent plus de répondre — ils agissent.",
+    "agents_title": "Les agents autonomes peuvent désormais :",
+    "agents": [
+      "lire et écrire dans les systèmes d'entreprise",
+      "invoquer des outils et des API",
+      "déclencher des flux de travail",
+      "prendre des actions irréversibles sans supervision humaine"
+    ],
+    "traditional": "La sécurité IA traditionnelle se concentre sur le filtrage des entrées au périmètre. Ce n'est plus suffisant une fois que les systèmes sont à l'intérieur de l'environnement et opèrent avec des identités autorisées.",
+    "conclusion": "Data Science Technologies sécurise ce que les systèmes d'IA font à l'exécution — pas seulement ce qu'ils disent."
+  },
+  "foundation": {
+    "title": "De la Fondation au Plan de Contrôle",
+    "intro": "Le pare-feu LLM Force Field est notre fondation — une couche d'application prête pour la production et à faible latence, qui se positionne directement dans le chemin d'exécution des systèmes d'IA.",
+    "evolution": "Sur cette base, nous évoluons vers des contrôles au niveau de l'exécution qui régissent :",
+    "controls": [
+      "comment les actions sont autorisées",
+      "quand l'exécution doit être suspendue",
+      "et quand l'autorité doit être révoquée en temps réel"
+    ],
+    "conclusion": "Cette évolution constitue la base d'un plan de contrôle qui permet aux organisations d'adopter l'IA agentique à grande échelle en toute sécurité."
+  },
+  "diagram": {
+    "title": "Comment Fonctionne l'Autorité Runtime",
+    "flow": "Utilisateur / Agent → Raisonnement LLM → Couche d'Autorité Runtime → Outils & Systèmes",
+    "actions": "Autoriser · Suspendre · Révoquer (dans le chemin d'exécution)",
+    "caption": "L'autorité runtime évalue et gouverne les actions au moment où elles se produisent — pas après."
+  },
+  "closing": "L'autorité runtime est la couche de contrôle manquante entre l'intention de l'IA et l'impact réel."
+}

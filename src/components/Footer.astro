@@ -51,10 +51,16 @@ const currentYear = new Date().getFullYear();
         </h3>
         <ul class="space-y-2">
           <li>
-            <a href={`/${lang}#services`} class="footer-link">{content.footer.links.services}</a>
+            <a href={lang === 'en' ? `/${lang}/why-runtime-authority` : `/${lang}/pourquoi-autorite-runtime`} class="footer-link">{content.footer.links.why}</a>
           </li>
           <li>
-            <a href={`/${lang}#contact`} class="footer-link">{content.footer.links.contact}</a>
+            <a href={`/${lang}/force-field`} class="footer-link">{content.footer.links.product}</a>
+          </li>
+          <li>
+            <a href={`/${lang}/architecture`} class="footer-link">{content.footer.links.architecture}</a>
+          </li>
+          <li>
+            <a href={lang === 'en' ? `/${lang}/security` : `/${lang}/securite`} class="footer-link">{content.footer.links.security}</a>
           </li>
         </ul>
       </div>
@@ -66,7 +72,7 @@ const currentYear = new Date().getFullYear();
         </h3>
         <ul class="space-y-2">
           <li>
-            <a href={`/${lang}/privacy`} class="footer-link">
+            <a href={lang === 'en' ? `/${lang}/privacy` : `/${lang}/confidentialite`} class="footer-link">
               {content.footer.links.privacy}
             </a>
           </li>
@@ -80,7 +86,7 @@ const currentYear = new Date().getFullYear();
     <!-- Copyright -->
     <div class="mt-12 border-t border-secondary-200 pt-8 dark:border-secondary-700">
       <p class="text-center text-sm text-secondary-600 dark:text-secondary-400">
-        {content.footer.copyright.replace('2025', String(currentYear))}
+        {content.footer.copyright}
       </p>
     </div>
   </div>

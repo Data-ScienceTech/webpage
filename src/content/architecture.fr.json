@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "Architecture — Le Plan de Contrôle IA | Data Science Technologies",
+    "description": "Data Science Technologies conçoit un plan de contrôle IA pour gouverner le comportement des systèmes d'IA en production. Architecture en couches pour l'application à faible latence, la gouvernance centralisée et la scalabilité.",
+    "keywords": "plan de contrôle IA, architecture IA, plan de contrôle plan de données, orchestration runtime, architecture sécurité IA entreprise"
+  },
+  "hero": {
+    "title": "Architecture",
+    "subtitle": "Le Plan de Contrôle IA"
+  },
+  "intro": "Data Science Technologies construit un plan de contrôle conçu pour gouverner le comportement des systèmes d'IA en production — pas seulement ce qu'on leur demande de dire. L'architecture est organisée en couches pour fournir une application à faible latence, une gouvernance centralisée et une scalabilité à travers les modèles et les environnements.",
+  "separation": {
+    "title": "Séparation du Plan de Contrôle et du Plan de Données",
+    "control_plane": {
+      "title": "Plan de Contrôle",
+      "items": [
+        "Rédaction et configuration centralisées des politiques",
+        "Distribution des politiques et gouvernance",
+        "Analytique, surveillance et visibilité d'audit",
+        "Contrôle administratif sans impact sur les performances runtime"
+      ]
+    },
+    "data_plane": {
+      "title": "Plan de Données",
+      "items": [
+        "Inspection en ligne des prompts et des actions",
+        "Évaluation des politiques à faible latence",
+        "Application dans le chemin d'exécution",
+        "Conception horizontalement scalable et sans état"
+      ]
+    }
+  },
+  "hybrid": {
+    "title": "Déploiement Hybride en Entreprise",
+    "description": "La séparation des plans de contrôle et de données permet une gestion centralisée des politiques tout en maintenant une application localisée à faible latence dans les environnements contrôlés par le client. Cela prend en charge les déploiements hybrides et on-prem sans sacrifier la gouvernance ou les performances."
+  },
+  "orchestration": {
+    "title": "Couche d'Orchestration Runtime",
+    "status": "Aperçu Partenaire de Conception",
+    "description": "Au cœur de l'architecture se trouve une couche d'orchestration runtime conçue pour superviser les systèmes agentiques. Elle autorise les actions avant l'exécution, médie l'accès aux outils et API, applique des garde-fous au niveau de l'exécution et permet l'intervention lorsque le comportement dévie des limites attendues."
+  },
+  "roadmap": {
+    "title": "Feuille de Route à Court Terme",
+    "description": "Nous itérons rapidement sur les capacités d'orchestration au niveau de l'exécution pour répondre au paysage émergent des menaces agentiques. Le développement se poursuit en étroite collaboration avec les partenaires de conception pour valider le comportement, les performances et l'adéquation opérationnelle avant une disponibilité plus large."
+  },
+  "summary": {
+    "title": "Résumé",
+    "items": [
+      "Fondations prêtes pour la production des plans de contrôle et de données",
+      "Un chemin clair vers l'orchestration au niveau de l'exécution",
+      "Support des environnements hybrides en entreprise",
+      "Une feuille de route honnête pour l'évolution de l'autorité runtime"
+    ]
+  }
+}

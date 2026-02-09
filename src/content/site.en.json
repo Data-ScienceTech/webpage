@@ -1,174 +1,79 @@
 {
   "company": "Data Science Technologies",
-  "tagline": "Secure Knowledge Systems for the AI Era",
+  "tagline": "Runtime Authority for the Agentic Era",
   "hero": {
-    "title": "Your AI Is a New Attack Surface. Secure It Before Someone Exploits It.",
-    "subtitle": "We help enterprises lock down their LLMs, RAG pipelines, and AI agents so they can't be hijacked, poisoned, or tricked into leaking sensitive data.",
-    "cta_primary": "Talk to an Expert",
-    "cta_secondary": "Request a Security Audit",
-    "trust_tagline": "Enterprise AI security built by a team with decades of AI and cybersecurity experience."
+    "title": "Runtime Authority for the Agentic Era",
+    "subtitle": "From Prompt Filtering to Active Execution Control",
+    "cta_primary": "Explore the Force Field LLM Firewall MVP"
   },
-  "llm_firewall": {
-    "title": "Force Field: LLM Firewall",
-    "description": "Real-time protection against prompt injection with 87% accuracy, 0% false positives, and <1ms latency. Security audit passed, production ready.",
-    "cta": "Learn More"
-  },
-  "vulnerabilities": {
-    "title": "AI Introduces Vulnerabilities You've Never Had to Defend Before",
-    "intro": "AI systems don't operate like traditional software. They take instructions from anyone who interacts with them — including adversaries.",
-    "subtitle": "Enterprises are already facing:",
-    "threats": [
-      {
-        "title": "Prompt injection & instruction hijacking",
-        "desc": "Attackers trick the model into ignoring policies or revealing secrets",
-        "icon": "terminal"
-      },
-      {
-        "title": "Retrieval poisoning & corrupted knowledge sources",
-        "desc": "Malicious data fed into RAG pipelines to manipulate outputs",
-        "icon": "database"
-      },
-      {
-        "title": "Unauthorized data access & silent information leaks",
-        "desc": "AI inadvertently exposing confidential information",
-        "icon": "unlock"
-      },
-      {
-        "title": "Manipulated decisions & compromised outputs",
-        "desc": "Adversaries influencing AI to produce harmful or wrong decisions",
-        "icon": "shuffle"
-      },
-      {
-        "title": "Zero visibility into AI decision processes",
-        "desc": "No clear logs or explanations, making it hard to detect issues",
-        "icon": "eye-off"
-      },
-      {
-        "title": "Model theft & intellectual property exposure",
-        "desc": "Extraction of proprietary models, training data, or business logic",
-        "icon": "download"
-      }
-    ],
-    "conclusion": "AI is entering critical workflows faster than security teams can adapt. Without strong defenses, these systems expose your data, your reasoning processes, and your business."
-  },
-  "expertise": {
-    "title": "Independent AI Security Expertise — Across the Full AI Lifecycle",
-    "intro": "We don't sell a product.",
-    "intro_detail": "We help you design, implement, and operationalize secure AI systems end-to-end. Our team works alongside yours to architect and safeguard every layer where AI can be compromised.",
-    "subtitle": "Our work covers every layer where AI can be compromised:",
-    "coverage": [
-      { "name": "Data ingestion", "icon": "Database" },
-      { "name": "Retrieval & knowledge routing", "icon": "GitBranch" },
-      { "name": "Model interaction & prompting", "icon": "MessageSquare" },
-      { "name": "Agentic workflows", "icon": "Workflow" },
-      { "name": "Access, identity & permissions", "icon": "Lock" },
-      { "name": "Monitoring & governance", "icon": "Eye" },
-      { "name": "Incident readiness", "icon": "ShieldAlert" }
-    ],
-    "conclusion": "You get clear guidance, hardening strategies, threat modeling, and real-world safeguards tailored to your environment."
-  },
-  "focus_areas": {
-    "title": "Our Core Focus Areas",
+  "secure_at_runtime": {
+    "title": "Secure AI at Runtime",
     "pillars": [
       {
-        "name": "Identity & Access",
-        "description": "Verify and control every user, agent, and system touching your AI. We design access models, permissions, and safeguards so only approved human and machine actors can interact with sensitive knowledge.",
-        "icon": "UserCheck"
+        "name": "LLM Firewall",
+        "items": [
+          "AI perimeter protection",
+          "Blocks injections & leaks",
+          "Enforces policies in real time"
+        ]
       },
       {
-        "name": "Policy & Enforcement",
-        "description": "Define what your AI can see, decide, and reveal — and enforce it. We build rule sets, guardrails, input/output filters, and knowledge-segmentation strategies that prevent inappropriate access or leakage.",
-        "icon": "ShieldCheck"
+        "name": "Runtime Orchestration",
+        "items": [
+          "Authorizes agent execution",
+          "Mediates tools & actions",
+          "Prevents unsafe behavior"
+        ]
       },
       {
-        "name": "Monitoring & Audit",
-        "description": "Make every prompt, retrieval, and inference observable. We establish logging, anomaly detection, and auditability so you always know how your AI reaches decisions and where risks emerge.",
-        "icon": "Eye"
-      },
-      {
-        "name": "Response & Resilience",
-        "description": "Prepare for AI security incidents — and respond fast. We create detection playbooks, containment workflows, and recovery processes for prompt injection, model misuse, and data-exposure events.",
-        "icon": "Zap"
+        "name": "Active Governance",
+        "items": [
+          "Human-in-the-loop controls",
+          "Full execution audit trail",
+          "Built for agentic systems"
+        ]
       }
     ]
   },
-  "weakest_link": {
-    "title": "Keep AI From Becoming Your Weakest Link",
-    "subtitle": "Securing your AI systems reduces the likelihood of:",
-    "risks": [
-      { "title": "Business logic manipulation", "icon": "settings" },
-      { "title": "Sensitive information leaks", "icon": "droplet" },
-      { "title": "Compromised outputs or decisions", "icon": "alert-circle" },
-      { "title": "Regulatory and policy violations", "icon": "file-warning" },
-      { "title": "Irreversible reputational damage", "icon": "trending-down" },
-      { "title": "Undetected security breaches", "icon": "shield-off" }
-    ],
-    "conclusion": "AI gives you massive leverage — but only if it operates safely and predictably under real-world conditions."
-  },
-  "case_studies": {
-    "title": "AI Security in Action",
-    "subtitle": "Real systems, real security, real impact"
+  "why_us": {
+    "title": "Why Data Science Technologies",
+    "items": [
+      "AI security expertise across the full lifecycle of modern AI systems",
+      "Protection against business logic manipulation, data leakage, and compromised model decisions",
+      "Observability and monitoring for every prompt, retrieval, and inference",
+      "Custom hardening strategies for complex, real-world enterprise environments",
+      "Built for MCP Standards"
+    ]
   },
   "trust_bar": {
     "title": "Built with proven technologies"
   },
-  "cta_section": {
-    "title": "Ready to Secure Your AI?",
-    "subtitle": "From insight to action—securely. Our team combines advanced AI expertise with security-by-design principles to ensure your AI initiatives are safe, compliant, and successful.",
-    "button": "Talk to Us Today"
-  },
   "contact": {
-    "title": "Contact Us",
-    "email": "info@datasciencetech.ca",
-    "form": {
-      "name_label": "Name",
-      "email_label": "Email",
-      "message_label": "Message",
-      "submit": "Send Message",
-      "success": "Thank you! We'll get back to you soon.",
-      "error": "Something went wrong. Please try again."
-    }
-  },
-  "security_audit": {
-    "modal_title": "Request a Security Audit",
-    "modal_subtitle": "Tell us about your AI systems and security concerns. Our team will reach out within 24 hours.",
-    "form": {
-      "name_label": "Full Name",
-      "email_label": "Work Email",
-      "company_label": "Company",
-      "role_label": "Your Role",
-      "ai_systems_label": "AI Systems in Use",
-      "ai_systems_placeholder": "e.g., LLMs, RAG pipelines, AI agents, chatbots...",
-      "concerns_label": "Primary Security Concerns",
-      "concerns_placeholder": "Describe your main concerns about AI security...",
-      "submit": "Request Audit",
-      "success": "Thank you! Our security team will contact you within 24 hours.",
-      "error": "Something went wrong. Please try again.",
-      "close": "Close"
-    }
+    "email": "info@datasciencetech.ca"
   },
   "footer": {
-    "description": "Secure knowledge systems for the AI era. We combine knowledge engineering, LLM-driven systems, and security expertise to build solutions that matter.",
-    "tagline": "From insight to action—securely.",
-    "languages": "Multilingual operations: English, Portuguese, French",
+    "description": "Runtime authority for agentic AI. We build production-ready enforcement, orchestration, and governance for the next generation of AI systems.",
+    "tagline": "From prompt filtering to active execution control.",
+    "languages": "Multilingual operations: English, French",
     "links": {
       "company": "Company",
-      "case_studies": "Case Studies",
-      "services": "Services",
-      "contact": "Contact",
+      "why": "Why Runtime Authority",
+      "product": "Force Field",
+      "architecture": "Architecture",
+      "security": "Security",
       "privacy": "Privacy Policy"
     },
-    "copyright": "© 2025 Data Science Technologies. All rights reserved."
+    "copyright": "© 2026 Data Science Technologies. All rights reserved."
   },
   "nav": {
-    "case_studies": "Case Studies",
-    "services": "What We Build",
-    "about": "About",
-    "contact": "Contact"
+    "why": "Why Runtime Authority",
+    "product": "Force Field",
+    "architecture": "Architecture",
+    "security": "Security"
   },
   "meta": {
-    "description": "Data Science Technologies builds secure knowledge systems that capture, reason, and act. We combine knowledge engineering, AI/ML, and security-by-design for the AI era.",
-    "keywords": "knowledge systems, knowledge-based systems, KBS, AI security, LLM security, knowledge engineering, enterprise AI, secure AI, ontologies, reasoning engines, AI governance"
+    "description": "Data Science Technologies provides runtime authority for agentic AI — from LLM firewalls to execution-level orchestration and governance. Production-ready AI security for the enterprise.",
+    "keywords": "runtime authority, agentic AI security, LLM firewall, AI execution control, AI governance, AI control plane, MCP security, enterprise AI security"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

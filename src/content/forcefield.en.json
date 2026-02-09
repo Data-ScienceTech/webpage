@@ -1,163 +1,54 @@
 {
   "meta": {
-    "title": "Force Field - Real-Time LLM Firewall | AI Security",
-    "description": "Sub-millisecond protection against prompt injection, model manipulation, and knowledge leaks for any LLM. Security audit passed, production ready.",
-    "keywords": "LLM Firewall, AI Security, Prompt Injection Prevention, LLM Security, AI Governance"
+    "title": "Force Field LLM Firewall — Production-Ready Runtime Protection | Data Science Technologies",
+    "description": "Force Field is a production-ready security gateway that provides real-time inspection, control, and enforcement for prompts, agent actions, and tool usage — without vendor lock-in.",
+    "keywords": "LLM Firewall, AI Security, Prompt Injection Prevention, MCP Security, Runtime Protection, Model-Agnostic AI Security"
   },
   "hero": {
-    "title": "Force Field",
-    "tagline": "Your Real-Time LLM Firewall",
-    "subtitle": "Sub-millisecond protection against prompt injection, model manipulation, and knowledge leaks - for any LLM.",
-    "trust_badges": ["Security Audit Passed", "Production Ready", "<1ms Latency"],
-    "cta_primary": "Book a Demo with the CTO",
-    "cta_secondary": "Request Access to Test the MVP"
+    "title": "Force Field LLM Firewall",
+    "subtitle": "Production-Ready Runtime Protection for AI Systems"
   },
-  "problem": {
-    "title": "LLMs Are Vulnerable. Enterprises Need Real-Time Defense.",
-    "description": "Attack success rates in common LLMs exceed 65%. Prompt injection, schema manipulation, and retrieval exploits bypass traditional tools. Enterprises lack visibility into prompt-level interactions and cannot enforce governance or prevent unintended model behavior.",
-    "conclusion": "A real-time inspection and control layer is now essential for keeping AI secure, compliant, and aligned with business rules.",
-    "risks": [
-      { "title": "Data Leaks", "icon": "Database" },
-      { "title": "Uncontrolled Outputs", "icon": "AlertTriangle" },
-      { "title": "Regulatory Exposure", "icon": "FileWarning" }
-    ]
-  },
-  "solution": {
-    "title": "The LLM Firewall Built for Production",
-    "description": "Force Field is a security layer that sits between users and your LLM-powered knowledge systems. It intercepts prompts, inspects outputs, enforces policies, and logs everything.",
-    "highlight": "It uses a multi-phase defense pipeline - normalization, signature detection, semantic screening, and OR-fusion - to stop known attacks with 87% accuracy and 0% false positives, all with <1ms latency.",
-    "cta": "Request Access to Test the MVP"
+  "intro": "Force Field is a production-ready security gateway that sits directly in the execution path of AI systems. It provides real-time inspection, control, and enforcement for prompts, agent actions, and tool usage — without locking you into a specific model or vendor.",
+  "intro_closing": "This is the foundation layer for runtime authority.",
+  "mcp_onramp": {
+    "title": "Mandatory MCP On-Ramp",
+    "description": "Establishes a secure gateway where MCP-based agents obtain authorization and credentials before accessing enterprise tools and systems — creating a strategic control point for governing agent behavior at runtime."
   },
   "capabilities": {
-    "title": "Key Capabilities",
+    "title": "Core Capabilities",
     "items": [
       {
-        "title": "Prompt Interception & Sanitation",
-        "description": "Force Field captures and filters inputs before they reach your model.",
+        "title": "Multi-Model Threat Detection",
+        "items": [
+          "Blocks prompt injection and jailbreak attempts",
+          "Prevents sensitive data leakage",
+          "Zero-Day Anomaly Detection using behavioral and statistical models"
+        ],
         "icon": "Shield"
       },
       {
-        "title": "Real-Time Output Monitoring",
-        "description": "Every response is checked for leaks, hallucinations, or policy violations.",
-        "icon": "Eye"
-      },
-      {
-        "title": "Policy-Based Access Controls",
-        "description": "Use IAM to control who can ask what, and get what answers.",
-        "icon": "Lock"
-      },
-      {
-        "title": "Zero Trust Architecture",
-        "description": "Full mTLS, no shared secrets, Vault integration.",
+        "title": "Policy Enforcement Engine",
+        "items": [
+          "Blocks, modifies, or sanitizes prompts in real time",
+          "Applies context-aware runtime policies",
+          "Enforces organizational and security constraints inline"
+        ],
         "icon": "ShieldCheck"
       },
       {
-        "title": "Comprehensive Audit Logging",
-        "description": "Every interaction is recorded for compliance, debugging, and trust.",
-        "icon": "FileText"
-      },
-      {
-        "title": "Sub-Millisecond Latency",
-        "description": "Adds <1ms, even on CPU - production safe.",
-        "icon": "Zap"
-      }
-    ]
-  },
-  "how_it_works": {
-    "title": "Inspect. Govern. Monitor. Repeat.",
-    "subtitle": "How Force Field Protects Your LLMs",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Intercept",
-        "description": "Force Field captures all prompts before they reach your LLM.",
-        "label": "Edge Proxy"
-      },
-      {
-        "number": "02",
-        "title": "Analyze & Apply",
-        "description": "Sanitize inputs, apply policies, and detect threats in real-time.",
-        "label": "Detectors + Policy Engine"
-      },
-      {
-        "number": "03",
-        "title": "Monitor Exits",
-        "description": "Check responses for data leaks or inappropriate content.",
-        "label": "Postprocessor"
-      },
-      {
-        "number": "04",
-        "title": "Log Everything",
-        "description": "Store full interaction trails for compliance and forensics.",
-        "label": "Audit Layer"
-      }
-    ]
-  },
-  "differentiators": {
-    "title": "What Makes Force Field Different",
-    "items": [
-      {
-        "title": "Fast Performance",
-        "description": "Adds <1ms latency to your inference pipeline.",
-        "icon": "Zap"
-      },
-      {
-        "title": "Model-Agnostic",
-        "description": "Works with any LLM: OpenAI, Claude, Ollama, and more.",
+        "title": "Pluggable, Model-Agnostic Architecture",
+        "items": [
+          "Compatible with OpenAI, Anthropic, and open-source models",
+          "Decouples security logic from model providers",
+          "Adopt new models without re-architecting security"
+        ],
         "icon": "Layers"
-      },
-      {
-        "title": "Threshold-Free OR-Fusion",
-        "description": "No tuning needed for strong detection performance.",
-        "icon": "Sliders"
-      },
-      {
-        "title": "IAM Integration",
-        "description": "Enforce policy by user, role, or group.",
-        "icon": "Users"
-      },
-      {
-        "title": "Audit-First Design",
-        "description": "Logs everything for compliance and incident response.",
-        "icon": "ClipboardList"
-      },
-      {
-        "title": "Flexible Deployment",
-        "description": "SaaS, Hybrid, or On-Prem - your call.",
-        "icon": "Cloud"
       }
     ]
   },
-  "use_cases": {
-    "title": "Use Cases",
-    "list": [
-      {
-        "title": "Enterprise RAG Systems",
-        "description": "Protect internal knowledge during retrieval and generation.",
-        "icon": "Building"
-      },
-      {
-        "title": "Public-Facing AI Assistants",
-        "description": "Stop jailbreaks and brand-damaging outputs.",
-        "icon": "MessageCircle"
-      },
-      {
-        "title": "Health Decision Support",
-        "description": "Enforce HIPAA-compliant audits on AI-driven insights.",
-        "icon": "Heart"
-      },
-      {
-        "title": "Financial AI Workflows",
-        "description": "Support regulatory compliance and detect risky prompts.",
-        "icon": "DollarSign"
-      }
-    ]
-  },
-  "cta": {
-    "title": "See the LLM Firewall in Action",
-    "subtitle": "Get hands-on with Force Field and see how it protects your AI infrastructure.",
-    "button_primary": "Book a Demo with the CTO",
-    "button_secondary": "Request Access to Test the MVP"
+  "what_this_enables": {
+    "title": "What This Enables",
+    "description": "Force Field delivers immediate protection today while establishing the enforcement foundation for broader execution-level governance across agentic AI systems."
   },
   "form": {
     "title": "Request Access",

@@ -1,134 +1,89 @@
 # Quick Start Guide
 
-## 🚀 Immediate Steps
+## 1. Install & Run
 
-### 1. Install Dependencies
 ```bash
-npm install
+pnpm install
+pnpm dev
 ```
 
-### 2. Start Development Server
-```bash
-npm run dev
-```
-Open http://localhost:4321/ in your browser.
+Open http://localhost:4321
 
-### 3. Update Content
+## 2. Update Content
 
-#### Replace Placeholder Images
-- `public/logo.png` - Your actual logo (400×100px recommended)
-- `public/og-image.png` - Social media image (1200×630px)
+All text lives in `src/content/*.json`. Edit the JSON files — no code changes needed.
 
-#### Update Formspree ID
-1. Sign up at https://formspree.io
-2. Create a new form
-3. Copy your form ID
-4. Update in:
-   - `src/content/site.en.json`
-   - `src/content/site.fr.json`
-   
-   Change `"formspree_id": "YOUR_FORM_ID"` to your actual ID.
+| What to edit | File |
+|---|---|
+| Homepage (EN) | `src/content/site.en.json` |
+| Homepage (FR) | `src/content/site.fr.json` |
+| Force Field product (EN) | `src/content/forcefield.en.json` |
+| Force Field product (FR) | `src/content/forcefield.fr.json` |
+| Why Runtime Authority (EN) | `src/content/why-runtime-authority.en.json` |
+| Why Runtime Authority (FR) | `src/content/why-runtime-authority.fr.json` |
+| Architecture (EN) | `src/content/architecture.en.json` |
+| Architecture (FR) | `src/content/architecture.fr.json` |
+| Security (EN) | `src/content/security.en.json` |
+| Security (FR) | `src/content/security.fr.json` |
 
-#### Update Social Links
+## 3. Replace Placeholder Images
+
+- `public/logo.svg` / `public/logo-dark.svg` — brand logo
+- `public/og-image.png` — social media preview (1200×630px)
+- `public/favicon.svg` — browser tab icon
+
+## 4. Update Social Links
+
 In both `site.en.json` and `site.fr.json`:
+
 ```json
 "social": {
-  "github": "https://github.com/your-org",
-  "linkedin": "https://www.linkedin.com/company/your-company/"
+  "github": "https://github.com/Data-ScienceTech",
+  "linkedin": "https://www.linkedin.com/company/data-sciencetech/"
 }
 ```
 
-### 4. Build for Production
+## 5. Build & Deploy
+
 ```bash
-npm run build
-npm run preview
+pnpm build       # Production build
+pnpm preview     # Preview locally
 ```
 
-### 5. Deploy to GitHub Pages
+Push to `main` to auto-deploy via Netlify.
 
-#### One-Time Setup
-1. Create a GitHub repository
-2. Push your code:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/your-username/your-repo.git
-   git push -u origin main
-   ```
+## Site Pages
 
-3. Enable GitHub Pages:
-   - Go to repo Settings → Pages
-   - Source: **GitHub Actions** (not branch)
+| Page | EN URL | FR URL |
+|------|--------|--------|
+| Home | `/en/` | `/fr/` |
+| Why Runtime Authority | `/en/why-runtime-authority` | `/fr/pourquoi-autorite-runtime` |
+| Force Field (Product) | `/en/force-field` | `/fr/force-field` |
+| Architecture | `/en/architecture` | `/fr/architecture` |
+| Security | `/en/security` | `/fr/securite` |
+| Privacy | `/en/privacy` | `/fr/confidentialite` |
 
-4. Configure custom domain (optional):
-   - In GitHub: Settings → Pages → Custom domain → Enter `datasciencetech.ca`
-   - In your DNS provider, add CNAME record:
-     ```
-     Type: CNAME
-     Name: @ (or www)
-     Value: your-username.github.io
-     ```
+## Common Tasks
 
-#### Deploy Updates
-Just push to main:
-```bash
-git add .
-git commit -m "Your update message"
-git push
-```
+### Change Brand Colors
 
-The site will automatically rebuild and deploy in ~2 minutes.
+Edit `tailwind.config.js` → `theme.extend.colors`.
 
-## 📝 Common Tasks
+### Change Fonts
 
-### Change Colors
-Edit `tailwind.config.js`:
-```js
-primary: {
-  DEFAULT: '#2C7A7B',  // Change this
-  // ...
-}
-```
+Fonts are configured in:
+- `tailwind.config.js` → `fontFamily` (font-heading, font-sans)
+- `src/layouts/MainLayout.astro` → Google Fonts `<link>` tags
+- `src/styles/globals.css` → heading font-family rule
 
-### Edit Text Content
-All text is in:
-- `src/content/site.en.json` (English)
-- `src/content/site.fr.json` (French)
-- `src/content/cases.json` (Case studies)
+### Edit Navigation
 
-### Add a New Case Study
-Edit `src/content/cases.json` and add a new entry following the existing format.
+Nav labels come from `site.*.json` → `nav` object. Nav link URLs are in `src/components/Header.astro`.
 
-## 🔍 Testing
+### Edit Footer
 
-### Check Build
-```bash
-npm run build
-```
+Footer labels come from `site.*.json` → `footer` object. Footer link URLs are in `src/components/Footer.astro`.
 
-### Run Lighthouse
-1. Build: `npm run build`
-2. Preview: `npm run preview`
-3. Open Chrome DevTools → Lighthouse
-4. Run audit (mobile & desktop)
+## Need Help?
 
-Target: All scores ≥95
-
-## 📦 Next Steps
-
-1. ✅ Install dependencies
-2. ✅ Start dev server
-3. ⬜ Replace placeholder images
-4. ⬜ Update Formspree ID
-5. ⬜ Update social links
-6. ⬜ Customize content
-7. ⬜ Push to GitHub
-8. ⬜ Enable GitHub Pages
-9. ⬜ Configure custom domain
-
-## 🆘 Need Help?
-
-See the full README.md for detailed documentation.
-
-For questions: info@datasciencetech.ca
+See the full `README.md` or contact info@datasciencetech.ca.

@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Why Runtime Authority | Data Science Technologies",
+    "description": "Modern AI systems don't just respond — they act. Traditional AI security is no longer sufficient once agents operate with authorized identities inside enterprise environments.",
+    "keywords": "runtime authority, agentic AI security, AI execution control, autonomous agent security, AI control plane"
+  },
+  "hero": {
+    "title": "Why Runtime Authority",
+    "subtitle": "Securing what AI systems do — not just what they say"
+  },
+  "why_it_matters": {
+    "title": "Why Runtime Authority Matters",
+    "intro": "Modern AI systems don't just respond — they act.",
+    "agents_title": "Autonomous agents now:",
+    "agents": [
+      "read and write to enterprise systems",
+      "invoke tools and APIs",
+      "trigger workflows",
+      "take irreversible actions without human supervision"
+    ],
+    "traditional": "Traditional AI security focuses on filtering inputs at the perimeter. That is no longer sufficient once systems are inside the environment and operating with authorized identities.",
+    "conclusion": "Data Science Technologies secures what AI systems do at runtime — not just what they say."
+  },
+  "foundation": {
+    "title": "From Foundation to Control Plane",
+    "intro": "The Force Field LLM Firewall is our foundation — a production-ready, low-latency enforcement layer that sits directly in the execution path of AI systems.",
+    "evolution": "Built on that foundation, we are evolving toward execution-level controls that govern:",
+    "controls": [
+      "how actions are authorized",
+      "when execution must pause",
+      "and when authority must be revoked in real time"
+    ],
+    "conclusion": "This evolution forms the basis of a control plane that allows organizations to safely adopt agentic AI at scale."
+  },
+  "diagram": {
+    "title": "How Runtime Authority Works",
+    "flow": "User / Agent → LLM Reasoning → Runtime Authority Layer → Tools & Systems",
+    "actions": "Authorize · Pause · Revoke (in execution path)",
+    "caption": "Runtime authority evaluates and governs actions as they occur — not after the fact."
+  },
+  "closing": "Runtime authority is the missing control layer between AI intent and real-world impact."
+}

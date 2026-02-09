@@ -20,9 +20,10 @@ const { lang, content } = Astro.props;
 
       <!-- Desktop Navigation -->
       <div class="hidden items-center space-x-8 md:flex">
-        <a href={`/${lang}#services`} class="nav-link">{content.nav.services}</a>
-        <a href={`/${lang}#about`} class="nav-link">{content.nav.about}</a>
-        <a href={`/${lang}#contact`} class="nav-link">{content.nav.contact}</a>
+        <a href={lang === 'en' ? `/${lang}/why-runtime-authority` : `/${lang}/pourquoi-autorite-runtime`} class="nav-link">{content.nav.why}</a>
+        <a href={`/${lang}/force-field`} class="nav-link">{content.nav.product}</a>
+        <a href={`/${lang}/architecture`} class="nav-link">{content.nav.architecture}</a>
+        <a href={lang === 'en' ? `/${lang}/security` : `/${lang}/securite`} class="nav-link">{content.nav.security}</a>
       </div>
 
       <!-- Right side: Language Switch + Dark Mode -->
@@ -60,9 +61,10 @@ const { lang, content } = Astro.props;
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="hidden pt-4 md:hidden">
       <div class="flex flex-col space-y-4">
-        <a href={`/${lang}#services`} class="nav-link">{content.nav.services}</a>
-        <a href={`/${lang}#about`} class="nav-link">{content.nav.about}</a>
-        <a href={`/${lang}#contact`} class="nav-link">{content.nav.contact}</a>
+        <a href={lang === 'en' ? `/${lang}/why-runtime-authority` : `/${lang}/pourquoi-autorite-runtime`} class="nav-link">{content.nav.why}</a>
+        <a href={`/${lang}/force-field`} class="nav-link">{content.nav.product}</a>
+        <a href={`/${lang}/architecture`} class="nav-link">{content.nav.architecture}</a>
+        <a href={lang === 'en' ? `/${lang}/security` : `/${lang}/securite`} class="nav-link">{content.nav.security}</a>
       </div>
     </div>
   </nav>

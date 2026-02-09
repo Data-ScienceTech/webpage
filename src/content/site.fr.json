@@ -1,174 +1,79 @@
 {
   "company": "Data Science Technologies",
-  "tagline": "Systèmes de Connaissances Sécurisés pour l'ère de l'IA",
+  "tagline": "Autorité Runtime pour l'Ère Agentique",
   "hero": {
-    "title": "Votre IA Est une Nouvelle Surface d'Attaque. Sécurisez-la Avant Qu'on l'Exploite.",
-    "subtitle": "Nous aidons les entreprises à verrouiller leurs LLMs, pipelines RAG et agents IA pour qu'ils ne puissent pas être détournés, empoisonnés ou manipulés pour divulguer des données sensibles.",
-    "cta_primary": "Parler à un Expert",
-    "cta_secondary": "Demander un Audit de Sécurité",
-    "trust_tagline": "Sécurité IA d'entreprise construite par une équipe avec des décennies d'expérience en IA et cybersécurité."
+    "title": "Autorité Runtime pour l'Ère Agentique",
+    "subtitle": "Du Filtrage de Prompts au Contrôle Actif d'Exécution",
+    "cta_primary": "Explorer le MVP du Pare-feu LLM Force Field"
   },
-  "llm_firewall": {
-    "title": "Force Field: Pare-feu LLM",
-    "description": "Protection en temps reel contre l'injection de prompts avec 87% de precision, 0% de faux positifs et latence <1ms. Audit de securite reussi, pret pour la production.",
-    "cta": "En Savoir Plus"
-  },
-  "vulnerabilities": {
-    "title": "L'IA Introduit des Vulnérabilités Que Vous N'avez Jamais Eu à Défendre",
-    "intro": "Les systèmes d'IA ne fonctionnent pas comme les logiciels traditionnels. Ils prennent des instructions de quiconque interagit avec eux — y compris les adversaires.",
-    "subtitle": "Les entreprises font déjà face à :",
-    "threats": [
-      {
-        "title": "Injection de prompts & détournement d'instructions",
-        "desc": "Les attaquants trompent le modèle pour ignorer les politiques ou révéler des secrets",
-        "icon": "terminal"
-      },
-      {
-        "title": "Empoisonnement de la récupération & sources corrompues",
-        "desc": "Données malveillantes injectées dans les pipelines RAG pour manipuler les sorties",
-        "icon": "database"
-      },
-      {
-        "title": "Accès non autorisé & fuites d'informations silencieuses",
-        "desc": "L'IA exposant involontairement des informations confidentielles",
-        "icon": "unlock"
-      },
-      {
-        "title": "Décisions manipulées & sorties compromises",
-        "desc": "Adversaires influençant l'IA pour produire des décisions nuisibles",
-        "icon": "shuffle"
-      },
-      {
-        "title": "Zéro visibilité sur les processus de décision IA",
-        "desc": "Aucun journal clair, rendant difficile la détection des problèmes",
-        "icon": "eye-off"
-      },
-      {
-        "title": "Vol de modèle & exposition de la propriété intellectuelle",
-        "desc": "Extraction de modèles propriétaires, données d'entraînement ou logique métier",
-        "icon": "download"
-      }
-    ],
-    "conclusion": "L'IA entre dans les flux de travail critiques plus vite que les équipes de sécurité ne peuvent s'adapter. Sans défenses solides, ces systèmes exposent vos données, vos processus de raisonnement et votre entreprise."
-  },
-  "expertise": {
-    "title": "Expertise Indépendante en Sécurité IA — Sur Tout le Cycle de Vie de l'IA",
-    "intro": "Nous ne vendons pas un produit.",
-    "intro_detail": "Nous vous aidons à concevoir, implémenter et opérationnaliser des systèmes d'IA sécurisés de bout en bout. Notre équipe travaille aux côtés de la vôtre pour architec turer et protéger chaque couche où l'IA peut être compromise.",
-    "subtitle": "Notre travail couvre chaque couche où l'IA peut être compromise :",
-    "coverage": [
-      { "name": "Ingéstion des données", "icon": "Database" },
-      { "name": "Récupération & routage", "icon": "GitBranch" },
-      { "name": "Interaction & prompting", "icon": "MessageSquare" },
-      { "name": "Flux agentiques", "icon": "Workflow" },
-      { "name": "Accès, identité & permissions", "icon": "Lock" },
-      { "name": "Surveillance & gouvernance", "icon": "Eye" },
-      { "name": "Préparation aux incidents", "icon": "ShieldAlert" }
-    ],
-    "conclusion": "Vous obtenez des conseils clairs, des stratégies de durcissement, une modélisation des menaces et des protections concrètes adaptées à votre environnement."
-  },
-  "focus_areas": {
-    "title": "Nos Domaines d'Expertise Principaux",
+  "secure_at_runtime": {
+    "title": "Sécurisez l'IA à l'Exécution",
     "pillars": [
       {
-        "name": "Identité & Accès",
-        "description": "Vérifiez et contrôlez chaque utilisateur, agent et système touchant votre IA. Nous concevons des modèles d'accès, des permissions et des protections pour que seuls les acteurs humains et machines approuvés puissent interagir avec les connaissances sensibles.",
-        "icon": "UserCheck"
+        "name": "Pare-feu LLM",
+        "items": [
+          "Protection du périmètre IA",
+          "Bloque les injections et fuites",
+          "Applique les politiques en temps réel"
+        ]
       },
       {
-        "name": "Politique & Application",
-        "description": "Définissez ce que votre IA peut voir, décider et révéler — et appliquez-le. Nous construisons des ensembles de règles, des garde-fous, des filtres d'entrée/sortie et des stratégies de segmentation des connaissances qui préviennent les accès inappropriés ou les fuites.",
-        "icon": "ShieldCheck"
+        "name": "Orchestration Runtime",
+        "items": [
+          "Autorise l'exécution des agents",
+          "Médie les outils et actions",
+          "Prévient les comportements dangereux"
+        ]
       },
       {
-        "name": "Surveillance & Audit",
-        "description": "Rendez chaque prompt, récupération et inférence observable. Nous établissons la journalisation, la détection d'anomalies et l'auditabilité pour que vous sachiez toujours comment votre IA prend ses décisions et où émergent les risques.",
-        "icon": "Eye"
-      },
-      {
-        "name": "Réponse & Résilience",
-        "description": "Préparez-vous aux incidents de sécurité IA — et réagissez vite. Nous créons des playbooks de détection, des flux de confinement et des processus de récupération pour l'injection de prompts, l'utilisation abusive de modèles et les événements d'exposition de données.",
-        "icon": "Zap"
+        "name": "Gouvernance Active",
+        "items": [
+          "Contrôles humain-dans-la-boucle",
+          "Piste d'audit complète d'exécution",
+          "Conçu pour les systèmes agentiques"
+        ]
       }
     ]
   },
-  "weakest_link": {
-    "title": "Empêchez l'IA de Devenir Votre Maillon Faible",
-    "subtitle": "Sécuriser vos systèmes d'IA réduit la probabilité de :",
-    "risks": [
-      { "title": "Manipulation de la logique métier", "icon": "settings" },
-      { "title": "Fuites d'informations sensibles", "icon": "droplet" },
-      { "title": "Sorties ou décisions compromises", "icon": "alert-circle" },
-      { "title": "Violations réglementaires et politiques", "icon": "file-warning" },
-      { "title": "Dommages irréversibles à la réputation", "icon": "trending-down" },
-      { "title": "Violations de sécurité non détectées", "icon": "shield-off" }
-    ],
-    "conclusion": "L'IA vous donne un levier massif — mais seulement si elle fonctionne de manière sûre et prévisible dans des conditions réelles."
-  },
-  "case_studies": {
-    "title": "Sécurité IA en Action",
-    "subtitle": "Systèmes réels, sécurité réelle, impact réel"
+  "why_us": {
+    "title": "Pourquoi Data Science Technologies",
+    "items": [
+      "Expertise en sécurité IA sur l'ensemble du cycle de vie des systèmes d'IA modernes",
+      "Protection contre la manipulation de la logique métier, les fuites de données et les décisions de modèles compromises",
+      "Observabilité et surveillance pour chaque prompt, récupération et inférence",
+      "Stratégies de durcissement personnalisées pour les environnements d'entreprise complexes et réels",
+      "Conçu pour les standards MCP"
+    ]
   },
   "trust_bar": {
     "title": "Construit avec des technologies éprouvées"
   },
-  "cta_section": {
-    "title": "Prêt à Sécuriser Votre IA ?",
-    "subtitle": "De l'insight à l'action—en toute sécurité. Notre équipe combine une expertise avancée en IA avec des principes de sécurité dès la conception pour garantir que vos initiatives IA soient sûres, conformes et réussies.",
-    "button": "Parlons-en Aujourd'hui"
-  },
   "contact": {
-    "title": "Contactez-nous",
-    "email": "info@datasciencetech.ca",
-    "form": {
-      "name_label": "Nom",
-      "email_label": "Courriel",
-      "message_label": "Message",
-      "submit": "Envoyer",
-      "success": "Merci ! Nous vous répondrons bientôt.",
-      "error": "Une erreur s'est produite. Veuillez réessayer."
-    }
-  },
-  "security_audit": {
-    "modal_title": "Demander un Audit de Sécurité",
-    "modal_subtitle": "Parlez-nous de vos systèmes IA et de vos préoccupations de sécurité. Notre équipe vous contactera dans les 24 heures.",
-    "form": {
-      "name_label": "Nom Complet",
-      "email_label": "Courriel Professionnel",
-      "company_label": "Entreprise",
-      "role_label": "Votre Rôle",
-      "ai_systems_label": "Systèmes IA Utilisés",
-      "ai_systems_placeholder": "ex., LLMs, pipelines RAG, agents IA, chatbots...",
-      "concerns_label": "Principales Préoccupations de Sécurité",
-      "concerns_placeholder": "Décrivez vos principales préoccupations concernant la sécurité IA...",
-      "submit": "Demander l'Audit",
-      "success": "Merci ! Notre équipe de sécurité vous contactera dans les 24 heures.",
-      "error": "Une erreur s'est produite. Veuillez réessayer.",
-      "close": "Fermer"
-    }
+    "email": "info@datasciencetech.ca"
   },
   "footer": {
-    "description": "Systèmes de connaissances sécurisés pour l'ère de l'IA. Nous combinons l'ingénierie des connaissances, les systèmes pilotés par LLM et l'expertise en sécurité pour créer des solutions qui comptent.",
-    "tagline": "De l'insight à l'action—en toute sécurité.",
-    "languages": "Opérations multilingues : anglais, portugais, français",
+    "description": "Autorité runtime pour l'IA agentique. Nous construisons des solutions d'application, d'orchestration et de gouvernance prêtes pour la production pour la prochaine génération de systèmes d'IA.",
+    "tagline": "Du filtrage de prompts au contrôle actif d'exécution.",
+    "languages": "Opérations multilingues : anglais, français",
     "links": {
       "company": "Entreprise",
-      "case_studies": "Études de cas",
-      "services": "Services",
-      "contact": "Contact",
+      "why": "Pourquoi l'Autorité Runtime",
+      "product": "Force Field",
+      "architecture": "Architecture",
+      "security": "Sécurité",
       "privacy": "Politique de confidentialité"
     },
-    "copyright": "© 2025 Data Science Technologies. Tous droits réservés."
+    "copyright": "© 2026 Data Science Technologies. Tous droits réservés."
   },
   "nav": {
-    "case_studies": "Études de cas",
-    "services": "Ce Que Nous Construisons",
-    "about": "À propos",
-    "contact": "Contact"
+    "why": "Autorité Runtime",
+    "product": "Force Field",
+    "architecture": "Architecture",
+    "security": "Sécurité"
   },
   "meta": {
-    "description": "Data Science Technologies construit des systèmes de connaissances sécurisés qui capturent, raisonnent et agissent. Nous combinons l'ingénierie des connaissances, l'IA/ML et la sécurité dès la conception pour l'ère de l'IA.",
-    "keywords": "systèmes de connaissances, systèmes basés sur les connaissances, KBS, sécurité IA, sécurité LLM, ingénierie des connaissances, IA d'entreprise, IA sécurisée, ontologies, moteurs de raisonnement, gouvernance IA"
+    "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des pare-feux LLM à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",
+    "keywords": "autorité runtime, sécurité IA agentique, pare-feu LLM, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité MCP, sécurité IA entreprise"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

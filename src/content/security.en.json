@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Security — Execution-Level Guardrails | Data Science Technologies",
+    "description": "Data Science Technologies is building execution-level security controls for agentic AI systems that extend beyond prompt filtering while remaining grounded in production-ready enforcement.",
+    "keywords": "AI security, execution-level guardrails, runtime risk containment, agentic AI governance, AI-BOM, agent discovery"
+  },
+  "hero": {
+    "title": "Security",
+    "subtitle": "Execution-Level Guardrails (Evolving)"
+  },
+  "intro": "Security in agentic AI systems is not just about blocking bad inputs — it is about governing behavior as systems act. Data Science Technologies is building execution-level security controls that extend beyond prompt filtering while remaining grounded in production-ready enforcement.",
+  "runtime_risk": {
+    "title": "Runtime Risk Containment",
+    "status": "Architecture",
+    "description": "The architecture is designed to support authorization of actions before execution, mediation of tool and API usage, prevention of unsafe behavior, and intervention when risk thresholds are exceeded. These capabilities build on the existing enforcement pipeline.",
+    "items": [
+      "Authorization of actions before execution",
+      "Mediation of tool and API usage",
+      "Prevention of unsafe or unintended behavior",
+      "Intervention when risk thresholds are exceeded"
+    ]
+  },
+  "stateful_risk": {
+    "title": "Stateful & Trajectory-Based Risk",
+    "description": "The security model is designed to reason about agent behavior over time — not just individual requests. This enables detection of:",
+    "items": [
+      "Multi-step abuse",
+      "Intent drift",
+      "Emergent behavior that only becomes apparent across sequences of actions"
+    ]
+  },
+  "tool_mediation": {
+    "title": "Active Tool Mediation",
+    "status": "Design Partner Preview",
+    "description": "The platform is actively developing the ability to mediate tool, API, and system command execution within agentic workflows. This capability is being validated with design partners to ensure safe and predictable behavior before broader availability."
+  },
+  "inter_agent": {
+    "title": "Inter-Agent Governance",
+    "status": "Future-Ready",
+    "description": "The security design is intended to extend into inter-agent governance as multi-agent systems emerge. This includes addressing:",
+    "items": [
+      "Authority delegation",
+      "Confused-deputy risks",
+      "Agent-to-agent interactions"
+    ]
+  },
+  "discovery": {
+    "title": "Automated Agent Discovery",
+    "status": "AI-BOM — Early Capability",
+    "description": "The platform is evolving toward automated discovery of active agents, their identities, and permission scopes. Early capabilities focus on inventory and visibility to help teams surface shadow AI and understand what autonomous systems are operating in their environment."
+  },
+  "explainability": {
+    "title": "Explainability & Reason Codes",
+    "description": "Enforcement decisions are designed to produce clear reason codes explaining why actions were blocked or modified. This supports:",
+    "items": [
+      "Investigation and incident response",
+      "Tuning of policies and detectors",
+      "Operator trust as execution-level controls mature"
+    ]
+  },
+  "human_in_loop": {
+    "title": "Human-in-the-Loop Controls",
+    "description": "The security design supports pausing execution for human review, escalating high-risk actions, and introducing approval workflows where oversight is required. These controls are designed to complement automation without disrupting normal execution paths."
+  },
+  "runtime_visibility": {
+    "title": "End-to-End Runtime Visibility",
+    "description": "The architecture supports continuous monitoring of agent decisions and actions, traceability across prompts, tools, and outcomes, and the creation of verifiable decision trails as execution-level capabilities mature."
+  },
+  "summary": {
+    "title": "Summary",
+    "items": [
+      "Production-ready enforcement foundations",
+      "A credible path toward execution-level governance",
+      "Visibility into autonomous behavior",
+      "Future-ready controls for increasingly agentic systems"
+    ],
+    "closing": "Security is built into the execution path — and evolves alongside agent autonomy."
+  }
+}

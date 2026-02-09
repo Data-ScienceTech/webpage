@@ -1,289 +1,190 @@
-# Data Science Technologies - Landing Site
+# Data Science Technologies — Runtime Authority for the Agentic Era
 
-A production-ready bilingual (EN/FR) landing site built with Astro, React, TypeScript, and Tailwind CSS. Deployed to GitHub Pages with a custom domain.
+A production-ready bilingual (EN/FR) marketing site built with Astro 4, React 18, TypeScript, and Tailwind CSS. Deployed to Netlify with custom domain `datasciencetech.ca`.
 
-## 🚀 Features
+## Features
 
-- **Bilingual Support**: Full English and French translations with language switcher
-- **Dark Mode**: Toggle between light and dark themes with localStorage persistence
-- **SEO Optimized**: Meta tags, OpenGraph, Twitter cards, sitemap, and robots.txt
-- **Responsive Design**: Mobile-first design with Tailwind CSS
-- **Accessible**: ARIA labels, semantic HTML, and keyboard navigation
-- **Performance**: Lighthouse score ≥95 on mobile and desktop
-- **Static Export**: No server required - deploys to GitHub Pages
-- **Form Integration**: Contact form via Formspree
+- **5-Page Structure**: Home, Why Runtime Authority, Product (Force Field), Architecture, Security
+- **Bilingual**: Full English / French with language switcher and French URL slugs
+- **Dark Mode**: Class-based toggle with localStorage persistence
+- **SEO**: Meta tags, OpenGraph, Twitter cards, sitemap, robots.txt, canonical URLs
+- **Responsive**: Mobile-first Tailwind CSS design
+- **Accessible**: ARIA labels, semantic HTML, keyboard navigation
+- **Brand Typography**: Space Grotesk (headings) + Inter (body) via Google Fonts
+- **Forms**: Netlify Forms (Force Field Request Access — EN/FR)
+- **Performance**: Static output, Lighthouse ≥95
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 /
-├── .github/
-│   └── workflows/
-│       └── pages.yml          # GitHub Pages deployment workflow
 ├── public/
 │   ├── favicon.svg
-│   ├── logo.png               # Replace with your actual logo
-│   ├── og-image.png           # Replace with your actual OG image
+│   ├── logo.svg / logo-dark.svg
+│   ├── og-image.png
 │   ├── robots.txt
-│   └── CNAME                  # Custom domain: datasciencetech.ca
+│   ├── forms.html
+│   └── CNAME
 ├── src/
-│   ├── assets/
-│   │   └── logos/             # Tech stack logos (placeholders)
 │   ├── components/
-│   │   ├── Header.astro       # Site header with navigation
-│   │   ├── Footer.astro       # Site footer
-│   │   ├── LangSwitch.tsx     # Language switcher (React)
-│   │   ├── CTA.astro          # Call-to-action button
-│   │   ├── CaseCard.astro     # Case study card
-│   │   └── FeatureCard.astro  # Value proposition card
+│   │   ├── Header.astro        # Nav: Why, Product, Architecture, Security
+│   │   ├── Footer.astro        # Links, social, language switch
+│   │   ├── LangSwitch.tsx      # EN/FR switcher (React)
+│   │   └── FeatureCard.astro   # Reusable card component
 │   ├── content/
-│   │   ├── site.en.json       # English content
-│   │   ├── site.fr.json       # French content
-│   │   └── cases.json         # Case studies (bilingual)
+│   │   ├── site.en.json        # Homepage + shared content (EN)
+│   │   ├── site.fr.json        # Homepage + shared content (FR)
+│   │   ├── forcefield.en.json  # Force Field product page (EN)
+│   │   ├── forcefield.fr.json  # Force Field product page (FR)
+│   │   ├── why-runtime-authority.en.json
+│   │   ├── why-runtime-authority.fr.json
+│   │   ├── architecture.en.json
+│   │   ├── architecture.fr.json
+│   │   ├── security.en.json
+│   │   └── security.fr.json
 │   ├── layouts/
-│   │   └── MainLayout.astro   # Main page layout
+│   │   └── MainLayout.astro    # Head, meta, Netlify form placeholders
 │   ├── pages/
-│   │   ├── index.astro        # Root redirect to preferred language
-│   │   ├── 404.astro          # 404 page (bilingual)
+│   │   ├── index.astro         # Root redirect
+│   │   ├── 404.astro           # Bilingual 404
 │   │   ├── en/
-│   │   │   ├── index.astro    # English homepage
-│   │   │   └── privacy.astro  # Privacy policy
+│   │   │   ├── index.astro
+│   │   │   ├── why-runtime-authority.astro
+│   │   │   ├── force-field.astro
+│   │   │   ├── architecture.astro
+│   │   │   ├── security.astro
+│   │   │   └── privacy.astro
 │   │   └── fr/
-│   │       ├── index.astro    # French homepage
-│   │       └── confidentialite.astro  # Privacy policy (FR)
+│   │       ├── index.astro
+│   │       ├── pourquoi-autorite-runtime.astro
+│   │       ├── force-field.astro
+│   │       ├── architecture.astro
+│   │       ├── securite.astro
+│   │       └── confidentialite.astro
 │   └── styles/
-│       └── globals.css        # Global styles with Tailwind
-├── .editorconfig
-├── .eslintrc.cjs
-├── .gitignore
-├── .prettierrc.json
+│       └── globals.css
 ├── astro.config.mjs
-├── package.json
-├── postcss.config.js
+├── netlify.toml
 ├── tailwind.config.js
-└── tsconfig.json
+├── tsconfig.json
+└── package.json
 ```
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
-- pnpm (recommended) or npm
+- Node.js 18+
+- pnpm 8+
 
 ### Installation
 
-1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone <repo-url>
 cd data-science-tech
-```
-
-2. Install dependencies:
-```bash
 pnpm install
 ```
 
-3. Start the development server:
+### Development
+
 ```bash
-pnpm dev
+pnpm dev          # http://localhost:4321
+pnpm build        # Production build
+pnpm preview      # Preview production build
 ```
 
-The site will be available at `http://localhost:4321`
+## Editing Content
 
-### Available Scripts
+All content lives in JSON files — no code changes needed for copy updates.
 
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm preview` - Preview production build locally
-- `pnpm lint` - Run ESLint
-- `pnpm format` - Format code with Prettier
+### Page Content Files
 
-## ✏️ Editing Content
+| Page | EN | FR |
+|------|----|----|
+| Homepage | `site.en.json` | `site.fr.json` |
+| Why Runtime Authority | `why-runtime-authority.en.json` | `why-runtime-authority.fr.json` |
+| Force Field (Product) | `forcefield.en.json` | `forcefield.fr.json` |
+| Architecture | `architecture.en.json` | `architecture.fr.json` |
+| Security | `security.en.json` | `security.fr.json` |
 
-All site content is stored in JSON files for easy editing without touching code:
+### Shared Content (in `site.*.json`)
 
-### Site Content
-
-- **English**: `src/content/site.en.json`
-- **French**: `src/content/site.fr.json`
-
-Edit these files to update:
-- Hero section text
-- Value propositions
-- Services list
-- Contact information
-- Navigation labels
-- Footer content
-
-### Case Studies
-
-Edit `src/content/cases.json` to update case studies. Each entry includes:
-- Title (EN/FR)
-- Industry
-- Impact metric
-- Summary
-- Technologies used
-- CTA label and link
+- `hero` — homepage hero title, subtitle, CTA
+- `secure_at_runtime` — 3-pillar section (LLM Firewall, Runtime Orchestration, Active Governance)
+- `why_us` — 5 bullet points
+- `trust_bar` — technology partner logos
+- `nav` — navigation labels (why, product, architecture, security)
+- `footer` — links, description, copyright, tagline
+- `meta` — SEO title/description/keywords
+- `social` — GitHub, LinkedIn URLs
+- `contact` — email address
 
 ### Images
 
-Replace placeholder images in the `public/` folder:
-- `logo.png` - Your company logo (recommended: 400×100px)
-- `og-image.png` - Social media preview image (1200×630px)
+Replace in `public/`:
+- `logo.svg` / `logo-dark.svg` — brand logo (light/dark variants)
+- `og-image.png` — social media preview (1200×630px)
+- `favicon.svg` — browser tab icon
 
-## 🚀 Deployment to GitHub Pages
+## Typography
 
-### One-Time Setup
+The site uses a custom font pairing loaded via Google Fonts:
 
-1. **Create a GitHub repository** for your project
+- **Space Grotesk** — headings (`font-heading`). Geometric sans-serif with sharp terminals conveying authority and technical precision.
+- **Inter** — body text (`font-sans`). Clean, highly legible at all sizes.
 
-2. **Enable GitHub Pages**:
-   - Go to repository Settings → Pages
-   - Source: GitHub Actions
+Fonts are configured in `tailwind.config.js` under `fontFamily` and loaded in `MainLayout.astro`.
 
-3. **Update Formspree ID**:
-   - Sign up at [Formspree.io](https://formspree.io)
-   - Create a new form
-   - Copy the form ID
-   - Update in `src/content/site.en.json` and `site.fr.json`:
-     ```json
-     "contact": {
-       "formspree_id": "YOUR_ACTUAL_FORM_ID"
-     }
-     ```
+## Colors
 
-4. **Custom Domain (Optional)**:
-   - Add your domain in repository Settings → Pages → Custom domain
-   - Update DNS records with your domain provider:
-     ```
-     Type: CNAME
-     Name: @ (or www)
-     Value: <your-username>.github.io
-     ```
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `primary-600` | `#0D9488` | Teal — buttons, accents, links |
+| `secondary-900` | `#0F172A` | Slate — text, dark backgrounds |
 
-### Deploying Updates
+Edit `tailwind.config.js` to adjust the full palette.
 
-Simply push to the `main` branch:
+## Deployment
 
-```bash
-git add .
-git commit -m "Your changes"
-git push origin main
-```
+### Netlify (current)
 
-The GitHub Actions workflow (`.github/workflows/pages.yml`) will automatically:
-1. Build the site
-2. Deploy to GitHub Pages
-3. Make it live at `https://datasciencetech.ca`
+Push to `main` triggers auto-deploy via `netlify.toml`. Domain: `datasciencetech.ca`.
 
-## 🎨 Customization
+### Forms
 
-### Colors
+The only active form is **Force Field Request Access** (`forcefield-access` / `forcefield-access-fr`). Hidden Netlify form placeholders are in `MainLayout.astro`. Form fields: first name, last name, company, email, job title, message.
 
-Edit `tailwind.config.js` to change brand colors:
+## i18n Route Mapping
 
-```js
-colors: {
-  primary: {
-    DEFAULT: '#2C7A7B',  // Your primary color
-    // ... other shades
-  },
-  secondary: {
-    DEFAULT: '#0F172A',  // Your secondary color
-    // ... other shades
-  },
-}
-```
+| EN Route | FR Route |
+|----------|----------|
+| `/en/` | `/fr/` |
+| `/en/why-runtime-authority` | `/fr/pourquoi-autorite-runtime` |
+| `/en/force-field` | `/fr/force-field` |
+| `/en/architecture` | `/fr/architecture` |
+| `/en/security` | `/fr/securite` |
+| `/en/privacy` | `/fr/confidentialite` |
 
-### Fonts
+The `LangSwitch.tsx` component handles route mapping. Routes with identical slugs (force-field, architecture) use the default prefix-swap logic.
 
-The site uses system fonts by default for optimal performance. To use custom fonts:
-
-1. Add font files to `public/fonts/`
-2. Update `tailwind.config.js`:
-   ```js
-   fontFamily: {
-     sans: ['YourFont', 'sans-serif'],
-   }
-   ```
-3. Add `@font-face` declarations in `src/styles/globals.css`
-
-### Dark Mode
-
-Dark mode toggle is in the header. The preference is stored in localStorage. To customize dark mode colors, edit Tailwind classes with `dark:` prefix throughout the components.
-
-## 📊 SEO & Analytics
-
-### SEO Features Included
-
-- ✅ Semantic HTML
-- ✅ Meta tags (title, description)
-- ✅ OpenGraph tags
-- ✅ Twitter Card tags
-- ✅ Canonical URLs
-- ✅ Sitemap.xml (auto-generated)
-- ✅ Robots.txt
-- ✅ Alt text for images
-- ✅ ARIA labels
-
-### Adding Analytics
-
-To add Google Analytics or other analytics:
-
-1. Add the tracking code to `src/layouts/MainLayout.astro` in the `<head>` section
-2. Wrap in a `<script is:inline>` tag for client-side execution
-
-## 🧪 Testing
-
-### Lighthouse
-
-Run Lighthouse tests:
-
-```bash
-pnpm build
-pnpm preview
-```
-
-Then open Chrome DevTools → Lighthouse and run audit.
-
-Target scores:
-- Performance: ≥95
-- Accessibility: ≥95
-- Best Practices: ≥95
-- SEO: ≥95
-
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Build Errors
 
-If you encounter build errors:
+```bash
+rm -rf node_modules .astro dist
+pnpm install
+pnpm build
+```
 
-1. Clear cache: `rm -rf node_modules .astro dist`
-2. Reinstall: `pnpm install`
-3. Rebuild: `pnpm build`
+### Content Warnings
 
-### Language Switch Not Working
+Astro warns about JSON files in `src/content/` not being in collection subdirectories. These are harmless — the files are imported directly, not via Astro content collections.
 
-Ensure:
-- JavaScript is enabled
-- localStorage is not blocked
-- Browser supports localStorage
+## License
 
-### Contact Form Not Submitting
-
-1. Verify Formspree ID is correct
-2. Check browser console for errors
-3. Ensure form action URL is correct
-
-## 📝 License
-
-Copyright © 2025 Data Science Technologies. All rights reserved.
-
-## 🤝 Contributing
-
-This is a private company website. For questions or support, contact: info@datasciencetech.ca
+© 2026 Data Science Technologies. All rights reserved.
 
 ---
 
-**Built with** ❤️ **using Astro, React, TypeScript, and Tailwind CSS**
+**Built with Astro, React, TypeScript, and Tailwind CSS**

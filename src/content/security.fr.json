@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Sécurité — Garde-fous au Niveau Exécution | Data Science Technologies",
+    "description": "Data Science Technologies construit des contrôles de sécurité au niveau de l'exécution pour les systèmes d'IA agentiques qui vont au-delà du filtrage des prompts tout en restant ancrés dans une application prête pour la production.",
+    "keywords": "sécurité IA, garde-fous exécution, confinement risques runtime, gouvernance IA agentique, AI-BOM, découverte d'agents"
+  },
+  "hero": {
+    "title": "Sécurité",
+    "subtitle": "Garde-fous au Niveau Exécution (En Évolution)"
+  },
+  "intro": "La sécurité dans les systèmes d'IA agentiques ne se résume pas à bloquer les mauvaises entrées — il s'agit de gouverner le comportement des systèmes en action. Data Science Technologies construit des contrôles de sécurité au niveau de l'exécution qui vont au-delà du filtrage des prompts tout en restant ancrés dans une application prête pour la production.",
+  "runtime_risk": {
+    "title": "Confinement des Risques Runtime",
+    "status": "Architecture",
+    "description": "L'architecture est conçue pour supporter l'autorisation des actions avant l'exécution, la médiation de l'utilisation des outils et API, la prévention des comportements dangereux et l'intervention lorsque les seuils de risque sont dépassés. Ces capacités s'appuient sur le pipeline d'application existant.",
+    "items": [
+      "Autorisation des actions avant l'exécution",
+      "Médiation de l'utilisation des outils et des API",
+      "Prévention des comportements dangereux ou non intentionnels",
+      "Intervention lorsque les seuils de risque sont dépassés"
+    ]
+  },
+  "stateful_risk": {
+    "title": "Risque Basé sur l'État et la Trajectoire",
+    "description": "Le modèle de sécurité est conçu pour raisonner sur le comportement des agents dans le temps — pas seulement sur les requêtes individuelles. Cela permet la détection de :",
+    "items": [
+      "Abus multi-étapes",
+      "Dérive d'intention",
+      "Comportement émergent qui ne devient apparent qu'à travers des séquences d'actions"
+    ]
+  },
+  "tool_mediation": {
+    "title": "Médiation Active des Outils",
+    "status": "Aperçu Partenaire de Conception",
+    "description": "La plateforme développe activement la capacité de médier l'exécution d'outils, d'API et de commandes système au sein des flux de travail agentiques. Cette capacité est validée avec des partenaires de conception pour assurer un comportement sûr et prévisible avant une disponibilité plus large."
+  },
+  "inter_agent": {
+    "title": "Gouvernance Inter-Agents",
+    "status": "Prêt pour l'Avenir",
+    "description": "La conception sécuritaire est destinée à s'étendre à la gouvernance inter-agents à mesure que les systèmes multi-agents émergent. Cela inclut :",
+    "items": [
+      "Délégation d'autorité",
+      "Risques de type confused-deputy",
+      "Interactions agent-à-agent"
+    ]
+  },
+  "discovery": {
+    "title": "Découverte Automatisée des Agents",
+    "status": "AI-BOM — Capacité Précoce",
+    "description": "La plateforme évolue vers la découverte automatisée des agents actifs, de leurs identités et de leurs périmètres de permissions. Les premières capacités se concentrent sur l'inventaire et la visibilité pour aider les équipes à identifier l'IA de l'ombre et comprendre quels systèmes autonomes opèrent dans leur environnement."
+  },
+  "explainability": {
+    "title": "Explicabilité et Codes de Raison",
+    "description": "Les décisions d'application sont conçues pour produire des codes de raison clairs expliquant pourquoi les actions ont été bloquées ou modifiées. Cela permet :",
+    "items": [
+      "Investigation et réponse aux incidents",
+      "Ajustement des politiques et détecteurs",
+      "Confiance des opérateurs à mesure que les contrôles d'exécution mûrissent"
+    ]
+  },
+  "human_in_loop": {
+    "title": "Contrôles Humain-dans-la-Boucle",
+    "description": "La conception sécuritaire prend en charge la suspension de l'exécution pour revue humaine, l'escalade des actions à haut risque et l'introduction de flux d'approbation là où la supervision est requise. Ces contrôles sont conçus pour compléter l'automatisation sans perturber les chemins d'exécution normaux."
+  },
+  "runtime_visibility": {
+    "title": "Visibilité Runtime de Bout en Bout",
+    "description": "L'architecture prend en charge la surveillance continue des décisions et actions des agents, la traçabilité à travers les prompts, outils et résultats, et la création de pistes de décision vérifiables à mesure que les capacités au niveau de l'exécution mûrissent."
+  },
+  "summary": {
+    "title": "Résumé",
+    "items": [
+      "Fondations d'application prêtes pour la production",
+      "Un chemin crédible vers la gouvernance au niveau de l'exécution",
+      "Visibilité sur le comportement autonome",
+      "Contrôles prêts pour l'avenir pour des systèmes de plus en plus agentiques"
+    ],
+    "closing": "La sécurité est intégrée dans le chemin d'exécution — et évolue parallèlement à l'autonomie des agents."
+  }
+}

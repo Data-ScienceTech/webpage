@@ -1,0 +1,166 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+import siteContent from '../../content/site.fr.json';
+import pageContent from '../../content/architecture.fr.json';
+
+const lang = 'fr';
+const pageTitle = pageContent.meta.title;
+const pageDescription = pageContent.meta.description;
+---
+
+<MainLayout
+  title={pageTitle}
+  description={pageDescription}
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden py-16 md:py-20 lg:py-24 bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
+      <div class="container-custom relative">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-secondary-700 bg-secondary-800/60 p-8 md:p-12">
+            <h1 class="mb-4 text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+              {pageContent.hero.title}
+            </h1>
+            <p class="text-xl md:text-2xl text-secondary-300">
+              {pageContent.hero.subtitle}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 p-8 md:p-10">
+            <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
+              {pageContent.intro}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Control Plane / Data Plane Separation -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="mb-8 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+            {pageContent.separation.title}
+          </h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 p-8">
+              <h3 class="mb-4 text-2xl font-bold text-secondary-900 dark:text-white">
+                {pageContent.separation.control_plane.title}
+              </h3>
+              <ul class="space-y-3">
+                {pageContent.separation.control_plane.items.map((item: string) => (
+                  <li class="flex items-start gap-3 text-secondary-600 dark:text-secondary-300">
+                    <span class="mt-1.5 h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 p-8">
+              <h3 class="mb-4 text-2xl font-bold text-secondary-900 dark:text-white">
+                {pageContent.separation.data_plane.title}
+              </h3>
+              <ul class="space-y-3">
+                {pageContent.separation.data_plane.items.map((item: string) => (
+                  <li class="flex items-start gap-3 text-secondary-600 dark:text-secondary-300">
+                    <span class="mt-1.5 h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hybrid -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 p-8 md:p-10">
+            <h2 class="mb-4 text-2xl md:text-3xl font-bold text-secondary-900 dark:text-white">
+              {pageContent.hybrid.title}
+            </h2>
+            <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
+              {pageContent.hybrid.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Orchestration -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-primary-200 dark:border-primary-800 bg-primary-50 dark:bg-primary-900/20 p-8 md:p-10">
+            <div class="flex items-center gap-3 mb-4">
+              <h2 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-white">
+                {pageContent.orchestration.title}
+              </h2>
+              <span class="px-3 py-1 rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-xs font-semibold uppercase tracking-wide">
+                {pageContent.orchestration.status}
+              </span>
+            </div>
+            <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
+              {pageContent.orchestration.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 p-8 md:p-10">
+            <h2 class="mb-4 text-2xl md:text-3xl font-bold text-secondary-900 dark:text-white">
+              {pageContent.roadmap.title}
+            </h2>
+            <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
+              {pageContent.roadmap.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section class="py-16 bg-gradient-to-br from-secondary-900 to-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-8 text-3xl font-bold text-white">
+            {pageContent.summary.title}
+          </h2>
+          <div class="grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto">
+            {pageContent.summary.items.map((item: string) => (
+              <div class="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
+                <svg class="w-5 h-5 text-primary-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-secondary-200 text-left">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

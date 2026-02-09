@@ -1,0 +1,164 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+import siteContent from '../../content/site.fr.json';
+import pageContent from '../../content/why-runtime-authority.fr.json';
+
+const lang = 'fr';
+const pageTitle = pageContent.meta.title;
+const pageDescription = pageContent.meta.description;
+---
+
+<MainLayout
+  title={pageTitle}
+  description={pageDescription}
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden py-16 md:py-20 lg:py-24 bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
+      <div class="container-custom relative">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-secondary-700 bg-secondary-800/60 p-8 md:p-12">
+            <h1 class="mb-4 text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+              {pageContent.hero.title}
+            </h1>
+            <p class="text-xl md:text-2xl text-secondary-300">
+              {pageContent.hero.subtitle}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 p-8 md:p-10">
+            <h2 class="mb-6 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">
+              {pageContent.why_it_matters.title}
+            </h2>
+            <p class="mb-6 text-lg text-secondary-600 dark:text-secondary-300">
+              {pageContent.why_it_matters.intro}
+            </p>
+            <p class="mb-4 text-lg font-semibold text-secondary-900 dark:text-white">
+              {pageContent.why_it_matters.agents_title}
+            </p>
+            <ul class="mb-6 space-y-2">
+              {pageContent.why_it_matters.agents.map((item: string) => (
+                <li class="flex items-start gap-3 text-secondary-600 dark:text-secondary-300">
+                  <span class="mt-1.5 h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p class="mb-6 text-lg text-secondary-600 dark:text-secondary-400">
+              {pageContent.why_it_matters.traditional}
+            </p>
+            <p class="text-lg font-semibold text-primary-600 dark:text-primary-400">
+              {pageContent.why_it_matters.conclusion}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- From Foundation to Control Plane -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 p-8 md:p-10">
+            <h2 class="mb-6 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">
+              {pageContent.foundation.title}
+            </h2>
+            <p class="mb-6 text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
+              {pageContent.foundation.intro}
+            </p>
+            <p class="mb-4 text-lg text-secondary-600 dark:text-secondary-300">
+              {pageContent.foundation.evolution}
+            </p>
+            <ul class="mb-6 space-y-2">
+              {pageContent.foundation.controls.map((item: string) => (
+                <li class="flex items-start gap-3 text-secondary-600 dark:text-secondary-300">
+                  <span class="mt-1.5 h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
+              {pageContent.foundation.conclusion}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagram -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 p-8 md:p-10">
+            <h2 class="mb-8 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">
+              {pageContent.diagram.title}
+            </h2>
+
+            <div class="mb-8 flex flex-col items-center gap-4 text-center">
+              <div class="px-6 py-3 rounded-lg bg-secondary-100 dark:bg-secondary-700 text-secondary-900 dark:text-white font-medium">
+                Utilisateur / Agent
+              </div>
+              <svg class="h-6 w-6 text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+              <div class="px-6 py-3 rounded-lg bg-secondary-100 dark:bg-secondary-700 text-secondary-900 dark:text-white font-medium">
+                Raisonnement LLM / Agent
+              </div>
+              <svg class="h-6 w-6 text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+              <div class="px-6 py-4 rounded-lg bg-primary-600 text-white font-bold text-lg">
+                Couche d'Autorité Runtime
+              </div>
+              <div class="flex gap-4 flex-wrap justify-center">
+                <span class="px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-semibold text-sm">
+                  Autoriser
+                </span>
+                <span class="px-4 py-2 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 font-semibold text-sm">
+                  Suspendre
+                </span>
+                <span class="px-4 py-2 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 font-semibold text-sm">
+                  Révoquer
+                </span>
+              </div>
+              <svg class="h-6 w-6 text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+              <div class="px-6 py-3 rounded-lg bg-secondary-100 dark:bg-secondary-700 text-secondary-900 dark:text-white font-medium">
+                Outils & Systèmes
+              </div>
+            </div>
+
+            <p class="text-secondary-600 dark:text-secondary-400 text-center italic">
+              {pageContent.diagram.caption}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="py-16 bg-gradient-to-br from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800">
+      <div class="container-custom">
+        <p class="text-center text-xl md:text-2xl font-medium text-white max-w-3xl mx-auto">
+          {pageContent.closing}
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

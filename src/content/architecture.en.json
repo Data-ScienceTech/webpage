@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "Architecture — The AI Control Plane | Data Science Technologies",
+    "description": "Data Science Technologies is designing an AI control plane to govern how AI systems behave in production. Layered architecture for low-latency enforcement, centralized governance, and scalability.",
+    "keywords": "AI control plane, AI architecture, control plane data plane, runtime orchestration, enterprise AI security architecture"
+  },
+  "hero": {
+    "title": "Architecture",
+    "subtitle": "The AI Control Plane"
+  },
+  "intro": "Data Science Technologies is building a control plane designed to govern how AI systems behave in production — not just what they are prompted to say. The architecture is layered to provide low-latency enforcement, centralized governance, and scalability across models and environments.",
+  "separation": {
+    "title": "Control Plane and Data Plane Separation",
+    "control_plane": {
+      "title": "Control Plane",
+      "items": [
+        "Centralized policy authoring and configuration",
+        "Policy distribution and governance",
+        "Analytics, monitoring, and audit visibility",
+        "Administrative control without runtime impact"
+      ]
+    },
+    "data_plane": {
+      "title": "Data Plane",
+      "items": [
+        "Inline inspection of prompts and actions",
+        "Low-latency policy evaluation",
+        "Enforcement in the execution path",
+        "Horizontally scalable and stateless design"
+      ]
+    }
+  },
+  "hybrid": {
+    "title": "Hybrid Enterprise Deployment",
+    "description": "Separation of control and data planes enables centralized policy management while maintaining localized, low-latency enforcement within customer-controlled environments. This supports hybrid and on-prem deployments without sacrificing governance or performance."
+  },
+  "orchestration": {
+    "title": "Runtime Orchestration Layer",
+    "status": "Design Partner Preview",
+    "description": "At the center of the architecture is a runtime orchestration layer designed to supervise agentic systems. It authorizes actions before execution, mediates access to tools and APIs, enforces execution-level guardrails, and enables intervention when behavior deviates from expected boundaries."
+  },
+  "roadmap": {
+    "title": "Near-Term Roadmap",
+    "description": "We are rapidly iterating on execution-level orchestration capabilities to address the emerging agentic threat landscape. Development is proceeding in close collaboration with design partners to validate behavior, performance, and operational fit before broader availability."
+  },
+  "summary": {
+    "title": "Summary",
+    "items": [
+      "Production-ready control and data plane foundations",
+      "A clear path toward execution-level orchestration",
+      "Support for hybrid enterprise environments",
+      "An honest roadmap for evolving runtime authority"
+    ]
+  }
+}
