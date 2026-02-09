@@ -28,10 +28,6 @@
 # Site Settings > Forms > Form notifications > Add notification > Email notification
 # Set recipient to: info@datasciencetech.ca
 
-# Security audit form notification
-[[plugins]]
-  package = "@netlify/plugin-forms"
-
 # Headers for security
 [[headers]]
   for = "/*"

@@ -11,15 +11,7 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap({
-      i18n: {
-        defaultLocale: 'en',
-        locales: {
-          en: 'en',
-          fr: 'fr',
-        },
-      },
-    }),
+    sitemap(),
   ],
   output: 'static',
   build: {
