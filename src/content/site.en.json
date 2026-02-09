@@ -42,7 +42,7 @@
       "Protection against business logic manipulation, data leakage, and compromised model decisions",
       "Observability and monitoring for every prompt, retrieval, and inference",
       "Custom hardening strategies for complex, real-world enterprise environments",
-      "Built for MCP Standards"
+      "Built on Zero-Trust Standards"
     ]
   },
   "trust_bar": {
@@ -73,7 +73,7 @@
   },
   "meta": {
     "description": "Data Science Technologies provides runtime authority for agentic AI — from LLM firewalls to execution-level orchestration and governance. Production-ready AI security for the enterprise.",
-    "keywords": "runtime authority, agentic AI security, LLM firewall, AI execution control, AI governance, AI control plane, MCP security, enterprise AI security"
+    "keywords": "runtime authority, agentic AI security, LLM firewall, AI execution control, AI governance, AI control plane, zero-trust AI security, enterprise AI security"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

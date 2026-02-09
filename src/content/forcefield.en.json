@@ -2,7 +2,7 @@
   "meta": {
     "title": "Force Field LLM Firewall — Production-Ready Runtime Protection | Data Science Technologies",
     "description": "Force Field is a production-ready security gateway that provides real-time inspection, control, and enforcement for prompts, agent actions, and tool usage — without vendor lock-in.",
-    "keywords": "LLM Firewall, AI Security, Prompt Injection Prevention, MCP Security, Runtime Protection, Model-Agnostic AI Security"
+    "keywords": "LLM Firewall, AI Security, Prompt Injection Prevention, Runtime Protection, Model-Agnostic AI Security, Zero-Trust AI Security"
   },
   "hero": {
     "title": "Force Field LLM Firewall",
@@ -11,8 +11,8 @@
   "intro": "Force Field is a production-ready security gateway that sits directly in the execution path of AI systems. It provides real-time inspection, control, and enforcement for prompts, agent actions, and tool usage — without locking you into a specific model or vendor.",
   "intro_closing": "This is the foundation layer for runtime authority.",
   "mcp_onramp": {
-    "title": "Mandatory MCP On-Ramp",
-    "description": "Establishes a secure gateway where MCP-based agents obtain authorization and credentials before accessing enterprise tools and systems — creating a strategic control point for governing agent behavior at runtime."
+    "title": "Mandatory Security Gateway",
+    "description": "Establishes a secure gateway where AI agents are authenticated via SPIFFE/SPIRE identity and authorized through policy enforcement before accessing enterprise tools and systems — creating a strategic control point for governing agent behavior at runtime."
   },
   "capabilities": {
     "title": "Core Capabilities",
@@ -22,7 +22,7 @@
         "items": [
           "Blocks prompt injection and jailbreak attempts",
           "Prevents sensitive data leakage",
-          "Zero-Day Anomaly Detection using behavioral and statistical models"
+          "ML-Based Anomaly Detection using behavioral and statistical models"
         ],
         "icon": "Shield"
       },
@@ -65,6 +65,6 @@
     "error": "Something went wrong. Please try again."
   },
   "footer": {
-    "badges": ["Security Audited", "Open Source", "SOC 2 In Progress"]
+    "badges": ["Security Hardened"]
   }
 }

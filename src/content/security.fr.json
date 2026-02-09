@@ -46,7 +46,7 @@
   },
   "discovery": {
     "title": "Découverte Automatisée des Agents",
-    "status": "AI-BOM — Capacité Précoce",
+    "status": "AI-BOM — En Conception",
     "description": "La plateforme évolue vers la découverte automatisée des agents actifs, de leurs identités et de leurs périmètres de permissions. Les premières capacités se concentrent sur l'inventaire et la visibilité pour aider les équipes à identifier l'IA de l'ombre et comprendre quels systèmes autonomes opèrent dans leur environnement."
   },
   "explainability": {

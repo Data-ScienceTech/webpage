@@ -46,7 +46,7 @@
   },
   "discovery": {
     "title": "Automated Agent Discovery",
-    "status": "AI-BOM — Early Capability",
+    "status": "AI-BOM — In Design",
     "description": "The platform is evolving toward automated discovery of active agents, their identities, and permission scopes. Early capabilities focus on inventory and visibility to help teams surface shadow AI and understand what autonomous systems are operating in their environment."
   },
   "explainability": {

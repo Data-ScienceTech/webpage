@@ -2,7 +2,7 @@
   "meta": {
     "title": "Force Field Pare-feu LLM — Protection Runtime Prête pour la Production | Data Science Technologies",
     "description": "Force Field est une passerelle de sécurité prête pour la production qui fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils.",
-    "keywords": "Pare-feu LLM, Sécurité IA, Prévention Injection de Prompts, Sécurité MCP, Protection Runtime, Sécurité IA Agnostique"
+    "keywords": "Pare-feu LLM, Sécurité IA, Prévention Injection de Prompts, Protection Runtime, Sécurité IA Agnostique, Sécurité IA Zero-Trust"
   },
   "hero": {
     "title": "Force Field Pare-feu LLM",
@@ -11,8 +11,8 @@
   "intro": "Force Field est une passerelle de sécurité prête pour la production qui se positionne directement dans le chemin d'exécution des systèmes d'IA. Elle fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils — sans vous enfermer dans un modèle ou un fournisseur spécifique.",
   "intro_closing": "C'est la couche fondamentale de l'autorité runtime.",
   "mcp_onramp": {
-    "title": "Point d'Entrée MCP Obligatoire",
-    "description": "Établit une passerelle sécurisée où les agents basés sur MCP obtiennent l'autorisation et les identifiants avant d'accéder aux outils et systèmes d'entreprise — créant un point de contrôle stratégique pour gouverner le comportement des agents à l'exécution."
+    "title": "Passerelle de Sécurité Obligatoire",
+    "description": "Établit une passerelle sécurisée où les agents IA sont authentifiés via l'identité SPIFFE/SPIRE et autorisés par l'application de politiques avant d'accéder aux outils et systèmes d'entreprise — créant un point de contrôle stratégique pour gouverner le comportement des agents à l'exécution."
   },
   "capabilities": {
     "title": "Capacités Principales",
@@ -22,7 +22,7 @@
         "items": [
           "Bloque les tentatives d'injection de prompts et de jailbreak",
           "Prévient les fuites de données sensibles",
-          "Détection d'anomalies zero-day utilisant des modèles comportementaux et statistiques"
+          "Détection d'anomalies basée sur le ML utilisant des modèles comportementaux et statistiques"
         ],
         "icon": "Shield"
       },
@@ -65,6 +65,6 @@
     "error": "Une erreur s'est produite. Veuillez réessayer."
   },
   "footer": {
-    "badges": ["Audit de Sécurité Réussi", "Open Source", "SOC 2 En Cours"]
+    "badges": ["Sécurité Renforcée"]
   }
 }

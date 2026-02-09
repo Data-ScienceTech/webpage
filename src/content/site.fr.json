@@ -42,7 +42,7 @@
       "Protection contre la manipulation de la logique métier, les fuites de données et les décisions de modèles compromises",
       "Observabilité et surveillance pour chaque prompt, récupération et inférence",
       "Stratégies de durcissement personnalisées pour les environnements d'entreprise complexes et réels",
-      "Conçu pour les standards MCP"
+      "Bâti sur les standards Zero-Trust"
     ]
   },
   "trust_bar": {
@@ -73,7 +73,7 @@
   },
   "meta": {
     "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des pare-feux LLM à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",
-    "keywords": "autorité runtime, sécurité IA agentique, pare-feu LLM, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité MCP, sécurité IA entreprise"
+    "keywords": "autorité runtime, sécurité IA agentique, pare-feu LLM, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité IA zero-trust, sécurité IA entreprise"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",
