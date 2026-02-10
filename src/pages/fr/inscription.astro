@@ -8,8 +8,8 @@ const lang = 'fr';
 ---
 
 <MainLayout
-  title={`Inscription — Accès anticipé | ${siteContent.company}`}
-  description="Inscrivez-vous pour accéder en avant-première au pare-feu LLM Force Field — sécurité IA de niveau entreprise à l'exécution."
+  title={`Inscription  Accès anticipé | ${siteContent.company}`}
+  description="Inscrivez-vous pour accéder en avant-première au pare-feu LLM Force Field  sécurité IA de niveau entreprise à l'exécution."
   lang={lang}
 >
   <Header lang={lang} content={siteContent} />
@@ -27,7 +27,7 @@ const lang = 'fr';
           </div>
           <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Démarrez avec Force Field</h1>
           <p class="text-xl text-secondary-300">
-            Créez votre compte pour accéder au pare-feu LLM Force Field — gratuit pendant la période d'accès anticipé.
+            Rejoignez la liste d'attente pour un accès anticipé au pare-feu LLM Force Field  soyez parmi les premiers lors du lancement.
           </p>
         </div>
       </div>
@@ -39,10 +39,10 @@ const lang = 'fr';
 
           <!-- Signup Form -->
           <div id="signup-form-container" class="card p-8">
-            <h2 class="text-2xl font-bold text-secondary-900 dark:text-white mb-2">Créez votre compte</h2>
-            <p class="text-secondary-600 dark:text-secondary-400 mb-8">Entrez vos informations ci-dessous pour commencer.</p>
+            <h2 class="text-2xl font-bold text-secondary-900 dark:text-white mb-2">Rejoignez la liste d'attente</h2>
+            <p class="text-secondary-600 dark:text-secondary-400 mb-8">Soyez parmi les premiers informés lorsque Force Field sera disponible. Nous vous contacterons dès l'ouverture de l'accès.</p>
 
-            <form id="signup-form" class="space-y-6" novalidate>
+            <form id="signup-form" name="signup-fr" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6" novalidate>
               <!-- Honeypot -->
               <div class="hidden">
                 <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
@@ -132,50 +132,8 @@ const lang = 'fr';
                 id="submit-btn"
                 class="btn-primary w-full flex items-center justify-center gap-2"
               >
-                <span id="submit-text">Créer le compte</span>
+                <span id="submit-text">Rejoindre la liste d'attente</span>
                 <svg id="submit-spinner" class="hidden animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-              </button>
-            </form>
-          </div>
-
-          <!-- Verification Step (hidden initially) -->
-          <div id="verify-container" class="card p-8 hidden">
-            <h2 class="text-2xl font-bold text-secondary-900 dark:text-white mb-2">Vérifiez votre courriel</h2>
-            <p class="text-secondary-600 dark:text-secondary-400 mb-2">
-              Nous avons envoyé un code de vérification à 6 chiffres à <strong id="verify-email-display" class="text-secondary-900 dark:text-white"></strong>.
-            </p>
-            <p class="text-secondary-500 dark:text-secondary-500 text-sm mb-8">Vérifiez votre boîte de réception (et le dossier spam) et entrez le code ci-dessous.</p>
-
-            <form id="verify-form" class="space-y-6" novalidate>
-              <div>
-                <label for="verification_code" class="label">Code de vérification <span class="text-red-500">*</span></label>
-                <input
-                  type="text"
-                  id="verification_code"
-                  name="verification_code"
-                  required
-                  maxlength="6"
-                  pattern="[0-9]{6}"
-                  inputmode="numeric"
-                  autocomplete="one-time-code"
-                  placeholder="000000"
-                  class="input-field text-center text-2xl tracking-[0.5em] font-mono"
-                />
-                <p id="verification_code-error" class="mt-1 text-sm text-red-600 dark:text-red-400 hidden"></p>
-              </div>
-
-              <div id="verify-error" class="hidden p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-sm text-red-700 dark:text-red-300"></div>
-
-              <button
-                type="submit"
-                id="verify-btn"
-                class="btn-primary w-full flex items-center justify-center gap-2"
-              >
-                <span id="verify-text">Vérifier et obtenir la clé API</span>
-                <svg id="verify-spinner" class="hidden animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
@@ -185,43 +143,19 @@ const lang = 'fr';
 
           <!-- Success State (hidden initially) -->
           <div id="success-container" class="card p-8 hidden">
-            <div class="text-center mb-6">
+            <div class="text-center">
               <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-green-100 dark:bg-green-900/30 mb-4">
                 <svg class="h-8 w-8 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 class="text-2xl font-bold text-secondary-900 dark:text-white mb-2">Vous êtes prêt!</h2>
-              <p class="text-secondary-600 dark:text-secondary-400">Votre compte Force Field a été créé. Voici votre clé API :</p>
-            </div>
-
-            <div class="relative">
-              <div class="p-4 rounded-lg bg-secondary-100 dark:bg-secondary-800 font-mono text-sm break-all text-secondary-900 dark:text-white" id="api-key-display"></div>
-              <button
-                id="copy-key-btn"
-                type="button"
-                class="absolute top-2 right-2 p-2 rounded-md bg-secondary-200 hover:bg-secondary-300 dark:bg-secondary-700 dark:hover:bg-secondary-600 text-secondary-600 dark:text-secondary-300 transition-colors"
-                title="Copier la clé API"
-              >
-                <svg id="copy-icon" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                <svg id="check-icon" class="h-4 w-4 hidden text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </button>
-            </div>
-
-            <div class="mt-6 p-4 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
-              <p class="text-sm text-amber-800 dark:text-amber-300">
-                <strong>Important :</strong> Conservez cette clé API en lieu sûr. Vous ne pourrez plus la consulter. Incluez-la comme en-tête <code class="px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40">X-API-Key</code> dans vos requêtes au pare-feu Force Field.
+              <h2 class="text-2xl font-bold text-secondary-900 dark:text-white mb-2">Vous êtes sur la liste!</h2>
+              <p class="text-secondary-600 dark:text-secondary-400 mb-4">
+                Merci de votre intérêt pour Force Field. Nous vous contacterons dès que l'accès anticipé sera disponible.
               </p>
-            </div>
-
-            <div class="mt-6 text-center">
-              <a href="/fr/architecture" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 font-medium">
-                Découvrir comment intégrer Force Field &rarr;
-              </a>
+              <p class="text-secondary-500 dark:text-secondary-500 text-sm">
+                En attendant, découvrez notre <a href="/fr/architecture" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 underline">architecture</a> et notre <a href="/fr/securite" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 underline">approche sécurité</a>.
+              </p>
             </div>
           </div>
 
@@ -234,19 +168,10 @@ const lang = 'fr';
 </MainLayout>
 
 <script>
-  // Configuration — update API_BASE when the product API endpoint is available
-  const API_BASE = 'https://api.datasciencetech.ca';
-
-  // DOM references
   const signupForm = document.getElementById('signup-form') as HTMLFormElement;
-  const verifyForm = document.getElementById('verify-form') as HTMLFormElement;
   const signupContainer = document.getElementById('signup-form-container')!;
-  const verifyContainer = document.getElementById('verify-container')!;
   const successContainer = document.getElementById('success-container')!;
 
-  let registeredEmail = '';
-
-  // Helpers
   function showError(id: string, msg: string) {
     const el = document.getElementById(id);
     if (el) { el.textContent = msg; el.classList.remove('hidden'); }
@@ -264,11 +189,9 @@ const lang = 'fr';
     spinner.classList.toggle('hidden', !loading);
   }
 
-  // Step 1: Registration
   signupForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Clear errors
     ['first_name', 'last_name', 'email', 'accept_privacy', 'accept_terms'].forEach(id => hideError(id + '-error'));
     hideError('form-error');
 
@@ -279,14 +202,12 @@ const lang = 'fr';
     const acceptTerms = (document.getElementById('accept_terms') as HTMLInputElement).checked;
     const botField = (signupForm.querySelector('[name="bot-field"]') as HTMLInputElement).value;
 
-    // Honeypot check
     if (botField) return;
 
-    // Validation
     let valid = true;
     if (!firstName) { showError('first_name-error', 'Le prénom est requis.'); valid = false; }
     if (!lastName) { showError('last_name-error', 'Le nom est requis.'); valid = false; }
-    if (!email) { showError('email-error', 'L\'adresse courriel est requise.'); valid = false; }
+    if (!email) { showError('email-error', "L'adresse courriel est requise."); valid = false; }
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email-error', 'Veuillez entrer une adresse courriel valide.'); valid = false; }
     if (!acceptPrivacy) { showError('accept_privacy-error', 'Vous devez accepter la Politique de confidentialité pour continuer.'); valid = false; }
     if (!acceptTerms) { showError('accept_terms-error', 'Vous devez accepter les Conditions pour continuer.'); valid = false; }
@@ -295,98 +216,31 @@ const lang = 'fr';
     setLoading('submit-btn', 'submit-text', 'submit-spinner', true);
 
     try {
-      const res = await fetch(`${API_BASE}/register`, {
+      const formData = new URLSearchParams();
+      formData.append('form-name', 'signup-fr');
+      formData.append('first_name', firstName);
+      formData.append('last_name', lastName);
+      formData.append('email', email);
+      formData.append('accept_privacy', 'yes');
+      formData.append('accept_terms', 'yes');
+
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          name: `${firstName} ${lastName}`,
-          accept_privacy: true,
-          accept_terms: true,
-        }),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.toString(),
       });
 
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.message || data.error || `L'inscription a échoué (${res.status})`);
-      }
+      if (!res.ok) throw new Error('Submission failed');
 
-      registeredEmail = email;
       signupContainer.classList.add('hidden');
-      verifyContainer.classList.remove('hidden');
-      (document.getElementById('verify-email-display') as HTMLElement).textContent = email;
+      successContainer.classList.remove('hidden');
 
     } catch (err: any) {
       const errorEl = document.getElementById('form-error')!;
-      errorEl.textContent = err.message || 'Une erreur est survenue. Veuillez réessayer.';
+      errorEl.textContent = 'Une erreur est survenue. Veuillez réessayer.';
       errorEl.classList.remove('hidden');
     } finally {
       setLoading('submit-btn', 'submit-text', 'submit-spinner', false);
-    }
-  });
-
-  // Step 2: Verification
-  verifyForm?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    hideError('verification_code-error');
-    hideError('verify-error');
-
-    const code = (document.getElementById('verification_code') as HTMLInputElement).value.trim();
-
-    if (!code || !/^\d{6}$/.test(code)) {
-      showError('verification_code-error', 'Veuillez entrer un code à 6 chiffres valide.');
-      return;
-    }
-
-    setLoading('verify-btn', 'verify-text', 'verify-spinner', true);
-
-    try {
-      const res = await fetch(`${API_BASE}/verify`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: registeredEmail,
-          code,
-        }),
-      });
-
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.message || data.error || `La vérification a échoué (${res.status})`);
-      }
-
-      const data = await res.json();
-      const apiKey = data.api_key || data.key || data.apiKey || '';
-
-      verifyContainer.classList.add('hidden');
-      successContainer.classList.remove('hidden');
-      (document.getElementById('api-key-display') as HTMLElement).textContent = apiKey;
-
-    } catch (err: any) {
-      const errorEl = document.getElementById('verify-error')!;
-      errorEl.textContent = err.message || 'La vérification a échoué. Veuillez réessayer.';
-      errorEl.classList.remove('hidden');
-    } finally {
-      setLoading('verify-btn', 'verify-text', 'verify-spinner', false);
-    }
-  });
-
-  // Copy API key
-  document.getElementById('copy-key-btn')?.addEventListener('click', async () => {
-    const apiKey = document.getElementById('api-key-display')?.textContent || '';
-    try {
-      await navigator.clipboard.writeText(apiKey);
-      document.getElementById('copy-icon')?.classList.add('hidden');
-      document.getElementById('check-icon')?.classList.remove('hidden');
-      setTimeout(() => {
-        document.getElementById('copy-icon')?.classList.remove('hidden');
-        document.getElementById('check-icon')?.classList.add('hidden');
-      }, 2000);
-    } catch {
-      const range = document.createRange();
-      range.selectNodeContents(document.getElementById('api-key-display')!);
-      window.getSelection()?.removeAllRanges();
-      window.getSelection()?.addRange(range);
     }
   });
 </script>
