@@ -61,7 +61,8 @@
       "product": "Force Field",
       "architecture": "Architecture",
       "security": "Security",
-      "privacy": "Privacy Policy"
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions"
     },
     "copyright": "© 2026 Data Science Technologies. All rights reserved."
   },
@@ -69,7 +70,8 @@
     "why": "Why Runtime Authority",
     "product": "Force Field",
     "architecture": "Architecture",
-    "security": "Security"
+    "security": "Security",
+    "signup": "Sign Up"
   },
   "meta": {
     "description": "Data Science Technologies provides runtime authority for agentic AI — from LLM firewalls to execution-level orchestration and governance. Production-ready AI security for the enterprise.",

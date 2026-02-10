@@ -27,6 +27,22 @@ export default function LangSwitch({ lang }: Props) {
         'en': '/en/privacy',
         'fr': '/fr/confidentialite'
       },
+      '/terms': {
+        'en': '/en/terms',
+        'fr': '/fr/conditions'
+      },
+      '/conditions': {
+        'en': '/en/terms',
+        'fr': '/fr/conditions'
+      },
+      '/signup': {
+        'en': '/en/signup',
+        'fr': '/fr/inscription'
+      },
+      '/inscription': {
+        'en': '/en/signup',
+        'fr': '/fr/inscription'
+      },
       '/why-runtime-authority': {
         'en': '/en/why-runtime-authority',
         'fr': '/fr/pourquoi-autorite-runtime'

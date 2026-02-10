@@ -84,6 +84,22 @@ const ogImageUrl = new URL('/og-image.png', Astro.site).toString();
       <input type="text" name="job_title" />
       <textarea name="message"></textarea>
     </form>
+
+    <!-- Signup Forms -->
+    <form name="signup" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="first_name" />
+      <input type="text" name="last_name" />
+      <input type="email" name="email" />
+      <input type="checkbox" name="accept_privacy" />
+      <input type="checkbox" name="accept_terms" />
+    </form>
+    <form name="signup-fr" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="first_name" />
+      <input type="text" name="last_name" />
+      <input type="email" name="email" />
+      <input type="checkbox" name="accept_privacy" />
+      <input type="checkbox" name="accept_terms" />
+    </form>
     
     <slot />
   </body>

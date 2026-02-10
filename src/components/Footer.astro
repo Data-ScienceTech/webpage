@@ -68,12 +68,17 @@ const currentYear = new Date().getFullYear();
       <!-- Legal & Language -->
       <div>
         <h3 class="mb-4 text-lg font-semibold text-secondary-900 dark:text-white">
-          {content.footer.links.privacy}
+          Legal
         </h3>
         <ul class="space-y-2">
           <li>
             <a href={lang === 'en' ? `/${lang}/privacy` : `/${lang}/confidentialite`} class="footer-link">
               {content.footer.links.privacy}
+            </a>
+          </li>
+          <li>
+            <a href={lang === 'en' ? `/${lang}/terms` : `/${lang}/conditions`} class="footer-link">
+              {content.footer.links.terms}
             </a>
           </li>
         </ul>

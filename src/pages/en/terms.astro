@@ -1,0 +1,190 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.en.json';
+
+const lang = 'en';
+---
+
+<MainLayout
+  title={`Early Access Terms & Conditions | ${siteContent.company}`}
+  description="Force Field Early Access Terms and Conditions — the agreement governing your use of the Force Field Solution during the Early Access Period."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Legal
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Early Access Terms &amp; Conditions</h1>
+          <p class="text-xl text-secondary-300">
+            The agreement governing your use of the Force Field Solution during the Early Access Period.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Effective:</strong> Upon acceptance (entering your name and e-mail and tapping the acceptance button at account creation)<br />
+                  <strong class="text-secondary-900 dark:text-white">Legal Entity:</strong> 9558-6616 Québec Inc.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            
+            <!-- Preamble -->
+            <div class="not-prose mb-10 p-6 rounded-xl bg-secondary-900 dark:bg-secondary-800 text-white">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+                <svg class="h-6 w-6 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Agreement Overview
+              </h2>
+              <p class="text-secondary-300 mb-0">
+                These Early Access Terms and Conditions (the "Agreement") are entered into between the user ("User" or "you") of the Force Field platform and real-time LLM firewall solution (the "Solution") and 9558-6616 Québec Inc. ("Force Field", "we", or "us"). The "Solution" means the beta version of a platform and AI-powered tool consisting of a security layer that sits between End Users and LLM-powered knowledge systems.
+              </p>
+            </div>
+
+            <p class="text-secondary-700 dark:text-secondary-300 font-semibold uppercase text-sm tracking-wide">
+              BY ACCESSING THE SOLUTION'S PLATFORM PAGE, USING THE SOLUTION AND TAPPING ON THE APPROPRIATE ACCEPTANCE BUTTON, USER ACCEPTS AND AGREES TO BE BOUND BY THE TERMS OF THIS AGREEMENT. IF YOU ARE ACCEPTING ON BEHALF OF A LEGAL ENTITY, YOU REPRESENT AND WARRANT THAT YOU HAVE THE AUTHORITY TO BIND THAT ENTITY.
+            </p>
+
+            <!-- Section 1 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">1. License</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field hereby grants User a limited, non-exclusive, personal, non-transferable, non-sublicensable (except to the End Users), internal, royalty-free license to access and use the Solution during the Early Access Period.
+            </p>
+
+            <!-- Section 2 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">2. Testing</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              User agrees during the Early Access Period to use and test features of the Solution and to voluntarily report on all testing results to Force Field via various means (including through the Solution, via email, or other methods made available to you), including any errors, bugs, defects, and other issues with the Solution, as well as any Feedback. User may implement and use such modifications, enhancements, error corrections, bug fixes, new releases, or other updates to or for the Solution that Force Field may make during the Early Access Period.
+            </p>
+
+            <!-- Section 3 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">3. Feedback</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field shall own all rights, title and interest in and to any suggestions, requests or recommendations for improvements or enhancements to the Solution or other feedback that User may, alone or jointly with Force Field, propose or make during the Early Access Period (collectively, "Feedback"). User hereby irrevocably (i) assigns all User's rights, title and interest in and to the Feedback to Force Field; and (ii) waives in favour of Force Field any and all moral rights that User has or may have in the Feedback. User further agrees to provide Force Field such assistance as it may require to document, perfect, and maintain its rights to the Feedback.
+            </p>
+
+            <!-- Section 4 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">4. User Content</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              During the Early Access Period, the Solution will access your and/or your End Users' inputs (including prompts) and outputs while using LLM-powered knowledge systems (the "User Content"). You are solely responsible for any and all User Content that is generated while using the Solution, and you represent and warrant that you own or control all necessary intellectual property rights in and to any such User Content. You will maintain all rights, title and interest to the User Content and you hereby grant to Force Field a royalty-free, worldwide and non-exclusive license to host, access, process, use, copy, reproduce, save, delete and transmit User Content for the purposes of, and only to the extent necessary for, the provision of the Solution.
+            </p>
+
+            <!-- Section 5 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">5. Provision of Solution</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field shall make the Solution available to User during the Early Access Period, solely for the purpose of User's use thereof. Force Field may, at its sole discretion, provide User such technical assistance as it may deem necessary. Force Field may impose certain limitations on the use of the Solution during the Early Access Period. Upon reasonable prior notice to User, Force Field may also delete all data from the Solution, which deletion would include any User Content. In such event, Force Field's reasonable prior notice would permit you to download and save any User Content prior to such deletion.
+            </p>
+
+            <!-- Section 6 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">6. No Other Obligations</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field is not obligated under this Agreement to provide any documentation, maintenance/technical support, or updates/upgrades to the Solution, though we will certainly attempt to do so. The Parties agree that upon expiry or termination of this Agreement, User is under no obligation to enter into any agreement relating to the Solution or to continue to use the Solution in any way.
+            </p>
+
+            <!-- Section 7 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">7. Ownership and Restrictions</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field retains ownership of all rights, title and interest in and to the Solution and the intellectual property rights therein (including all patent rights, design rights, copyrights and trade secret rights). Except as provided hereunder, User will have no right to loan, license, sublicense, rent, transfer, assign, sell, distribute, change, alter, copy, amend, modify, make derivative works, reverse engineer, decompile, disassemble, publish, disclose, display or make available, in whole or in part, or otherwise use the Solution. User shall not remove any proprietary rights legends from the Solution. User shall not use or permit others to use the Solution for developing any system which performs or may perform functions similar to, or competitive with, the Solution.
+            </p>
+
+            <!-- Section 8 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">8. Term; Termination</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Unless terminated earlier, this Agreement will begin on the Effective Date and will automatically terminate on the date on which a generally available commercial version of the Solution is released and a new Terms and Conditions covers the User's use (such term being defined as the "Early Access Period"). Force Field may terminate this Agreement at any time for any reason. User may terminate this Agreement at any time by notifying Force Field and/or by ceasing all use of the Solution. Any provision which by its nature should survive termination or expiration will survive.
+            </p>
+
+            <!-- Section 9 -->
+            <div class="not-prose mt-10 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2 text-secondary-900 dark:text-white">
+                <svg class="h-6 w-6 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                9. Fees
+              </h2>
+              <p class="text-secondary-700 dark:text-secondary-300 mb-0">
+                <strong>The Solution is made available to you without payment of any fees for the duration of the Early Access Period.</strong> Prior to the date on which a generally available commercial version of the Solution is released, Force Field will make available final pricing options for access to the general availability release.
+              </p>
+            </div>
+
+            <!-- Section 10 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">10. Disclaimer</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              User hereby expressly acknowledges and agrees that the Solution (including any modifications or improvements thereto) may not be ready for general commercial release and may contain bugs, errors or defects. Accordingly, <strong>Force Field is providing the Solution to User "AS IS".</strong> Force Field and its Representatives make no representations, warranties or covenants, express or implied, in respect of the Solution, including without limitation, statutory or implied warranties or conditions of merchantability, accuracy, non-infringement, satisfactory quality or fitness for a particular purpose, all of which are expressly disclaimed and excluded. Force Field does not guarantee that the Solution will ever be made generally commercially available.
+            </p>
+
+            <!-- Section 11 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">11. Non-Disparagement</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              User shall not, during the Early Access Period or thereafter, directly or indirectly, (i) criticize, disparage, defame or make or post any negative comments or reports about the Solution or Force Field, whether oral or written, including via social media or the internet; or (ii) take any action that might impair the integrity, reputation or goodwill of Force Field or its Representatives.
+            </p>
+
+            <!-- Section 12 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">12. Limitation of Liability</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              In no event will Force Field or its Representatives be liable for any loss, damages, claims, or costs whatsoever, including any indirect, incidental, consequential, special, punitive, or exemplary damages (including, without limitation, any loss of revenue or profits, lost or damaged data, loss of use, business interruption or any claim by a User's End User), arising out of or relating to this Agreement or caused by the use, misuse or inability to use the Solution, even if Force Field has been advised of the possibility of such damages. This limitation will apply regardless of the form of action.
+            </p>
+
+            <!-- Section 13 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">13. End Users Notices and Consents</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Where User is a Legal Entity, User shall, at its sole cost and responsibility, (a) provide all notices, disclosures, and other information required under applicable laws to its End Users regarding their access to, and use of, the Solution; and (b) obtain, maintain, and document all consents, authorizations, and permissions from End Users that are necessary for Force Field to lawfully provide, operate, support, monitor and process data through the Solution. User represents and warrants that such notices have been delivered and consents validly obtained prior to any End User's use of the Solution.
+            </p>
+
+            <!-- Section 14 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">14. Confidential Information</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              "Confidential Information" means all non-public, confidential or proprietary information of Force Field or its Representatives relating to the Solution, including all software, technology, intellectual property, trade secrets, all Feedback and all testing information provided by User. User shall not use the Confidential Information in any manner except as reasonably required to test the Solution and shall keep confidential all Confidential Information. User shall not disclose any Confidential Information to any person, except to employees and agents who require access for User's authorized use.
+            </p>
+
+            <!-- Section 15 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">15. Governing Law</h2>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                This Agreement will be governed by, interpreted and construed in accordance with the <strong>laws of the Province of Québec, Canada</strong> and the laws of Canada applicable therein. Any dispute arising out of or in connection with this Agreement shall be submitted to the exclusive jurisdiction of the <strong>courts of the Province of Quebec, Canada (district of Montreal)</strong>.
+              </p>
+            </div>
+
+            <!-- Section 16 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">16. General</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              This Agreement constitutes the entire agreement between you and Force Field with respect to your use of the Solution, superseding any prior agreements. If any provision is found invalid, illegal or unenforceable, the remaining provisions shall not be affected. Force Field shall not be liable for any failure to perform due to causes beyond its reasonable control. The Parties have requested that this Agreement be drafted in English. <em>Les parties aux présentes ont exigé que le présent contrat soit rédigé en langue anglaise.</em>
+            </p>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 9558-6616 Québec Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

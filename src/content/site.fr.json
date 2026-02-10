@@ -61,7 +61,8 @@
       "product": "Force Field",
       "architecture": "Architecture",
       "security": "Sécurité",
-      "privacy": "Politique de confidentialité"
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
     },
     "copyright": "© 2026 Data Science Technologies. Tous droits réservés."
   },
@@ -69,7 +70,8 @@
     "why": "Autorité Runtime",
     "product": "Force Field",
     "architecture": "Architecture",
-    "security": "Sécurité"
+    "security": "Sécurité",
+    "signup": "Inscription"
   },
   "meta": {
     "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des pare-feux LLM à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",

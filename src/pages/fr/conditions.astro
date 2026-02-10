@@ -1,0 +1,203 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout
+  title={`Conditions d'accès anticipé | ${siteContent.company}`}
+  description="Conditions d'accès anticipé de Force Field — l'entente régissant votre utilisation de la Solution Force Field durant la période d'accès anticipé."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Juridique
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Conditions d'accès anticipé</h1>
+          <p class="text-xl text-secondary-300">
+            L'entente régissant votre utilisation de la Solution Force Field durant la période d'accès anticipé.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+
+          <!-- Translation Notice -->
+          <div class="mb-8 p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
+            <p class="text-sm text-amber-800 dark:text-amber-300 flex items-start gap-2">
+              <svg class="h-5 w-5 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+              </svg>
+              <span>
+                <strong>Avis :</strong> Les parties ont exigé que le présent contrat soit rédigé en langue anglaise. La version anglaise est la version juridiquement contraignante.
+                <a href="/en/terms" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 underline">Voir la version anglaise</a>.
+              </span>
+            </p>
+          </div>
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">En vigueur :</strong> Dès l'acceptation (en entrant votre nom et courriel et en cliquant sur le bouton d'acceptation lors de la création du compte)<br />
+                  <strong class="text-secondary-900 dark:text-white">Entité juridique :</strong> 9558-6616 Québec Inc.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            
+            <!-- Préambule -->
+            <div class="not-prose mb-10 p-6 rounded-xl bg-secondary-900 dark:bg-secondary-800 text-white">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+                <svg class="h-6 w-6 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Aperçu de l'entente
+              </h2>
+              <p class="text-secondary-300 mb-0">
+                Les présentes Conditions d'accès anticipé (l'« Entente ») sont conclues entre l'utilisateur (l'« Utilisateur » ou « vous ») de la plateforme Force Field et de la solution de pare-feu LLM en temps réel (la « Solution ») et 9558-6616 Québec Inc. (« Force Field », « nous »). La « Solution » désigne la version bêta d'une plateforme et d'un outil alimenté par l'IA consistant en une couche de sécurité entre les Utilisateurs Finaux et les systèmes de connaissances propulsés par des LLM.
+              </p>
+            </div>
+
+            <p class="text-secondary-700 dark:text-secondary-300 font-semibold uppercase text-sm tracking-wide">
+              EN ACCÉDANT À LA PAGE DE LA SOLUTION, EN UTILISANT LA SOLUTION ET EN CLIQUANT SUR LE BOUTON D'ACCEPTATION APPROPRIÉ, L'UTILISATEUR ACCEPTE ET S'ENGAGE À ÊTRE LIÉ PAR LES TERMES DE CETTE ENTENTE.
+            </p>
+
+            <!-- Section 1 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">1. Licence</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field accorde par les présentes à l'Utilisateur une licence limitée, non exclusive, personnelle, non transférable, non sous-licenciable (sauf aux Utilisateurs Finaux), interne et libre de redevances pour accéder à et utiliser la Solution pendant la Période d'accès anticipé.
+            </p>
+
+            <!-- Section 2 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">2. Tests</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              L'Utilisateur s'engage, pendant la Période d'accès anticipé, à utiliser et tester les fonctionnalités de la Solution et à rapporter volontairement les résultats des tests à Force Field, incluant toutes erreurs, bogues, défauts, ainsi que toute Rétroaction.
+            </p>
+
+            <!-- Section 3 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">3. Rétroaction</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field détiendra tous les droits, titres et intérêts dans toute suggestion, demande ou recommandation d'amélioration de la Solution (la « Rétroaction »). L'Utilisateur cède irrévocablement tous ses droits dans la Rétroaction à Force Field et renonce à tout droit moral y afférent.
+            </p>
+
+            <!-- Section 4 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">4. Contenu de l'Utilisateur</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              La Solution accédera à vos entrées (y compris les prompts) et sorties lors de l'utilisation de systèmes de connaissances LLM (le « Contenu de l'Utilisateur »). Vous êtes seul responsable de tout Contenu de l'Utilisateur. Vous conserverez tous les droits sur votre Contenu et vous accordez à Force Field une licence libre de redevances, mondiale et non exclusive pour héberger, traiter, utiliser et transmettre le Contenu aux fins de la fourniture de la Solution.
+            </p>
+
+            <!-- Section 5 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">5. Fourniture de la Solution</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field mettra la Solution à la disposition de l'Utilisateur pendant la Période d'accès anticipé. Force Field peut imposer certaines limitations. Sur préavis raisonnable, Force Field peut supprimer toutes les données de la Solution, en vous permettant de télécharger votre Contenu au préalable.
+            </p>
+
+            <!-- Section 6 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">6. Aucune autre obligation</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field n'est pas tenue de fournir documentation, maintenance/support technique ou mises à jour, bien que nous nous efforcerons de le faire. À l'expiration de l'Entente, l'Utilisateur n'est pas tenu de conclure d'autre entente ni de continuer à utiliser la Solution.
+            </p>
+
+            <!-- Section 7 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">7. Propriété et restrictions</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Force Field conserve la propriété de tous les droits de propriété intellectuelle de la Solution. L'Utilisateur n'est pas autorisé à copier, modifier, constituer des œuvres dérivées, procéder à l'ingénierie inverse, ni utiliser la Solution pour développer des produits concurrents.
+            </p>
+
+            <!-- Section 8 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">8. Durée; Résiliation</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              L'Entente prend fin automatiquement à la date de mise en disponibilité générale de la Solution commerciale (la « Période d'accès anticipé »). Force Field peut résilier à tout moment. L'Utilisateur peut résilier en cessant toute utilisation de la Solution.
+            </p>
+
+            <!-- Section 9 -->
+            <div class="not-prose mt-10 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2 text-secondary-900 dark:text-white">
+                <svg class="h-6 w-6 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                9. Frais
+              </h2>
+              <p class="text-secondary-700 dark:text-secondary-300 mb-0">
+                <strong>La Solution est mise à votre disposition gratuitement pendant la durée de la Période d'accès anticipé.</strong> Les options de tarification finale seront communiquées avant la mise en disponibilité générale.
+              </p>
+            </div>
+
+            <!-- Section 10 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">10. Avis de non-responsabilité</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              L'Utilisateur reconnaît que la Solution peut ne pas être prête pour une commercialisation générale et peut contenir des bogues, erreurs ou défauts. <strong>Force Field fournit la Solution « TELLE QUELLE ».</strong> Force Field ne fournit aucune garantie, expresse ou implicite, concernant la Solution.
+            </p>
+
+            <!-- Section 11 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">11. Non-dénigrement</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              L'Utilisateur s'engage à ne pas critiquer, dénigrer ou diffamer la Solution ou Force Field, que ce soit directement ou indirectement, y compris via les réseaux sociaux ou Internet.
+            </p>
+
+            <!-- Section 12 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">12. Limitation de responsabilité</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              En aucun cas Force Field ne sera responsable de toute perte, dommage, réclamation ou coût, y compris les dommages indirects, accessoires, consécutifs, spéciaux, punitifs ou exemplaires, découlant de l'utilisation ou de l'incapacité d'utiliser la Solution.
+            </p>
+
+            <!-- Section 13 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">13. Avis et consentements des Utilisateurs Finaux</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Lorsque l'Utilisateur est une Entité juridique, il doit fournir tous les avis requis par la loi à ses Utilisateurs Finaux et obtenir tous les consentements nécessaires avant toute utilisation de la Solution.
+            </p>
+
+            <!-- Section 14 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">14. Informations confidentielles</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              L'Utilisateur s'engage à garder confidentielles toutes les informations non publiques de Force Field relatives à la Solution, incluant les logiciels, la technologie, la propriété intellectuelle, les secrets commerciaux, la Rétroaction et les résultats de tests.
+            </p>
+
+            <!-- Section 15 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">15. Droit applicable</h2>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                Cette Entente est régie par les <strong>lois de la province de Québec, Canada</strong>. Tout litige sera soumis à la compétence exclusive des <strong>tribunaux de la province de Québec (district de Montréal)</strong>.
+              </p>
+            </div>
+
+            <!-- Section 16 -->
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">16. Dispositions générales</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Cette Entente constitue l'entente complète entre vous et Force Field concernant votre utilisation de la Solution. Les parties ont exigé que le présent contrat soit rédigé en langue anglaise. <em>The Parties have requested that this Agreement be drafted in English.</em>
+            </p>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 9558-6616 Québec Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

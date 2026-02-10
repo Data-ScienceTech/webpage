@@ -1,0 +1,393 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.en.json';
+
+const lang = 'en';
+---
+
+<MainLayout
+  title={`Sign Up for Early Access | ${siteContent.company}`}
+  description="Sign up for early access to the Force Field LLM Firewall — enterprise-grade AI security at runtime."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+            </svg>
+            Early Access
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Get Started with Force Field</h1>
+          <p class="text-xl text-secondary-300">
+            Create your account to access the Force Field LLM Firewall — free during the Early Access Period.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-xl">
+
+          <!-- Signup Form -->
+          <div id="signup-form-container" class="card p-8">
+            <h2 class="text-2xl font-bold text-secondary-900 dark:text-white mb-2">Create your account</h2>
+            <p class="text-secondary-600 dark:text-secondary-400 mb-8">Enter your details below to get started.</p>
+
+            <form id="signup-form" class="space-y-6" novalidate>
+              <!-- Honeypot -->
+              <div class="hidden">
+                <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <!-- First Name -->
+              <div>
+                <label for="first_name" class="label">First Name <span class="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  required
+                  autocomplete="given-name"
+                  placeholder="Jane"
+                  class="input-field"
+                />
+                <p id="first_name-error" class="mt-1 text-sm text-red-600 dark:text-red-400 hidden"></p>
+              </div>
+
+              <!-- Last Name -->
+              <div>
+                <label for="last_name" class="label">Last Name <span class="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  required
+                  autocomplete="family-name"
+                  placeholder="Smith"
+                  class="input-field"
+                />
+                <p id="last_name-error" class="mt-1 text-sm text-red-600 dark:text-red-400 hidden"></p>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="email" class="label">Email Address <span class="text-red-500">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="jane.smith@company.com"
+                  class="input-field"
+                />
+                <p id="email-error" class="mt-1 text-sm text-red-600 dark:text-red-400 hidden"></p>
+              </div>
+
+              <!-- Privacy Policy Checkbox -->
+              <div class="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="accept_privacy"
+                  name="accept_privacy"
+                  required
+                  class="mt-1 h-4 w-4 rounded border-secondary-300 text-primary-600 focus:ring-primary-500 dark:border-secondary-600 dark:bg-secondary-800"
+                />
+                <label for="accept_privacy" class="text-sm text-secondary-700 dark:text-secondary-300">
+                  I have read and agree to the <a href="/en/privacy" target="_blank" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 underline">Privacy Policy</a>. <span class="text-red-500">*</span>
+                </label>
+              </div>
+              <p id="accept_privacy-error" class="mt-1 text-sm text-red-600 dark:text-red-400 hidden"></p>
+
+              <!-- Terms Checkbox -->
+              <div class="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="accept_terms"
+                  name="accept_terms"
+                  required
+                  class="mt-1 h-4 w-4 rounded border-secondary-300 text-primary-600 focus:ring-primary-500 dark:border-secondary-600 dark:bg-secondary-800"
+                />
+                <label for="accept_terms" class="text-sm text-secondary-700 dark:text-secondary-300">
+                  I have read and agree to the <a href="/en/terms" target="_blank" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 underline">Early Access Terms &amp; Conditions</a>. <span class="text-red-500">*</span>
+                </label>
+              </div>
+              <p id="accept_terms-error" class="mt-1 text-sm text-red-600 dark:text-red-400 hidden"></p>
+
+              <!-- Error Banner -->
+              <div id="form-error" class="hidden p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-sm text-red-700 dark:text-red-300"></div>
+
+              <!-- Submit -->
+              <button
+                type="submit"
+                id="submit-btn"
+                class="btn-primary w-full flex items-center justify-center gap-2"
+              >
+                <span id="submit-text">Create Account</span>
+                <svg id="submit-spinner" class="hidden animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Verification Step (hidden initially) -->
+          <div id="verify-container" class="card p-8 hidden">
+            <h2 class="text-2xl font-bold text-secondary-900 dark:text-white mb-2">Verify your email</h2>
+            <p class="text-secondary-600 dark:text-secondary-400 mb-2">
+              We've sent a 6-digit verification code to <strong id="verify-email-display" class="text-secondary-900 dark:text-white"></strong>.
+            </p>
+            <p class="text-secondary-500 dark:text-secondary-500 text-sm mb-8">Check your inbox (and spam folder) and enter the code below.</p>
+
+            <form id="verify-form" class="space-y-6" novalidate>
+              <div>
+                <label for="verification_code" class="label">Verification Code <span class="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  id="verification_code"
+                  name="verification_code"
+                  required
+                  maxlength="6"
+                  pattern="[0-9]{6}"
+                  inputmode="numeric"
+                  autocomplete="one-time-code"
+                  placeholder="000000"
+                  class="input-field text-center text-2xl tracking-[0.5em] font-mono"
+                />
+                <p id="verification_code-error" class="mt-1 text-sm text-red-600 dark:text-red-400 hidden"></p>
+              </div>
+
+              <div id="verify-error" class="hidden p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-sm text-red-700 dark:text-red-300"></div>
+
+              <button
+                type="submit"
+                id="verify-btn"
+                class="btn-primary w-full flex items-center justify-center gap-2"
+              >
+                <span id="verify-text">Verify &amp; Get API Key</span>
+                <svg id="verify-spinner" class="hidden animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Success State (hidden initially) -->
+          <div id="success-container" class="card p-8 hidden">
+            <div class="text-center mb-6">
+              <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-green-100 dark:bg-green-900/30 mb-4">
+                <svg class="h-8 w-8 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h2 class="text-2xl font-bold text-secondary-900 dark:text-white mb-2">You're all set!</h2>
+              <p class="text-secondary-600 dark:text-secondary-400">Your Force Field account has been created. Here is your API key:</p>
+            </div>
+
+            <div class="relative">
+              <div class="p-4 rounded-lg bg-secondary-100 dark:bg-secondary-800 font-mono text-sm break-all text-secondary-900 dark:text-white" id="api-key-display"></div>
+              <button
+                id="copy-key-btn"
+                type="button"
+                class="absolute top-2 right-2 p-2 rounded-md bg-secondary-200 hover:bg-secondary-300 dark:bg-secondary-700 dark:hover:bg-secondary-600 text-secondary-600 dark:text-secondary-300 transition-colors"
+                title="Copy API key"
+              >
+                <svg id="copy-icon" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <svg id="check-icon" class="h-4 w-4 hidden text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="mt-6 p-4 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
+              <p class="text-sm text-amber-800 dark:text-amber-300">
+                <strong>Important:</strong> Save this API key securely. You won't be able to see it again. Include it as the <code class="px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40">X-API-Key</code> header in your requests to the Force Field gateway.
+              </p>
+            </div>
+
+            <div class="mt-6 text-center">
+              <a href="/en/architecture" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 font-medium">
+                Learn how to integrate Force Field &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>
+
+<script>
+  // Configuration — update API_BASE when the product API endpoint is available
+  const API_BASE = 'https://api.datasciencetech.ca';
+
+  // DOM references
+  const signupForm = document.getElementById('signup-form') as HTMLFormElement;
+  const verifyForm = document.getElementById('verify-form') as HTMLFormElement;
+  const signupContainer = document.getElementById('signup-form-container')!;
+  const verifyContainer = document.getElementById('verify-container')!;
+  const successContainer = document.getElementById('success-container')!;
+
+  let registeredEmail = '';
+
+  // Helpers
+  function showError(id: string, msg: string) {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = msg; el.classList.remove('hidden'); }
+  }
+  function hideError(id: string) {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = ''; el.classList.add('hidden'); }
+  }
+  function setLoading(btnId: string, textId: string, spinnerId: string, loading: boolean) {
+    const btn = document.getElementById(btnId) as HTMLButtonElement;
+    const text = document.getElementById(textId)!;
+    const spinner = document.getElementById(spinnerId)!;
+    btn.disabled = loading;
+    text.classList.toggle('opacity-0', loading);
+    spinner.classList.toggle('hidden', !loading);
+  }
+
+  // Step 1: Registration
+  signupForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Clear errors
+    ['first_name', 'last_name', 'email', 'accept_privacy', 'accept_terms', 'form-error'].forEach(id => hideError(id + '-error'));
+    hideError('form-error');
+
+    const firstName = (document.getElementById('first_name') as HTMLInputElement).value.trim();
+    const lastName = (document.getElementById('last_name') as HTMLInputElement).value.trim();
+    const email = (document.getElementById('email') as HTMLInputElement).value.trim();
+    const acceptPrivacy = (document.getElementById('accept_privacy') as HTMLInputElement).checked;
+    const acceptTerms = (document.getElementById('accept_terms') as HTMLInputElement).checked;
+    const botField = (signupForm.querySelector('[name="bot-field"]') as HTMLInputElement).value;
+
+    // Honeypot check
+    if (botField) return;
+
+    // Validation
+    let valid = true;
+    if (!firstName) { showError('first_name-error', 'First name is required.'); valid = false; }
+    if (!lastName) { showError('last_name-error', 'Last name is required.'); valid = false; }
+    if (!email) { showError('email-error', 'Email address is required.'); valid = false; }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email-error', 'Please enter a valid email address.'); valid = false; }
+    if (!acceptPrivacy) { showError('accept_privacy-error', 'You must accept the Privacy Policy to continue.'); valid = false; }
+    if (!acceptTerms) { showError('accept_terms-error', 'You must accept the Terms & Conditions to continue.'); valid = false; }
+    if (!valid) return;
+
+    setLoading('submit-btn', 'submit-text', 'submit-spinner', true);
+
+    try {
+      const res = await fetch(`${API_BASE}/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          name: `${firstName} ${lastName}`,
+          accept_privacy: true,
+          accept_terms: true,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.message || data.error || `Registration failed (${res.status})`);
+      }
+
+      registeredEmail = email;
+      signupContainer.classList.add('hidden');
+      verifyContainer.classList.remove('hidden');
+      (document.getElementById('verify-email-display') as HTMLElement).textContent = email;
+
+    } catch (err: any) {
+      const errorEl = document.getElementById('form-error')!;
+      errorEl.textContent = err.message || 'Something went wrong. Please try again.';
+      errorEl.classList.remove('hidden');
+    } finally {
+      setLoading('submit-btn', 'submit-text', 'submit-spinner', false);
+    }
+  });
+
+  // Step 2: Verification
+  verifyForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    hideError('verification_code-error');
+    hideError('verify-error');
+
+    const code = (document.getElementById('verification_code') as HTMLInputElement).value.trim();
+
+    if (!code || !/^\d{6}$/.test(code)) {
+      showError('verification_code-error', 'Please enter a valid 6-digit code.');
+      return;
+    }
+
+    setLoading('verify-btn', 'verify-text', 'verify-spinner', true);
+
+    try {
+      const res = await fetch(`${API_BASE}/verify`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: registeredEmail,
+          code,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.message || data.error || `Verification failed (${res.status})`);
+      }
+
+      const data = await res.json();
+      const apiKey = data.api_key || data.key || data.apiKey || '';
+
+      verifyContainer.classList.add('hidden');
+      successContainer.classList.remove('hidden');
+      (document.getElementById('api-key-display') as HTMLElement).textContent = apiKey;
+
+    } catch (err: any) {
+      const errorEl = document.getElementById('verify-error')!;
+      errorEl.textContent = err.message || 'Verification failed. Please try again.';
+      errorEl.classList.remove('hidden');
+    } finally {
+      setLoading('verify-btn', 'verify-text', 'verify-spinner', false);
+    }
+  });
+
+  // Copy API key
+  document.getElementById('copy-key-btn')?.addEventListener('click', async () => {
+    const apiKey = document.getElementById('api-key-display')?.textContent || '';
+    try {
+      await navigator.clipboard.writeText(apiKey);
+      document.getElementById('copy-icon')?.classList.add('hidden');
+      document.getElementById('check-icon')?.classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('copy-icon')?.classList.remove('hidden');
+        document.getElementById('check-icon')?.classList.add('hidden');
+      }, 2000);
+    } catch {
+      // Fallback: select text
+      const range = document.createRange();
+      range.selectNodeContents(document.getElementById('api-key-display')!);
+      window.getSelection()?.removeAllRanges();
+      window.getSelection()?.addRange(range);
+    }
+  });
+</script>
