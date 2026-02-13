@@ -1,0 +1,215 @@
+﻿PRIVACY POLICY
+ (Last updated on February 9, 2026)
+
+Welcome!
+
+Thank you for your interest in Force Field. We hope that you will enjoy using our “Services”, which include: (i) visiting our website at https://datasciencetech.ca/en/, including all subpages and subdomains, present and future (the “Website”); and (ii) the use of our firewall “Solution” which is a platform and AI-powered tool consisting in a security layer that sits between End Users (as defined below) and LLM-powered knowledge systems . 
+
+Force Field takes your privacy and the security of personal data very seriously. We are providing this privacy policy (the “Policy”) to tell you about who we are, what personal data we collect from you and about you, and what we do with your personal data, all while you use the Services or otherwise interact with us online. The Policy also explains your rights under applicable law, how you can contact us and the necessary authorities to enforce those rights. We ask that you please read it carefully.
+
+Key Elements of this Policy
+
+Here are the key elements of this Policy so that you can know the important parts right away to make an informed decision about your consent for our collection, use and disclosure of your personal data. By submitting any personal data to us via any means, you consent to such collection, use and disclosure. You can find the details in the rest of the Policy. 
+
+Personal data we collect from you but only with your consentWhat we do with itTypes of third parties we share it withAccount Information Create and verify your accountCompanies that provide the technical infrastructure for the the Solution; companies that manage our email and communicationsData Inputs/PromptsProcess data inputs and prompts to allow you to fully use and test the SolutionCompanies that provide the technical infrastructure for the the Solution
+Some Terms
+
+Before we get started with the details, here are a few terms we think you should know as you read this Policy.
+
+“Data Protection Laws” refers to the laws that are designed to protect your personal data and privacy in the place where you live. Force Field is committed to adhering to all applicable Data Protection Laws, which include: 
+
+1. The “GDPR”, the European Data Protection Law which stands for “General Data Protection Regulation”, with the official name Regulation (EU) 2016/679 of the European Parliament and of the Council; 
+2. The “UK GDPR” which applies to our activities in the United Kingdom; please note that when this Policy refers only to the “GDPR”, this includes the UK GDPR, as applicable;
+3. “PIPEDA” (Personal Information Protection and Electronic Documents Act), which is the Canadian Data Protection Law that applies to our activities in Canada; 
+4. Quebec’s Act Respecting the Protection of Personal Information in the Private Sector (the “Quebec Privacy Act”), as amended by Law 25, that applies to our activities in Quebec;
+5. The “CCPA” (California Consumer Privacy Act), Cal. Civ. Code § 1798.100 (2018) et seq., as amended by the California Privacy Rights Act; and
+6. Any other state privacy laws in force in the United States, such as those which are currently in force in Colorado, Connecticut, and Virginia.
+
+(in each case as amended, consolidated, re-enacted or replaced from time to time).
+
+“Personal data” – this is information that we collect from you or about you and which is defined in the GDPR as “any information relating to an identified or identifiable natural person.” It can be as simple as your name or your email, or something more complicated like an online identifier (usually a string of letters and / or numbers) that gets attached to you. Under PIPEDA, the Quebec Privacy Act and the CCPA, the equivalent concept is “personal information”, which is roughly the same. For example, the Quebec Privacy Act defines “personal information” as “any information which relates to a natural person and allows that person to be identified either directly or indirectly.” Any mention of “personal data” in this Policy will also mean personal information. 
+
+About Us; Contacting Us
+
+9558-6616 Québec Inc. (referred to throughout this Policy as “Force Field”), which owns and operates the Website and the Solution, is a Quebec corporation located in the province of Quebec, Canada, with an office at the address listed below. Where this Policy refers to “Force Field”, it may refer to 9558-6616 Québec Inc. and/or its affiliates, and their respective shareholders, officers, directors, employees, agents, partners, principals, representatives, successors and assigns (collectively “Representatives”), depending on the context. Any reference to “we”, “our”, or “us” in this Policy shall also refer to Force Field. 
+
+The Solution is primarily intended for use by enterprise clients (each, a “User”) and will be accessible to each User’s employees and consultants (the “End Users”) via the User’s own internal LLM-powered knowledge system. If an individual is accessing the Solution on his. her or their own, the term “User” may refer to that individual person. A Website visitor, a User, an End User or any person for whom we hold personal data may be referred to as “you”, “yours” or “your”.
+
+Under the GDPR, Force Field is generally a “data controller”. That means we collect personal data directly from you and determine the purpose and means of “processing” that data. “Processing” is a broad term that means collection, use, storage, transfer or any other action related to your personal data; it is used in this Policy in that way. Sometimes, Force Field acts as a “data processor” when we get personal data from our enterprise clients and process it on their behalf, for example when the inputs that End Users submit to the Solution include personal data from third parties unaffiliated with the enterprise client in question.  
+
+Under PIPEDA, Force Field is an “organization” and, under the Quebec Privacy Act, Force Field is an “enterprise”. PIPEDA uses the phrase “collection, use and disclosure” and the Quebec Privacy Act uses uses the phrase “collects, holds, uses or communicates to third parties” as the rough equivalent to the “processing” of the GDPR. When we use “processing” in this Policy, you can substitute either of those phrases.
+
+If you want to ask us anything about this Policy, or anything else privacy- or data- related, or exercise any of your available privacy rights, you can contact us at the following address:
+
+Force Field Privacy and Data Protection Officer
+Email: privacy@datasciencetech.ca
+
+Here is the mailing address for you as well:
+700-465 McGill Street
+Montreal, Quebec
+H2Y 2H1
+Canada
+
+Your Rights 
+
+You have the following rights regarding your personal data held by Force Field, and other privacy rights. Please note that not necessarily all of these rights may be available to you; this depends on the Data Protection Laws where you are located that apply to you. Please note that exercising certain of these rights may affect your ability to use a part or the entirety of the Services: 
+
+● The right to withdraw your consent for Force Field to process your personal data at any time;
+● The right to have your personal data erased from Force Field’s records;
+● The right to have your name de-indexed from the Website or the Solution (if we link them to any information about you);
+● The right to access your personal data and any relevant information around its processing and use; 
+● The right to have a copy of your personal data given to you in an easy-to-read format so that you can transfer it to another organization;
+● The right to have your personal data corrected or updated if you believe it is inaccurate or out of date;
+● The right to opt out of email marketing communications we send you, at any time;
+● The right to know whether Force Field shares your personal data (and if so, who gets it). Please refer to that information elsewhere in this Policy, though you can contact our Privacy and Data Protection Officer if you need additional information or clarification;
+● The right to demand that Force Field not sell your personal data. Please note that Force Field does not sell your personal data;
+● The right to restrict the processing of your personal data if it is inaccurate or if our processing or use of it is against the law; and 
+● The right to refuse any marketing or advertising targeted at you by Force Field, if applicable.
+
+If you wish to exercise any of these rights, please contact our Privacy and Data Protection Officer at the contact information above or refer to certain relevant sections further in this Policy.
+
+Please note that if you request the erasure of your personal data, we will do so to the extent possible. However, Force Field reserves the right to retain certain data for a reasonable period of time in order to comply with certain legal obligations or for the purposes of any legal proceedings.
+
+Limited Personal Data Collected from You and What We Use It For
+
+Force Field limits the amount of personal data we collect to what is necessary and appropriate for the identified purposes. We will not use or disclose your personal data for purposes other than those for which it was collected, except with your consent or as permitted or required by applicable law.
+
+In the table below, please find all the personal data we may collect from you directly, what we use it for, and the legal basis under the GDPR for us having and processing this personal data. Under PIPEDA, the Quebec Privacy Act and the CCPA, the legal basis is your informed consent, and by submitting this personal data you acknowledge having granted this consent to Force Field.
+
+Personal data categoryPersonal data processedWhat we use it for
+(the “purpose” of processing)Legal basis for processing under the GDPRAccount InformationYour first name, last name and email address
+1.  Create and verify your Solution account
+2. Manage the account, give you access to all of the Solution features and enable logging in to the SolutionYour consent in giving us this information
+Data Inputs/Prompts Any personal data that you submit to (or that is collected by) the LLM-powered knowledge system that is supported by the SolutionAllow you to use and test the Solution as intended Your consent in giving us this information
+
+If you happen to share or communicate personal data with us other than as explicitly set forth in this Policy, we will treat any such personal data in accordance with this Policy. 
+
+Personal Data Collected About You from Third Parties 
+
+We do not collect any personal data about you from third parties. However, remember that your use of the Solution is in connection with an LLM-powered knowledge system. The LLM service provider behind that LLM-powered knowledge system (such as OpenAI or Anthropic) is a third party to Force Field and will also receive any personal data that you submit to the LLM-powered knowledge system. 
+
+Who We Transfer Your Personal Data To
+
+We only share some of your personal data with third parties who are identified in the table below in this section, along with what they do with it. Each type of third party identified below is under a contractual obligation not to (1) transfer or sell your personal data; or (2) use your personal data for any purpose, other than the purpose identified in the table below.
+
+We will share personal data with law enforcement or other public authorities if: (1) we are required by applicable law in response to lawful requests, including to meet national security or law enforcement requirements; (2) we believe it is necessary in order to investigate, prevent, or take action regarding illegal activities, fraud, or situations involving potential threats to the safety of any person; (3) we believe it is necessary to investigate, prevent, or take action regarding situations that involve abuse of the Website, the Solution infrastructure or the internet in general (such as voluminous spamming or denial of service attacks); or (4) we are required to under any applicable law. 
+
+We may also share personal data: (1) to a parent company, subsidiaries, joint ventures, or other companies under common control with Force Field (in which case we will require such entities to honour this Policy); (2) if Force Field merges with another entity, is subject to a corporate reorganization, sells or transfers all or part of its business, assets or shares (in which case, we will require such entity to assume our obligations under this Policy, or inform you that you are covered by a new privacy policy).
+
+Some of these third-party recipients may be based outside your home jurisdiction. If you are in the European Economic Area or the U.K., please see the “Transfer of Your Personal Data Outside of the European Economic Area” section further down in this Policy for more information, including on how we safeguard your personal data when this occurs. If you are in Quebec, please see the “Transfer of Your Personal Data Outside of Quebec” section further down in this Policy for information on how we safeguard your personal data when this occurs.
+
+We will never share your personal data with other third parties, except under these circumstances or as otherwise permitted under applicable Data Protection Laws. We do not sell or rent your personal data to any third party for direct marketing purposes or any other purpose. 
+
+
+Category of personal dataTypes of third parties we share it withWhat they do
+
+Account InformationCompanies that provide technical infrastructure and hosting services for the Solution, such as Google CloudStore it; keep it for record-keeping purposesCompanies that help us to send out our emails, such as SendGrid and Google Workspace
+Send you emails as detailed in the Email Communications section belowData Inputs/PromptsCompanies that provide technical infrastructure and hosting services for the Solution, such as Google CloudStore it temporarily
+
+Sensitive Personal information
+
+We do not collect any of what the Data Protection Laws consider sensitive personal information from you when you visit the Website or use the Solution, unless you voluntarily submit it to us, which we encourage you not to do. 
+
+Email Communications and Compliance with Anti-Spam Laws 
+
+Force Field uses SendGrid and Gmail via the Google Workspace (the “Email Services Providers”) to (i) verify your email when you sign up for an account to access the Solution; (ii) email you with updates or notifications regarding the Solution; and (iii) respond to your communications. Personal data is transferred to the Email Service Providers in order for the emails to be sent out properly. The Email Service Providers do not use your personal data for any other purpose and will not transfer or sell your personal data to any other third party. For more information, please refer to Twilio's Privacy Policy, which applies to SendGrid’s email services and to Google's Privacy Policy.  
+
+Force Field’s emails do not currently include any opt-out provision, since any email that we send to you is essential for the use of our Services. 
+
+Force Field’s email practices are designed to be compliant with anti-spam laws, specifically the law unofficially called “CASL” or Canada’s Anti-Spam Law (S.C. 2010, c. 23) and the American CAN-SPAM Act. If you believe you have received any email from Force Field in violation of these laws, please contact our Privacy and Data Protection Officer using the contact information further up in this Policy.
+
+Limited Gathering of Information for Statistical and Security Purposes
+
+Force Field automatically collects certain technical metadata about the Solution and ours Users and End Users, but none of this information identifies you personally, except via an alphanumeric string. For example, we temporarily collect our Users’ (or End Users’) IP address when they submit a request to the Solution. Your IP address and other similar metadata that we collect may be used (i) to trace any fraudulent or criminal activity; (ii) for auditing, operational monitoring and session tracking; and (iii) to produce general usage metrics that help us to improve the Solution. 
+
+Tracking Technology ("Cookies") and Related Technologies
+
+Force Field uses tracking technology (“cookies” and related technology such as tags, pixels and web beacons) on the Website. Cookies are small text files placed on your computer or device when you visit a website or an application, in order to (i) track use of the Website and to improve the user experience by storing certain data on your computer or your device; and (ii) assist us in identifying potentially fraudulent activities. Force Field only uses functional and essential cookies in connection with the Website.
+
+Your browser can be set to refuse cookies or delete them after they have been accepted and stored. You can refer to your browser’s help section for instructions, but here are instructions for the most commonly used browsers and operating systems:
+
+• Google Chrome
+• Mozilla Firefox
+• Microsoft Edge
+• Opera
+• Apple Safari
+• iOS
+• Android
+
+How We Protect Your Personal Data
+
+We have implemented strict technical and organizational procedures for ensuring that, by default, only personal data which are necessary for each specific purpose of the processing are processed by us. These procedures prevent your personal data from being lost or used or accessed in any unauthorized way.
+
+We also have procedures in place to deal with any suspected data security breach. We will notify you and any applicable supervisory authority of a suspected data security breach where the Data Protection Laws require us to do so, and within the time frame required by the applicable Data Protection Law.
+
+Force Field uses only industry best practices (in terms of equipment, electronics and procedures) in keeping any data collected (including personal data) secure. In addition, we use third-party vendors and hosting partners to provide the necessary hardware, software, networking, storage, and related technology required to operate the Website and the Solution, and these third parties have been selected for their high standards of security, both electronic and physical. For example, Force Field uses Google Cloud, a recognized leader in secure data with a robust security program, for hosting of the Solution, and all related data. You can learn more about its security program here: Google Cloud Privacy Notice. 
+
+When you use our Website or the Solution, your connection is protected with HTTPS (TLS), the industry standard for encrypting information in transit on the internet. Look for the padlock in your browser’s address bar to view our TLS certificate and confirm you are connected securely to our Website.
+
+Internal Procedures and Policies
+
+In addition to the measures to protect your personal data described in the previous section, we have drafted and implemented certain internal procedures and policies regarding personal data, including the following: 
+
+1. A framework for the keeping and destruction of personal data, including where we may keep anonymized data;
+2. Defining and describing the roles and responsibilities of the members of Force Field personnel
+throughout the life cycle of the personal data;
+3. A process for dealing with individual complaints and requests for personal data and exercising of an individual’s rights under Data Protection Laws; and
+4. A management and IT policy and procedure for addressing potential data breach incidents involving personal data in the custody of Force Field.
+
+Transfer of Your Personal Data Outside of the European Economic Area (EEA) and the U.K. 
+
+For our European users, we endeavour to keep the personal data of our Users, End Users or Website visitors inside the EEA or the U.K. (as applicable).
+
+Certain of our data processors (and Force Field) are in other countries where your personal data may be transferred. However, these countries are limited to countries with particular circumstances that protect your data, specifically:
+
+● Canada. We transfer personal data to our operations in Canada, but Canada has been determined to have an “adequate level of protection” for your personal data under European data protection law. 
+● The United States. Your personal data is only transferred to companies in the United States that: (1) have signed agreements with us or have informed us that they are GDPR-compliant; and (2) have concluded the Standard Contractual Clauses for the transfer of personal data outside the EEA and the U.K. 
+
+That’s it! You have the right, however, to refuse to have your data transferred outside the EEA or the U.K. Please contact our Privacy and Data Protection Officer to make that request. Please note that making this request may prevent you from using the Solution.
+
+Transfer of Your Personal Data Outside of Quebec
+
+For our Quebec Users, End Users and Website visitors, we endeavour to keep your personal data in Quebec. However, certain of our third-party service providers are in other provinces or countries where your personal data may be transferred. When this happens, we do the following to safeguard your personal data:
+
+1. We will perform what the Quebec Privacy Act calls an “Assessment of the privacy-related factors” (what is generally called a “Privacy Impact Assessment,” or “PIA”) prior to the personal data leaving Quebec. If the PIA does not meet our standards and the standards required by the Quebec Privacy Act, we will not transfer your personal data to such a service provider; and
+2. If the PIA allows us to transfer the personal data to such a service provider outside Quebec, we will sign what is generally called a “Data Processing Agreement,” or DPA, with the service provider, which protects the personal data transferred to them and limits their use of it to what we have contracted with them to do. This DPA will adhere to the requirements of the Quebec Privacy Act. 
+
+Supervisory Authorities and Complaints
+
+If you are in the EEA or the U.K., under the GDPR, you have the right to make a complaint to the appropriate supervisory authority. If you are not satisfied with the response received or the actions taken by our Privacy and Data Protection Officer, or if you would like to make a complaint directly about Force Field’s data practices, we invite you to contact the supervisory authority in your country. 
+
+If you are in the U.K., you should contact the Information Commissioner’s Office who is the supervisory authority. You can reach them in a variety of ways, including by phone (0303 123 1113 in the UK) and mail (Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF). If you are in France, you should contact the Commission Nationale de l'Informatique et des Libertés which is the supervisory authority there. Their contact information can be found here. 
+
+The full listing of all Data Protection Authorities (the supervisory authorities) across the EEA can be found here. 
+
+If you are in Canada and you are not satisfied with the response received or the actions taken by our Privacy and Data Protection Officer, you can make a complaint to the Office of the Privacy Commissioner of Canada. Instructions on how to do so can be found on their website. If you are in Québec, you can make a complaint to the Commission d’accès à l’information, with the instructions for contacting them on their website.
+
+Data Retention and Anonymization
+
+Your personal data will only be kept for as long as it is necessary for the purpose needed for that processing. For example, we will retain your account information for as long as you have an active account with us to access and use the Solution.
+
+We may have to keep your data for a longer period of time to satisfy our requirements under any applicable law, including anti-spam laws, or to protect our legal interests. In some cases, where permitted by the Data Protection Laws, we may keep personal data that has been anonymized, for our legitimate business purposes.
+
+Automated Decision-Making
+
+Force Field does not use any automated decision-making processes with regard to your personal data in providing the Website or the Solution.
+
+Children’s Privacy Statement
+
+Our Services are only intended for persons who have reached the age of majority in their respective jurisdictions. 
+
+The Data Protection Laws have various age limits as to the minimum age required for us to hold personal data about an individual. We do not knowingly collect any personal data from a child under those minimum ages. If we become aware that we have inadvertently received personal data from a person under the minimum ages through the Website or the Solution, we will delete such information from our records.
+
+Changes to This Privacy Policy
+
+The date at the top of this page indicates when this Policy was last updated. Because Data Protection Laws are constantly evolving, every now and then we will have to update this Policy. You can always find the most updated version at this URL. We will post a prominent notice on the Website and the Solution’s platform page if we make significant changes to the Policy.
+
+Thanks for reading! Please keep your personal data safe; we promise to do the same. 
+
+© (under license) 9558-6616 Québec Inc., 2026
+
+
+
+
+
+
