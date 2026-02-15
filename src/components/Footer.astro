@@ -81,6 +81,19 @@ const currentYear = new Date().getFullYear();
               {content.footer.links.terms}
             </a>
           </li>
+          <li>
+            <a href={lang === 'en' ? `/${lang}/privacy-policy` : `/${lang}/politique-de-confidentialite`} class="footer-link">
+              {content.footer.links.websitePrivacy}
+            </a>
+          </li>
+          <li>
+            <a href={lang === 'en' ? `/${lang}/terms-of-use` : `/${lang}/conditions-dutilisation`} class="footer-link">
+              {content.footer.links.websiteTerms}
+            </a>
+          </li>
+          <li>
+            <a href="#" class="termly-display-preferences footer-link">Consent Preferences</a>
+          </li>
         </ul>
         <div class="mt-6">
           <LangSwitch lang={lang} client:load />

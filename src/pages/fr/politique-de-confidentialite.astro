@@ -1,0 +1,33 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout
+  title={`Politique de confidentialité du site | ${siteContent.company}`}
+  description="Politique de confidentialité du site Web de Data Science Technologies — comment nous gérons les cookies, l'analytique et vos données de navigation."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+
+  <main class="section-padding">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <div name="termly-embed" data-id="dd385e42-a1f6-4b88-aee3-a259534bbbf3"></div>
+        <script is:inline type="text/javascript">(function(d, s, id) {
+          var js, tjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "https://app.termly.io/embed-policy.min.js";
+          tjs.parentNode.insertBefore(js, tjs);
+        }(document, 'script', 'termly-jssdk'));</script>
+      </div>
+    </div>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

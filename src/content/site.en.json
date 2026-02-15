@@ -61,8 +61,10 @@
       "product": "Force Field",
       "architecture": "Architecture",
       "security": "Security",
-      "privacy": "Privacy Policy",
-      "terms": "Terms & Conditions"
+      "privacy": "Force Field Privacy",
+      "terms": "Force Field Terms",
+      "websitePrivacy": "Website Privacy Policy",
+      "websiteTerms": "Website Terms of Use"
     },
     "copyright": "© 2026 Data Science Technologies. All rights reserved."
   },
