@@ -19,7 +19,12 @@ const ogImageUrl = new URL('/og-image.png', Astro.site).toString();
 <html lang={lang}>
   <head>
     <!-- Termly Cookie Consent Blocker (must be first script) -->
-    <script is:inline src="https://app.termly.io/resource-blocker/0e6a4482-273e-4965-afeb-c11b5e08894c?autoBlock=on"></script>
+    <script is:inline define:vars={{ lang }}>
+      // Force Termly consent banner to match page language instead of browser language
+      document.documentElement.lang = lang;
+      window.__TERMLY_LANG = lang;
+    </script>
+    <script is:inline src={`https://app.termly.io/resource-blocker/0e6a4482-273e-4965-afeb-c11b5e08894c?autoBlock=on&lang=${lang}`}></script>
     <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-GX40M4TQB6"></script>
     <script is:inline>
