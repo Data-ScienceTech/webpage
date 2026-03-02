@@ -2,53 +2,126 @@
   "meta": {
     "title": "Force Field LLM Firewall — Production-Ready Runtime Protection | Data Science Technologies",
     "description": "Force Field is a production-ready security gateway that provides real-time inspection, control, and enforcement for prompts, agent actions, and tool usage — without vendor lock-in.",
-    "keywords": "LLM Firewall, AI Security, Prompt Injection Prevention, Runtime Protection, Model-Agnostic AI Security, Zero-Trust AI Security"
+    "keywords": "LLM Firewall, AI Security, Prompt Injection Detection, Runtime Protection, Model-Agnostic AI Security, Zero-Trust AI Security, MCP Security, MCP Proxy, AI Agent Security, LLM Firewall Benchmark, Streaming LLM Security, AI Tool Call Interception, PII Redaction LLM, Structured Output Security, DeBERTa Threat Detection"
   },
   "hero": {
     "title": "Force Field LLM Firewall",
     "subtitle": "Production-Ready Runtime Protection for AI Systems"
   },
-  "intro": "Force Field is a production-ready security gateway that sits directly in the execution path of AI systems. It provides real-time inspection, control, and enforcement for prompts, agent actions, and tool usage — without locking you into a specific model or vendor.",
+  "intro": "Force Field is a production-ready security gateway with a 10-step inspection pipeline and a 6-layer AI detection ensemble (regex, ML, token analysis, embeddings, DeBERTa transformer, and LLM-as-judge). Tested on 2,188 held-out samples: 98.9% attack detection, 100% data leak prevention, 0.3% false positive rate. Security processing in < 1ms P99. 1,650+ tests passing.",
   "intro_closing": "This is the foundation layer for runtime authority.",
   "mcp_onramp": {
-    "title": "Mandatory Security Gateway",
-    "description": "Establishes a secure gateway where AI agents are authenticated via SPIFFE/SPIRE identity and authorized through policy enforcement before accessing enterprise tools and systems — creating a strategic control point for governing agent behavior at runtime."
+    "title": "Zero Trust by Default",
+    "description": "Every request is authenticated, every prompt is inspected, every response is scanned. Force Field enforces a fail-closed security posture -- if any of the 10 pipeline steps flags a threat, the request is blocked before it reaches the AI model."
   },
   "capabilities": {
     "title": "Core Capabilities",
     "items": [
       {
-        "title": "Multi-Model Threat Detection",
+        "title": "6-Layer Threat Detection",
         "items": [
-          "Blocks prompt injection and jailbreak attempts",
-          "Prevents sensitive data leakage",
-          "ML-Based Anomaly Detection using behavioral and statistical models"
+          "352 WAF patterns across 11 attack types",
+          "ML classifier (TF-IDF) + DeBERTa transformer (184M params)",
+          "LLM-as-judge for novel/uncertain attacks",
+          "Fail-closed: any layer flags it, prompt is blocked"
         ],
         "icon": "Shield"
       },
       {
-        "title": "Policy Enforcement Engine",
+        "title": "Agentic AI Security (MCP)",
         "items": [
-          "Blocks, modifies, or sanitizes prompts in real time",
-          "Applies context-aware runtime policies",
-          "Enforces organizational and security constraints inline"
+          "Tool call interception with policy enforcement",
+          "MCP proxy gateway for AI agent communication",
+          "Per-agent permissions, schema validation, human-approval gates",
+          "Chain tracking: detects escalation, data exfiltration, recon patterns"
         ],
-        "icon": "ShieldCheck"
+        "icon": "Bot"
       },
       {
-        "title": "Pluggable, Model-Agnostic Architecture",
+        "title": "Streaming & Multimodal Protection",
         "items": [
-          "Compatible with OpenAI, Anthropic, and open-source models",
-          "Decouples security logic from model providers",
-          "Adopt new models without re-architecting security"
+          "Real-time SSE stream scanning with mid-stream halt",
+          "Image/vision input scanning (OCR injection, steganography detection)",
+          "Structured output scanning (JSON value PII/secret/injection detection)"
+        ],
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Data Protection & Compliance",
+        "items": [
+          "18 PII types detected (regex + NLP + Luhn validation)",
+          "Secret/credential detection (AWS, GCP, Slack, DB connection strings)",
+          "Compliance audit trail with JSONL/CSV export and configurable retention",
+          "Token budget controls per API key (daily limits, rolling windows)"
+        ],
+        "icon": "Database"
+      },
+      {
+        "title": "Model-Agnostic, Zero-Lock-In",
+        "items": [
+          "OpenAI, Anthropic, Google Gemini, Azure OpenAI, open-source/self-hosted",
+          "MCP protocol support (Claude Desktop, Cursor, custom agents)",
+          "Drop-in proxy: change one URL, no code changes",
+          "SaaS, hybrid (customer VPC), or fully on-premise deployment"
         ],
         "icon": "Layers"
       }
     ]
   },
+  "pipeline": {
+    "title": "10-Step Security Pipeline",
+    "steps": [
+      { "number": 1, "name": "Token Budget", "description": "Enforce per-key usage limits" },
+      { "number": 2, "name": "Tool Result Inspection", "description": "Scan tool/function results for PII, secrets, injection" },
+      { "number": 3, "name": "Image Scanner", "description": "Detect attacks hidden in images (OCR, steganography)" },
+      { "number": 4, "name": "6-Layer AI Detection", "description": "Regex + ML + DeBERTa + LLM-as-judge ensemble" },
+      { "number": 5, "name": "Streaming Security", "description": "Scan responses in real-time, halt mid-stream" },
+      { "number": 6, "name": "Tool Call Interception", "description": "Block unauthorized AI agent actions" },
+      { "number": 7, "name": "PII Redaction", "description": "Strip personal data from responses" },
+      { "number": 8, "name": "Structured Output Scan", "description": "Walk JSON responses for secrets and injection" },
+      { "number": 9, "name": "Output Moderation", "description": "Block harmful or policy-violating output" },
+      { "number": 10, "name": "Audit Trail", "description": "Log every interaction for compliance" }
+    ]
+  },
+  "agentic_security": {
+    "title": "Agentic AI Security",
+    "description": "Force Field includes an MCP proxy gateway that sits between AI agents and tools. Every tool call is evaluated against security policies before execution. The system tracks multi-step agent workflows and detects escalation patterns, data gathering attacks, and privilege escalation -- with quantitative benchmarks published.",
+    "items": [
+      "Tool call authorization with allow/deny/require-approval policies",
+      "Multi-agent orchestration security with trust levels and delegation management",
+      "Chain-of-action attack detection (4 pattern types: data exfil, privilege escalation, recon, rapid tool calls)",
+      "Per-agent, per-tool rate limiting (token bucket)",
+      "Schema validation for tool inputs",
+      "Result inspection: PII, secrets, and injection scanning in tool outputs"
+    ]
+  },
+  "benchmarks": {
+    "title": "Benchmark Results",
+    "core": [
+      { "value": "98.9%", "label": "Attack detection on 2,188 held-out samples" },
+      { "value": "100%", "label": "Outbound PII/secret detection" },
+      { "value": "0.3%", "label": "False positive rate" },
+      { "value": "< 1ms", "label": "P99 security processing (GCP Cloud Run)" },
+      { "value": "408ms", "label": "Median end-to-end response (includes LLM round-trip)" },
+      { "value": "0.00%", "label": "Error rate under load (235 requests, 50 concurrent)" }
+    ],
+    "agentic_title": "Agentic Benchmarks (162 test scenarios)",
+    "agentic": [
+      { "value": "87-100%", "label": "Tool result inspection accuracy" },
+      { "value": "100%", "label": "MCP gateway pre-call and post-call accuracy" },
+      { "value": "100%", "label": "Chain tracking detection across 4 attack pattern types" }
+    ]
+  },
   "what_this_enables": {
     "title": "What This Enables",
-    "description": "Force Field delivers immediate protection today while establishing the enforcement foundation for broader execution-level governance across agentic AI systems."
+    "items": [
+      "Deploy AI chatbots, copilots, and agents with quantifiable security guarantees",
+      "Meet compliance requirements (GDPR, CCPA, HIPAA) with built-in audit trails",
+      "Protect against prompt injection, data exfiltration, jailbreaks, and agent abuse",
+      "Secure streaming responses, multimodal inputs, and structured outputs",
+      "Control AI agent tool usage with policy enforcement and human-approval gates",
+      "Continuously validate security with automated red team pipelines (7 attack suites)"
+    ]
   },
   "form": {
     "title": "Request Access",

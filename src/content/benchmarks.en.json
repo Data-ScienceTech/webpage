@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Force Field Benchmark Results — Verified Security Performance | Data Science Technologies",
+    "description": "Published benchmark results for Force Field LLM Firewall: 98.9% attack detection, 100% data leak prevention, 0.3% false positive rate, and sub-millisecond security processing.",
+    "keywords": "LLM Firewall Benchmark, AI Security Benchmark, Prompt Injection Detection Rate, MCP Security Benchmark, AI Agent Security Testing, DeBERTa Threat Detection, Force Field Performance"
+  },
+  "hero": {
+    "title": "Benchmark Results",
+    "subtitle": "Verified security performance on held-out data and production workloads"
+  },
+  "intro": "Every number on this page comes from automated benchmark runs against held-out test data. We publish these results because transparency builds trust -- and because no competitor does it.",
+  "core": {
+    "title": "Core Detection Benchmarks",
+    "subtitle": "2,188 held-out samples, Feb 14 2026",
+    "items": [
+      { "value": "98.9%", "label": "Attack Detection Rate", "detail": "Across all attack types on held-out samples" },
+      { "value": "100%", "label": "Data Leak Prevention", "detail": "Outbound PII and secret detection" },
+      { "value": "0.3%", "label": "False Positive Rate", "detail": "On standard test corpus" },
+      { "value": "< 1ms", "label": "Security Processing P99", "detail": "Verified on GCP Cloud Run" },
+      { "value": "408ms", "label": "Median End-to-End Response", "detail": "Includes LLM round-trip latency" },
+      { "value": "0.00%", "label": "Error Rate Under Load", "detail": "235 requests, 50 concurrent" }
+    ]
+  },
+  "agentic": {
+    "title": "Agentic Security Benchmarks",
+    "subtitle": "162 test scenarios across MCP proxy, tool interception, and chain tracking",
+    "items": [
+      { "value": "87-100%", "label": "Tool Result Inspection", "detail": "PII, secrets, and injection detection in tool outputs" },
+      { "value": "100%", "label": "MCP Gateway Accuracy", "detail": "Pre-call and post-call policy enforcement" },
+      { "value": "100%", "label": "Chain Tracking Detection", "detail": "Across 4 attack pattern types: data exfil, privilege escalation, recon, rapid tool calls" }
+    ]
+  },
+  "detection_layers": {
+    "title": "6-Layer Detection Ensemble",
+    "layers": [
+      { "name": "Regex/WAF Patterns", "detail": "352 patterns across 11 attack types" },
+      { "name": "ML Classifier (TF-IDF)", "detail": "Statistical pattern detection" },
+      { "name": "Token Analysis", "detail": "Entropy and structural anomaly detection" },
+      { "name": "Embedding Similarity", "detail": "Semantic similarity to known attack patterns" },
+      { "name": "DeBERTa Transformer", "detail": "184M parameter fine-tuned model" },
+      { "name": "LLM-as-Judge", "detail": "Novel and uncertain attack classification" }
+    ]
+  },
+  "testing": {
+    "title": "Test Coverage",
+    "items": [
+      { "value": "1,650+", "label": "Total Tests Passing" },
+      { "value": "7", "label": "Attack Suites in Red Team Pipeline" },
+      { "value": "88", "label": "Go MCP Gateway Tests" },
+      { "value": "162", "label": "Agentic Security Test Scenarios" }
+    ]
+  },
+  "caveats": {
+    "title": "What We Don't Claim",
+    "items": [
+      "Jailbreak-specific recall: 18.6% for DistilBERT multiclass (contrastive fine-tuning in progress)",
+      "Mixed encoding adversarial attacks: 12.5% detection (improvement planned)",
+      "FP rate on adversarial samples: 13% (the 0.3% figure is from the standard test corpus)",
+      "GPU acceleration and sub-100ms latency: roadmap items (Q4 2026)",
+      "SOC 2 Type II and ISO 27001: in progress, not yet compliant"
+    ]
+  },
+  "cta": {
+    "title": "See It in Action",
+    "description": "Request access to Force Field and verify these numbers against your own workloads."
+  }
+}

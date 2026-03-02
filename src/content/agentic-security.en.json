@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Agentic AI Security — MCP Proxy Gateway & Tool Call Interception | Data Science Technologies",
+    "description": "Production-ready agentic AI security: MCP proxy gateway, tool call interception, chain tracking, and multi-agent orchestration security with published benchmarks.",
+    "keywords": "Agentic AI Security, MCP Security, MCP Proxy Gateway, AI Agent Security, Tool Call Interception, Chain Tracking, Multi-Agent Orchestration, AI Tool Authorization, Agent Rate Limiting"
+  },
+  "hero": {
+    "title": "Agentic AI Security",
+    "subtitle": "Production-ready security for AI agents, tool calls, and multi-step workflows"
+  },
+  "intro": "AI agents that can browse the web, execute code, call APIs, and manage infrastructure need security controls that match their capabilities. Force Field provides the only production-ready security gateway with quantitative benchmarks for agentic AI.",
+  "mcp_gateway": {
+    "title": "MCP Proxy Gateway",
+    "description": "Force Field includes an MCP proxy gateway that sits between AI agents and tools. Every tool call is evaluated against security policies before execution. The gateway supports Claude Desktop, Cursor, and custom agents via the MCP protocol.",
+    "features": [
+      "Transparent proxy: agents connect to Force Field instead of tools directly",
+      "Policy evaluation before every tool call execution",
+      "Support for MCP protocol (Claude Desktop, Cursor, custom agents)",
+      "Pre-call authorization and post-call result inspection",
+      "Configurable per-agent, per-tool policies"
+    ]
+  },
+  "tool_interception": {
+    "title": "Tool Call Interception",
+    "description": "Every tool call passes through Force Field's security pipeline before reaching the target system.",
+    "policies": [
+      { "name": "Allow", "detail": "Tool call proceeds with logging" },
+      { "name": "Deny", "detail": "Tool call blocked, agent receives policy violation message" },
+      { "name": "Require Approval", "detail": "Tool call held for human review before execution" },
+      { "name": "Rate Limit", "detail": "Per-agent, per-tool token bucket rate limiting" },
+      { "name": "Schema Validate", "detail": "Tool inputs validated against expected schemas" },
+      { "name": "Result Inspect", "detail": "Tool outputs scanned for PII, secrets, and injection" }
+    ]
+  },
+  "chain_tracking": {
+    "title": "Chain-of-Action Attack Detection",
+    "description": "Force Field monitors multi-step agent workflows and detects attack patterns that span multiple tool calls.",
+    "patterns": [
+      { "name": "Data Exfiltration", "detail": "Agent reads sensitive data then attempts to send it externally" },
+      { "name": "Privilege Escalation", "detail": "Agent progressively requests higher-permission tools" },
+      { "name": "Reconnaissance", "detail": "Agent systematically probes available tools and permissions" },
+      { "name": "Rapid Tool Calls", "detail": "Abnormal burst of tool calls indicating automated attack" }
+    ]
+  },
+  "multi_agent": {
+    "title": "Multi-Agent Orchestration Security",
+    "items": [
+      "Trust levels assigned per agent identity",
+      "Delegation management: which agents can invoke other agents",
+      "Cross-agent communication monitoring",
+      "Isolated execution contexts per agent",
+      "Aggregate rate limiting across agent pools"
+    ]
+  },
+  "benchmarks": {
+    "title": "Agentic Security Benchmarks",
+    "subtitle": "162 test scenarios, verified Feb 2026",
+    "items": [
+      { "value": "87-100%", "label": "Tool Result Inspection Accuracy" },
+      { "value": "100%", "label": "MCP Gateway Pre/Post-Call Accuracy" },
+      { "value": "100%", "label": "Chain Tracking Detection (4 pattern types)" },
+      { "value": "88", "label": "Go MCP Gateway Tests Passing" }
+    ]
+  },
+  "cta": {
+    "title": "Secure Your AI Agents",
+    "description": "Request access to Force Field and deploy production-ready agentic security."
+  }
+}

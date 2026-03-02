@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Résultats des Benchmarks Force Field — Performance de Sécurité Vérifiée | Data Science Technologies",
+    "description": "Résultats de benchmarks publiés pour le pare-feu LLM Force Field : 98,9 % de détection d'attaques, 100 % de prévention des fuites de données, 0,3 % de taux de faux positifs et traitement de sécurité en moins d'une milliseconde.",
+    "keywords": "Benchmark Pare-feu LLM, Benchmark Sécurité IA, Taux Détection Injection Prompts, Benchmark Sécurité MCP, Tests Sécurité Agents IA, Détection Menaces DeBERTa, Performance Force Field"
+  },
+  "hero": {
+    "title": "Résultats des Benchmarks",
+    "subtitle": "Performance de sécurité vérifiée sur des données de validation et des charges de production"
+  },
+  "intro": "Chaque chiffre sur cette page provient d'exécutions de benchmarks automatisés contre des données de test de validation. Nous publions ces résultats parce que la transparence inspire la confiance -- et parce qu'aucun concurrent ne le fait.",
+  "core": {
+    "title": "Benchmarks de Détection Principaux",
+    "subtitle": "2 188 échantillons de validation, 14 février 2026",
+    "items": [
+      { "value": "98,9 %", "label": "Taux de Détection d'Attaques", "detail": "Sur tous les types d'attaques sur les échantillons de validation" },
+      { "value": "100 %", "label": "Prévention des Fuites de Données", "detail": "Détection sortante de PII et secrets" },
+      { "value": "0,3 %", "label": "Taux de Faux Positifs", "detail": "Sur le corpus de test standard" },
+      { "value": "< 1 ms", "label": "Traitement de Sécurité P99", "detail": "Vérifié sur GCP Cloud Run" },
+      { "value": "408 ms", "label": "Réponse Médiane de Bout en Bout", "detail": "Inclut la latence aller-retour du LLM" },
+      { "value": "0,00 %", "label": "Taux d'Erreur Sous Charge", "detail": "235 requêtes, 50 simultanées" }
+    ]
+  },
+  "agentic": {
+    "title": "Benchmarks de Sécurité Agentique",
+    "subtitle": "162 scénarios de test couvrant le proxy MCP, l'interception d'outils et le suivi de chaîne",
+    "items": [
+      { "value": "87-100 %", "label": "Inspection des Résultats d'Outils", "detail": "Détection de PII, secrets et injection dans les sorties d'outils" },
+      { "value": "100 %", "label": "Précision de la Passerelle MCP", "detail": "Application des politiques pré-appel et post-appel" },
+      { "value": "100 %", "label": "Détection de Suivi de Chaîne", "detail": "Sur 4 types de schémas d'attaque : exfiltration, escalade de privilèges, reconnaissance, appels rapides" }
+    ]
+  },
+  "detection_layers": {
+    "title": "Ensemble de Détection à 6 Couches",
+    "layers": [
+      { "name": "Règles Regex/WAF", "detail": "352 règles couvrant 11 types d'attaques" },
+      { "name": "Classifieur ML (TF-IDF)", "detail": "Détection statistique de schémas" },
+      { "name": "Analyse de Tokens", "detail": "Détection d'anomalies d'entropie et de structure" },
+      { "name": "Similarité par Embeddings", "detail": "Similarité sémantique avec les schémas d'attaque connus" },
+      { "name": "Transformeur DeBERTa", "detail": "Modèle affiné de 184M paramètres" },
+      { "name": "LLM-as-Judge", "detail": "Classification des attaques nouvelles et incertaines" }
+    ]
+  },
+  "testing": {
+    "title": "Couverture des Tests",
+    "items": [
+      { "value": "1 650+", "label": "Total de Tests Réussis" },
+      { "value": "7", "label": "Suites d'Attaques dans le Pipeline Red Team" },
+      { "value": "88", "label": "Tests de la Passerelle MCP en Go" },
+      { "value": "162", "label": "Scénarios de Tests de Sécurité Agentique" }
+    ]
+  },
+  "caveats": {
+    "title": "Ce Que Nous Ne Prétendons Pas",
+    "items": [
+      "Rappel spécifique au jailbreak : 18,6 % pour DistilBERT multiclasse (affinage contrastif en cours)",
+      "Attaques adversariales par encodage mixte : 12,5 % de détection (amélioration planifiée)",
+      "Taux de FP sur échantillons adversariaux : 13 % (le chiffre de 0,3 % provient du corpus de test standard)",
+      "Accélération GPU et latence sous 100 ms : éléments de feuille de route (T4 2026)",
+      "SOC 2 Type II et ISO 27001 : en cours, pas encore conformes"
+    ]
+  },
+  "cta": {
+    "title": "Voyez-le en Action",
+    "description": "Demandez l'accès à Force Field et vérifiez ces chiffres sur vos propres charges de travail."
+  }
+}

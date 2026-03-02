@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Sécurité IA Agentique — Passerelle Proxy MCP & Interception d'Appels d'Outils | Data Science Technologies",
+    "description": "Sécurité IA agentique prête pour la production : passerelle proxy MCP, interception des appels d'outils, suivi de chaîne et sécurité d'orchestration multi-agents avec benchmarks publiés.",
+    "keywords": "Sécurité IA Agentique, Sécurité MCP, Passerelle Proxy MCP, Sécurité Agents IA, Interception Appels d'Outils, Suivi de Chaîne, Orchestration Multi-Agents, Autorisation Outils IA, Limitation de Débit Agents"
+  },
+  "hero": {
+    "title": "Sécurité de l'IA Agentique",
+    "subtitle": "Sécurité prête pour la production pour les agents IA, les appels d'outils et les workflows multi-étapes"
+  },
+  "intro": "Les agents IA capables de naviguer sur le web, exécuter du code, appeler des API et gérer l'infrastructure nécessitent des contrôles de sécurité à la hauteur de leurs capacités. Force Field fournit la seule passerelle de sécurité prête pour la production avec des benchmarks quantitatifs pour l'IA agentique.",
+  "mcp_gateway": {
+    "title": "Passerelle Proxy MCP",
+    "description": "Force Field inclut une passerelle proxy MCP qui s'interpose entre les agents IA et les outils. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution. La passerelle prend en charge Claude Desktop, Cursor et les agents personnalisés via le protocole MCP.",
+    "features": [
+      "Proxy transparent : les agents se connectent à Force Field au lieu des outils directement",
+      "Évaluation des politiques avant chaque exécution d'appel d'outil",
+      "Support du protocole MCP (Claude Desktop, Cursor, agents personnalisés)",
+      "Autorisation pré-appel et inspection post-appel des résultats",
+      "Politiques configurables par agent et par outil"
+    ]
+  },
+  "tool_interception": {
+    "title": "Interception des Appels d'Outils",
+    "description": "Chaque appel d'outil passe par le pipeline de sécurité de Force Field avant d'atteindre le système cible.",
+    "policies": [
+      { "name": "Autoriser", "detail": "L'appel d'outil se poursuit avec journalisation" },
+      { "name": "Refuser", "detail": "L'appel d'outil est bloqué, l'agent reçoit un message de violation de politique" },
+      { "name": "Approbation Requise", "detail": "L'appel d'outil est mis en attente pour examen humain avant exécution" },
+      { "name": "Limitation de Débit", "detail": "Limitation par token bucket par agent et par outil" },
+      { "name": "Validation de Schéma", "detail": "Les entrées d'outils sont validées contre les schémas attendus" },
+      { "name": "Inspection des Résultats", "detail": "Les sorties d'outils sont analysées pour PII, secrets et injection" }
+    ]
+  },
+  "chain_tracking": {
+    "title": "Détection d'Attaques par Chaîne d'Actions",
+    "description": "Force Field surveille les workflows multi-étapes des agents et détecte les schémas d'attaque couvrant plusieurs appels d'outils.",
+    "patterns": [
+      { "name": "Exfiltration de Données", "detail": "L'agent lit des données sensibles puis tente de les envoyer à l'extérieur" },
+      { "name": "Escalade de Privilèges", "detail": "L'agent demande progressivement des outils à permissions plus élevées" },
+      { "name": "Reconnaissance", "detail": "L'agent sonde systématiquement les outils et permissions disponibles" },
+      { "name": "Appels d'Outils Rapides", "detail": "Rafale anormale d'appels d'outils indiquant une attaque automatisée" }
+    ]
+  },
+  "multi_agent": {
+    "title": "Sécurité d'Orchestration Multi-Agents",
+    "items": [
+      "Niveaux de confiance attribués par identité d'agent",
+      "Gestion de la délégation : quels agents peuvent invoquer d'autres agents",
+      "Surveillance des communications inter-agents",
+      "Contextes d'exécution isolés par agent",
+      "Limitation de débit agrégée à travers les pools d'agents"
+    ]
+  },
+  "benchmarks": {
+    "title": "Benchmarks de Sécurité Agentique",
+    "subtitle": "162 scénarios de test, vérifiés en février 2026",
+    "items": [
+      { "value": "87-100 %", "label": "Précision d'Inspection des Résultats d'Outils" },
+      { "value": "100 %", "label": "Précision Pré/Post-Appel de la Passerelle MCP" },
+      { "value": "100 %", "label": "Détection de Suivi de Chaîne (4 types de schémas)" },
+      { "value": "88", "label": "Tests de la Passerelle MCP en Go Réussis" }
+    ]
+  },
+  "cta": {
+    "title": "Sécurisez Vos Agents IA",
+    "description": "Demandez l'accès à Force Field et déployez une sécurité agentique prête pour la production."
+  }
+}

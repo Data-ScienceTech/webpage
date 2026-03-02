@@ -2,53 +2,126 @@
   "meta": {
     "title": "Force Field Pare-feu LLM — Protection Runtime Prête pour la Production | Data Science Technologies",
     "description": "Force Field est une passerelle de sécurité prête pour la production qui fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils.",
-    "keywords": "Pare-feu LLM, Sécurité IA, Prévention Injection de Prompts, Protection Runtime, Sécurité IA Agnostique, Sécurité IA Zero-Trust"
+    "keywords": "Pare-feu LLM, Sécurité IA, Détection Injection de Prompts, Protection Runtime, Sécurité IA Agnostique, Sécurité IA Zero-Trust, Sécurité MCP, Proxy MCP, Sécurité Agents IA, Benchmark Pare-feu LLM, Sécurité Streaming LLM, Interception Appels d'Outils IA, Rédaction PII LLM, Sécurité Sorties Structurées, Détection de Menaces DeBERTa"
   },
   "hero": {
     "title": "Force Field Pare-feu LLM",
     "subtitle": "Protection Runtime Prête pour la Production des Systèmes d'IA"
   },
-  "intro": "Force Field est une passerelle de sécurité prête pour la production qui se positionne directement dans le chemin d'exécution des systèmes d'IA. Elle fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils — sans vous enfermer dans un modèle ou un fournisseur spécifique.",
+  "intro": "Force Field est une passerelle de sécurité prête pour la production avec un pipeline d'inspection en 10 étapes et un ensemble de détection IA à 6 couches (regex, ML, analyse de tokens, embeddings, transformeur DeBERTa et LLM-as-judge). Testé sur 2 188 échantillons de validation : 98,9 % de détection d'attaques, 100 % de prévention des fuites de données, 0,3 % de taux de faux positifs. Traitement de sécurité en < 1 ms P99. Plus de 1 650 tests réussis.",
   "intro_closing": "C'est la couche fondamentale de l'autorité runtime.",
   "mcp_onramp": {
-    "title": "Passerelle de Sécurité Obligatoire",
-    "description": "Établit une passerelle sécurisée où les agents IA sont authentifiés via l'identité SPIFFE/SPIRE et autorisés par l'application de politiques avant d'accéder aux outils et systèmes d'entreprise — créant un point de contrôle stratégique pour gouverner le comportement des agents à l'exécution."
+    "title": "Zero Trust par Défaut",
+    "description": "Chaque requête est authentifiée, chaque prompt est inspecté, chaque réponse est analysée. Force Field applique une posture de sécurité fail-closed -- si l'une des 10 étapes du pipeline signale une menace, la requête est bloquée avant d'atteindre le modèle IA."
   },
   "capabilities": {
     "title": "Capacités Principales",
     "items": [
       {
-        "title": "Détection de Menaces Multi-Modèles",
+        "title": "Détection de Menaces à 6 Couches",
         "items": [
-          "Bloque les tentatives d'injection de prompts et de jailbreak",
-          "Prévient les fuites de données sensibles",
-          "Détection d'anomalies basée sur le ML utilisant des modèles comportementaux et statistiques"
+          "352 règles WAF couvrant 11 types d'attaques",
+          "Classifieur ML (TF-IDF) + transformeur DeBERTa (184M paramètres)",
+          "LLM-as-judge pour les attaques nouvelles/incertaines",
+          "Fail-closed : toute couche qui détecte bloque le prompt"
         ],
         "icon": "Shield"
       },
       {
-        "title": "Moteur d'Application de Politiques",
+        "title": "Sécurité IA Agentique (MCP)",
         "items": [
-          "Bloque, modifie ou assainit les prompts en temps réel",
-          "Applique des politiques runtime contextuelles",
-          "Applique les contraintes organisationnelles et de sécurité en ligne"
+          "Interception des appels d'outils avec application des politiques",
+          "Passerelle proxy MCP pour la communication des agents IA",
+          "Permissions par agent, validation de schéma, portes d'approbation humaine",
+          "Suivi de chaîne : détecte l'escalade, l'exfiltration de données, les schémas de reconnaissance"
         ],
-        "icon": "ShieldCheck"
+        "icon": "Bot"
       },
       {
-        "title": "Architecture Modulaire, Agnostique au Modèle",
+        "title": "Protection Streaming et Multimodale",
         "items": [
-          "Compatible avec OpenAI, Anthropic et les modèles open-source",
-          "Découple la logique de sécurité des fournisseurs de modèles",
-          "Adoptez de nouveaux modèles sans ré-architecturer la sécurité"
+          "Analyse des flux SSE en temps réel avec arrêt en cours de flux",
+          "Analyse des entrées image/vision (injection OCR, détection de stéganographie)",
+          "Analyse des sorties structurées (détection PII/secrets/injection dans les valeurs JSON)"
+        ],
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Protection des Données et Conformité",
+        "items": [
+          "18 types de PII détectés (regex + NLP + validation Luhn)",
+          "Détection de secrets/identifiants (AWS, GCP, Slack, chaînes de connexion BD)",
+          "Piste d'audit de conformité avec export JSONL/CSV et rétention configurable",
+          "Contrôles de budget de tokens par clé API (limites quotidiennes, fenêtres glissantes)"
+        ],
+        "icon": "Database"
+      },
+      {
+        "title": "Agnostique au Modèle, Zéro Enfermement",
+        "items": [
+          "OpenAI, Anthropic, Google Gemini, Azure OpenAI, open-source/auto-hébergé",
+          "Support du protocole MCP (Claude Desktop, Cursor, agents personnalisés)",
+          "Proxy drop-in : changez une URL, aucune modification de code",
+          "Déploiement SaaS, hybride (VPC client) ou entièrement sur site"
         ],
         "icon": "Layers"
       }
     ]
   },
+  "pipeline": {
+    "title": "Pipeline de Sécurité en 10 Étapes",
+    "steps": [
+      { "number": 1, "name": "Budget de Tokens", "description": "Appliquer les limites d'utilisation par clé" },
+      { "number": 2, "name": "Inspection des Résultats d'Outils", "description": "Analyser les résultats d'outils pour PII, secrets, injection" },
+      { "number": 3, "name": "Scanner d'Images", "description": "Détecter les attaques cachées dans les images (OCR, stéganographie)" },
+      { "number": 4, "name": "Détection IA à 6 Couches", "description": "Ensemble regex + ML + DeBERTa + LLM-as-judge" },
+      { "number": 5, "name": "Sécurité du Streaming", "description": "Analyser les réponses en temps réel, interrompre en cours de flux" },
+      { "number": 6, "name": "Interception des Appels d'Outils", "description": "Bloquer les actions non autorisées des agents IA" },
+      { "number": 7, "name": "Rédaction des PII", "description": "Supprimer les données personnelles des réponses" },
+      { "number": 8, "name": "Analyse des Sorties Structurées", "description": "Parcourir les réponses JSON pour secrets et injection" },
+      { "number": 9, "name": "Modération des Sorties", "description": "Bloquer les sorties nuisibles ou contraires aux politiques" },
+      { "number": 10, "name": "Piste d'Audit", "description": "Journaliser chaque interaction pour la conformité" }
+    ]
+  },
+  "agentic_security": {
+    "title": "Sécurité de l'IA Agentique",
+    "description": "Force Field inclut une passerelle proxy MCP qui s'interpose entre les agents IA et les outils. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution. Le système suit les workflows multi-étapes des agents et détecte les schémas d'escalade, les attaques de collecte de données et l'escalade de privilèges -- avec des benchmarks quantitatifs publiés.",
+    "items": [
+      "Autorisation des appels d'outils avec politiques autoriser/refuser/approbation requise",
+      "Sécurité d'orchestration multi-agents avec niveaux de confiance et gestion de la délégation",
+      "Détection d'attaques par chaîne d'actions (4 types : exfiltration de données, escalade de privilèges, reconnaissance, appels d'outils rapides)",
+      "Limitation de débit par agent et par outil (token bucket)",
+      "Validation de schéma pour les entrées d'outils",
+      "Inspection des résultats : analyse des PII, secrets et injections dans les sorties d'outils"
+    ]
+  },
+  "benchmarks": {
+    "title": "Résultats des Benchmarks",
+    "core": [
+      { "value": "98,9 %", "label": "Détection d'attaques sur 2 188 échantillons de validation" },
+      { "value": "100 %", "label": "Détection sortante de PII/secrets" },
+      { "value": "0,3 %", "label": "Taux de faux positifs" },
+      { "value": "< 1 ms", "label": "Traitement de sécurité P99 (GCP Cloud Run)" },
+      { "value": "408 ms", "label": "Réponse médiane de bout en bout (inclut l'aller-retour LLM)" },
+      { "value": "0,00 %", "label": "Taux d'erreur sous charge (235 requêtes, 50 simultanées)" }
+    ],
+    "agentic_title": "Benchmarks agentiques (162 scénarios de test)",
+    "agentic": [
+      { "value": "87-100 %", "label": "Précision d'inspection des résultats d'outils" },
+      { "value": "100 %", "label": "Précision pré-appel et post-appel de la passerelle MCP" },
+      { "value": "100 %", "label": "Détection de suivi de chaîne sur 4 types de schémas d'attaque" }
+    ]
+  },
   "what_this_enables": {
     "title": "Ce Que Cela Permet",
-    "description": "Force Field offre une protection immédiate aujourd'hui tout en établissant la fondation d'application pour une gouvernance plus large au niveau de l'exécution à travers les systèmes d'IA agentiques."
+    "items": [
+      "Déployez des chatbots, copilotes et agents IA avec des garanties de sécurité quantifiables",
+      "Respectez les exigences de conformité (RGPD, CCPA, HIPAA) avec des pistes d'audit intégrées",
+      "Protégez contre l'injection de prompts, l'exfiltration de données, les jailbreaks et les abus d'agents",
+      "Sécurisez les réponses en streaming, les entrées multimodales et les sorties structurées",
+      "Contrôlez l'utilisation des outils par les agents IA avec l'application des politiques et les portes d'approbation humaine",
+      "Validez en continu la sécurité avec des pipelines automatisés de red team (7 suites d'attaques)"
+    ]
   },
   "form": {
     "title": "Demander l'Accès",

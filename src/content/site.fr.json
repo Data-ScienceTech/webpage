@@ -12,25 +12,28 @@
       {
         "name": "Pare-feu LLM",
         "items": [
-          "Protection du périmètre IA",
-          "Bloque les injections et fuites",
-          "Applique les politiques en temps réel"
+          "Pipeline de sécurité en 10 étapes",
+          "Ensemble de détection IA à 6 couches",
+          "98,9 % de détection d'attaques, < 1 ms P99",
+          "352 règles WAF, 18 types de PII"
         ]
       },
       {
         "name": "Orchestration Runtime",
         "items": [
-          "Autorise l'exécution des agents",
-          "Médie les outils et actions",
-          "Prévient les comportements dangereux"
+          "Passerelle proxy MCP pour agents IA",
+          "Interception des appels d'outils + application des politiques",
+          "Suivi de chaîne à travers les workflows multi-étapes",
+          "Limitation de débit et permissions par agent"
         ]
       },
       {
         "name": "Gouvernance Active",
         "items": [
-          "Contrôles humain-dans-la-boucle",
-          "Piste d'audit complète d'exécution",
-          "Conçu pour les systèmes agentiques"
+          "Portes d'approbation humaine pour les actions sensibles",
+          "Piste d'audit de conformité (export JSONL/CSV)",
+          "Contrôles de budget de tokens par clé API",
+          "Pipeline automatisé de red team (CI/CD)"
         ]
       }
     ]
@@ -38,15 +41,24 @@
   "why_us": {
     "title": "Pourquoi Data Science Technologies",
     "items": [
-      "Expertise en sécurité IA sur l'ensemble du cycle de vie des systèmes d'IA modernes",
-      "Protection contre la manipulation de la logique métier, les fuites de données et les décisions de modèles compromises",
-      "Observabilité et surveillance pour chaque prompt, récupération et inférence",
-      "Stratégies de durcissement personnalisées pour les environnements d'entreprise complexes et réels",
-      "Bâti sur les standards Zero-Trust"
+      "Détection IA à 6 couches avec transformeur DeBERTa et LLM-as-judge -- 98,9 % de précision sur les données de validation",
+      "Seule passerelle avec sécurité agentique prête pour la production -- proxy MCP, interception d'outils, suivi de chaîne avec benchmarks publiés",
+      "Pipeline fail-closed en 10 étapes analysant prompts, réponses, flux, images, sorties JSON et appels d'outils d'agents",
+      "Stack de conformité complète -- pistes d'audit, rédaction PII, budgets de tokens, prêt RGPD/CCPA/HIPAA",
+      "Plus de 1 650 tests réussis -- unitaires, intégration, E2E, sécurité, charge, chaos et pénétration",
+      "Bâti sur le zero-trust -- mTLS, identité SPIFFE, gestion des secrets Vault"
     ]
   },
   "trust_bar": {
     "title": "Construit avec la sécurité zéro-trust"
+  },
+  "metrics_banner": {
+    "items": [
+      { "value": "98,9 %", "label": "Attaques bloquées" },
+      { "value": "100 %", "label": "Prévention des fuites de données" },
+      { "value": "< 1 ms", "label": "Traitement de sécurité P99" },
+      { "value": "1 650+", "label": "Tests réussis" }
+    ]
   },
   "contact": {
     "email": "info@datasciencetech.ca"
@@ -59,6 +71,8 @@
       "company": "Entreprise",
       "why": "Pourquoi l'Autorité Runtime",
       "product": "Force Field",
+      "benchmarks": "Benchmarks",
+      "agentic": "Sécurité Agentique",
       "architecture": "Architecture",
       "security": "Sécurité",
       "privacy": "Confidentialité Force Field",
@@ -71,13 +85,15 @@
   "nav": {
     "why": "Autorité Runtime",
     "product": "Force Field",
+    "benchmarks": "Benchmarks",
+    "agentic": "Sécurité Agentique",
     "architecture": "Architecture",
     "security": "Sécurité",
     "signup": "Inscription"
   },
   "meta": {
     "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des pare-feux LLM à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",
-    "keywords": "autorité runtime, sécurité IA agentique, pare-feu LLM, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité IA zero-trust, sécurité IA entreprise"
+    "keywords": "autorité runtime, sécurité IA agentique, pare-feu LLM, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité IA zero-trust, sécurité IA entreprise, sécurité MCP, proxy MCP, sécurité agents IA, détection injection de prompts, interception appels d'outils IA, rédaction PII LLM, sécurité streaming LLM"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

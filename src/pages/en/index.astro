@@ -62,6 +62,20 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
       </div>
     </section>
 
+    <!-- Metrics Banner -->
+    <section class="py-12 bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800">
+      <div class="container-custom">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+          {siteContent.metrics_banner.items.map((metric) => (
+            <div>
+              <p class="text-3xl md:text-4xl font-bold text-white mb-1">{metric.value}</p>
+              <p class="text-sm text-primary-100 uppercase tracking-wide font-medium">{metric.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <!-- Secure AI at Runtime — 3 Pillars -->
     <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
       <div class="container-custom">

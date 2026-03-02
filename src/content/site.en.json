@@ -12,25 +12,28 @@
       {
         "name": "LLM Firewall",
         "items": [
-          "AI perimeter protection",
-          "Blocks injections & leaks",
-          "Enforces policies in real time"
+          "10-step security pipeline",
+          "6-layer AI detection ensemble",
+          "98.9% attack detection, < 1ms P99",
+          "352 WAF patterns, 18 PII types"
         ]
       },
       {
         "name": "Runtime Orchestration",
         "items": [
-          "Authorizes agent execution",
-          "Mediates tools & actions",
-          "Prevents unsafe behavior"
+          "MCP proxy gateway for AI agents",
+          "Tool call interception + policy enforcement",
+          "Chain tracking across multi-step workflows",
+          "Per-agent rate limiting and permissions"
         ]
       },
       {
         "name": "Active Governance",
         "items": [
-          "Human-in-the-loop controls",
-          "Full execution audit trail",
-          "Built for agentic systems"
+          "Human-approval gates for sensitive actions",
+          "Compliance audit trail (JSONL/CSV export)",
+          "Token budget controls per API key",
+          "Automated red team pipeline (CI/CD)"
         ]
       }
     ]
@@ -38,15 +41,24 @@
   "why_us": {
     "title": "Why Data Science Technologies",
     "items": [
-      "AI security expertise across the full lifecycle of modern AI systems",
-      "Protection against business logic manipulation, data leakage, and compromised model decisions",
-      "Observability and monitoring for every prompt, retrieval, and inference",
-      "Custom hardening strategies for complex, real-world enterprise environments",
-      "Built on Zero-Trust Standards"
+      "6-layer AI detection with DeBERTa transformer and LLM-as-judge -- 98.9% accuracy on held-out data",
+      "Only gateway with production-ready agentic security -- MCP proxy, tool interception, chain tracking with published benchmarks",
+      "10-step fail-closed pipeline scanning prompts, responses, streams, images, JSON outputs, and agent tool calls",
+      "Full compliance stack -- audit trails, PII redaction, token budgets, GDPR/CCPA/HIPAA-ready",
+      "1,650+ tests passing -- unit, integration, E2E, security, load, chaos, and penetration tests",
+      "Built on zero-trust -- mTLS, SPIFFE identity, Vault secret management"
     ]
   },
   "trust_bar": {
     "title": "Built with zero-trust security"
+  },
+  "metrics_banner": {
+    "items": [
+      { "value": "98.9%", "label": "Attacks Blocked" },
+      { "value": "100%", "label": "Data Leak Prevention" },
+      { "value": "< 1ms", "label": "Security Processing P99" },
+      { "value": "1,650+", "label": "Tests Passing" }
+    ]
   },
   "contact": {
     "email": "info@datasciencetech.ca"
@@ -59,6 +71,8 @@
       "company": "Company",
       "why": "Why Runtime Authority",
       "product": "Force Field",
+      "benchmarks": "Benchmarks",
+      "agentic": "Agentic Security",
       "architecture": "Architecture",
       "security": "Security",
       "privacy": "Force Field Privacy",
@@ -71,13 +85,15 @@
   "nav": {
     "why": "Why Runtime Authority",
     "product": "Force Field",
+    "benchmarks": "Benchmarks",
+    "agentic": "Agentic Security",
     "architecture": "Architecture",
     "security": "Security",
     "signup": "Sign Up"
   },
   "meta": {
     "description": "Data Science Technologies provides runtime authority for agentic AI — from LLM firewalls to execution-level orchestration and governance. Production-ready AI security for the enterprise.",
-    "keywords": "runtime authority, agentic AI security, LLM firewall, AI execution control, AI governance, AI control plane, zero-trust AI security, enterprise AI security"
+    "keywords": "runtime authority, agentic AI security, LLM firewall, AI execution control, AI governance, AI control plane, zero-trust AI security, enterprise AI security, MCP security, MCP proxy, AI agent security, prompt injection detection, AI tool call interception, PII redaction LLM, streaming LLM security"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

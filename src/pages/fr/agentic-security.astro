@@ -1,0 +1,188 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+import siteContent from '../../content/site.fr.json';
+import agenticContent from '../../content/agentic-security.fr.json';
+
+const lang = 'fr';
+const pageTitle = agenticContent.meta.title;
+const pageDescription = agenticContent.meta.description;
+---
+
+<MainLayout
+  title={pageTitle}
+  description={pageDescription}
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden py-16 md:py-20 lg:py-28 bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
+      <div class="absolute inset-0 opacity-5">
+        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]" viewBox="0 0 200 200" fill="none">
+          <path d="M100 10 L180 50 L180 110 C180 150 145 185 100 195 C55 185 20 150 20 110 L20 50 Z" stroke="currentColor" stroke-width="1" class="text-primary-400"/>
+        </svg>
+      </div>
+      <div class="container-custom relative">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+            {agenticContent.hero.title}
+          </h1>
+          <p class="mb-6 text-xl md:text-2xl text-secondary-300 max-w-3xl mx-auto">
+            {agenticContent.hero.subtitle}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed text-center">
+            {agenticContent.intro}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Passerelle Proxy MCP -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-6 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+            {agenticContent.mcp_gateway.title}
+          </h2>
+          <div class="rounded-2xl border border-primary-200 dark:border-primary-800 bg-primary-50 dark:bg-primary-900/20 p-8 md:p-10 mb-8">
+            <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
+              {agenticContent.mcp_gateway.description}
+            </p>
+          </div>
+          <ul class="space-y-3">
+            {agenticContent.mcp_gateway.features.map((item: string) => (
+              <li class="flex items-start gap-3 p-4 rounded-xl bg-secondary-50 dark:bg-secondary-900 border border-secondary-100 dark:border-secondary-700">
+                <svg class="mt-0.5 h-5 w-5 text-primary-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-secondary-700 dark:text-secondary-300">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interception des Appels d'Outils -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-4 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+            {agenticContent.tool_interception.title}
+          </h2>
+          <p class="mb-10 text-center text-lg text-secondary-600 dark:text-secondary-300">
+            {agenticContent.tool_interception.description}
+          </p>
+          <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {agenticContent.tool_interception.policies.map((policy) => (
+              <div class="p-5 rounded-2xl bg-white dark:bg-secondary-800 border border-secondary-200 dark:border-secondary-700">
+                <p class="font-bold text-primary-600 dark:text-primary-400 mb-1">{policy.name}</p>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">{policy.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Détection d'Attaques par Chaîne d'Actions -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-4 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+            {agenticContent.chain_tracking.title}
+          </h2>
+          <p class="mb-10 text-center text-lg text-secondary-600 dark:text-secondary-300">
+            {agenticContent.chain_tracking.description}
+          </p>
+          <div class="grid gap-4 sm:grid-cols-2">
+            {agenticContent.chain_tracking.patterns.map((pattern) => (
+              <div class="flex items-start gap-4 p-5 rounded-2xl bg-secondary-50 dark:bg-secondary-900 border border-secondary-100 dark:border-secondary-700">
+                <svg class="mt-0.5 h-6 w-6 text-red-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+                <div>
+                  <p class="font-semibold text-secondary-900 dark:text-white">{pattern.name}</p>
+                  <p class="text-sm text-secondary-600 dark:text-secondary-400">{pattern.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sécurité d'Orchestration Multi-Agents -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-8 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+            {agenticContent.multi_agent.title}
+          </h2>
+          <ul class="space-y-3">
+            {agenticContent.multi_agent.items.map((item: string) => (
+              <li class="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-secondary-800 border border-secondary-200 dark:border-secondary-700">
+                <svg class="mt-0.5 h-5 w-5 text-primary-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="text-secondary-700 dark:text-secondary-300">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmarks -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-2 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
+            {agenticContent.benchmarks.title}
+          </h2>
+          <p class="mb-10 text-center text-secondary-500 dark:text-secondary-400">{agenticContent.benchmarks.subtitle}</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {agenticContent.benchmarks.items.map((item) => (
+              <div class="text-center p-5 rounded-2xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+                <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">{item.value}</p>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gradient-to-br from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800">
+      <div class="container-custom text-center">
+        <h2 class="mb-4 text-2xl md:text-3xl font-bold text-white">
+          {agenticContent.cta.title}
+        </h2>
+        <p class="mb-8 text-lg text-primary-100 max-w-2xl mx-auto">
+          {agenticContent.cta.description}
+        </p>
+        <a
+          href={`/${lang}/force-field`}
+          class="btn inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-primary-50 focus:ring-white text-lg px-8 py-4"
+        >
+          Demander l'accès
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>
