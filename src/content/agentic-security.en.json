@@ -11,7 +11,7 @@
   "intro": "AI agents that can browse the web, execute code, call APIs, and manage infrastructure need security controls that match their capabilities. Force Field provides the only production-ready security gateway with quantitative benchmarks for agentic AI.",
   "mcp_gateway": {
     "title": "MCP Proxy Gateway",
-    "description": "Force Field includes an MCP proxy gateway that sits between AI agents and tools. Every tool call is evaluated against security policies before execution. The gateway supports Claude Desktop, Cursor, and custom agents via the MCP protocol.",
+    "description": "Force Field includes an MCP proxy gateway that sits between AI agents and tools. Every tool call is evaluated against security policies before execution. The gateway supports Claude Desktop, Cursor, and custom agents via the MCP protocol. Chain state is backed by a pluggable store (in-memory or Redis) for multi-instance deployments.",
     "features": [
       "Transparent proxy: agents connect to Force Field instead of tools directly",
       "Policy evaluation before every tool call execution",
@@ -54,7 +54,7 @@
   },
   "benchmarks": {
     "title": "Agentic Security Benchmarks",
-    "subtitle": "162 test scenarios, verified Feb 2026",
+    "subtitle": "168 test scenarios, verified March 2026",
     "items": [
       { "value": "87-100%", "label": "Tool Result Inspection Accuracy" },
       { "value": "100%", "label": "MCP Gateway Pre/Post-Call Accuracy" },

@@ -45,7 +45,7 @@
       "Only gateway with production-ready agentic security -- MCP proxy, tool interception, chain tracking with published benchmarks",
       "10-step fail-closed pipeline scanning prompts, responses, streams, images, JSON outputs, and agent tool calls",
       "Full compliance stack -- audit trails, PII redaction, token budgets, GDPR/CCPA/HIPAA-ready",
-      "1,650+ tests passing -- unit, integration, E2E, security, load, chaos, and penetration tests",
+      "1,250+ tests passing -- unit, integration, E2E, security, load, chaos, and penetration tests",
       "Built on zero-trust -- mTLS, SPIFFE identity, Vault secret management"
     ]
   },
@@ -56,8 +56,8 @@
     "items": [
       { "value": "98.9%", "label": "Attacks Blocked" },
       { "value": "100%", "label": "Data Leak Prevention" },
-      { "value": "< 1ms", "label": "Security Processing P99" },
-      { "value": "1,650+", "label": "Tests Passing" }
+      { "value": "~ 1ms", "label": "Security Processing P99" },
+      { "value": "1,250+", "label": "Tests Passing" }
     ]
   },
   "contact": {

@@ -11,7 +11,7 @@
   "intro": "Les agents IA capables de naviguer sur le web, exécuter du code, appeler des API et gérer l'infrastructure nécessitent des contrôles de sécurité à la hauteur de leurs capacités. Force Field fournit la seule passerelle de sécurité prête pour la production avec des benchmarks quantitatifs pour l'IA agentique.",
   "mcp_gateway": {
     "title": "Passerelle Proxy MCP",
-    "description": "Force Field inclut une passerelle proxy MCP qui s'interpose entre les agents IA et les outils. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution. La passerelle prend en charge Claude Desktop, Cursor et les agents personnalisés via le protocole MCP.",
+    "description": "Force Field inclut une passerelle proxy MCP qui s'interpose entre les agents IA et les outils. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution. La passerelle prend en charge Claude Desktop, Cursor et les agents personnalisés via le protocole MCP. L'état de chaîne est sauvegardé via un magasin enfichable (en mémoire ou Redis) pour les déploiements multi-instances.",
     "features": [
       "Proxy transparent : les agents se connectent à Force Field au lieu des outils directement",
       "Évaluation des politiques avant chaque exécution d'appel d'outil",
@@ -54,7 +54,7 @@
   },
   "benchmarks": {
     "title": "Benchmarks de Sécurité Agentique",
-    "subtitle": "162 scénarios de test, vérifiés en février 2026",
+    "subtitle": "168 scénarios de test, vérifiés en mars 2026",
     "items": [
       { "value": "87-100 %", "label": "Précision d'Inspection des Résultats d'Outils" },
       { "value": "100 %", "label": "Précision Pré/Post-Appel de la Passerelle MCP" },

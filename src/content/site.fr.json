@@ -45,7 +45,7 @@
       "Seule passerelle avec sécurité agentique prête pour la production -- proxy MCP, interception d'outils, suivi de chaîne avec benchmarks publiés",
       "Pipeline fail-closed en 10 étapes analysant prompts, réponses, flux, images, sorties JSON et appels d'outils d'agents",
       "Stack de conformité complète -- pistes d'audit, rédaction PII, budgets de tokens, prêt RGPD/CCPA/HIPAA",
-      "Plus de 1 650 tests réussis -- unitaires, intégration, E2E, sécurité, charge, chaos et pénétration",
+      "Plus de 1 250 tests réussis -- unitaires, intégration, E2E, sécurité, charge, chaos et pénétration",
       "Bâti sur le zero-trust -- mTLS, identité SPIFFE, gestion des secrets Vault"
     ]
   },
@@ -56,8 +56,8 @@
     "items": [
       { "value": "98,9 %", "label": "Attaques bloquées" },
       { "value": "100 %", "label": "Prévention des fuites de données" },
-      { "value": "< 1 ms", "label": "Traitement de sécurité P99" },
-      { "value": "1 650+", "label": "Tests réussis" }
+      { "value": "~ 1 ms", "label": "Traitement de sécurité P99" },
+      { "value": "1 250+", "label": "Tests réussis" }
     ]
   },
   "contact": {

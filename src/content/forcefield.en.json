@@ -8,7 +8,7 @@
     "title": "Force Field LLM Firewall",
     "subtitle": "Production-Ready Runtime Protection for AI Systems"
   },
-  "intro": "Force Field is a production-ready security gateway with a 10-step inspection pipeline and a 6-layer AI detection ensemble (regex, ML, token analysis, embeddings, DeBERTa transformer, and LLM-as-judge). Tested on 2,188 held-out samples: 98.9% attack detection, 100% data leak prevention, 0.3% false positive rate. Security processing in < 1ms P99. 1,650+ tests passing.",
+  "intro": "Force Field is a production-ready security gateway with a 10-step inspection pipeline and a 6-layer AI detection ensemble (regex, ML, token analysis, embeddings, DeBERTa transformer, and LLM-as-judge). Tested on 2,188 held-out samples: 98.9% attack detection, 100% data leak prevention, 0.6% false positive rate. Security processing in ~ 1ms P99. 1,250+ tests passing.",
   "intro_closing": "This is the foundation layer for runtime authority.",
   "mcp_onramp": {
     "title": "Zero Trust by Default",
@@ -100,12 +100,12 @@
     "core": [
       { "value": "98.9%", "label": "Attack detection on 2,188 held-out samples" },
       { "value": "100%", "label": "Outbound PII/secret detection" },
-      { "value": "0.3%", "label": "False positive rate" },
-      { "value": "< 1ms", "label": "P99 security processing (GCP Cloud Run)" },
-      { "value": "408ms", "label": "Median end-to-end response (includes LLM round-trip)" },
-      { "value": "0.00%", "label": "Error rate under load (235 requests, 50 concurrent)" }
+      { "value": "0.6%", "label": "False positive rate (standard test corpus)" },
+      { "value": "~ 1ms", "label": "P99 security processing (WAF + PII pipeline)" },
+      { "value": "392ms", "label": "Median end-to-end response (includes LLM round-trip)" },
+      { "value": "0.00%", "label": "Error rate under load (2,188 requests, production GCP)" }
     ],
-    "agentic_title": "Agentic Benchmarks (162 test scenarios)",
+    "agentic_title": "Agentic Benchmarks (168 test scenarios)",
     "agentic": [
       { "value": "87-100%", "label": "Tool result inspection accuracy" },
       { "value": "100%", "label": "MCP gateway pre-call and post-call accuracy" },

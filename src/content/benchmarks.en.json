@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Force Field Benchmark Results — Verified Security Performance | Data Science Technologies",
-    "description": "Published benchmark results for Force Field LLM Firewall: 98.9% attack detection, 100% data leak prevention, 0.3% false positive rate, and sub-millisecond security processing.",
+    "description": "Published benchmark results for Force Field LLM Firewall: 98.9% attack detection, 100% data leak prevention, 0.6% false positive rate, and ~ 1ms P99 security processing.",
     "keywords": "LLM Firewall Benchmark, AI Security Benchmark, Prompt Injection Detection Rate, MCP Security Benchmark, AI Agent Security Testing, DeBERTa Threat Detection, Force Field Performance"
   },
   "hero": {
@@ -15,15 +15,15 @@
     "items": [
       { "value": "98.9%", "label": "Attack Detection Rate", "detail": "Across all attack types on held-out samples" },
       { "value": "100%", "label": "Data Leak Prevention", "detail": "Outbound PII and secret detection" },
-      { "value": "0.3%", "label": "False Positive Rate", "detail": "On standard test corpus" },
-      { "value": "< 1ms", "label": "Security Processing P99", "detail": "Verified on GCP Cloud Run" },
-      { "value": "408ms", "label": "Median End-to-End Response", "detail": "Includes LLM round-trip latency" },
-      { "value": "0.00%", "label": "Error Rate Under Load", "detail": "235 requests, 50 concurrent" }
+      { "value": "0.6%", "label": "False Positive Rate", "detail": "On standard test corpus (2,188 samples)" },
+      { "value": "~ 1ms", "label": "Security Processing P99", "detail": "WAF + PII pipeline, verified via microbenchmark" },
+      { "value": "392ms", "label": "Median End-to-End Response", "detail": "Includes LLM round-trip latency" },
+      { "value": "0.00%", "label": "Error Rate Under Load", "detail": "2,188 requests on production GCP Cloud Run" }
     ]
   },
   "agentic": {
     "title": "Agentic Security Benchmarks",
-    "subtitle": "162 test scenarios across MCP proxy, tool interception, and chain tracking",
+    "subtitle": "168 test scenarios across MCP proxy, tool interception, and chain tracking",
     "items": [
       { "value": "87-100%", "label": "Tool Result Inspection", "detail": "PII, secrets, and injection detection in tool outputs" },
       { "value": "100%", "label": "MCP Gateway Accuracy", "detail": "Pre-call and post-call policy enforcement" },
@@ -44,10 +44,10 @@
   "testing": {
     "title": "Test Coverage",
     "items": [
-      { "value": "1,650+", "label": "Total Tests Passing" },
+      { "value": "1,250+", "label": "Total Tests Passing" },
       { "value": "7", "label": "Attack Suites in Red Team Pipeline" },
       { "value": "88", "label": "Go MCP Gateway Tests" },
-      { "value": "162", "label": "Agentic Security Test Scenarios" }
+      { "value": "168", "label": "Agentic Security Test Scenarios" }
     ]
   },
   "caveats": {
@@ -55,7 +55,7 @@
     "items": [
       "Jailbreak-specific recall: 18.6% for DistilBERT multiclass (contrastive fine-tuning in progress)",
       "Mixed encoding adversarial attacks: 12.5% detection (improvement planned)",
-      "FP rate on adversarial samples: 13% (the 0.3% figure is from the standard test corpus)",
+      "FP rate on adversarial samples: 13% (the 0.6% figure is from the standard test corpus)",
       "GPU acceleration and sub-100ms latency: roadmap items (Q4 2026)",
       "SOC 2 Type II and ISO 27001: in progress, not yet compliant"
     ]
