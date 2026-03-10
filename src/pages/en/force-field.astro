@@ -19,24 +19,46 @@ const pageDescription = productContent.meta.description;
   <Header lang={lang} content={siteContent} />
 
   <main>
-    <!-- Hero -->
-    <section class="relative overflow-hidden py-16 md:py-20 lg:py-28 bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
+    <!-- Hero: Compact headline + intro + metrics above the fold -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900 pt-12 pb-10 md:pt-16 md:pb-12">
       <div class="absolute inset-0 opacity-5">
-        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]" viewBox="0 0 200 200" fill="none">
+        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px]" viewBox="0 0 200 200" fill="none">
           <path d="M100 10 L180 50 L180 110 C180 150 145 185 100 195 C55 185 20 150 20 110 L20 50 Z" stroke="currentColor" stroke-width="1" class="text-primary-400"/>
         </svg>
       </div>
       <div class="container-custom relative">
-        <div class="mx-auto max-w-4xl text-center">
-          <h1 class="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+        <div class="mx-auto max-w-4xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-400">{productContent.hero.subtitle}</p>
+          <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             {productContent.hero.title}
           </h1>
-          <p class="mb-10 text-xl md:text-2xl text-secondary-300 max-w-3xl mx-auto">
-            {productContent.hero.subtitle}
+          <p class="mb-6 text-lg text-secondary-300 leading-relaxed max-w-3xl">
+            {productContent.intro}
           </p>
+          <p class="mb-8 text-lg font-semibold text-primary-400">
+            {productContent.intro_closing}
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4 text-center">
+              <p class="text-2xl md:text-3xl font-bold text-primary-400">98.9%</p>
+              <p class="text-xs text-secondary-400 mt-1">Attack Detection</p>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4 text-center">
+              <p class="text-2xl md:text-3xl font-bold text-primary-400">100%</p>
+              <p class="text-xs text-secondary-400 mt-1">Data Leak Prevention</p>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4 text-center">
+              <p class="text-2xl md:text-3xl font-bold text-primary-400">~ 1ms</p>
+              <p class="text-xs text-secondary-400 mt-1">Security P99</p>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4 text-center">
+              <p class="text-2xl md:text-3xl font-bold text-primary-400">1,650+</p>
+              <p class="text-xs text-secondary-400 mt-1">Tests Passing</p>
+            </div>
+          </div>
           <a
             href={`/${lang}/signup`}
-            class="btn-accent inline-flex items-center gap-2 text-lg px-8 py-4"
+            class="btn-accent inline-flex items-center gap-2 text-base px-6 py-3"
           >
             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -47,34 +69,16 @@ const pageDescription = productContent.meta.description;
       </div>
     </section>
 
-    <!-- Intro -->
-    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+    <!-- Zero Trust by Default -->
+    <section class="py-10 md:py-14 bg-white dark:bg-secondary-800">
       <div class="container-custom">
         <div class="mx-auto max-w-4xl">
-          <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 p-8 md:p-10">
-            <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed mb-4">
-              {productContent.intro}
-            </p>
-            <p class="text-lg font-semibold text-primary-600 dark:text-primary-400">
-              {productContent.intro_closing}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mandatory MCP On-Ramp -->
-    <section class="section-padding bg-white dark:bg-secondary-800">
-      <div class="container-custom">
-        <div class="mx-auto max-w-4xl">
-          <div class="rounded-2xl border border-primary-200 dark:border-primary-800 bg-primary-50 dark:bg-primary-900/20 p-8 md:p-10">
-            <h2 class="mb-4 text-2xl md:text-3xl font-bold text-secondary-900 dark:text-white">
-              {productContent.mcp_onramp.title}
-            </h2>
-            <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
-              {productContent.mcp_onramp.description}
-            </p>
-          </div>
+          <h2 class="mb-4 text-2xl md:text-3xl font-bold text-secondary-900 dark:text-white">
+            {productContent.mcp_onramp.title}
+          </h2>
+          <p class="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed">
+            {productContent.mcp_onramp.description}
+          </p>
         </div>
       </div>
     </section>
