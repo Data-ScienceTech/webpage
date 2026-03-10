@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Force Field Pare-feu LLM — Protection Runtime Prête pour la Production | Data Science Technologies",
+    "title": "Force Field Passerelle de Sécurité IA Entreprise — Protection Runtime Prête pour la Production | Data Science Technologies",
     "description": "Force Field est une passerelle de sécurité prête pour la production qui fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils.",
-    "keywords": "Pare-feu LLM, Sécurité IA, Détection Injection de Prompts, Protection Runtime, Sécurité IA Agnostique, Sécurité IA Zero-Trust, Sécurité MCP, Proxy MCP, Sécurité Agents IA, Benchmark Pare-feu LLM, Sécurité Streaming LLM, Interception Appels d'Outils IA, Rédaction PII LLM, Sécurité Sorties Structurées, Détection de Menaces DeBERTa"
+    "keywords": "Passerelle de Sécurité IA Entreprise, Sécurité IA, Détection Injection de Prompts, Protection Runtime, Sécurité IA Agnostique, Sécurité IA Zero-Trust, Sécurité MCP, Proxy MCP, Sécurité Agents IA, Benchmark Passerelle Sécurité IA, Sécurité Streaming LLM, Interception Appels d'Outils IA, Rédaction PII LLM, Sécurité Sorties Structurées, Détection de Menaces DeBERTa"
   },
   "hero": {
-    "title": "Force Field Pare-feu LLM",
+    "title": "Force Field Passerelle de Sécurité IA Entreprise",
     "subtitle": "Protection Runtime Prête pour la Production des Systèmes d'IA"
   },
   "intro": "Force Field est une passerelle de sécurité prête pour la production avec un pipeline d'inspection en 10 étapes et un ensemble de détection IA à 6 couches (regex, ML, analyse de tokens, embeddings, transformeur DeBERTa et LLM-as-judge). Testé sur 2 188 échantillons de validation : 98,9 % de détection d'attaques, 100 % de prévention des fuites de données, 0,6 % de taux de faux positifs. Traitement de sécurité en ~ 1 ms P99. Plus de 1 400 tests réussis.",

@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Résultats des Benchmarks Force Field — Performance de Sécurité Vérifiée | Data Science Technologies",
-    "description": "Résultats de benchmarks publiés pour le pare-feu LLM Force Field : 98,9 % de détection d'attaques, 100 % de prévention des fuites de données, 0,6 % de taux de faux positifs et traitement de sécurité en ~ 1 ms P99.",
-    "keywords": "Benchmark Pare-feu LLM, Benchmark Sécurité IA, Taux Détection Injection Prompts, Benchmark Sécurité MCP, Tests Sécurité Agents IA, Détection Menaces DeBERTa, Performance Force Field"
+    "description": "Résultats de benchmarks publiés pour la Passerelle de Sécurité IA Entreprise Force Field : 98,9 % de détection d'attaques, 100 % de prévention des fuites de données, 0,6 % de taux de faux positifs et traitement de sécurité en ~ 1 ms P99.",
+    "keywords": "Benchmark Passerelle Sécurité IA, Benchmark Sécurité IA, Taux Détection Injection Prompts, Benchmark Sécurité MCP, Tests Sécurité Agents IA, Détection Menaces DeBERTa, Performance Force Field"
   },
   "hero": {
     "title": "Résultats des Benchmarks",

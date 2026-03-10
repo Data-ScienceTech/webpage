@@ -4,13 +4,13 @@
   "hero": {
     "title": "Autorité Runtime pour l'Ère Agentique",
     "subtitle": "Du Filtrage de Prompts au Contrôle Actif d'Exécution",
-    "cta_primary": "Explorer le Pare-feu LLM Force Field"
+    "cta_primary": "Explorer la Passerelle de Sécurité IA Force Field"
   },
   "secure_at_runtime": {
     "title": "Sécurisez l'IA à l'Exécution",
     "pillars": [
       {
-        "name": "Pare-feu LLM",
+        "name": "Passerelle de Sécurité IA",
         "items": [
           "Pipeline de sécurité en 10 étapes",
           "Ensemble de détection IA à 6 couches",
@@ -92,8 +92,8 @@
     "signup": "Inscription"
   },
   "meta": {
-    "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des pare-feux LLM à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",
-    "keywords": "autorité runtime, sécurité IA agentique, pare-feu LLM, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité IA zero-trust, sécurité IA entreprise, sécurité MCP, proxy MCP, sécurité agents IA, détection injection de prompts, interception appels d'outils IA, rédaction PII LLM, sécurité streaming LLM"
+    "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des passerelles de sécurité IA entreprise à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",
+    "keywords": "autorité runtime, sécurité IA agentique, passerelle de sécurité IA entreprise, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité IA zero-trust, sécurité IA entreprise, sécurité MCP, proxy MCP, sécurité agents IA, détection injection de prompts, interception appels d'outils IA, rédaction PII LLM, sécurité streaming LLM"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

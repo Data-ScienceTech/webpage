@@ -4,13 +4,13 @@
   "hero": {
     "title": "Runtime Authority for the Agentic Era",
     "subtitle": "From Prompt Filtering to Active Execution Control",
-    "cta_primary": "Explore the Force Field LLM Firewall"
+    "cta_primary": "Explore the Force Field Enterprise AI Security Gateway"
   },
   "secure_at_runtime": {
     "title": "Secure AI at Runtime",
     "pillars": [
       {
-        "name": "LLM Firewall",
+        "name": "AI Security Gateway",
         "items": [
           "10-step security pipeline",
           "6-layer AI detection ensemble",
@@ -92,8 +92,8 @@
     "signup": "Sign Up"
   },
   "meta": {
-    "description": "Data Science Technologies provides runtime authority for agentic AI — from LLM firewalls to execution-level orchestration and governance. Production-ready AI security for the enterprise.",
-    "keywords": "runtime authority, agentic AI security, LLM firewall, AI execution control, AI governance, AI control plane, zero-trust AI security, enterprise AI security, MCP security, MCP proxy, AI agent security, prompt injection detection, AI tool call interception, PII redaction LLM, streaming LLM security"
+    "description": "Data Science Technologies provides runtime authority for agentic AI — from enterprise AI security gateways to execution-level orchestration and governance. Production-ready AI security for the enterprise.",
+    "keywords": "runtime authority, agentic AI security, enterprise AI security gateway, AI execution control, AI governance, AI control plane, zero-trust AI security, enterprise AI security, MCP security, MCP proxy, AI agent security, prompt injection detection, AI tool call interception, PII redaction LLM, streaming LLM security"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

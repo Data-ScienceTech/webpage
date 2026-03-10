@@ -23,7 +23,7 @@
   },
   "foundation": {
     "title": "From Foundation to Control Plane",
-    "intro": "The Force Field LLM Firewall is our foundation — a production-ready, low-latency enforcement layer that sits directly in the execution path of AI systems.",
+    "intro": "The Force Field Enterprise AI Security Gateway is our foundation — a production-ready, low-latency enforcement layer that sits directly in the execution path of AI systems.",
     "evolution": "Built on that foundation, we are evolving toward execution-level controls that govern:",
     "controls": [
       "how actions are authorized",
