@@ -4,7 +4,7 @@
   "hero": {
     "title": "Runtime Authority for the Agentic Era",
     "subtitle": "From Prompt Filtering to Active Execution Control",
-    "cta_primary": "Explore the Force Field LLM Firewall MVP"
+    "cta_primary": "Explore the Force Field LLM Firewall"
   },
   "secure_at_runtime": {
     "title": "Secure AI at Runtime",
@@ -33,7 +33,7 @@
           "Human-approval gates for sensitive actions",
           "Compliance audit trail (JSONL/CSV export)",
           "Token budget controls per API key",
-          "Automated red team pipeline (CI/CD)"
+          "Automated red team test suites (7 attack categories)"
         ]
       }
     ]
@@ -45,8 +45,8 @@
       "Only gateway with production-ready agentic security -- MCP proxy, tool interception, chain tracking with published benchmarks",
       "10-step fail-closed pipeline scanning prompts, responses, streams, images, JSON outputs, and agent tool calls",
       "Full compliance stack -- audit trails, PII redaction, token budgets, GDPR/CCPA/HIPAA-ready",
-      "1,250+ tests passing -- unit, integration, E2E, security, load, chaos, and penetration tests",
-      "Built on zero-trust -- mTLS, SPIFFE identity, Vault secret management"
+      "1,400+ tests passing -- unit, integration, E2E, security, load, chaos, and penetration tests",
+      "Built on zero-trust -- bearer token authentication, session-agent binding, instruction integrity verification"
     ]
   },
   "trust_bar": {
@@ -57,7 +57,7 @@
       { "value": "98.9%", "label": "Attacks Blocked" },
       { "value": "100%", "label": "Data Leak Prevention" },
       { "value": "~ 1ms", "label": "Security Processing P99" },
-      { "value": "1,250+", "label": "Tests Passing" }
+      { "value": "1,400+", "label": "Tests Passing" }
     ]
   },
   "contact": {

@@ -36,8 +36,8 @@
   },
   "orchestration": {
     "title": "Runtime Orchestration Layer",
-    "status": "Design Partner Preview",
-    "description": "At the center of the architecture is a runtime orchestration layer designed to supervise agentic systems. It authorizes actions before execution, mediates access to tools and APIs, enforces execution-level guardrails, and enables intervention when behavior deviates from expected boundaries."
+    "status": "Production",
+    "description": "At the center of the architecture is a runtime orchestration layer that supervises agentic systems. It authorizes actions before execution, mediates access to tools and APIs, enforces execution-level guardrails, and intervenes when behavior deviates from expected boundaries. This layer is production-deployed as the MCP proxy gateway on GCP Cloud Run."
   },
   "roadmap": {
     "title": "Near-Term Roadmap",

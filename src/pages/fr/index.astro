@@ -53,7 +53,7 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
           {siteContent.trust_bar.title}
         </p>
         <div class="flex flex-wrap items-center justify-center gap-8 opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0">
-          {['SPIFFE/SPIRE', 'HashiCorp Vault', 'Terraform', 'GCP', 'Python', 'Docker'].map((tech) => (
+          {['GCP Cloud Run', 'Firebase Auth', 'Go', 'Python', 'Redis', 'Docker'].map((tech) => (
             <div class="text-secondary-600 dark:text-secondary-400 font-semibold text-lg">
               {tech}
             </div>
@@ -131,12 +131,20 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
         <p class="mb-6 text-2xl md:text-3xl font-bold text-white">
           Prêt à prendre le contrôle de votre couche d'exécution IA ?
         </p>
-        <a
-          href={`/${lang}/force-field`}
-          class="btn inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-primary-50 focus:ring-white text-lg px-8 py-4"
-        >
-          Découvrir Force Field en action
-        </a>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href={`/${lang}/inscription`}
+            class="btn inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-primary-50 focus:ring-white text-lg px-8 py-4"
+          >
+            Commencer gratuitement
+          </a>
+          <a
+            href={`/${lang}/force-field`}
+            class="btn inline-flex items-center gap-2 border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
+          >
+            Découvrir Force Field en action
+          </a>
+        </div>
       </div>
     </section>
   </main>

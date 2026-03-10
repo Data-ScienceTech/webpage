@@ -31,17 +31,19 @@
   },
   "tool_mediation": {
     "title": "Active Tool Mediation",
-    "status": "Design Partner Preview",
-    "description": "The platform is actively developing the ability to mediate tool, API, and system command execution within agentic workflows. This capability is being validated with design partners to ensure safe and predictable behavior before broader availability."
+    "status": "Production",
+    "description": "The MCP proxy gateway mediates tool, API, and system command execution within agentic workflows. Every tool call is evaluated against security policies before execution, with pre-call authorization and post-call result inspection enforced on all requests."
   },
   "inter_agent": {
     "title": "Inter-Agent Governance",
-    "status": "Future-Ready",
-    "description": "The security design is intended to extend into inter-agent governance as multi-agent systems emerge. This includes addressing:",
+    "status": "Production",
+    "description": "Inter-agent governance is enforced in the MCP proxy gateway. The system manages authority delegation, detects confused-deputy attacks, and governs agent-to-agent interactions with:",
     "items": [
-      "Authority delegation",
-      "Confused-deputy risks",
-      "Agent-to-agent interactions"
+      "Inter-agent policy engine with allow/deny rules per agent pair",
+      "Delegation scope enforcement with per-delegation tool and call limits",
+      "Lateral movement prevention with session-agent binding and identity verification",
+      "Trust escalation protection (agents cannot re-register at higher trust levels)",
+      "Instruction integrity verification (HMAC-SHA256 signing at every hop)"
     ]
   },
   "discovery": {

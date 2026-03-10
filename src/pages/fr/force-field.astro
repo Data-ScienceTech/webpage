@@ -35,13 +35,13 @@ const pageDescription = productContent.meta.description;
             {productContent.hero.subtitle}
           </p>
           <a
-            href="#request-access"
+            href={`/${lang}/inscription`}
             class="btn-accent inline-flex items-center gap-2 text-lg px-8 py-4"
           >
             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            Demander l'accès
+            Commencer gratuitement
           </a>
         </div>
       </div>
@@ -228,55 +228,27 @@ const pageDescription = productContent.meta.description;
       </div>
     </section>
 
-    <!-- Formulaire de demande d'accès -->
-    <section id="request-access" class="section-padding scroll-mt-24 bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
-      <div class="container-custom">
-        <div class="mx-auto max-w-2xl">
-          <h2 class="mb-8 text-3xl font-bold text-white text-center">
-            {productContent.form.title}
-          </h2>
-          <form
-            name="forcefield-access-fr"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            class="space-y-5 bg-white dark:bg-secondary-800 rounded-2xl p-8 md:p-10 shadow-xl"
-          >
-            <input type="hidden" name="form-name" value="forcefield-access-fr" />
-            <p class="hidden">
-              <label>Ne remplissez pas : <input name="bot-field" /></label>
-            </p>
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label for="first_name" class="label">{productContent.form.fields.first_name}</label>
-                <input type="text" id="first_name" name="first_name" required class="input-field" />
-              </div>
-              <div>
-                <label for="last_name" class="label">{productContent.form.fields.last_name}</label>
-                <input type="text" id="last_name" name="last_name" required class="input-field" />
-              </div>
-            </div>
-            <div>
-              <label for="company" class="label">{productContent.form.fields.company}</label>
-              <input type="text" id="company" name="company" required class="input-field" />
-            </div>
-            <div>
-              <label for="email" class="label">{productContent.form.fields.email}</label>
-              <input type="email" id="email" name="email" required class="input-field" />
-            </div>
-            <div>
-              <label for="job_title" class="label">{productContent.form.fields.job_title}</label>
-              <input type="text" id="job_title" name="job_title" class="input-field" />
-            </div>
-            <div>
-              <label for="message" class="label">{productContent.form.fields.message}</label>
-              <textarea id="message" name="message" rows="3" class="input-field"></textarea>
-            </div>
-            <button type="submit" class="btn-primary w-full text-lg py-3">
-              {productContent.form.submit}
-            </button>
-          </form>
-        </div>
+    <!-- CTA Inscription -->
+    <section class="section-padding bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
+      <div class="container-custom text-center">
+        <h2 class="mb-4 text-3xl font-bold text-white">
+          Commencez avec Force Field
+        </h2>
+        <p class="mb-8 text-lg text-secondary-300 max-w-2xl mx-auto">
+          Créez votre compte gratuit, obtenez une clé API et commencez à protéger vos applications LLM en moins d'une minute.
+        </p>
+        <a
+          href={`/${lang}/inscription`}
+          class="btn inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-primary-50 focus:ring-white text-lg px-8 py-4"
+        >
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          Créer un compte gratuit
+        </a>
+        <p class="mt-6 text-sm text-secondary-400">
+          Gratuit pendant l'accès anticipé. Aucune carte de crédit requise.
+        </p>
       </div>
     </section>
 

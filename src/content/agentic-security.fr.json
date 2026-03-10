@@ -48,18 +48,41 @@
       "Niveaux de confiance attribués par identité d'agent",
       "Gestion de la délégation : quels agents peuvent invoquer d'autres agents",
       "Surveillance des communications inter-agents",
-      "Contextes d'exécution isolés par agent",
-      "Limitation de débit agrégée à travers les pools d'agents"
+      "Listes d'outils autorisés par agent et limites de confiance appliquées par politique",
+      "Limitation de débit par agent avec fenêtres configurables"
     ]
   },
   "benchmarks": {
     "title": "Benchmarks de Sécurité Agentique",
-    "subtitle": "168 scénarios de test, vérifiés en mars 2026",
+    "subtitle": "192 scénarios de test, vérifiés en mars 2026",
     "items": [
       { "value": "87-100 %", "label": "Précision d'Inspection des Résultats d'Outils" },
       { "value": "100 %", "label": "Précision Pré/Post-Appel de la Passerelle MCP" },
       { "value": "100 %", "label": "Détection de Suivi de Chaîne (4 types de schémas)" },
-      { "value": "88", "label": "Tests de la Passerelle MCP en Go Réussis" }
+      { "value": "108", "label": "Tests MCP en Go Réussis" },
+      { "value": "84", "label": "Tests E2E Python Réussis" }
+    ]
+  },
+  "instruction_integrity": {
+    "title": "Validation d'Int\u00e9grit\u00e9 Zero-Trust",
+    "description": "Chaque d\u00e9l\u00e9gation inter-agents est v\u00e9rifi\u00e9e cryptographiquement. Force Field utilise la signature HMAC-SHA256 avec protection contre la r\u00e9p\u00e9tition de nonce pour garantir que les instructions d'appels d'outils n'ont pas \u00e9t\u00e9 alt\u00e9r\u00e9es en transit entre les agents.",
+    "features": [
+      "Signature HMAC-SHA256 des instructions \u00e0 chaque saut",
+      "V\u00e9rification du hash de contenu d\u00e9tecte les arguments alt\u00e9r\u00e9s",
+      "Protection contre la r\u00e9p\u00e9tition de nonce emp\u00eache la r\u00e9utilisation d'instructions",
+      "Suivi de provenance enregistre la cha\u00eene de d\u00e9l\u00e9gation compl\u00e8te",
+      "Modes consultatif et strict pour un d\u00e9ploiement progressif"
+    ]
+  },
+  "lateral_movement": {
+    "title": "Pr\u00e9vention des Mouvements Lat\u00e9raux",
+    "description": "Force Field lie les identit\u00e9s des agents aux sessions authentifi\u00e9es et aux jetons porteurs. Si un agent tente d'usurper l'identit\u00e9 d'un autre agent, de d\u00e9tourner une session ou d'escalader les niveaux de confiance, la requ\u00eate est bloqu\u00e9e et l'\u00e9v\u00e9nement est enregistr\u00e9.",
+    "features": [
+      "Liaison session-agent avec v\u00e9rification du jeton porteur",
+      "D\u00e9tection d'usurpation d'identit\u00e9 entre sessions",
+      "Pr\u00e9vention de l'escalade de confiance (les agents ne peuvent pas se r\u00e9inscrire \u00e0 un niveau sup\u00e9rieur)",
+      "D\u00e9tection d'attaques inter-sessions",
+      "M\u00e9triques Prometheus en temps r\u00e9el pour tous les \u00e9v\u00e9nements de mouvement lat\u00e9ral"
     ]
   },
   "cta": {

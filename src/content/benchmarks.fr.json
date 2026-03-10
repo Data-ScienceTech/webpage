@@ -23,7 +23,7 @@
   },
   "agentic": {
     "title": "Benchmarks de Sécurité Agentique",
-    "subtitle": "168 scénarios de test couvrant le proxy MCP, l'interception d'outils et le suivi de chaîne",
+    "subtitle": "192 scénarios de test couvrant le proxy MCP, l'interception d'outils, le suivi de chaîne et la prévention des mouvements latéraux",
     "items": [
       { "value": "87-100 %", "label": "Inspection des Résultats d'Outils", "detail": "Détection de PII, secrets et injection dans les sorties d'outils" },
       { "value": "100 %", "label": "Précision de la Passerelle MCP", "detail": "Application des politiques pré-appel et post-appel" },
@@ -44,10 +44,11 @@
   "testing": {
     "title": "Couverture des Tests",
     "items": [
-      { "value": "1 250+", "label": "Total de Tests Réussis" },
-      { "value": "7", "label": "Suites d'Attaques dans le Pipeline Red Team" },
-      { "value": "88", "label": "Tests de la Passerelle MCP en Go" },
-      { "value": "168", "label": "Scénarios de Tests de Sécurité Agentique" }
+      { "value": "1 400+", "label": "Total de Tests Réussis" },
+      { "value": "7", "label": "Suites d'Attaques dans les Tests Red Team" },
+      { "value": "108", "label": "Tests MCP en Go" },
+      { "value": "84", "label": "Tests E2E Python" },
+      { "value": "192", "label": "Scénarios de Tests de Sécurité Agentique" }
     ]
   },
   "caveats": {

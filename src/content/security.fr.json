@@ -31,17 +31,19 @@
   },
   "tool_mediation": {
     "title": "Médiation Active des Outils",
-    "status": "Aperçu Partenaire de Conception",
-    "description": "La plateforme développe activement la capacité de médier l'exécution d'outils, d'API et de commandes système au sein des flux de travail agentiques. Cette capacité est validée avec des partenaires de conception pour assurer un comportement sûr et prévisible avant une disponibilité plus large."
+    "status": "Production",
+    "description": "La passerelle proxy MCP médie l'exécution d'outils, d'API et de commandes système au sein des flux de travail agentiques. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution, avec autorisation pré-appel et inspection post-appel des résultats appliquées sur toutes les requêtes."
   },
   "inter_agent": {
     "title": "Gouvernance Inter-Agents",
-    "status": "Prêt pour l'Avenir",
-    "description": "La conception sécuritaire est destinée à s'étendre à la gouvernance inter-agents à mesure que les systèmes multi-agents émergent. Cela inclut :",
+    "status": "Production",
+    "description": "La gouvernance inter-agents est appliquée dans la passerelle proxy MCP. Le système gère la délégation d'autorité, détecte les attaques de type confused-deputy et gouverne les interactions agent-à-agent avec :",
     "items": [
-      "Délégation d'autorité",
-      "Risques de type confused-deputy",
-      "Interactions agent-à-agent"
+      "Moteur de politique inter-agents avec règles autoriser/refuser par paire d'agents",
+      "Application du périmètre de délégation avec limites d'outils et d'appels par délégation",
+      "Prévention des mouvements latéraux avec liaison session-agent et vérification d'identité",
+      "Protection contre l'escalade de confiance (les agents ne peuvent pas se réinscrire à un niveau supérieur)",
+      "Vérification d'intégrité des instructions (signature HMAC-SHA256 à chaque saut)"
     ]
   },
   "discovery": {

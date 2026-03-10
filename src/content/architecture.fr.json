@@ -36,8 +36,8 @@
   },
   "orchestration": {
     "title": "Couche d'Orchestration Runtime",
-    "status": "Aperçu Partenaire de Conception",
-    "description": "Au cœur de l'architecture se trouve une couche d'orchestration runtime conçue pour superviser les systèmes agentiques. Elle autorise les actions avant l'exécution, médie l'accès aux outils et API, applique des garde-fous au niveau de l'exécution et permet l'intervention lorsque le comportement dévie des limites attendues."
+    "status": "Production",
+    "description": "Au cœur de l'architecture se trouve une couche d'orchestration runtime qui supervise les systèmes agentiques. Elle autorise les actions avant l'exécution, médie l'accès aux outils et API, applique des garde-fous au niveau de l'exécution et intervient lorsque le comportement dévie des limites attendues. Cette couche est déployée en production en tant que passerelle proxy MCP sur GCP Cloud Run."
   },
   "roadmap": {
     "title": "Feuille de Route à Court Terme",

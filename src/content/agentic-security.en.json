@@ -48,18 +48,41 @@
       "Trust levels assigned per agent identity",
       "Delegation management: which agents can invoke other agents",
       "Cross-agent communication monitoring",
-      "Isolated execution contexts per agent",
-      "Aggregate rate limiting across agent pools"
+      "Policy-enforced per-agent tool allowlists and trust boundaries",
+      "Per-agent rate limiting with configurable windows"
     ]
   },
   "benchmarks": {
     "title": "Agentic Security Benchmarks",
-    "subtitle": "168 test scenarios, verified March 2026",
+    "subtitle": "192 test scenarios, verified March 2026",
     "items": [
       { "value": "87-100%", "label": "Tool Result Inspection Accuracy" },
       { "value": "100%", "label": "MCP Gateway Pre/Post-Call Accuracy" },
       { "value": "100%", "label": "Chain Tracking Detection (4 pattern types)" },
-      { "value": "88", "label": "Go MCP Gateway Tests Passing" }
+      { "value": "108", "label": "Go MCP Tests Passing" },
+      { "value": "84", "label": "Python E2E Tests Passing" }
+    ]
+  },
+  "instruction_integrity": {
+    "title": "Zero-Trust Intent Validation",
+    "description": "Every inter-agent delegation is cryptographically verified. Force Field uses HMAC-SHA256 signing with nonce replay protection to ensure tool call instructions have not been tampered with in transit between agents.",
+    "features": [
+      "HMAC-SHA256 instruction signing at every hop",
+      "Content hash verification detects tampered arguments",
+      "Nonce replay protection prevents instruction reuse",
+      "Provenance tracking records the full delegation chain",
+      "Advisory and enforce modes for gradual rollout"
+    ]
+  },
+  "lateral_movement": {
+    "title": "Lateral Movement Prevention",
+    "description": "Force Field binds agent identities to authenticated sessions and bearer tokens. If an agent attempts to spoof another agent's identity, hijack a session, or escalate trust levels, the request is blocked and the event is recorded.",
+    "features": [
+      "Session-agent binding with bearer token verification",
+      "Identity spoofing detection across sessions",
+      "Trust escalation prevention (agents cannot re-register at higher trust)",
+      "Cross-session attack detection",
+      "Real-time Prometheus metrics for all lateral movement events"
     ]
   },
   "cta": {

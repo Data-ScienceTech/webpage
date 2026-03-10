@@ -23,7 +23,7 @@
   },
   "agentic": {
     "title": "Agentic Security Benchmarks",
-    "subtitle": "168 test scenarios across MCP proxy, tool interception, and chain tracking",
+    "subtitle": "192 test scenarios across MCP proxy, tool interception, chain tracking, and lateral movement prevention",
     "items": [
       { "value": "87-100%", "label": "Tool Result Inspection", "detail": "PII, secrets, and injection detection in tool outputs" },
       { "value": "100%", "label": "MCP Gateway Accuracy", "detail": "Pre-call and post-call policy enforcement" },
@@ -44,10 +44,11 @@
   "testing": {
     "title": "Test Coverage",
     "items": [
-      { "value": "1,250+", "label": "Total Tests Passing" },
-      { "value": "7", "label": "Attack Suites in Red Team Pipeline" },
-      { "value": "88", "label": "Go MCP Gateway Tests" },
-      { "value": "168", "label": "Agentic Security Test Scenarios" }
+      { "value": "1,400+", "label": "Total Tests Passing" },
+      { "value": "7", "label": "Attack Suites in Red Team Tests" },
+      { "value": "108", "label": "Go MCP Tests" },
+      { "value": "84", "label": "Python E2E Tests" },
+      { "value": "192", "label": "Agentic Security Test Scenarios" }
     ]
   },
   "caveats": {
