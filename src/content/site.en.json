@@ -1,10 +1,11 @@
 {
   "company": "Data Science Technologies",
-  "tagline": "Runtime Authority for the Agentic Era",
+  "tagline": "AI Security Gateway for Apps and Agents",
   "hero": {
-    "title": "Runtime Authority for the Agentic Era",
-    "subtitle": "From Prompt Filtering to Active Execution Control",
-    "cta_primary": "Explore the Force Field Enterprise AI Security Gateway"
+    "title": "Stop prompt injection, data leaks, and unsafe tool use before AI hits production",
+    "subtitle": "ForceField is the runtime authority for agentic AI — scan prompts, enforce policies, and block risky tool calls with a fail-closed security pipeline.",
+    "cta_primary": "Run Free Scan",
+    "cta_secondary": "View Benchmarks"
   },
   "secure_at_runtime": {
     "title": "Secure AI at Runtime",
@@ -45,7 +46,7 @@
       "Only gateway with production-ready agentic security -- MCP proxy, tool interception, chain tracking with published benchmarks",
       "10-step fail-closed pipeline scanning prompts, responses, streams, images, JSON outputs, and agent tool calls",
       "Full compliance stack -- audit trails, PII redaction, token budgets, GDPR/CCPA/HIPAA-ready",
-      "1,400+ tests passing -- unit, integration, E2E, security, load, chaos, and penetration tests",
+      "1,650+ tests passing -- unit, integration, E2E, security, load, chaos, and penetration tests",
       "Built on zero-trust -- bearer token authentication, session-agent binding, instruction integrity verification"
     ]
   },
@@ -57,7 +58,7 @@
       { "value": "98.9%", "label": "Attacks Blocked" },
       { "value": "100%", "label": "Data Leak Prevention" },
       { "value": "~ 1ms", "label": "Security Processing P99" },
-      { "value": "1,400+", "label": "Tests Passing" }
+      { "value": "1,650+", "label": "Tests Passing" }
     ]
   },
   "contact": {
@@ -70,13 +71,17 @@
     "links": {
       "company": "Company",
       "why": "Why Runtime Authority",
-      "product": "Force Field",
+      "product": "ForceField",
       "benchmarks": "Benchmarks",
       "agentic": "Agentic Security",
       "architecture": "Architecture",
       "security": "Security",
-      "privacy": "Force Field Privacy",
-      "terms": "Force Field Terms",
+      "privacy": "ForceField Privacy",
+      "terms": "ForceField Terms",
+      "scannerTerms": "Scanner Terms",
+      "scannerPrivacy": "Scanner Privacy Addendum",
+      "aup": "Acceptable Use Policy",
+      "disclosure": "Responsible Disclosure",
       "websitePrivacy": "Website Privacy Policy",
       "websiteTerms": "Website Terms of Use"
     },
@@ -84,7 +89,7 @@
   },
   "nav": {
     "why": "Why Runtime Authority",
-    "product": "Force Field",
+    "product": "ForceField",
     "benchmarks": "Benchmarks",
     "agentic": "Agentic Security",
     "architecture": "Architecture",

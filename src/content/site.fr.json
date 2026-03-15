@@ -1,10 +1,11 @@
 {
   "company": "Data Science Technologies",
-  "tagline": "Autorité Runtime pour l'Ère Agentique",
+  "tagline": "Passerelle de sécurité IA pour applications et agents",
   "hero": {
-    "title": "Autorité Runtime pour l'Ère Agentique",
-    "subtitle": "Du Filtrage de Prompts au Contrôle Actif d'Exécution",
-    "cta_primary": "Explorer la Passerelle de Sécurité IA Force Field"
+    "title": "Bloquez l'injection de prompts, les fuites de données et les actions non sécurisées avant la mise en production",
+    "subtitle": "ForceField est l'autorité runtime pour l'IA agentique — analysez les prompts, appliquez des politiques et bloquez les appels d'outils risqués avec un pipeline de sécurité fail-closed.",
+    "cta_primary": "Lancer un scan gratuit",
+    "cta_secondary": "Voir les benchmarks"
   },
   "secure_at_runtime": {
     "title": "Sécurisez l'IA à l'Exécution",
@@ -45,7 +46,7 @@
       "Seule passerelle avec sécurité agentique prête pour la production -- proxy MCP, interception d'outils, suivi de chaîne avec benchmarks publiés",
       "Pipeline fail-closed en 10 étapes analysant prompts, réponses, flux, images, sorties JSON et appels d'outils d'agents",
       "Stack de conformité complète -- pistes d'audit, rédaction PII, budgets de tokens, prêt RGPD/CCPA/HIPAA",
-      "Plus de 1 400 tests réussis -- unitaires, intégration, E2E, sécurité, charge, chaos et pénétration",
+      "Plus de 1 650 tests réussis -- unitaires, intégration, E2E, sécurité, charge, chaos et pénétration",
       "Bâti sur le zero-trust -- authentification par jeton, liaison session-agent, vérification d'intégrité des instructions"
     ]
   },
@@ -57,7 +58,7 @@
       { "value": "98,9 %", "label": "Attaques bloquées" },
       { "value": "100 %", "label": "Prévention des fuites de données" },
       { "value": "~ 1 ms", "label": "Traitement de sécurité P99" },
-      { "value": "1 400+", "label": "Tests réussis" }
+      { "value": "1 650+", "label": "Tests réussis" }
     ]
   },
   "contact": {
@@ -70,13 +71,17 @@
     "links": {
       "company": "Entreprise",
       "why": "Pourquoi l'Autorité Runtime",
-      "product": "Force Field",
+      "product": "ForceField",
       "benchmarks": "Benchmarks",
       "agentic": "Sécurité Agentique",
       "architecture": "Architecture",
       "security": "Sécurité",
-      "privacy": "Confidentialité Force Field",
-      "terms": "Conditions Force Field",
+      "privacy": "Confidentialité ForceField",
+      "terms": "Conditions ForceField",
+      "scannerTerms": "Conditions du Scanner",
+      "scannerPrivacy": "Confidentialité du Scanner",
+      "aup": "Utilisation acceptable",
+      "disclosure": "Divulgation responsable",
       "websitePrivacy": "Politique de confidentialité du site",
       "websiteTerms": "Conditions d'utilisation du site"
     },
@@ -84,7 +89,7 @@
   },
   "nav": {
     "why": "Autorité Runtime",
-    "product": "Force Field",
+    "product": "ForceField",
     "benchmarks": "Benchmarks",
     "agentic": "Sécurité Agentique",
     "architecture": "Architecture",

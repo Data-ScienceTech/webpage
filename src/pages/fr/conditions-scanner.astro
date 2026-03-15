@@ -1,0 +1,107 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout
+  title={`Conditions du Scanner ForceField | ${siteContent.company}`}
+  description="Conditions du Scanner ForceField — les conditions régissant l'utilisation du Scanner ForceField pour les tests de sécurité IA."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Juridique
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Conditions du Scanner ForceField</h1>
+          <p class="text-xl text-secondary-300">
+            Conditions r&eacute;gissant l'utilisation du Scanner ForceField pour les tests de s&eacute;curit&eacute; IA.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Derni&egrave;re mise &agrave; jour :</strong> 15 mars 2026<br />
+                  <strong class="text-secondary-900 dark:text-white">Entit&eacute; juridique :</strong> 9558-6616 Qu&eacute;bec Inc.<br />
+                  <strong class="text-secondary-900 dark:text-white">English version:</strong> <a href="/en/scanner-terms" class="text-primary-600 dark:text-primary-400 hover:underline">ForceField Scanner Terms</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            
+            <div class="not-prose mb-10 p-6 rounded-xl bg-secondary-900 dark:bg-secondary-800 text-white">
+              <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+                <svg class="h-6 w-6 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                Aper&ccedil;u
+              </h2>
+              <p class="text-secondary-300 mb-0">
+                Le scanner ForceField est destin&eacute; &agrave; l'analyse de s&eacute;curit&eacute; d&eacute;fensive des applications d'IA. Il effectue une analyse au niveau des prompts et des comportements des syst&egrave;mes d'IA et ne r&eacute;alise pas de tests d'intrusion sur l'infrastructure.
+              </p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">1. Autorisation</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Les utilisateurs confirment &ecirc;tre propri&eacute;taires ou disposer d'une autorisation explicite pour tester tout syst&egrave;me soumis au Scanner ForceField. Vous ne devez pas utiliser le scanner pour tester des syst&egrave;mes appartenant &agrave; des tiers sans leur consentement &eacute;crit.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">2. Port&eacute;e des tests</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Le scanner effectue une analyse au niveau des prompts et des comportements des syst&egrave;mes d'IA. Les analyses sont effectu&eacute;es via le pipeline de d&eacute;tection de la passerelle ForceField et n'interagissent pas directement avec vos syst&egrave;mes de production. Le scanner ne r&eacute;alise pas de tests d'intrusion sur l'infrastructure, de balayage r&eacute;seau ou d'ex&eacute;cution d'exploits.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">3. Traitement des donn&eacute;es</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Le scanner traite les prompts soumis pour analyse, les URL ou identifiants de points d'acc&egrave;s, les r&eacute;sultats de vuln&eacute;rabilit&eacute;s, ainsi que les journaux et horodatages pour la limitation du d&eacute;bit et la pr&eacute;vention des abus. Consultez l'<a href="/fr/confidentialite-scanner" class="text-primary-600 dark:text-primary-400 hover:underline">Addendum de confidentialit&eacute; du Scanner</a> pour plus de d&eacute;tails.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">4. Limitation du d&eacute;bit</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              ForceField se r&eacute;serve le droit de limiter le d&eacute;bit ou de suspendre l'acc&egrave;s au scanner en cas d'abus, d'utilisation automatis&eacute;e excessive ou de violation des pr&eacute;sentes conditions.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">5. Droit applicable</h2>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                Les pr&eacute;sentes conditions du Scanner sont r&eacute;gies par les <strong>lois de la province de Qu&eacute;bec, Canada</strong> et sont soumises aux <a href="/fr/conditions" class="text-primary-600 dark:text-primary-400 hover:underline">Conditions de la plateforme ForceField</a>.
+              </p>
+            </div>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 9558-6616 Qu&eacute;bec Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

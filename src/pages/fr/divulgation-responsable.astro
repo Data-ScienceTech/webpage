@@ -1,0 +1,104 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout
+  title={`Divulgation responsable | ${siteContent.company}`}
+  description="Politique de divulgation responsable — comment signaler les vulnérabilités de sécurité découvertes dans ForceField."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            S&eacute;curit&eacute;
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Divulgation responsable</h1>
+          <p class="text-xl text-secondary-300">
+            Comment signaler les vuln&eacute;rabilit&eacute;s de s&eacute;curit&eacute; d&eacute;couvertes dans ForceField.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Derni&egrave;re mise &agrave; jour :</strong> 15 mars 2026<br />
+                  <strong class="text-secondary-900 dark:text-white">Entit&eacute; juridique :</strong> 9558-6616 Qu&eacute;bec Inc.<br />
+                  <strong class="text-secondary-900 dark:text-white">English version:</strong> <a href="/en/responsible-disclosure" class="text-primary-600 dark:text-primary-400 hover:underline">Responsible Disclosure Policy</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Signaler une vuln&eacute;rabilit&eacute;</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Si vous d&eacute;couvrez une vuln&eacute;rabilit&eacute; dans ForceField, veuillez la signaler de mani&egrave;re responsable &agrave; :
+            </p>
+            <div class="not-prose mt-4 mb-6 p-6 rounded-xl bg-secondary-900 dark:bg-secondary-800 text-white text-center">
+              <p class="text-lg font-semibold mb-1">
+                <a href="mailto:security@datasciencetech.ca" class="text-primary-400 hover:text-primary-300">security@datasciencetech.ca</a>
+              </p>
+              <p class="text-secondary-400 text-sm">Communication chiffr&eacute;e disponible sur demande</p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Notre engagement</h2>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li>Nous accuserons r&eacute;ception de votre signalement dans les <strong>48 heures</strong></li>
+              <li>Nous fournirons une &eacute;valuation initiale dans les <strong>5 jours ouvrables</strong></li>
+              <li>Nous travaillerons avec vous pour comprendre et r&eacute;soudre le probl&egrave;me avant toute divulgation publique</li>
+              <li>Nous cr&eacute;diterons les chercheurs qui signalent des vuln&eacute;rabilit&eacute;s valides (sauf si l'anonymat est pr&eacute;f&eacute;r&eacute;)</li>
+              <li>Nous n'engagerons pas de poursuites judiciaires contre les chercheurs agissant de bonne foi</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Informations &agrave; inclure</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Lors du signalement d'une vuln&eacute;rabilit&eacute;, veuillez inclure :
+            </p>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li>Une description de la vuln&eacute;rabilit&eacute; et de son impact potentiel</li>
+              <li>Les &eacute;tapes pour reproduire le probl&egrave;me</li>
+              <li>Tout code de preuve de concept ou captures d'&eacute;cran</li>
+              <li>Vos coordonn&eacute;es pour le suivi</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Port&eacute;e</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Cette politique couvre tous les services ForceField : le Scanner, le Simulateur, le Labo Demo, la Passerelle, le Tableau de bord et le site datasciencetech.ca. L'ing&eacute;nierie sociale, l'hame&ccedil;onnage et les attaques par d&eacute;ni de service sont hors port&eacute;e.
+            </p>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 9558-6616 Qu&eacute;bec Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

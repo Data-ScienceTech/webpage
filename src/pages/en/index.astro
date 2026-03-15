@@ -33,15 +33,26 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
           <p class="mb-10 text-xl md:text-2xl text-secondary-300 max-w-3xl mx-auto">
             {siteContent.hero.subtitle}
           </p>
-          <a
-            href={`/${lang}/force-field`}
-            class="btn-accent inline-flex items-center gap-2 text-lg px-8 py-4"
-          >
-            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-            {siteContent.hero.cta_primary}
-          </a>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://forcefield.datasciencetech.ca/scan/start"
+              class="btn-accent inline-flex items-center gap-2 text-lg px-8 py-4"
+            >
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              {siteContent.hero.cta_primary}
+            </a>
+            <a
+              href={`/${lang}/benchmarks`}
+              class="btn inline-flex items-center gap-2 border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
+            >
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              {siteContent.hero.cta_secondary}
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -142,7 +153,7 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
             href={`/${lang}/force-field`}
             class="btn inline-flex items-center gap-2 border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
           >
-            See Force Field in Action
+            See ForceField in Action
           </a>
         </div>
       </div>

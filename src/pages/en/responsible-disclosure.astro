@@ -1,0 +1,104 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.en.json';
+
+const lang = 'en';
+---
+
+<MainLayout
+  title={`Responsible Disclosure Policy | ${siteContent.company}`}
+  description="Responsible Disclosure Policy — how to report security vulnerabilities found in ForceField."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Security
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Responsible Disclosure Policy</h1>
+          <p class="text-xl text-secondary-300">
+            How to report security vulnerabilities found in ForceField.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Last Updated:</strong> March 15, 2026<br />
+                  <strong class="text-secondary-900 dark:text-white">Legal Entity:</strong> 9558-6616 Qu&eacute;bec Inc.<br />
+                  <strong class="text-secondary-900 dark:text-white">Version fran&ccedil;aise :</strong> <a href="/fr/divulgation-responsable" class="text-primary-600 dark:text-primary-400 hover:underline">Divulgation responsable</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Reporting a Vulnerability</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              If you discover a vulnerability in ForceField, please report it responsibly to:
+            </p>
+            <div class="not-prose mt-4 mb-6 p-6 rounded-xl bg-secondary-900 dark:bg-secondary-800 text-white text-center">
+              <p class="text-lg font-semibold mb-1">
+                <a href="mailto:security@datasciencetech.ca" class="text-primary-400 hover:text-primary-300">security@datasciencetech.ca</a>
+              </p>
+              <p class="text-secondary-400 text-sm">Encrypted communication available upon request</p>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Our Commitment</h2>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li>We will acknowledge receipt of your report within <strong>48 hours</strong></li>
+              <li>We will provide an initial assessment within <strong>5 business days</strong></li>
+              <li>We will work with you to understand and resolve the issue before any public disclosure</li>
+              <li>We will credit researchers who report valid vulnerabilities (unless anonymity is preferred)</li>
+              <li>We will not take legal action against researchers acting in good faith</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">What to Include</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              When reporting a vulnerability, please include:
+            </p>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li>A description of the vulnerability and its potential impact</li>
+              <li>Steps to reproduce the issue</li>
+              <li>Any proof-of-concept code or screenshots</li>
+              <li>Your contact information for follow-up</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Scope</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              This policy covers all ForceField services: the Scanner, Simulator, Demo Lab, Gateway, Dashboard, and the datasciencetech.ca website. Social engineering, phishing, and denial-of-service attacks are out of scope.
+            </p>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 9558-6616 Qu&eacute;bec Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

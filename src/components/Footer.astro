@@ -88,6 +88,26 @@ const currentYear = new Date().getFullYear();
             </a>
           </li>
           <li>
+            <a href={lang === 'en' ? `/${lang}/scanner-terms` : `/${lang}/conditions-scanner`} class="footer-link">
+              {content.footer.links.scannerTerms}
+            </a>
+          </li>
+          <li>
+            <a href={lang === 'en' ? `/${lang}/scanner-privacy` : `/${lang}/confidentialite-scanner`} class="footer-link">
+              {content.footer.links.scannerPrivacy}
+            </a>
+          </li>
+          <li>
+            <a href={lang === 'en' ? `/${lang}/acceptable-use` : `/${lang}/utilisation-acceptable`} class="footer-link">
+              {content.footer.links.aup}
+            </a>
+          </li>
+          <li>
+            <a href={lang === 'en' ? `/${lang}/responsible-disclosure` : `/${lang}/divulgation-responsable`} class="footer-link">
+              {content.footer.links.disclosure}
+            </a>
+          </li>
+          <li>
             <a href={lang === 'en' ? `/${lang}/privacy-policy` : `/${lang}/politique-de-confidentialite`} class="footer-link">
               {content.footer.links.websitePrivacy}
             </a>

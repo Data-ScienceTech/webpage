@@ -1,0 +1,107 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.en.json';
+
+const lang = 'en';
+---
+
+<MainLayout
+  title={`Acceptable Use Policy | ${siteContent.company}`}
+  description="Acceptable Use Policy for the ForceField platform — rules governing permitted and prohibited uses of ForceField services."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+            Legal
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Acceptable Use Policy</h1>
+          <p class="text-xl text-secondary-300">
+            Rules governing permitted and prohibited uses of ForceField services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Last Updated:</strong> March 15, 2026<br />
+                  <strong class="text-secondary-900 dark:text-white">Legal Entity:</strong> 9558-6616 Qu&eacute;bec Inc.<br />
+                  <strong class="text-secondary-900 dark:text-white">Version fran&ccedil;aise :</strong> <a href="/fr/utilisation-acceptable" class="text-primary-600 dark:text-primary-400 hover:underline">Politique d'utilisation acceptable</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Prohibited Uses</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              When using any ForceField service (Scanner, Simulator, Demo Lab, or Gateway), users may not:
+            </p>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li>Scan systems without authorization from the system owner</li>
+              <li>Exploit vulnerabilities discovered through ForceField</li>
+              <li>Conduct denial-of-service tests against ForceField or third-party systems</li>
+              <li>Overload ForceField services through automated bulk scanning without prior permission</li>
+              <li>Use the service for illegal purposes</li>
+              <li>Redistribute the attack catalog for offensive purposes</li>
+              <li>Attempt to bypass ForceField security controls for malicious purposes</li>
+              <li>Use ForceField to develop competing security products</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Permitted Uses</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              ForceField is designed for defensive AI security testing. Permitted uses include:
+            </p>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li>Scanning AI applications you own or have written authorization to test</li>
+              <li>Using the Simulator to evaluate your security policies</li>
+              <li>Using the Demo Lab to learn about AI security threats</li>
+              <li>Deploying the Gateway to protect your production AI applications</li>
+              <li>Sharing scan results with your team for remediation purposes</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Enforcement</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              ForceField reserves the right to suspend or terminate access for violations of this policy. Repeated or serious violations may be reported to relevant authorities.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Governing Law</h2>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                This policy is governed by the <strong>laws of the Province of Qu&eacute;bec, Canada</strong> and is subject to the <a href="/en/terms" class="text-primary-600 dark:text-primary-400 hover:underline">ForceField Platform Terms</a>.
+              </p>
+            </div>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 9558-6616 Qu&eacute;bec Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

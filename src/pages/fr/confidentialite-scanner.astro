@@ -1,0 +1,125 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout
+  title={`Addendum de confidentialité du Scanner | ${siteContent.company}`}
+  description="Addendum de confidentialité du Scanner ForceField — comment le Scanner ForceField traite et gère vos données."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Confidentialit&eacute;
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Addendum de confidentialit&eacute; du Scanner</h1>
+          <p class="text-xl text-secondary-300">
+            Comment le Scanner ForceField traite et g&egrave;re vos donn&eacute;es.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Derni&egrave;re mise &agrave; jour :</strong> 15 mars 2026<br />
+                  <strong class="text-secondary-900 dark:text-white">Entit&eacute; juridique :</strong> 9558-6616 Qu&eacute;bec Inc.<br />
+                  <strong class="text-secondary-900 dark:text-white">English version:</strong> <a href="/en/scanner-privacy" class="text-primary-600 dark:text-primary-400 hover:underline">Scanner Privacy Addendum</a><br />
+                  <strong class="text-secondary-900 dark:text-white">Politique principale :</strong> <a href="/fr/confidentialite" class="text-primary-600 dark:text-primary-400 hover:underline">Politique de confidentialit&eacute; ForceField</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Donn&eacute;es trait&eacute;es par le Scanner</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Le Scanner ForceField traite les donn&eacute;es suivantes lors de l'ex&eacute;cution d'un scan :
+            </p>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li><strong>Prompts soumis</strong> pour analyse (prompts d'attaque de la biblioth&egrave;que ForceField)</li>
+              <li><strong>URL analys&eacute;es</strong> ou identifiants de points d'acc&egrave;s que vous fournissez</li>
+              <li><strong>R&eacute;sultats de vuln&eacute;rabilit&eacute;s</strong> incluant les scores de risque, classifications de menaces et recommandations</li>
+              <li><strong>Journaux et horodatages</strong> pour la limitation du d&eacute;bit et la pr&eacute;vention des abus</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Conservation des donn&eacute;es</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Les donn&eacute;es peuvent &ecirc;tre conserv&eacute;es pour am&eacute;liorer l'analyse de s&eacute;curit&eacute; et prot&eacute;ger le service. Les d&eacute;tails des r&eacute;sultats de scan (scores, d&eacute;couvertes, recommandations) sont stock&eacute;s dans la session de votre navigateur et ne sont pas conserv&eacute;s sur nos serveurs au-del&agrave; de ce qui est n&eacute;cessaire au fonctionnement du service et &agrave; la pr&eacute;vention des abus.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Traitement des donn&eacute;es par surface</h2>
+            <div class="not-prose mt-4 overflow-x-auto rounded-lg border border-secondary-200 dark:border-secondary-700">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-secondary-100 dark:bg-secondary-800">
+                    <th class="px-4 py-3 text-left font-semibold text-secondary-900 dark:text-white">Surface produit</th>
+                    <th class="px-4 py-3 text-left font-semibold text-secondary-900 dark:text-white">Traitement des donn&eacute;es</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-secondary-200 dark:divide-secondary-700">
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-secondary-900 dark:text-white">ForceField Scanner</td>
+                    <td class="px-4 py-3 text-secondary-700 dark:text-secondary-300">Prompts d'attaque envoy&eacute;s &agrave; la Passerelle pour analyse. M&eacute;tadonn&eacute;es (URL, horodatages) pouvant &ecirc;tre conserv&eacute;es.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-secondary-900 dark:text-white">ForceField Simulateur</td>
+                    <td class="px-4 py-3 text-secondary-700 dark:text-secondary-300">Prompts analys&eacute;s en temps r&eacute;el. R&eacute;sultats retourn&eacute;s au navigateur uniquement.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-secondary-900 dark:text-white">ForceField Labo Demo</td>
+                    <td class="px-4 py-3 text-secondary-700 dark:text-secondary-300">Tous les sc&eacute;narios pr&eacute;-configur&eacute;s et ex&eacute;cut&eacute;s localement dans le navigateur. Aucune requ&ecirc;te r&eacute;seau.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-secondary-900 dark:text-white">ForceField Passerelle</td>
+                    <td class="px-4 py-3 text-secondary-700 dark:text-secondary-300">M&eacute;tadonn&eacute;es de requ&ecirc;te et journaux d'audit stock&eacute;s selon votre politique de r&eacute;tention. IPI expurg&eacute;es avant stockage.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Donn&eacute;es d'authentification</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Nous utilisons Firebase Authentication. Les donn&eacute;es d'email et de compte sont stock&eacute;es de mani&egrave;re s&eacute;curis&eacute;e et ne sont jamais partag&eacute;es avec des tiers au-del&agrave; des fournisseurs de services list&eacute;s dans la <a href="/fr/confidentialite" class="text-primary-600 dark:text-primary-400 hover:underline">politique de confidentialit&eacute; compl&egrave;te</a>.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Contact</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Pour toute question concernant le traitement des donn&eacute;es, contactez notre responsable de la protection des donn&eacute;es et de la vie priv&eacute;e &agrave; <a href="mailto:privacy@datasciencetech.ca" class="text-primary-600 dark:text-primary-400 hover:underline">privacy@datasciencetech.ca</a>.
+            </p>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 9558-6616 Qu&eacute;bec Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

@@ -1,0 +1,107 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import siteContent from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout
+  title={`Politique d'utilisation acceptable | ${siteContent.company}`}
+  description="Politique d'utilisation acceptable de ForceField — règles régissant les utilisations permises et interdites des services ForceField."
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+  
+  <main>
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 text-primary-400 text-sm font-medium mb-6">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+            Juridique
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Politique d'utilisation acceptable</h1>
+          <p class="text-xl text-secondary-300">
+            R&egrave;gles r&eacute;gissant les utilisations permises et interdites des services ForceField.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500 text-white flex-shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-secondary-600 dark:text-secondary-400">
+                  <strong class="text-secondary-900 dark:text-white">Derni&egrave;re mise &agrave; jour :</strong> 15 mars 2026<br />
+                  <strong class="text-secondary-900 dark:text-white">Entit&eacute; juridique :</strong> 9558-6616 Qu&eacute;bec Inc.<br />
+                  <strong class="text-secondary-900 dark:text-white">English version:</strong> <a href="/en/acceptable-use" class="text-primary-600 dark:text-primary-400 hover:underline">Acceptable Use Policy</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Utilisations interdites</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Lors de l'utilisation de tout service ForceField (Scanner, Simulateur, Labo Demo ou Passerelle), il est interdit de :
+            </p>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li>Analyser des syst&egrave;mes sans l'autorisation du propri&eacute;taire du syst&egrave;me</li>
+              <li>Exploiter des vuln&eacute;rabilit&eacute;s d&eacute;couvertes via ForceField</li>
+              <li>Mener des tests de d&eacute;ni de service contre ForceField ou des syst&egrave;mes tiers</li>
+              <li>Surcharger les services ForceField par une analyse en masse automatis&eacute;e sans permission pr&eacute;alable</li>
+              <li>Utiliser le service &agrave; des fins ill&eacute;gales</li>
+              <li>Redistribuer le catalogue d'attaques &agrave; des fins offensives</li>
+              <li>Tenter de contourner les contr&ocirc;les de s&eacute;curit&eacute; de ForceField &agrave; des fins malveillantes</li>
+              <li>Utiliser ForceField pour d&eacute;velopper des produits de s&eacute;curit&eacute; concurrents</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Utilisations permises</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              ForceField est con&ccedil;u pour les tests de s&eacute;curit&eacute; IA d&eacute;fensifs. Les utilisations permises comprennent :
+            </p>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li>Analyser les applications d'IA que vous poss&eacute;dez ou pour lesquelles vous disposez d'une autorisation &eacute;crite</li>
+              <li>Utiliser le Simulateur pour &eacute;valuer vos politiques de s&eacute;curit&eacute;</li>
+              <li>Utiliser le Labo Demo pour en apprendre davantage sur les menaces de s&eacute;curit&eacute; IA</li>
+              <li>D&eacute;ployer la Passerelle pour prot&eacute;ger vos applications d'IA en production</li>
+              <li>Partager les r&eacute;sultats d'analyse avec votre &eacute;quipe &agrave; des fins de rem&eacute;diation</li>
+            </ul>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Application</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              ForceField se r&eacute;serve le droit de suspendre ou de r&eacute;silier l'acc&egrave;s en cas de violation de cette politique. Les violations r&eacute;p&eacute;t&eacute;es ou graves peuvent &ecirc;tre signal&eacute;es aux autorit&eacute;s comp&eacute;tentes.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Droit applicable</h2>
+            <div class="mt-4 rounded-lg bg-secondary-100 p-6 dark:bg-secondary-800">
+              <p class="text-secondary-900 dark:text-white">
+                Cette politique est r&eacute;gie par les <strong>lois de la province de Qu&eacute;bec, Canada</strong> et est soumise aux <a href="/fr/conditions" class="text-primary-600 dark:text-primary-400 hover:underline">Conditions de la plateforme ForceField</a>.
+              </p>
+            </div>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 9558-6616 Qu&eacute;bec Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>
