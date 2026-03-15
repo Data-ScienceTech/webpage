@@ -29,16 +29,30 @@ const pageDescription = productContent.meta.description;
       <div class="container-custom relative">
         <div class="mx-auto max-w-4xl">
           <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-400">{productContent.hero.subtitle}</p>
-          <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-            {productContent.hero.title}
-          </h1>
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight md:max-w-[60%]">
+              {productContent.hero.title}
+            </h1>
+            <div class="flex flex-col items-start md:items-end md:pt-2">
+              <a
+                href={`/${lang}/inscription`}
+                class="btn-accent inline-flex items-center gap-2 text-base px-6 py-3"
+              >
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Commencer gratuitement
+              </a>
+              <p class="mt-2 text-sm text-secondary-300">Acces anticipe instantane a ForceField</p>
+            </div>
+          </div>
           <p class="mb-6 text-lg text-secondary-300 leading-relaxed max-w-3xl">
             {productContent.intro}
           </p>
           <p class="mb-8 text-lg font-semibold text-primary-400">
             {productContent.intro_closing}
           </p>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="rounded-xl bg-white/5 border border-white/10 p-4 text-center">
               <p class="text-2xl md:text-3xl font-bold text-primary-400">98,9 %</p>
               <p class="text-xs text-secondary-400 mt-1">Detection d'attaques</p>
@@ -56,15 +70,6 @@ const pageDescription = productContent.meta.description;
               <p class="text-xs text-secondary-400 mt-1">Tests reussis</p>
             </div>
           </div>
-          <a
-            href={`/${lang}/inscription`}
-            class="btn-accent inline-flex items-center gap-2 text-base px-6 py-3"
-          >
-            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            Commencer gratuitement
-          </a>
         </div>
       </div>
     </section>
