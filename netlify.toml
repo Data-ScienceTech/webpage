@@ -28,6 +28,22 @@
 # Site Settings > Forms > Form notifications > Add notification > Email notification
 # Set recipient to: info@datasciencetech.ca
 
+# Locale-prefix redirects (canonical paths use /en/ prefix)
+[[redirects]]
+  from = "/force-field"
+  to = "/en/force-field"
+  status = 301
+
+[[redirects]]
+  from = "/agentic-security"
+  to = "/en/agentic-security"
+  status = 301
+
+[[redirects]]
+  from = "/signup"
+  to = "/en/signup"
+  status = 301
+
 # Headers for security
 [[headers]]
   for = "/*"
