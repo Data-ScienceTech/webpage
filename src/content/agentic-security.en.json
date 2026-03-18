@@ -29,7 +29,8 @@
       { "name": "Require Approval", "detail": "Tool call held for human review before execution" },
       { "name": "Rate Limit", "detail": "Per-agent, per-tool token bucket rate limiting" },
       { "name": "Schema Validate", "detail": "Tool inputs validated against expected schemas" },
-      { "name": "Result Inspect", "detail": "Tool outputs scanned for PII, secrets, and injection" }
+      { "name": "Result Inspect", "detail": "Tool outputs scanned for PII, secrets, and injection" },
+      { "name": "Sandbox", "detail": "Risky tools executed in isolated OpenShell containers instead of blocked" }
     ]
   },
   "chain_tracking": {
@@ -59,7 +60,7 @@
       { "value": "87-100%", "label": "Tool Result Inspection Accuracy" },
       { "value": "100%", "label": "MCP Gateway Pre/Post-Call Accuracy" },
       { "value": "100%", "label": "Chain Tracking Detection (4 pattern types)" },
-      { "value": "108", "label": "Go MCP Tests Passing" },
+      { "value": "125", "label": "Go MCP Tests Passing" },
       { "value": "84", "label": "Python E2E Tests Passing" }
     ]
   },
@@ -84,6 +85,18 @@
       "Cross-session attack detection",
       "Real-time Prometheus metrics for all lateral movement events"
     ]
+  },
+  "sandbox_execution": {
+    "title": "OpenShell Sandbox Execution",
+    "description": "Force Field integrates with NVIDIA OpenShell to provide graduated tool enforcement. Instead of binary allow/deny decisions, risky tools like shell execution and file deletion are routed into isolated containers with scoped filesystem, network, and process constraints. If chain pattern detection identifies a data exfiltration or privilege escalation sequence, the sandbox's network policy is tightened in real time -- cutting outbound access before data can leave.",
+    "features": [
+      "Graduated enforcement: risky tools run in sandboxes instead of being blocked",
+      "On-demand container isolation per agent and session",
+      "Dynamic egress restriction when suspicious chain patterns are detected",
+      "Default-deny network policy with ForceField gateway as the only allowed inference endpoint",
+      "Prometheus metrics for sandbox execution, duration, and egress restrictions"
+    ],
+    "github": "https://github.com/Data-ScienceTech/forcefield-openshell-sandbox"
   },
   "cta": {
     "title": "Secure Your AI Agents",

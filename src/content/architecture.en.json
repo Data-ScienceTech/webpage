@@ -37,7 +37,7 @@
   "orchestration": {
     "title": "Runtime Orchestration Layer",
     "status": "Production",
-    "description": "At the center of the architecture is a runtime orchestration layer that supervises agentic systems. It authorizes actions before execution, mediates access to tools and APIs, enforces execution-level guardrails, and intervenes when behavior deviates from expected boundaries. This layer is production-deployed as the MCP proxy gateway on GCP Cloud Run."
+    "description": "At the center of the architecture is a runtime orchestration layer that supervises agentic systems. It authorizes actions before execution, mediates access to tools and APIs, enforces execution-level guardrails, and intervenes when behavior deviates from expected boundaries. Risky tool calls can be routed to NVIDIA OpenShell sandboxed containers with dynamic egress control -- providing graduated enforcement instead of binary allow/deny. This layer is production-deployed as the MCP proxy gateway on GCP Cloud Run."
   },
   "roadmap": {
     "title": "Near-Term Roadmap",

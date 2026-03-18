@@ -33,7 +33,8 @@
           "Tool call interception with policy enforcement",
           "MCP proxy gateway for AI agent communication",
           "Per-agent permissions, schema validation, human-approval gates",
-          "Chain tracking: detects escalation, data exfiltration, recon patterns"
+          "Chain tracking: detects escalation, data exfiltration, recon patterns",
+          "OpenShell sandbox: risky tools execute in isolated containers with dynamic egress control"
         ],
         "icon": "Bot"
       },
@@ -92,7 +93,8 @@
       "Chain-of-action attack detection (4 pattern types: data exfil, privilege escalation, recon, rapid tool calls)",
       "Per-agent, per-tool rate limiting (token bucket)",
       "Schema validation for tool inputs",
-      "Result inspection: PII, secrets, and injection scanning in tool outputs"
+      "Result inspection: PII, secrets, and injection scanning in tool outputs",
+      "OpenShell sandbox integration: graduated enforcement routes risky tools to isolated containers"
     ]
   },
   "benchmarks": {

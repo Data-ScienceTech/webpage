@@ -29,7 +29,8 @@
       { "name": "Approbation Requise", "detail": "L'appel d'outil est mis en attente pour examen humain avant exécution" },
       { "name": "Limitation de Débit", "detail": "Limitation par token bucket par agent et par outil" },
       { "name": "Validation de Schéma", "detail": "Les entrées d'outils sont validées contre les schémas attendus" },
-      { "name": "Inspection des Résultats", "detail": "Les sorties d'outils sont analysées pour PII, secrets et injection" }
+      { "name": "Inspection des Résultats", "detail": "Les sorties d'outils sont analysées pour PII, secrets et injection" },
+      { "name": "Bac à Sable", "detail": "Les outils risqués sont exécutés dans des conteneurs OpenShell isolés au lieu d'être bloqués" }
     ]
   },
   "chain_tracking": {
@@ -59,7 +60,7 @@
       { "value": "87-100 %", "label": "Précision d'Inspection des Résultats d'Outils" },
       { "value": "100 %", "label": "Précision Pré/Post-Appel de la Passerelle MCP" },
       { "value": "100 %", "label": "Détection de Suivi de Chaîne (4 types de schémas)" },
-      { "value": "108", "label": "Tests MCP en Go Réussis" },
+      { "value": "125", "label": "Tests MCP en Go Réussis" },
       { "value": "84", "label": "Tests E2E Python Réussis" }
     ]
   },
@@ -84,6 +85,18 @@
       "D\u00e9tection d'attaques inter-sessions",
       "M\u00e9triques Prometheus en temps r\u00e9el pour tous les \u00e9v\u00e9nements de mouvement lat\u00e9ral"
     ]
+  },
+  "sandbox_execution": {
+    "title": "Exécution en Bac à Sable OpenShell",
+    "description": "Force Field s'intègre avec NVIDIA OpenShell pour fournir une application graduée des outils. Au lieu de décisions binaires autoriser/refuser, les outils risqués comme l'exécution de commandes et la suppression de fichiers sont acheminés vers des conteneurs isolés avec un système de fichiers, un réseau et des contraintes de processus limités. Si la détection de schémas de chaîne identifie une séquence d'exfiltration de données ou d'escalade de privilèges, la politique réseau du bac à sable est resserrée en temps réel -- coupant l'accès sortant avant que les données ne puissent quitter l'environnement.",
+    "features": [
+      "Application graduée : les outils risqués s'exécutent dans des bacs à sable au lieu d'être bloqués",
+      "Isolation par conteneur à la demande par agent et par session",
+      "Restriction dynamique de la sortie réseau lorsque des schémas de chaîne suspects sont détectés",
+      "Politique réseau par défaut deny-all avec la passerelle ForceField comme seul point d'inférence autorisé",
+      "Métriques Prometheus pour l'exécution en bac à sable, la durée et les restrictions de sortie"
+    ],
+    "github": "https://github.com/Data-ScienceTech/forcefield-openshell-sandbox"
   },
   "cta": {
     "title": "Sécurisez Vos Agents IA",

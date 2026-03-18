@@ -33,7 +33,8 @@
           "Interception des appels d'outils avec application des politiques",
           "Passerelle proxy MCP pour la communication des agents IA",
           "Permissions par agent, validation de schéma, portes d'approbation humaine",
-          "Suivi de chaîne : détecte l'escalade, l'exfiltration de données, les schémas de reconnaissance"
+          "Suivi de chaîne : détecte l'escalade, l'exfiltration de données, les schémas de reconnaissance",
+          "Bac à sable OpenShell : les outils risqués s'exécutent dans des conteneurs isolés avec contrôle dynamique de la sortie réseau"
         ],
         "icon": "Bot"
       },
@@ -92,7 +93,8 @@
       "Détection d'attaques par chaîne d'actions (4 types : exfiltration de données, escalade de privilèges, reconnaissance, appels d'outils rapides)",
       "Limitation de débit par agent et par outil (token bucket)",
       "Validation de schéma pour les entrées d'outils",
-      "Inspection des résultats : analyse des PII, secrets et injections dans les sorties d'outils"
+      "Inspection des résultats : analyse des PII, secrets et injections dans les sorties d'outils",
+      "Intégration bac à sable OpenShell : l'application graduée achemine les outils risqués vers des conteneurs isolés"
     ]
   },
   "benchmarks": {
