@@ -45,7 +45,7 @@ const lang = 'fr';
               </div>
               <div>
                 <p class="text-sm text-secondary-600 dark:text-secondary-400">
-                  <strong class="text-secondary-900 dark:text-white">Derni&egrave;re mise &agrave; jour :</strong> 15 mars 2026<br />
+                  <strong class="text-secondary-900 dark:text-white">Derni&egrave;re mise &agrave; jour :</strong> 19 mars 2026<br />
                   <strong class="text-secondary-900 dark:text-white">Entit&eacute; juridique :</strong> 9558-6616 Qu&eacute;bec Inc.<br />
                   <strong class="text-secondary-900 dark:text-white">English version:</strong> <a href="/en/scanner-privacy" class="text-primary-600 dark:text-primary-400 hover:underline">Scanner Privacy Addendum</a><br />
                   <strong class="text-secondary-900 dark:text-white">Politique principale :</strong> <a href="/fr/confidentialite" class="text-primary-600 dark:text-primary-400 hover:underline">Politique de confidentialit&eacute; ForceField</a>
@@ -56,20 +56,31 @@ const lang = 'fr';
 
           <div class="prose prose-lg dark:prose-invert max-w-none">
 
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Modes de scan</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Le Scanner ForceField fonctionne en deux modes selon le type de cible que vous s&eacute;lectionnez :
+            </p>
+            <ul class="text-secondary-700 dark:text-secondary-300">
+              <li><strong>Sonde en direct</strong> (URL de chatbot ou point d'acc&egrave;s API) &mdash; les prompts d'attaque sont envoy&eacute;s directement au point d'acc&egrave;s que vous fournissez et les r&eacute;ponses sont analys&eacute;es pour d&eacute;tecter les vuln&eacute;rabilit&eacute;s.</li>
+              <li><strong>D&eacute;tection uniquement</strong> (mod&egrave;le de prompt ou code wrapper) &mdash; les prompts d'attaque sont v&eacute;rifi&eacute;s par rapport &agrave; la biblioth&egrave;que de motifs ForceField. Aucun point d'acc&egrave;s n'est contact&eacute;.</li>
+            </ul>
+
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Donn&eacute;es trait&eacute;es par le Scanner</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
               Le Scanner ForceField traite les donn&eacute;es suivantes lors de l'ex&eacute;cution d'un scan :
             </p>
             <ul class="text-secondary-700 dark:text-secondary-300">
-              <li><strong>Prompts soumis</strong> pour analyse (prompts d'attaque de la biblioth&egrave;que ForceField)</li>
-              <li><strong>URL analys&eacute;es</strong> ou identifiants de points d'acc&egrave;s que vous fournissez</li>
+              <li><strong>Prompts d'attaque</strong> de la biblioth&egrave;que ForceField (stock&eacute;s sous forme de hachage SHA-256, pas en texte brut)</li>
+              <li><strong>URL analys&eacute;es</strong> ou identifiants de points d'acc&egrave;s que vous fournissez (stock&eacute;s sous forme de domaine + hachage)</li>
               <li><strong>R&eacute;sultats de vuln&eacute;rabilit&eacute;s</strong> incluant les scores de risque, classifications de menaces et recommandations</li>
+              <li><strong>Extraits de r&eacute;ponse du LLM cible</strong> (premiers 500 caract&egrave;res, mode sonde en direct uniquement)</li>
+              <li><strong>Raisonnement d'analyse du juge</strong> g&eacute;n&eacute;r&eacute; par le moteur de verdict automatis&eacute;</li>
               <li><strong>Journaux et horodatages</strong> pour la limitation du d&eacute;bit et la pr&eacute;vention des abus</li>
             </ul>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Conservation des donn&eacute;es</h2>
             <p class="text-secondary-700 dark:text-secondary-300">
-              Les donn&eacute;es peuvent &ecirc;tre conserv&eacute;es pour am&eacute;liorer l'analyse de s&eacute;curit&eacute; et prot&eacute;ger le service. Les d&eacute;tails des r&eacute;sultats de scan (scores, d&eacute;couvertes, recommandations) sont stock&eacute;s dans la session de votre navigateur et ne sont pas conserv&eacute;s sur nos serveurs au-del&agrave; de ce qui est n&eacute;cessaire au fonctionnement du service et &agrave; la pr&eacute;vention des abus.
+              La t&eacute;l&eacute;m&eacute;trie de scan&mdash;incluant les scores de risque, les classifications de menaces, les extraits de r&eacute;ponse (premiers 500 caract&egrave;res) et le raisonnement du juge&mdash;est stock&eacute;e c&ocirc;t&eacute; serveur dans notre base de donn&eacute;es de t&eacute;l&eacute;m&eacute;trie afin de fournir votre historique de scans et vos fiches de score. Les prompts d'attaque bruts ne sont jamais stock&eacute;s ; seuls les hachages SHA-256 sont conserv&eacute;s. Les donn&eacute;es peuvent &eacute;galement &ecirc;tre utilis&eacute;es pour am&eacute;liorer l'analyse de s&eacute;curit&eacute; et prot&eacute;ger le service.
             </p>
 
             <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Traitement des donn&eacute;es par surface</h2>
@@ -83,8 +94,12 @@ const lang = 'fr';
                 </thead>
                 <tbody class="divide-y divide-secondary-200 dark:divide-secondary-700">
                   <tr>
-                    <td class="px-4 py-3 font-medium text-secondary-900 dark:text-white">ForceField Scanner</td>
-                    <td class="px-4 py-3 text-secondary-700 dark:text-secondary-300">Prompts d'attaque envoy&eacute;s &agrave; la Passerelle pour analyse. M&eacute;tadonn&eacute;es (URL, horodatages) pouvant &ecirc;tre conserv&eacute;es.</td>
+                    <td class="px-4 py-3 font-medium text-secondary-900 dark:text-white">Scanner (sonde en direct)</td>
+                    <td class="px-4 py-3 text-secondary-700 dark:text-secondary-300">Prompts d'attaque envoy&eacute;s directement &agrave; votre point d'acc&egrave;s. Extraits de r&eacute;ponse (premiers 500 caract&egrave;res), raisonnement du juge, scores de risque et m&eacute;tadonn&eacute;es stock&eacute;s c&ocirc;t&eacute; serveur. Texte des prompts stock&eacute; sous forme de hachage SHA-256 uniquement.</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-secondary-900 dark:text-white">Scanner (d&eacute;tection uniquement)</td>
+                    <td class="px-4 py-3 text-secondary-700 dark:text-secondary-300">Prompts d'attaque v&eacute;rifi&eacute;s par rapport &agrave; la biblioth&egrave;que de motifs ForceField. Aucun point d'acc&egrave;s contact&eacute;. Scores de risque et m&eacute;tadonn&eacute;es stock&eacute;s c&ocirc;t&eacute; serveur. Texte des prompts stock&eacute; sous forme de hachage SHA-256 uniquement.</td>
                   </tr>
                   <tr>
                     <td class="px-4 py-3 font-medium text-secondary-900 dark:text-white">ForceField Simulateur</td>
