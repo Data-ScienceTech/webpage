@@ -2,10 +2,40 @@
   "company": "Data Science Technologies",
   "tagline": "AI Security Gateway for Apps and Agents",
   "hero": {
-    "title": "Stop prompt injection, data leaks, and unsafe tool use before AI hits production",
-    "subtitle": "ForceField is the runtime authority for agentic AI — scan prompts, enforce policies, and block risky tool calls with a fail-closed security pipeline.",
-    "cta_primary": "Run Free Scan",
-    "cta_secondary": "View Benchmarks"
+    "title": "Watch ForceField block an attack in real time",
+    "subtitle": "See prompt injection, data exfiltration, and unsafe tool calls stopped live. Then scan your own app for free.",
+    "cta_primary": "See it in action",
+    "cta_secondary": "Scan your app free"
+  },
+  "funnel_steps": {
+    "title": "Demo Lab. Scanner. Gateway.",
+    "subtitle": "Three steps from curiosity to production security.",
+    "steps": [
+      {
+        "number": "1",
+        "name": "Demo Lab",
+        "hook": "See it block attacks",
+        "description": "Watch ForceField intercept prompt injection, data exfiltration, and unsafe tool calls in a live interactive demo. No signup required.",
+        "cta": "Try Demo Lab",
+        "color": "primary"
+      },
+      {
+        "number": "2",
+        "name": "Scanner",
+        "hook": "Scan your own app",
+        "description": "Point the scanner at your LLM endpoint and get a personalized security scorecard across 12 attack categories in under a minute.",
+        "cta": "Run Free Scan",
+        "color": "blue"
+      },
+      {
+        "number": "3",
+        "name": "Gateway",
+        "hook": "Deploy runtime protection",
+        "description": "Drop ForceField in front of your AI stack. 10-step pipeline, 6-layer detection, MCP proxy, audit trail. One API key, production-ready.",
+        "cta": "Deploy Gateway",
+        "color": "purple"
+      }
+    ]
   },
   "secure_at_runtime": {
     "title": "Secure AI at Runtime",
@@ -69,10 +99,13 @@
     "tagline": "From prompt filtering to active execution control.",
     "languages": "Multilingual operations: English, French",
     "links": {
-      "company": "Company",
-      "why": "Why Runtime Authority",
+      "company": "Product",
+      "demo": "Demo Lab",
+      "scanner": "Scanner",
       "product": "ForceField",
       "benchmarks": "Benchmarks",
+      "more": "Learn More",
+      "why": "Why Runtime Authority",
       "agentic": "Agentic Security",
       "architecture": "Architecture",
       "security": "Security",
@@ -88,13 +121,15 @@
     "copyright": "© 2026 Data Science Technologies. All rights reserved."
   },
   "nav": {
-    "why": "Why Runtime Authority",
+    "demo": "Demo Lab",
+    "scanner": "Scanner",
     "product": "ForceField",
     "benchmarks": "Benchmarks",
+    "why": "Why Runtime Authority",
     "agentic": "Agentic Security",
     "architecture": "Architecture",
     "security": "Security",
-    "signup": "Sign Up"
+    "cta": "See it in action"
   },
   "meta": {
     "description": "Data Science Technologies provides runtime authority for agentic AI — from enterprise AI security gateways to execution-level orchestration and governance. Production-ready AI security for the enterprise.",

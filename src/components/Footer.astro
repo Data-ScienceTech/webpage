@@ -44,20 +44,29 @@ const currentYear = new Date().getFullYear();
         </div>
       </div>
 
-      <!-- Quick Links -->
+      <!-- Product Links (Funnel Order) -->
       <div>
         <h3 class="mb-4 text-lg font-semibold text-secondary-900 dark:text-white">
           {content.footer.links.company}
         </h3>
         <ul class="space-y-2">
           <li>
-            <a href={lang === 'en' ? `/${lang}/why-runtime-authority` : `/${lang}/pourquoi-autorite-runtime`} class="footer-link">{content.footer.links.why}</a>
+            <a href="https://forcefield.datasciencetech.ca/demo-lab" class="footer-link">{content.footer.links.demo}</a>
+          </li>
+          <li>
+            <a href="https://forcefield.datasciencetech.ca/scan/start" class="footer-link">{content.footer.links.scanner}</a>
           </li>
           <li>
             <a href={`/${lang}/force-field`} class="footer-link">{content.footer.links.product}</a>
           </li>
           <li>
             <a href={`/${lang}/benchmarks`} class="footer-link">{content.footer.links.benchmarks}</a>
+          </li>
+          <li class="pt-2 border-t border-secondary-200 dark:border-secondary-700">
+            <span class="text-xs font-semibold uppercase tracking-wide text-secondary-500 dark:text-secondary-500">{content.footer.links.more}</span>
+          </li>
+          <li>
+            <a href={lang === 'en' ? `/${lang}/why-runtime-authority` : `/${lang}/pourquoi-autorite-runtime`} class="footer-link">{content.footer.links.why}</a>
           </li>
           <li>
             <a href={`/${lang}/agentic-security`} class="footer-link">{content.footer.links.agentic}</a>

@@ -2,10 +2,40 @@
   "company": "Data Science Technologies",
   "tagline": "Passerelle de sécurité IA pour applications et agents",
   "hero": {
-    "title": "Bloquez l'injection de prompts, les fuites de données et les actions non sécurisées avant la mise en production",
-    "subtitle": "ForceField est l'autorité runtime pour l'IA agentique — analysez les prompts, appliquez des politiques et bloquez les appels d'outils risqués avec un pipeline de sécurité fail-closed.",
-    "cta_primary": "Lancer un scan gratuit",
-    "cta_secondary": "Voir les benchmarks"
+    "title": "Voyez ForceField bloquer une attaque en temps réel",
+    "subtitle": "Regardez l'injection de prompts, l'exfiltration de données et les appels d'outils non sécurisés être stoppés en direct. Puis scannez votre propre application gratuitement.",
+    "cta_primary": "Voir en action",
+    "cta_secondary": "Scanner votre app"
+  },
+  "funnel_steps": {
+    "title": "Demo Lab. Scanner. Passerelle.",
+    "subtitle": "Trois étapes de la curiosité à la sécurité en production.",
+    "steps": [
+      {
+        "number": "1",
+        "name": "Demo Lab",
+        "hook": "Voir les attaques bloquées",
+        "description": "Regardez ForceField intercepter l'injection de prompts, l'exfiltration de données et les appels d'outils non sécurisés dans une démo interactive en direct. Aucune inscription requise.",
+        "cta": "Essayer Demo Lab",
+        "color": "primary"
+      },
+      {
+        "number": "2",
+        "name": "Scanner",
+        "hook": "Scanner votre propre app",
+        "description": "Pointez le scanner vers votre endpoint LLM et obtenez un tableau de bord de sécurité personnalisé sur 12 catégories d'attaques en moins d'une minute.",
+        "cta": "Lancer un scan",
+        "color": "blue"
+      },
+      {
+        "number": "3",
+        "name": "Passerelle",
+        "hook": "Déployer la protection runtime",
+        "description": "Placez ForceField devant votre stack IA. Pipeline en 10 étapes, détection à 6 couches, proxy MCP, piste d'audit. Une clé API, prêt pour la production.",
+        "cta": "Déployer la passerelle",
+        "color": "purple"
+      }
+    ]
   },
   "secure_at_runtime": {
     "title": "Sécurisez l'IA à l'Exécution",
@@ -69,10 +99,13 @@
     "tagline": "Du filtrage de prompts au contrôle actif d'exécution.",
     "languages": "Opérations multilingues : anglais, français",
     "links": {
-      "company": "Entreprise",
-      "why": "Pourquoi l'Autorité Runtime",
+      "company": "Produit",
+      "demo": "Demo Lab",
+      "scanner": "Scanner",
       "product": "ForceField",
       "benchmarks": "Benchmarks",
+      "more": "En savoir plus",
+      "why": "Pourquoi l'Autorité Runtime",
       "agentic": "Sécurité Agentique",
       "architecture": "Architecture",
       "security": "Sécurité",
@@ -88,13 +121,15 @@
     "copyright": "© 2026 Data Science Technologies. Tous droits réservés."
   },
   "nav": {
-    "why": "Autorité Runtime",
+    "demo": "Demo Lab",
+    "scanner": "Scanner",
     "product": "ForceField",
     "benchmarks": "Benchmarks",
+    "why": "Autorité Runtime",
     "agentic": "Sécurité Agentique",
     "architecture": "Architecture",
     "security": "Sécurité",
-    "signup": "Inscription"
+    "cta": "Voir en action"
   },
   "meta": {
     "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des passerelles de sécurité IA entreprise à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",

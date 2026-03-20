@@ -33,17 +33,26 @@ const pageDescription = productContent.meta.description;
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight md:max-w-[60%]">
               {productContent.hero.title}
             </h1>
-            <div class="flex flex-col items-start md:items-end md:pt-2">
+            <div class="flex flex-col items-start md:items-end md:pt-2 gap-3">
               <a
-                href={`/${lang}/inscription`}
+                href="https://forcefield.datasciencetech.ca/demo-lab"
                 class="btn-accent inline-flex items-center gap-2 text-base px-6 py-3"
               >
                 <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Commencer gratuitement
+                Voir en action
               </a>
-              <p class="mt-2 text-sm text-secondary-300">Acces anticipe instantane a ForceField</p>
+              <a
+                href={`/${lang}/inscription`}
+                class="inline-flex items-center gap-2 text-sm text-secondary-300 hover:text-white transition-colors"
+              >
+                Ou creez un compte gratuit
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
           </div>
           <p class="mb-6 text-lg text-secondary-300 leading-relaxed max-w-3xl">
@@ -241,22 +250,33 @@ const pageDescription = productContent.meta.description;
     <section class="section-padding bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
       <div class="container-custom text-center">
         <h2 class="mb-4 text-3xl font-bold text-white">
-          Commencez avec ForceField
+          Voyez ForceField en action
         </h2>
         <p class="mb-8 text-lg text-secondary-300 max-w-2xl mx-auto">
-          Créez votre compte gratuit, obtenez une clé API et commencez à sécuriser vos systèmes IA en moins d'une minute.
+          Regardez les attaques bloquees en direct dans le Demo Lab, scannez votre propre app ou creez un compte.
         </p>
-        <a
-          href={`/${lang}/inscription`}
-          class="btn inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-primary-50 focus:ring-white text-lg px-8 py-4"
-        >
-          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-          Créer un compte gratuit
-        </a>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://forcefield.datasciencetech.ca/demo-lab"
+            class="btn inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-primary-50 focus:ring-white text-lg px-8 py-4"
+          >
+            Essayer Demo Lab
+          </a>
+          <a
+            href="https://forcefield.datasciencetech.ca/scan/start"
+            class="btn inline-flex items-center gap-2 border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
+          >
+            Lancer un scan
+          </a>
+          <a
+            href={`/${lang}/inscription`}
+            class="btn inline-flex items-center gap-2 border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
+          >
+            Creer un compte gratuit
+          </a>
+        </div>
         <p class="mt-6 text-sm text-secondary-400">
-          Gratuit pendant l'accès anticipé. Aucune carte de crédit requise.
+          Gratuit pendant l'acces anticipe. Aucune carte de credit requise.
         </p>
       </div>
     </section>
