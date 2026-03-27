@@ -15,9 +15,13 @@
     "basic": "pip install forcefield",
     "ml": "pip install forcefield[ml]",
     "all": "pip install forcefield[all]",
+    "conda": "conda install -c conda-forge forcefield",
+    "docker": "docker pull datasciencetechmtl/forcefield-gateway:0.4.0",
     "basic_label": "Base (regex + heuristiques)",
     "ml_label": "+ Modele ML ONNX + detection d'abus par embeddings",
-    "all_label": "Tout (ML + cloud + integrations)"
+    "all_label": "Tout (ML + cloud + integrations)",
+    "conda_label": "conda-forge (SDK uniquement)",
+    "docker_label": "Gateway complet avec ensemble 6 couches"
   },
   "quickstart": {
     "title": "3 lignes pour securiser votre application",
@@ -148,6 +152,10 @@
     "github_url": "https://github.com/Data-ScienceTech/forcefield",
     "marketplace": "GitHub Marketplace",
     "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
+    "conda": "conda-forge",
+    "conda_url": "https://anaconda.org/conda-forge/forcefield",
+    "docker_hub": "Docker Hub",
+    "docker_hub_url": "https://hub.docker.com/r/datasciencetechmtl/forcefield-gateway",
     "docs": "Lire la documentation",
     "docs_url": "https://datasciencetech.ca/fr/python-sdk",
     "gateway": "Besoin de plus ? Essayez le Gateway complet",
@@ -157,7 +165,7 @@
     "title": "SDK vs Gateway",
     "headers": ["", "Python SDK", "ForceField Gateway"],
     "rows": [
-      ["Deploiement", "pip install (local)", "Cloud Run / sur site"],
+      ["Deploiement", "pip / conda / GitHub Action", "Docker Hub / Cloud Run / sur site"],
       ["Detection", "Regex + ONNX ML", "Ensemble 6 couches + DeBERTa"],
       ["Latence", "< 1ms (regex), ~5ms (ML)", "~25ms (pipeline complet)"],
       ["Redaction DPI", "Base regex", "Regex + NLP + Luhn"],
