@@ -63,7 +63,7 @@
           "OpenAI, Anthropic, Google Gemini, Azure OpenAI, open-source/auto-hébergé",
           "Support du protocole MCP (Claude Desktop, Cursor, agents personnalisés)",
           "Proxy drop-in : changez une URL, aucune modification de code",
-          "Image Docker Hub : docker pull datasciencetechmtl/forcefield-gateway",
+          "Image conteneur : docker pull ghcr.io/data-sciencetech/forcefield-gateway",
           "Déploiement SaaS, hybride (VPC client) ou entièrement sur site"
         ],
         "icon": "Layers"
