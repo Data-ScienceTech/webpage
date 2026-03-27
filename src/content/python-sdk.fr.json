@@ -16,16 +16,12 @@
     "ml": "pip install forcefield[ml]",
     "all": "pip install forcefield[all]",
     "conda": "conda install -c conda-forge forcefield",
-    "docker": "docker pull ghcr.io/data-sciencetech/forcefield-gateway:0.4.0",
     "brew": "brew install forcefield",
-    "helm": "helm install forcefield oci://ghcr.io/data-sciencetech/charts/forcefield-gateway",
     "basic_label": "Base (regex + heuristiques)",
     "ml_label": "+ Modele ML ONNX + detection d'abus par embeddings",
     "all_label": "Tout (ML + cloud + integrations)",
     "conda_label": "conda-forge (SDK uniquement)",
-    "docker_label": "Gateway complet avec ensemble 6 couches",
-    "brew_label": "Homebrew (macOS / Linux)",
-    "helm_label": "Kubernetes via chart Helm"
+    "brew_label": "Homebrew (macOS / Linux)"
   },
   "quickstart": {
     "title": "3 lignes pour securiser votre application",
@@ -158,10 +154,7 @@
     "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
     "conda": "conda-forge",
     "conda_url": "https://anaconda.org/conda-forge/forcefield",
-    "ghcr": "GitHub Packages",
-    "ghcr_url": "https://github.com/orgs/Data-ScienceTech/packages/container/package/forcefield-gateway",
-    "helm": "Chart Helm",
-    "helm_url": "https://artifacthub.io/packages/helm/forcefield/forcefield-gateway",
+
     "vscode": "Extension VS Code",
     "vscode_url": "https://marketplace.visualstudio.com/items?itemName=DataScienceTech.forcefield",
     "docs": "Lire la documentation",
@@ -173,7 +166,7 @@
     "title": "SDK vs Gateway",
     "headers": ["", "Python SDK", "ForceField Gateway"],
     "rows": [
-      ["Deploiement", "pip / conda / brew / GitHub Action", "Docker Hub / Helm / Cloud Run / sur site"],
+      ["Deploiement", "pip / conda / brew / GitHub Action", "SaaS manage / sur site (entreprise)"],
       ["Detection", "Regex + ONNX ML", "Ensemble 6 couches + DeBERTa"],
       ["Latence", "< 1ms (regex), ~5ms (ML)", "~25ms (pipeline complet)"],
       ["Redaction DPI", "Base regex", "Regex + NLP + Luhn"],
