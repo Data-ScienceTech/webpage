@@ -2,7 +2,7 @@
   "meta": {
     "title": "ForceField Python SDK -- Securite IA en 3 lignes de code | Data Science Technologies",
     "description": "SDK Python open-source pour la detection d'injection de prompts, la redaction de DPI et la securite des LLM. Installez avec pip, protegez votre application IA en quelques minutes.",
-    "keywords": "Python SDK, securite IA, detection injection de prompts, redaction DPI, pare-feu LLM, pip install, ONNX, guardrails, open source, forcefield"
+    "keywords": "Python SDK, securite IA, detection injection de prompts, redaction DPI, pare-feu LLM, pip install, ONNX, guardrails, open source, forcefield, securite de contenu, limitation de debit, detection d'abus, gouvernance d'outils"
   },
   "hero": {
     "title": "ForceField Python SDK",
@@ -16,7 +16,7 @@
     "ml": "pip install forcefield[ml]",
     "all": "pip install forcefield[all]",
     "basic_label": "Base (regex + heuristiques)",
-    "ml_label": "+ Modele ML ONNX (95%+ detection)",
+    "ml_label": "+ Modele ML ONNX + detection d'abus par embeddings",
     "all_label": "Tout (ML + cloud + integrations)"
   },
   "quickstart": {
@@ -72,6 +72,26 @@
         "title": "Scanner de points d'acces",
         "description": "Commande CLI pour tester vos propres points d'acces LLM. Execute 50+ prompts d'attaque dans 7 categories et genere un rapport de securite.",
         "icon": "Crosshair"
+      },
+      {
+        "title": "Securite de contenu",
+        "description": "API compatible Azure Content Safety retournant des scores de severite 0/2/4/6 pour Haine, Violence, Sexuel et Automutilation. Remplacement direct avec seuils configurables par categorie.",
+        "icon": "ShieldAlert"
+      },
+      {
+        "title": "Limitation de debit",
+        "description": "Limiteur de debit en memoire par seau de jetons avec support multi-niveaux (par utilisateur, par session, global). Thread-safe, zero dependance, avec nettoyage automatique.",
+        "icon": "Gauge"
+      },
+      {
+        "title": "Detection d'abus",
+        "description": "Detecte les sorties hostiles, les personnalites desequilibrees, les succes de jailbreak et les deviations de persona. Heuristiques par defaut, similarite cosinus par embeddings avec forcefield[ml].",
+        "icon": "AlertTriangle"
+      },
+      {
+        "title": "Gouvernance d'outils",
+        "description": "Securite des appels d'outils pilotee par politiques avec inspection pre-appel et post-appel. Politiques configurables autoriser/bloquer/approbation requise, detection de secrets et DPI dans les resultats.",
+        "icon": "Settings"
       }
     ]
   },
@@ -99,7 +119,7 @@
     "title": "Outils CLI",
     "commands": [
       { "cmd": "forcefield scan \"votre texte ici\"", "description": "Analyser un prompt depuis le terminal" },
-      { "cmd": "forcefield selftest", "description": "Executer 116 prompts d'attaque integres et verifier la detection" },
+      { "cmd": "forcefield selftest", "description": "Executer 121 prompts d'attaque integres et verifier la detection" },
       { "cmd": "forcefield test https://votre-api.com/chat", "description": "Tester votre point d'acces LLM avec 50+ attaques" },
       { "cmd": "forcefield audit policy.yaml", "description": "Valider votre configuration de politique de securite" }
     ]
@@ -107,7 +127,7 @@
   "extras": {
     "title": "Extras optionnels",
     "items": [
-      { "name": "forcefield[ml]", "description": "ONNX Runtime pour detection par ML (95%+ de precision)" },
+      { "name": "forcefield[ml]", "description": "ONNX Runtime + sentence-transformers pour detection ML et detection d'abus par embeddings" },
       { "name": "forcefield[cloud]", "description": "Scoring hybride cloud via l'API ForceField Gateway" },
       { "name": "forcefield[langchain]", "description": "Integration du gestionnaire de callbacks LangChain" },
       { "name": "forcefield[fastapi]", "description": "Integration du middleware FastAPI" },
@@ -119,7 +139,7 @@
     "description": "Ajoutez ForceField a votre pipeline CI/CD. Analyse votre code pour les injections de prompts, les fuites de DPI et les vulnerabilites de securite a chaque push.",
     "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
     "marketplace_label": "Voir sur GitHub Marketplace",
-    "code": "- uses: Data-ScienceTech/forcefield@v0.3.1\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
+    "code": "- uses: Data-ScienceTech/forcefield@v0.4.0\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
   },
   "cta": {
     "pypi": "Voir sur PyPI",
@@ -143,6 +163,10 @@
       ["Redaction DPI", "Base regex", "Regex + NLP + Luhn"],
       ["Scan streaming", "--", "Interception SSE en temps reel"],
       ["Securite agentique", "--", "Proxy MCP + interception d'outils"],
+      ["Securite de contenu", "Compatible Azure (Haine/Violence/Sexuel/Automutilation)", "Integration Azure Content Safety"],
+      ["Limitation de debit", "Seau de jetons en memoire", "Distribution Redis"],
+      ["Detection d'abus", "Heuristiques + embeddings optionnels", "Detecteur d'anomalies par embeddings"],
+      ["Gouvernance d'outils", "Politiques autoriser/bloquer/approuver + inspection", "Intercepteur complet d'appels d'outils"],
       ["Piste d'audit", "Journalisation locale", "Piste de conformite cloud"],
       ["Prix", "Gratuit / open source", "Niveau gratuit + plans payes"]
     ]

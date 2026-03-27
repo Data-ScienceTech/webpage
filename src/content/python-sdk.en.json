@@ -2,7 +2,7 @@
   "meta": {
     "title": "ForceField Python SDK -- AI Security in 3 Lines of Code | Data Science Technologies",
     "description": "Open-source Python SDK for prompt injection detection, PII redaction, and LLM security. Install with pip, protect your AI app in minutes.",
-    "keywords": "Python SDK, AI security, prompt injection detection, PII redaction, LLM firewall, pip install, ONNX, guardrails, open source, forcefield"
+    "keywords": "Python SDK, AI security, prompt injection detection, PII redaction, LLM firewall, pip install, ONNX, guardrails, open source, forcefield, content safety, rate limiting, abuse detection, tool governance"
   },
   "hero": {
     "title": "ForceField Python SDK",
@@ -16,7 +16,7 @@
     "ml": "pip install forcefield[ml]",
     "all": "pip install forcefield[all]",
     "basic_label": "Core (regex + heuristics)",
-    "ml_label": "+ ONNX ML model (95%+ detection)",
+    "ml_label": "+ ONNX ML model + embedding-based abuse detection",
     "all_label": "Everything (ML + cloud + integrations)"
   },
   "quickstart": {
@@ -72,6 +72,26 @@
         "title": "Endpoint Scanner",
         "description": "CLI command to red-team your own LLM endpoints. Runs 50+ attack prompts across 7 categories and generates a security report.",
         "icon": "Crosshair"
+      },
+      {
+        "title": "Content Safety",
+        "description": "Azure Content Safety-compatible API returning 0/2/4/6 severity scores for Hate, Violence, Sexual, and SelfHarm. Drop-in replacement with configurable per-category thresholds.",
+        "icon": "ShieldAlert"
+      },
+      {
+        "title": "Rate Limiting",
+        "description": "In-memory token-bucket rate limiter with multi-tier support (per-user, per-session, global). Thread-safe, zero-dependency, with automatic stale-bucket cleanup.",
+        "icon": "Gauge"
+      },
+      {
+        "title": "Abuse Detection",
+        "description": "Detects hostile output, unhinged persona, jailbreak success, and persona deviation. Keyword heuristics by default, embedding-based cosine similarity with forcefield[ml].",
+        "icon": "AlertTriangle"
+      },
+      {
+        "title": "Tool Governance",
+        "description": "Policy-driven tool call security with pre-call and post-call inspection. Configurable allow/block/require-approval policies, secret and PII detection in tool results.",
+        "icon": "Settings"
       }
     ]
   },
@@ -99,7 +119,7 @@
     "title": "CLI Tools",
     "commands": [
       { "cmd": "forcefield scan \"your text here\"", "description": "Scan a single prompt from the terminal" },
-      { "cmd": "forcefield selftest", "description": "Run 116 built-in attack prompts and verify detection" },
+      { "cmd": "forcefield selftest", "description": "Run 121 built-in attack prompts and verify detection" },
       { "cmd": "forcefield test https://your-api.com/chat", "description": "Red-team your LLM endpoint with 50+ attacks" },
       { "cmd": "forcefield audit policy.yaml", "description": "Validate your security policy configuration" }
     ]
@@ -107,7 +127,7 @@
   "extras": {
     "title": "Optional Extras",
     "items": [
-      { "name": "forcefield[ml]", "description": "ONNX Runtime for ML-powered detection (95%+ accuracy)" },
+      { "name": "forcefield[ml]", "description": "ONNX Runtime + sentence-transformers for ML detection and embedding-based abuse detection" },
       { "name": "forcefield[cloud]", "description": "Cloud hybrid scoring via ForceField Gateway API" },
       { "name": "forcefield[langchain]", "description": "LangChain callback handler integration" },
       { "name": "forcefield[fastapi]", "description": "FastAPI middleware integration" },
@@ -119,7 +139,7 @@
     "description": "Add ForceField to your CI/CD pipeline. Scans your codebase for prompt injection, PII leaks, and security vulnerabilities on every push.",
     "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
     "marketplace_label": "View on GitHub Marketplace",
-    "code": "- uses: Data-ScienceTech/forcefield@v0.3.1\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
+    "code": "- uses: Data-ScienceTech/forcefield@v0.4.0\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
   },
   "cta": {
     "pypi": "View on PyPI",
@@ -143,6 +163,10 @@
       ["PII Redaction", "Regex-based", "Regex + NLP + Luhn"],
       ["Streaming Scan", "--", "Real-time SSE interception"],
       ["Agentic Security", "--", "MCP proxy + tool interception"],
+      ["Content Safety", "Azure-compatible (Hate/Violence/Sexual/SelfHarm)", "Azure Content Safety integration"],
+      ["Rate Limiting", "In-memory token bucket", "Redis-backed distributed"],
+      ["Abuse Detection", "Keyword heuristics + optional embeddings", "Embedding anomaly detector"],
+      ["Tool Governance", "Policy-driven allow/block/approve + result inspection", "Full tool call interceptor"],
       ["Audit Trail", "Local logging", "Cloud-based compliance trail"],
       ["Price", "Free / open source", "Free tier + paid plans"]
     ]

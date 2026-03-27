@@ -107,7 +107,7 @@
       { "value": "392ms", "label": "Median end-to-end response (includes LLM round-trip)" },
       { "value": "0.00%", "label": "Error rate under load (2,188 requests, production GCP)" }
     ],
-    "agentic_title": "Agentic Benchmarks (168 test scenarios)",
+    "agentic_title": "Agentic Benchmarks (192 test scenarios)",
     "agentic": [
       { "value": "87-100%", "label": "Tool result inspection accuracy" },
       { "value": "100%", "label": "MCP gateway pre-call and post-call accuracy" },

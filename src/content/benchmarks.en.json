@@ -46,7 +46,7 @@
     "items": [
       { "value": "1,650+", "label": "Total Tests Passing" },
       { "value": "7", "label": "Attack Suites in Red Team Tests" },
-      { "value": "108", "label": "Go MCP Tests" },
+      { "value": "125", "label": "Go MCP Tests" },
       { "value": "84", "label": "Python E2E Tests" },
       { "value": "192", "label": "Agentic Security Test Scenarios" }
     ]

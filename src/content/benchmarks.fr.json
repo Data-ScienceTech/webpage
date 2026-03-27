@@ -46,7 +46,7 @@
     "items": [
       { "value": "1 650+", "label": "Total de Tests Réussis" },
       { "value": "7", "label": "Suites d'Attaques dans les Tests Red Team" },
-      { "value": "108", "label": "Tests MCP en Go" },
+      { "value": "125", "label": "Tests MCP en Go" },
       { "value": "84", "label": "Tests E2E Python" },
       { "value": "192", "label": "Scénarios de Tests de Sécurité Agentique" }
     ]
