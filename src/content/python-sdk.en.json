@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "title": "ForceField Python SDK -- AI Security in 3 Lines of Code | Data Science Technologies",
+    "description": "Open-source Python SDK for prompt injection detection, PII redaction, and LLM security. Install with pip, protect your AI app in minutes.",
+    "keywords": "Python SDK, AI security, prompt injection detection, PII redaction, LLM firewall, pip install, ONNX, guardrails, open source, forcefield"
+  },
+  "hero": {
+    "title": "ForceField Python SDK",
+    "subtitle": "pip install forcefield",
+    "tagline": "AI security in 3 lines of Python. No API keys, no cloud dependency, no vendor lock-in."
+  },
+  "install": {
+    "title": "Get Started in 30 Seconds",
+    "basic": "pip install forcefield",
+    "ml": "pip install forcefield[ml]",
+    "all": "pip install forcefield[all]",
+    "basic_label": "Core (regex + heuristics)",
+    "ml_label": "+ ONNX ML model (95%+ detection)",
+    "all_label": "Everything (ML + cloud + integrations)"
+  },
+  "quickstart": {
+    "title": "3 Lines to Secure Your App",
+    "code": "from forcefield import Guard\n\nguard = Guard()\nresult = guard.scan(\"Ignore all previous instructions\")\n# result.blocked == True, result.risk_score == 0.95"
+  },
+  "stats": [
+    { "value": "95%+", "label": "Detection rate with ML" },
+    { "value": "235 KB", "label": "ONNX model size" },
+    { "value": "< 1ms", "label": "Scan latency (regex)" },
+    { "value": "0", "label": "External dependencies required" }
+  ],
+  "features": {
+    "title": "What's Inside",
+    "items": [
+      {
+        "title": "Prompt Injection Detection",
+        "description": "12 attack categories: instruction override, jailbreaks, role switching, token smuggling, payload splitting, data extraction, indirect injection, and more.",
+        "icon": "Shield"
+      },
+      {
+        "title": "ML-Powered Scoring",
+        "description": "Bundled TF-IDF + Logistic Regression model exported to ONNX (235 KB). Classifies prompts into benign, prompt_injection, jailbreak, or data_exfiltration.",
+        "icon": "Brain"
+      },
+      {
+        "title": "PII Detection & Redaction",
+        "description": "Detect and redact emails, phone numbers, SSNs, credit cards, IP addresses, and more. Four strategies: mask, hash, remove, partial.",
+        "icon": "Eye"
+      },
+      {
+        "title": "Anti-Obfuscation",
+        "description": "Defeats evasion techniques: zero-width characters, Cyrillic/Greek homoglyphs, leetspeak, mixed scripts, base64/URL/HTML encoding.",
+        "icon": "Lock"
+      },
+      {
+        "title": "LLM Output Moderation",
+        "description": "Scan AI responses for hate speech, violence, self-harm content, dangerous information, credential leaks, and jailbreak success indicators.",
+        "icon": "Filter"
+      },
+      {
+        "title": "Session Tracking",
+        "description": "Multi-turn attack detection. Tracks conversation risk across turns and detects escalation sequences like probe-then-inject patterns.",
+        "icon": "Activity"
+      },
+      {
+        "title": "Template Validation",
+        "description": "Detect backdoored Jinja2 chat templates: hardcoded instructions, base64 payloads, embedded special tokens, suspicious macros.",
+        "icon": "FileCheck"
+      },
+      {
+        "title": "Endpoint Scanner",
+        "description": "CLI command to red-team your own LLM endpoints. Runs 50+ attack prompts across 7 categories and generates a security report.",
+        "icon": "Crosshair"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Drop-In Integrations",
+    "items": [
+      {
+        "name": "OpenAI",
+        "code": "from forcefield.integrations.openai import SafeOpenAI\nclient = SafeOpenAI()",
+        "description": "Wraps the OpenAI client. Scans prompts before sending, moderates responses after."
+      },
+      {
+        "name": "FastAPI",
+        "code": "from forcefield.integrations.fastapi import ForceFieldMiddleware\napp.add_middleware(ForceFieldMiddleware)",
+        "description": "ASGI middleware that scans all incoming request bodies automatically."
+      },
+      {
+        "name": "LangChain",
+        "code": "from forcefield.integrations.langchain import ForceFieldCallbackHandler\ncallbacks = [ForceFieldCallbackHandler()]",
+        "description": "Callback handler that scans prompts and outputs at every chain step."
+      }
+    ]
+  },
+  "cli": {
+    "title": "CLI Tools",
+    "commands": [
+      { "cmd": "forcefield scan \"your text here\"", "description": "Scan a single prompt from the terminal" },
+      { "cmd": "forcefield selftest", "description": "Run 116 built-in attack prompts and verify detection" },
+      { "cmd": "forcefield test https://your-api.com/chat", "description": "Red-team your LLM endpoint with 50+ attacks" },
+      { "cmd": "forcefield audit policy.yaml", "description": "Validate your security policy configuration" }
+    ]
+  },
+  "extras": {
+    "title": "Optional Extras",
+    "items": [
+      { "name": "forcefield[ml]", "description": "ONNX Runtime for ML-powered detection (95%+ accuracy)" },
+      { "name": "forcefield[cloud]", "description": "Cloud hybrid scoring via ForceField Gateway API" },
+      { "name": "forcefield[langchain]", "description": "LangChain callback handler integration" },
+      { "name": "forcefield[fastapi]", "description": "FastAPI middleware integration" },
+      { "name": "forcefield[all]", "description": "Everything above in one install" }
+    ]
+  },
+  "cta": {
+    "pypi": "View on PyPI",
+    "pypi_url": "https://pypi.org/project/forcefield/",
+    "github": "View on GitHub",
+    "github_url": "https://github.com/Data-ScienceTech/forcefield",
+    "docs": "Read the Docs",
+    "docs_url": "https://datasciencetech.ca/en/python-sdk",
+    "gateway": "Need more? Try the full Gateway",
+    "gateway_url": "/en/force-field"
+  },
+  "comparison": {
+    "title": "SDK vs Gateway",
+    "headers": ["", "Python SDK", "ForceField Gateway"],
+    "rows": [
+      ["Deployment", "pip install (local)", "Cloud Run / on-prem"],
+      ["Detection", "Regex + ONNX ML", "6-layer ensemble + DeBERTa"],
+      ["Latency", "< 1ms (regex), ~5ms (ML)", "~25ms (full pipeline)"],
+      ["PII Redaction", "Regex-based", "Regex + NLP + Luhn"],
+      ["Streaming Scan", "--", "Real-time SSE interception"],
+      ["Agentic Security", "--", "MCP proxy + tool interception"],
+      ["Audit Trail", "Local logging", "Cloud-based compliance trail"],
+      ["Price", "Free / open source", "Free tier + paid plans"]
+    ]
+  }
+}

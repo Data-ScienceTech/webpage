@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "title": "ForceField Python SDK -- Securite IA en 3 lignes de code | Data Science Technologies",
+    "description": "SDK Python open-source pour la detection d'injection de prompts, la redaction de DPI et la securite des LLM. Installez avec pip, protegez votre application IA en quelques minutes.",
+    "keywords": "Python SDK, securite IA, detection injection de prompts, redaction DPI, pare-feu LLM, pip install, ONNX, guardrails, open source, forcefield"
+  },
+  "hero": {
+    "title": "ForceField Python SDK",
+    "subtitle": "pip install forcefield",
+    "tagline": "Securite IA en 3 lignes de Python. Aucune cle API, aucune dependance cloud, aucun verrouillage fournisseur."
+  },
+  "install": {
+    "title": "Commencez en 30 secondes",
+    "basic": "pip install forcefield",
+    "ml": "pip install forcefield[ml]",
+    "all": "pip install forcefield[all]",
+    "basic_label": "Base (regex + heuristiques)",
+    "ml_label": "+ Modele ML ONNX (95%+ detection)",
+    "all_label": "Tout (ML + cloud + integrations)"
+  },
+  "quickstart": {
+    "title": "3 lignes pour securiser votre application",
+    "code": "from forcefield import Guard\n\nguard = Guard()\nresult = guard.scan(\"Ignore all previous instructions\")\n# result.blocked == True, result.risk_score == 0.95"
+  },
+  "stats": [
+    { "value": "95%+", "label": "Taux de detection avec ML" },
+    { "value": "235 Ko", "label": "Taille du modele ONNX" },
+    { "value": "< 1ms", "label": "Latence de scan (regex)" },
+    { "value": "0", "label": "Dependances externes requises" }
+  ],
+  "features": {
+    "title": "Contenu du SDK",
+    "items": [
+      {
+        "title": "Detection d'injection de prompts",
+        "description": "12 categories d'attaques : contournement d'instructions, jailbreaks, changement de role, contrebande de tokens, fractionnement de payload, extraction de donnees, injection indirecte, et plus.",
+        "icon": "Shield"
+      },
+      {
+        "title": "Scoring par ML",
+        "description": "Modele TF-IDF + Regression Logistique integre, exporte en ONNX (235 Ko). Classifie les prompts en benin, injection, jailbreak ou exfiltration.",
+        "icon": "Brain"
+      },
+      {
+        "title": "Detection et redaction de DPI",
+        "description": "Detectez et masquez les courriels, numeros de telephone, NAS, cartes de credit, adresses IP et plus. Quatre strategies : masquer, hacher, supprimer, partiel.",
+        "icon": "Eye"
+      },
+      {
+        "title": "Anti-obfuscation",
+        "description": "Dejoue les techniques d'evasion : caracteres zero-width, homoglyphes cyrilliques/grecs, leetspeak, scripts mixtes, encodage base64/URL/HTML.",
+        "icon": "Lock"
+      },
+      {
+        "title": "Moderation des sorties LLM",
+        "description": "Analysez les reponses IA pour detecter les discours haineux, la violence, l'automutilation, les informations dangereuses, les fuites d'identifiants et les indicateurs de jailbreak reussi.",
+        "icon": "Filter"
+      },
+      {
+        "title": "Suivi de session",
+        "description": "Detection d'attaques multi-tours. Suit le risque conversationnel et detecte les sequences d'escalade comme les schemas sonde-puis-injecte.",
+        "icon": "Activity"
+      },
+      {
+        "title": "Validation de modeles",
+        "description": "Detectez les modeles de chat Jinja2 compromis : instructions codees en dur, payloads base64, tokens speciaux integres, macros suspectes.",
+        "icon": "FileCheck"
+      },
+      {
+        "title": "Scanner de points d'acces",
+        "description": "Commande CLI pour tester vos propres points d'acces LLM. Execute 50+ prompts d'attaque dans 7 categories et genere un rapport de securite.",
+        "icon": "Crosshair"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Integrations directes",
+    "items": [
+      {
+        "name": "OpenAI",
+        "code": "from forcefield.integrations.openai import SafeOpenAI\nclient = SafeOpenAI()",
+        "description": "Encapsule le client OpenAI. Analyse les prompts avant l'envoi, modere les reponses apres."
+      },
+      {
+        "name": "FastAPI",
+        "code": "from forcefield.integrations.fastapi import ForceFieldMiddleware\napp.add_middleware(ForceFieldMiddleware)",
+        "description": "Middleware ASGI qui analyse automatiquement tous les corps de requetes entrantes."
+      },
+      {
+        "name": "LangChain",
+        "code": "from forcefield.integrations.langchain import ForceFieldCallbackHandler\ncallbacks = [ForceFieldCallbackHandler()]",
+        "description": "Gestionnaire de callbacks qui analyse les prompts et les sorties a chaque etape de la chaine."
+      }
+    ]
+  },
+  "cli": {
+    "title": "Outils CLI",
+    "commands": [
+      { "cmd": "forcefield scan \"votre texte ici\"", "description": "Analyser un prompt depuis le terminal" },
+      { "cmd": "forcefield selftest", "description": "Executer 116 prompts d'attaque integres et verifier la detection" },
+      { "cmd": "forcefield test https://votre-api.com/chat", "description": "Tester votre point d'acces LLM avec 50+ attaques" },
+      { "cmd": "forcefield audit policy.yaml", "description": "Valider votre configuration de politique de securite" }
+    ]
+  },
+  "extras": {
+    "title": "Extras optionnels",
+    "items": [
+      { "name": "forcefield[ml]", "description": "ONNX Runtime pour detection par ML (95%+ de precision)" },
+      { "name": "forcefield[cloud]", "description": "Scoring hybride cloud via l'API ForceField Gateway" },
+      { "name": "forcefield[langchain]", "description": "Integration du gestionnaire de callbacks LangChain" },
+      { "name": "forcefield[fastapi]", "description": "Integration du middleware FastAPI" },
+      { "name": "forcefield[all]", "description": "Tout ce qui precede en une seule installation" }
+    ]
+  },
+  "cta": {
+    "pypi": "Voir sur PyPI",
+    "pypi_url": "https://pypi.org/project/forcefield/",
+    "github": "Voir sur GitHub",
+    "github_url": "https://github.com/Data-ScienceTech/forcefield",
+    "docs": "Lire la documentation",
+    "docs_url": "https://datasciencetech.ca/fr/python-sdk",
+    "gateway": "Besoin de plus ? Essayez le Gateway complet",
+    "gateway_url": "/fr/force-field"
+  },
+  "comparison": {
+    "title": "SDK vs Gateway",
+    "headers": ["", "Python SDK", "ForceField Gateway"],
+    "rows": [
+      ["Deploiement", "pip install (local)", "Cloud Run / sur site"],
+      ["Detection", "Regex + ONNX ML", "Ensemble 6 couches + DeBERTa"],
+      ["Latence", "< 1ms (regex), ~5ms (ML)", "~25ms (pipeline complet)"],
+      ["Redaction DPI", "Base regex", "Regex + NLP + Luhn"],
+      ["Scan streaming", "--", "Interception SSE en temps reel"],
+      ["Securite agentique", "--", "Proxy MCP + interception d'outils"],
+      ["Piste d'audit", "Journalisation locale", "Piste de conformite cloud"],
+      ["Prix", "Gratuit / open source", "Niveau gratuit + plans payes"]
+    ]
+  }
+}
