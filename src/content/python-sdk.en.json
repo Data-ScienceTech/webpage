@@ -17,11 +17,15 @@
     "all": "pip install forcefield[all]",
     "conda": "conda install -c conda-forge forcefield",
     "docker": "docker pull datasciencetechmtl/forcefield-gateway:0.4.0",
+    "brew": "brew install forcefield",
+    "helm": "helm install forcefield oci://ghcr.io/data-sciencetech/charts/forcefield-gateway",
     "basic_label": "Core (regex + heuristics)",
     "ml_label": "+ ONNX ML model + embedding-based abuse detection",
     "all_label": "Everything (ML + cloud + integrations)",
     "conda_label": "conda-forge (SDK only)",
-    "docker_label": "Full Gateway with 6-layer ensemble"
+    "docker_label": "Full Gateway with 6-layer ensemble",
+    "brew_label": "Homebrew (macOS / Linux)",
+    "helm_label": "Kubernetes via Helm chart"
   },
   "quickstart": {
     "title": "3 Lines to Secure Your App",
@@ -156,6 +160,10 @@
     "conda_url": "https://anaconda.org/conda-forge/forcefield",
     "docker_hub": "Docker Hub",
     "docker_hub_url": "https://hub.docker.com/r/datasciencetechmtl/forcefield-gateway",
+    "helm": "Helm Chart",
+    "helm_url": "https://artifacthub.io/packages/helm/forcefield/forcefield-gateway",
+    "vscode": "VS Code Extension",
+    "vscode_url": "https://marketplace.visualstudio.com/items?itemName=DataScienceTech.forcefield",
     "docs": "Read the Docs",
     "docs_url": "https://datasciencetech.ca/en/python-sdk",
     "gateway": "Need more? Try the full Gateway",
@@ -165,7 +173,7 @@
     "title": "SDK vs Gateway",
     "headers": ["", "Python SDK", "ForceField Gateway"],
     "rows": [
-      ["Deployment", "pip / conda / GitHub Action", "Docker Hub / Cloud Run / on-prem"],
+      ["Deployment", "pip / conda / brew / GitHub Action", "Docker Hub / Helm / Cloud Run / on-prem"],
       ["Detection", "Regex + ONNX ML", "6-layer ensemble + DeBERTa"],
       ["Latency", "< 1ms (regex), ~5ms (ML)", "~25ms (full pipeline)"],
       ["PII Redaction", "Regex-based", "Regex + NLP + Luhn"],
