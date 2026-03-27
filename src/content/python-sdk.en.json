@@ -7,7 +7,8 @@
   "hero": {
     "title": "ForceField Python SDK",
     "subtitle": "pip install forcefield",
-    "tagline": "AI security in 3 lines of Python. No API keys, no cloud dependency, no vendor lock-in."
+    "tagline": "AI security in 3 lines of Python. No API keys, no cloud dependency, no vendor lock-in.",
+    "badges": ["Apache 2.0", "Python 3.9-3.13", "100% detection with ML"]
   },
   "install": {
     "title": "Get Started in 30 Seconds",
@@ -23,10 +24,11 @@
     "code": "from forcefield import Guard\n\nguard = Guard()\nresult = guard.scan(\"Ignore all previous instructions\")\n# result.blocked == True, result.risk_score == 0.95"
   },
   "stats": [
-    { "value": "95%+", "label": "Detection rate with ML" },
+    { "value": "100%", "label": "Detection rate with ML" },
     { "value": "235 KB", "label": "ONNX model size" },
     { "value": "< 1ms", "label": "Scan latency (regex)" },
-    { "value": "0", "label": "External dependencies required" }
+    { "value": "0", "label": "External dependencies required" },
+    { "value": "Apache 2.0", "label": "Open source license" }
   ],
   "features": {
     "title": "What's Inside",
@@ -112,11 +114,20 @@
       { "name": "forcefield[all]", "description": "Everything above in one install" }
     ]
   },
+  "github_action": {
+    "title": "GitHub Action",
+    "description": "Add ForceField to your CI/CD pipeline. Scans your codebase for prompt injection, PII leaks, and security vulnerabilities on every push.",
+    "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
+    "marketplace_label": "View on GitHub Marketplace",
+    "code": "- uses: Data-ScienceTech/forcefield@v0.3.1\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
+  },
   "cta": {
     "pypi": "View on PyPI",
     "pypi_url": "https://pypi.org/project/forcefield/",
     "github": "View on GitHub",
     "github_url": "https://github.com/Data-ScienceTech/forcefield",
+    "marketplace": "GitHub Marketplace",
+    "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
     "docs": "Read the Docs",
     "docs_url": "https://datasciencetech.ca/en/python-sdk",
     "gateway": "Need more? Try the full Gateway",
