@@ -105,11 +105,8 @@
       "product": "ForceField",
       "sdk": "Python SDK",
       "benchmarks": "Benchmarks",
-      "more": "Learn More",
-      "why": "Why Runtime Authority",
-      "agentic": "Agentic Security",
-      "architecture": "Architecture",
-      "security": "Security",
+      "pricing": "Pricing",
+      "docs": "Documentation",
       "privacy": "ForceField Privacy",
       "terms": "ForceField Terms",
       "scannerTerms": "Scanner Terms",
@@ -131,6 +128,7 @@
     "agentic": "Agentic Security",
     "architecture": "Architecture",
     "security": "Security",
+    "pricing": "Pricing",
     "cta": "See it in action"
   },
   "meta": {

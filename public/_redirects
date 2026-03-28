@@ -1,0 +1,39 @@
+# Product pages -> forcefield.datasciencetech.ca (301 permanent redirects)
+# Netlify _redirects do NOT take priority over static files by default.
+# Use ! (forced) to override the Astro-generated HTML pages.
+
+# EN product pages
+/en/python-sdk          https://forcefield.datasciencetech.ca/python-sdk      301!
+/en/python-sdk/         https://forcefield.datasciencetech.ca/python-sdk      301!
+/en/benchmarks          https://forcefield.datasciencetech.ca/benchmarks      301!
+/en/benchmarks/         https://forcefield.datasciencetech.ca/benchmarks      301!
+/en/force-field         https://forcefield.datasciencetech.ca/                301!
+/en/force-field/        https://forcefield.datasciencetech.ca/                301!
+/en/agentic-security    https://forcefield.datasciencetech.ca/docs            301!
+/en/agentic-security/   https://forcefield.datasciencetech.ca/docs            301!
+/en/architecture        https://forcefield.datasciencetech.ca/docs            301!
+/en/architecture/       https://forcefield.datasciencetech.ca/docs            301!
+/en/security            https://forcefield.datasciencetech.ca/docs            301!
+/en/security/           https://forcefield.datasciencetech.ca/docs            301!
+/en/why-runtime-authority   https://forcefield.datasciencetech.ca/docs        301!
+/en/why-runtime-authority/  https://forcefield.datasciencetech.ca/docs        301!
+/en/signup              https://forcefield.datasciencetech.ca/signup          301!
+/en/signup/             https://forcefield.datasciencetech.ca/signup          301!
+
+# FR product pages
+/fr/python-sdk          https://forcefield.datasciencetech.ca/python-sdk      301!
+/fr/python-sdk/         https://forcefield.datasciencetech.ca/python-sdk      301!
+/fr/benchmarks          https://forcefield.datasciencetech.ca/benchmarks      301!
+/fr/benchmarks/         https://forcefield.datasciencetech.ca/benchmarks      301!
+/fr/force-field         https://forcefield.datasciencetech.ca/                301!
+/fr/force-field/        https://forcefield.datasciencetech.ca/                301!
+/fr/agentic-security    https://forcefield.datasciencetech.ca/docs            301!
+/fr/agentic-security/   https://forcefield.datasciencetech.ca/docs            301!
+/fr/architecture        https://forcefield.datasciencetech.ca/docs            301!
+/fr/architecture/       https://forcefield.datasciencetech.ca/docs            301!
+/fr/securite            https://forcefield.datasciencetech.ca/docs            301!
+/fr/securite/           https://forcefield.datasciencetech.ca/docs            301!
+/fr/pourquoi-autorite-runtime   https://forcefield.datasciencetech.ca/docs    301!
+/fr/pourquoi-autorite-runtime/  https://forcefield.datasciencetech.ca/docs    301!
+/fr/inscription         https://forcefield.datasciencetech.ca/signup          301!
+/fr/inscription/        https://forcefield.datasciencetech.ca/signup          301!
