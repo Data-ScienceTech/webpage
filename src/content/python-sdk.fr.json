@@ -96,6 +96,21 @@
         "title": "Gouvernance d'outils",
         "description": "Securite des appels d'outils pilotee par politiques avec inspection pre-appel et post-appel. Politiques configurables autoriser/bloquer/approbation requise, detection de secrets et DPI dans les resultats.",
         "icon": "Settings"
+      },
+      {
+        "title": "Analyse de commandes",
+        "description": "Classifie les commandes terminal pour 22 motifs dangereux : rm -rf, curl | sh, chmod 777, reverse shells, exfiltration d'identifiants, escalade de privileges, persistance crontab, et plus. Alimente le mode Sentinelle dans l'extension VS Code.",
+        "icon": "Terminal"
+      },
+      {
+        "title": "Analyse de noms de fichiers",
+        "description": "Detecte les operations dangereuses sur 12 motifs de fichiers sensibles : .env, id_rsa, secrets.json, authorized_keys, .pem, shadow, et plus. Signale les operations de creation, suppression et renommage par severite.",
+        "icon": "FileWarning"
+      },
+      {
+        "title": "Chemins proteges",
+        "description": "Designez des fichiers et dossiers comme immuables. ProtectedPathSet supporte la correspondance exacte, glob et recursive par repertoire. S'integre avec le mode Sentinelle VS Code pour bloquer les modifications d'agents sur les fichiers critiques.",
+        "icon": "ShieldCheck"
       }
     ]
   },
@@ -125,7 +140,9 @@
       { "cmd": "forcefield scan \"votre texte ici\"", "description": "Analyser un prompt depuis le terminal" },
       { "cmd": "forcefield selftest", "description": "Executer 121 prompts d'attaque integres et verifier la detection" },
       { "cmd": "forcefield test https://votre-api.com/chat", "description": "Tester votre point d'acces LLM avec 50+ attaques" },
-      { "cmd": "forcefield audit policy.yaml", "description": "Valider votre configuration de politique de securite" }
+      { "cmd": "forcefield audit policy.yaml", "description": "Valider votre configuration de politique de securite" },
+      { "cmd": "forcefield scan-command \"rm -rf /\"", "description": "Classifier une commande terminal pour les motifs dangereux" },
+      { "cmd": "forcefield scan-filename .env --operation delete", "description": "Verifier si une operation sur fichier est dangereuse" }
     ]
   },
   "extras": {
@@ -143,7 +160,7 @@
     "description": "Ajoutez ForceField a votre pipeline CI/CD. Analyse votre code pour les injections de prompts, les fuites de DPI et les vulnerabilites de securite a chaque push.",
     "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
     "marketplace_label": "Voir sur GitHub Marketplace",
-    "code": "- uses: Data-ScienceTech/forcefield@v0.4.0\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
+    "code": "- uses: Data-ScienceTech/forcefield@v0.5.1\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
   },
   "cta": {
     "pypi": "Voir sur PyPI",
@@ -171,7 +188,7 @@
       ["Latence", "< 1ms (regex), ~5ms (ML)", "~25ms (pipeline complet)"],
       ["Redaction DPI", "Base regex", "Regex + NLP + Luhn"],
       ["Scan streaming", "--", "Interception SSE en temps reel"],
-      ["Securite agentique", "--", "Proxy MCP + interception d'outils"],
+      ["Securite agentique", "Analyse commandes + fichiers, mode Sentinelle (VS Code)", "Proxy MCP + interception d'outils"],
       ["Securite de contenu", "Compatible Azure (Haine/Violence/Sexuel/Automutilation)", "Integration Azure Content Safety"],
       ["Limitation de debit", "Seau de jetons en memoire", "Distribution Redis"],
       ["Detection d'abus", "Heuristiques + embeddings optionnels", "Detecteur d'anomalies par embeddings"],

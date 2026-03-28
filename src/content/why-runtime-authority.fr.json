@@ -23,7 +23,7 @@
   },
   "foundation": {
     "title": "De la Fondation au Plan de Contrôle",
-    "intro": "La Passerelle de Sécurité IA Entreprise Force Field est notre fondation — une couche d'application prête pour la production et à faible latence, qui se positionne directement dans le chemin d'exécution des systèmes d'IA.",
+    "intro": "La Passerelle de Sécurité IA Entreprise ForceField est notre fondation — une couche d'application prête pour la production et à faible latence, qui se positionne directement dans le chemin d'exécution des systèmes d'IA.",
     "evolution": "Sur cette base, nous évoluons vers des contrôles au niveau de l'exécution qui régissent :",
     "controls": [
       "comment les actions sont autorisées",

@@ -8,12 +8,12 @@
     "title": "Agentic AI Security",
     "subtitle": "Production-ready security for AI agents, tool calls, and multi-step workflows"
   },
-  "intro": "AI agents that can browse the web, execute code, call APIs, and manage infrastructure need security controls that match their capabilities. Force Field provides the only production-ready security gateway with quantitative benchmarks for agentic AI.",
+  "intro": "AI agents that can browse the web, execute code, call APIs, and manage infrastructure need security controls that match their capabilities. ForceField provides the only production-ready security gateway with quantitative benchmarks for agentic AI.",
   "mcp_gateway": {
     "title": "MCP Proxy Gateway",
-    "description": "Force Field includes an MCP proxy gateway that sits between AI agents and tools. Every tool call is evaluated against security policies before execution. The gateway supports Claude Desktop, Cursor, and custom agents via the MCP protocol. Chain state is backed by a pluggable store (in-memory or Redis) for multi-instance deployments.",
+    "description": "ForceField includes an MCP proxy gateway that sits between AI agents and tools. Every tool call is evaluated against security policies before execution. The gateway supports Claude Desktop, Cursor, and custom agents via the MCP protocol. Chain state is backed by a pluggable store (in-memory or Redis) for multi-instance deployments.",
     "features": [
-      "Transparent proxy: agents connect to Force Field instead of tools directly",
+      "Transparent proxy: agents connect to ForceField instead of tools directly",
       "Policy evaluation before every tool call execution",
       "Support for MCP protocol (Claude Desktop, Cursor, custom agents)",
       "Pre-call authorization and post-call result inspection",
@@ -22,7 +22,7 @@
   },
   "tool_interception": {
     "title": "Tool Call Interception",
-    "description": "Every tool call passes through Force Field's security pipeline before reaching the target system.",
+    "description": "Every tool call passes through ForceField's security pipeline before reaching the target system.",
     "policies": [
       { "name": "Allow", "detail": "Tool call proceeds with logging" },
       { "name": "Deny", "detail": "Tool call blocked, agent receives policy violation message" },
@@ -35,7 +35,7 @@
   },
   "chain_tracking": {
     "title": "Chain-of-Action Attack Detection",
-    "description": "Force Field monitors multi-step agent workflows and detects attack patterns that span multiple tool calls.",
+    "description": "ForceField monitors multi-step agent workflows and detects attack patterns that span multiple tool calls.",
     "patterns": [
       { "name": "Data Exfiltration", "detail": "Agent reads sensitive data then attempts to send it externally" },
       { "name": "Privilege Escalation", "detail": "Agent progressively requests higher-permission tools" },
@@ -66,7 +66,7 @@
   },
   "instruction_integrity": {
     "title": "Zero-Trust Intent Validation",
-    "description": "Every inter-agent delegation is cryptographically verified. Force Field uses HMAC-SHA256 signing with nonce replay protection to ensure tool call instructions have not been tampered with in transit between agents.",
+    "description": "Every inter-agent delegation is cryptographically verified. ForceField uses HMAC-SHA256 signing with nonce replay protection to ensure tool call instructions have not been tampered with in transit between agents.",
     "features": [
       "HMAC-SHA256 instruction signing at every hop",
       "Content hash verification detects tampered arguments",
@@ -77,7 +77,7 @@
   },
   "lateral_movement": {
     "title": "Lateral Movement Prevention",
-    "description": "Force Field binds agent identities to authenticated sessions and bearer tokens. If an agent attempts to spoof another agent's identity, hijack a session, or escalate trust levels, the request is blocked and the event is recorded.",
+    "description": "ForceField binds agent identities to authenticated sessions and bearer tokens. If an agent attempts to spoof another agent's identity, hijack a session, or escalate trust levels, the request is blocked and the event is recorded.",
     "features": [
       "Session-agent binding with bearer token verification",
       "Identity spoofing detection across sessions",
@@ -88,7 +88,7 @@
   },
   "sandbox_execution": {
     "title": "OpenShell Sandbox Execution",
-    "description": "Force Field integrates with NVIDIA OpenShell to provide graduated tool enforcement. Instead of binary allow/deny decisions, risky tools like shell execution and file deletion are routed into isolated containers with scoped filesystem, network, and process constraints. If chain pattern detection identifies a data exfiltration or privilege escalation sequence, the sandbox's network policy is tightened in real time -- cutting outbound access before data can leave.",
+    "description": "ForceField integrates with NVIDIA OpenShell to provide graduated tool enforcement. Instead of binary allow/deny decisions, risky tools like shell execution and file deletion are routed into isolated containers with scoped filesystem, network, and process constraints. If chain pattern detection identifies a data exfiltration or privilege escalation sequence, the sandbox's network policy is tightened in real time -- cutting outbound access before data can leave.",
     "features": [
       "Graduated enforcement: risky tools run in sandboxes instead of being blocked",
       "On-demand container isolation per agent and session",
@@ -100,6 +100,6 @@
   },
   "cta": {
     "title": "Secure Your AI Agents",
-    "description": "Request access to Force Field and deploy production-ready agentic security."
+    "description": "Request access to ForceField and deploy production-ready agentic security."
   }
 }

@@ -8,12 +8,12 @@
     "title": "Sécurité de l'IA Agentique",
     "subtitle": "Sécurité prête pour la production pour les agents IA, les appels d'outils et les workflows multi-étapes"
   },
-  "intro": "Les agents IA capables de naviguer sur le web, exécuter du code, appeler des API et gérer l'infrastructure nécessitent des contrôles de sécurité à la hauteur de leurs capacités. Force Field fournit la seule passerelle de sécurité prête pour la production avec des benchmarks quantitatifs pour l'IA agentique.",
+  "intro": "Les agents IA capables de naviguer sur le web, exécuter du code, appeler des API et gérer l'infrastructure nécessitent des contrôles de sécurité à la hauteur de leurs capacités. ForceField fournit la seule passerelle de sécurité prête pour la production avec des benchmarks quantitatifs pour l'IA agentique.",
   "mcp_gateway": {
     "title": "Passerelle Proxy MCP",
-    "description": "Force Field inclut une passerelle proxy MCP qui s'interpose entre les agents IA et les outils. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution. La passerelle prend en charge Claude Desktop, Cursor et les agents personnalisés via le protocole MCP. L'état de chaîne est sauvegardé via un magasin enfichable (en mémoire ou Redis) pour les déploiements multi-instances.",
+    "description": "ForceField inclut une passerelle proxy MCP qui s'interpose entre les agents IA et les outils. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution. La passerelle prend en charge Claude Desktop, Cursor et les agents personnalisés via le protocole MCP. L'état de chaîne est sauvegardé via un magasin enfichable (en mémoire ou Redis) pour les déploiements multi-instances.",
     "features": [
-      "Proxy transparent : les agents se connectent à Force Field au lieu des outils directement",
+      "Proxy transparent : les agents se connectent à ForceField au lieu des outils directement",
       "Évaluation des politiques avant chaque exécution d'appel d'outil",
       "Support du protocole MCP (Claude Desktop, Cursor, agents personnalisés)",
       "Autorisation pré-appel et inspection post-appel des résultats",
@@ -22,7 +22,7 @@
   },
   "tool_interception": {
     "title": "Interception des Appels d'Outils",
-    "description": "Chaque appel d'outil passe par le pipeline de sécurité de Force Field avant d'atteindre le système cible.",
+    "description": "Chaque appel d'outil passe par le pipeline de sécurité de ForceField avant d'atteindre le système cible.",
     "policies": [
       { "name": "Autoriser", "detail": "L'appel d'outil se poursuit avec journalisation" },
       { "name": "Refuser", "detail": "L'appel d'outil est bloqué, l'agent reçoit un message de violation de politique" },
@@ -35,7 +35,7 @@
   },
   "chain_tracking": {
     "title": "Détection d'Attaques par Chaîne d'Actions",
-    "description": "Force Field surveille les workflows multi-étapes des agents et détecte les schémas d'attaque couvrant plusieurs appels d'outils.",
+    "description": "ForceField surveille les workflows multi-étapes des agents et détecte les schémas d'attaque couvrant plusieurs appels d'outils.",
     "patterns": [
       { "name": "Exfiltration de Données", "detail": "L'agent lit des données sensibles puis tente de les envoyer à l'extérieur" },
       { "name": "Escalade de Privilèges", "detail": "L'agent demande progressivement des outils à permissions plus élevées" },
@@ -66,7 +66,7 @@
   },
   "instruction_integrity": {
     "title": "Validation d'Int\u00e9grit\u00e9 Zero-Trust",
-    "description": "Chaque d\u00e9l\u00e9gation inter-agents est v\u00e9rifi\u00e9e cryptographiquement. Force Field utilise la signature HMAC-SHA256 avec protection contre la r\u00e9p\u00e9tition de nonce pour garantir que les instructions d'appels d'outils n'ont pas \u00e9t\u00e9 alt\u00e9r\u00e9es en transit entre les agents.",
+    "description": "Chaque d\u00e9l\u00e9gation inter-agents est v\u00e9rifi\u00e9e cryptographiquement. ForceField utilise la signature HMAC-SHA256 avec protection contre la r\u00e9p\u00e9tition de nonce pour garantir que les instructions d'appels d'outils n'ont pas \u00e9t\u00e9 alt\u00e9r\u00e9es en transit entre les agents.",
     "features": [
       "Signature HMAC-SHA256 des instructions \u00e0 chaque saut",
       "V\u00e9rification du hash de contenu d\u00e9tecte les arguments alt\u00e9r\u00e9s",
@@ -77,7 +77,7 @@
   },
   "lateral_movement": {
     "title": "Pr\u00e9vention des Mouvements Lat\u00e9raux",
-    "description": "Force Field lie les identit\u00e9s des agents aux sessions authentifi\u00e9es et aux jetons porteurs. Si un agent tente d'usurper l'identit\u00e9 d'un autre agent, de d\u00e9tourner une session ou d'escalader les niveaux de confiance, la requ\u00eate est bloqu\u00e9e et l'\u00e9v\u00e9nement est enregistr\u00e9.",
+    "description": "ForceField lie les identit\u00e9s des agents aux sessions authentifi\u00e9es et aux jetons porteurs. Si un agent tente d'usurper l'identit\u00e9 d'un autre agent, de d\u00e9tourner une session ou d'escalader les niveaux de confiance, la requ\u00eate est bloqu\u00e9e et l'\u00e9v\u00e9nement est enregistr\u00e9.",
     "features": [
       "Liaison session-agent avec v\u00e9rification du jeton porteur",
       "D\u00e9tection d'usurpation d'identit\u00e9 entre sessions",
@@ -88,7 +88,7 @@
   },
   "sandbox_execution": {
     "title": "Exécution en Bac à Sable OpenShell",
-    "description": "Force Field s'intègre avec NVIDIA OpenShell pour fournir une application graduée des outils. Au lieu de décisions binaires autoriser/refuser, les outils risqués comme l'exécution de commandes et la suppression de fichiers sont acheminés vers des conteneurs isolés avec un système de fichiers, un réseau et des contraintes de processus limités. Si la détection de schémas de chaîne identifie une séquence d'exfiltration de données ou d'escalade de privilèges, la politique réseau du bac à sable est resserrée en temps réel -- coupant l'accès sortant avant que les données ne puissent quitter l'environnement.",
+    "description": "ForceField s'intègre avec NVIDIA OpenShell pour fournir une application graduée des outils. Au lieu de décisions binaires autoriser/refuser, les outils risqués comme l'exécution de commandes et la suppression de fichiers sont acheminés vers des conteneurs isolés avec un système de fichiers, un réseau et des contraintes de processus limités. Si la détection de schémas de chaîne identifie une séquence d'exfiltration de données ou d'escalade de privilèges, la politique réseau du bac à sable est resserrée en temps réel -- coupant l'accès sortant avant que les données ne puissent quitter l'environnement.",
     "features": [
       "Application graduée : les outils risqués s'exécutent dans des bacs à sable au lieu d'être bloqués",
       "Isolation par conteneur à la demande par agent et par session",
@@ -100,6 +100,6 @@
   },
   "cta": {
     "title": "Sécurisez Vos Agents IA",
-    "description": "Demandez l'accès à Force Field et déployez une sécurité agentique prête pour la production."
+    "description": "Demandez l'accès à ForceField et déployez une sécurité agentique prête pour la production."
   }
 }

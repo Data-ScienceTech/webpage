@@ -1,0 +1,244 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+import siteContent from '../../content/site.en.json';
+import content from '../../content/vscode-extension.en.json';
+
+const lang = 'en';
+---
+
+<MainLayout
+  title={content.meta.title}
+  description={content.meta.description}
+  lang={lang}
+>
+  <Header lang={lang} content={siteContent} />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900 pt-12 pb-10 md:pt-16 md:pb-12">
+      <div class="absolute inset-0 opacity-5">
+        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="1" class="text-primary-400"/>
+          <path d="M70 100 L90 120 L130 80" stroke="currentColor" stroke-width="3" class="text-primary-400" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="container-custom relative">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-500/20 px-4 py-1.5 text-sm font-semibold text-primary-300">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Sentinel Mode
+          </div>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4">
+            {content.hero.title}
+          </h1>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-400">{content.hero.subtitle}</p>
+          <p class="text-lg md:text-xl text-secondary-300 mb-4 max-w-2xl mx-auto">
+            {content.hero.tagline}
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
+            {content.hero.badges.map((badge: string) => (
+              <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-primary-200 border border-white/20">{badge}</span>
+            ))}
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={content.cta.marketplace_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-accent inline-flex items-center gap-2 text-base px-6 py-3"
+            >
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              {content.cta.marketplace}
+            </a>
+            <a
+              href={content.cta.sdk_url}
+              class="inline-flex items-center gap-2 text-sm text-secondary-300 hover:text-white transition-colors"
+            >
+              {content.cta.sdk} &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-10 bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800">
+      <div class="container-custom">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+          {content.stats.map((stat) => (
+            <div>
+              <p class="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</p>
+              <p class="text-sm text-primary-100 uppercase tracking-wide font-medium">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Sentinel Mode -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-3 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{content.sentinel.title}</h2>
+          <p class="mb-4 text-lg text-primary-600 dark:text-primary-400 font-semibold text-center">{content.sentinel.subtitle}</p>
+          <p class="mb-10 text-secondary-600 dark:text-secondary-300 text-center max-w-3xl mx-auto">{content.sentinel.description}</p>
+          <div class="grid gap-6 md:grid-cols-2">
+            {content.sentinel.features.map((feature) => (
+              <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 p-6">
+                <h3 class="text-lg font-bold text-secondary-900 dark:text-white mb-2">{feature.title}</h3>
+                <p class="text-sm text-secondary-600 dark:text-secondary-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protection Levels -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <h2 class="mb-10 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{content.protection_levels.title}</h2>
+        <div class="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+          {content.protection_levels.levels.map((level) => (
+            <div class={`rounded-2xl border-2 ${level.default ? 'border-primary-400 bg-primary-50 dark:bg-primary-900/20' : 'border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800'} p-6 text-center`}>
+              <h3 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">{level.name}</h3>
+              {level.default && <span class="inline-block mb-3 text-xs font-semibold text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-900/40 px-2 py-0.5 rounded-full">Default</span>}
+              <p class="text-sm text-secondary-600 dark:text-secondary-300">{level.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Protected Paths -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <h2 class="mb-3 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{content.protected_paths.title}</h2>
+          <p class="mb-4 text-lg text-primary-600 dark:text-primary-400 font-semibold text-center">{content.protected_paths.subtitle}</p>
+          <p class="mb-8 text-secondary-600 dark:text-secondary-300 text-center max-w-3xl mx-auto">{content.protected_paths.description}</p>
+          <div class="grid gap-8 md:grid-cols-2 items-start">
+            <div class="bg-secondary-800 dark:bg-secondary-950 rounded-xl p-6">
+              <p class="text-xs text-secondary-400 uppercase tracking-wide font-semibold mb-3">Example protected paths</p>
+              <div class="font-mono text-sm text-primary-300 space-y-1">
+                {content.protected_paths.examples.map((ex: string) => (
+                  <div class="flex items-center gap-2">
+                    <svg class="h-3.5 w-3.5 text-yellow-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    {ex}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <ul class="space-y-3">
+              {content.protected_paths.features.map((feature: string) => (
+                <li class="flex items-start gap-2 text-sm text-secondary-600 dark:text-secondary-300">
+                  <svg class="mt-0.5 h-4 w-4 text-primary-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scanning & Detection -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <h2 class="mb-10 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{content.scanning.title}</h2>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+          {content.scanning.items.map((item) => (
+            <div class="rounded-xl border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 p-5">
+              <div class="flex items-start justify-between mb-2">
+                <h3 class="text-base font-bold text-secondary-900 dark:text-white">{item.title}</h3>
+                {item.shortcut && <span class="text-xs font-mono bg-secondary-100 dark:bg-secondary-700 text-secondary-600 dark:text-secondary-300 px-2 py-0.5 rounded">{item.shortcut}</span>}
+              </div>
+              <p class="text-sm text-secondary-600 dark:text-secondary-300">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Gateway Integration -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="mb-4 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{content.gateway.title}</h2>
+          <p class="mb-8 text-secondary-600 dark:text-secondary-300 text-center">{content.gateway.description}</p>
+          <div class="grid gap-3 md:grid-cols-2">
+            {content.gateway.features.map((feature: string) => (
+              <div class="flex items-start gap-2 text-sm text-secondary-600 dark:text-secondary-300">
+                <svg class="mt-0.5 h-4 w-4 text-primary-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {feature}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+      <div class="container-custom">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="mb-8 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{content.architecture.title}</h2>
+          <div class="space-y-3">
+            {content.architecture.items.map((item: string) => (
+              <div class="flex items-start gap-3">
+                <svg class="mt-1 h-5 w-5 text-primary-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                </svg>
+                <p class="text-secondary-700 dark:text-secondary-300">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="py-10 bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800">
+      <div class="container-custom text-center">
+        <h3 class="text-xl font-bold text-white mb-2">{content.telemetry.title}</h3>
+        <p class="text-sm text-primary-100 max-w-2xl mx-auto">{content.telemetry.description}</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom text-center">
+        <h2 class="mb-6 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">Get Started</h2>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href={content.cta.marketplace_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-accent inline-flex items-center gap-2 px-6 py-3"
+          >
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            {content.cta.marketplace}
+          </a>
+          <a
+            href={content.cta.gateway_url}
+            class="btn inline-flex items-center gap-2 border-2 border-secondary-300 dark:border-secondary-600 text-secondary-700 dark:text-secondary-300 hover:bg-secondary-100 dark:hover:bg-secondary-700 px-6 py-3"
+          >
+            {content.cta.gateway} &rarr;
+          </a>
+        </div>
+        <p class="mt-4 text-sm text-secondary-500 dark:text-secondary-400">
+          <a href={content.cta.sdk_url} class="text-primary-600 dark:text-primary-400 hover:underline">{content.cta.sdk}</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} content={siteContent} />
+</MainLayout>

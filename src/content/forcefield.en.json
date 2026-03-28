@@ -1,18 +1,18 @@
 {
   "meta": {
-    "title": "Force Field Enterprise AI Security Gateway — Production-Ready Runtime Protection | Data Science Technologies",
-    "description": "Force Field is a production-ready security gateway that provides real-time inspection, control, and enforcement for prompts, agent actions, and tool usage — without vendor lock-in.",
-    "keywords": "Enterprise AI Security Gateway, AI Security, Prompt Injection Detection, Runtime Protection, Model-Agnostic AI Security, Zero-Trust AI Security, MCP Security, MCP Proxy, AI Agent Security, AI Security Gateway Benchmark, Streaming LLM Security, AI Tool Call Interception, PII Redaction LLM, Structured Output Security, DeBERTa Threat Detection"
+    "title": "ForceField Enterprise AI Security Gateway — Production-Ready Runtime Protection | Data Science Technologies",
+    "description": "ForceField is a production-ready security gateway that provides real-time inspection, control, and enforcement for prompts, agent actions, and tool usage — without vendor lock-in.",
+    "keywords": "Enterprise AI Security Gateway, AI Security, Prompt Injection Detection, Runtime Protection, Model-Agnostic AI Security, Zero-Trust AI Security, MCP Security, MCP Proxy, AI Agent Security, AI Security Gateway Benchmark, Streaming LLM Security, AI Tool Call Interception, PII Redaction LLM, Structured Output Security, DeBERTa Threat Detection, Sentinel Mode, vibe coding security, AI coding agent monitor"
   },
   "hero": {
-    "title": "Force Field Enterprise AI Security Gateway",
+    "title": "ForceField Enterprise AI Security Gateway",
     "subtitle": "Secure AI Agents at Runtime"
   },
-  "intro": "Force Field is a production-ready security gateway with a 10-step inspection pipeline and a 6-layer AI detection ensemble (regex, ML, token analysis, embeddings, DeBERTa transformer, and LLM-as-judge). Tested on 2,188 held-out samples: 98.9% attack detection, 100% data leak prevention, 0.6% false positive rate. Security processing in ~ 1ms P99. 1,650+ tests passing.",
+  "intro": "ForceField is a production-ready security gateway with a 10-step inspection pipeline and a 6-layer AI detection ensemble (regex, ML, token analysis, embeddings, DeBERTa transformer, and LLM-as-judge). Tested on 2,188 held-out samples: 98.9% attack detection, 100% data leak prevention, 0.6% false positive rate. Security processing in ~ 1ms P99. 1,650+ tests passing.",
   "intro_closing": "This is the foundation layer for runtime authority.",
   "mcp_onramp": {
     "title": "Zero Trust by Default",
-    "description": "Every request is authenticated, every prompt is inspected, every response is scanned. Force Field enforces a fail-closed security posture -- if any of the 10 pipeline steps flags a threat, the request is blocked before it reaches the AI model."
+    "description": "Every request is authenticated, every prompt is inspected, every response is scanned. ForceField enforces a fail-closed security posture -- if any of the 10 pipeline steps flags a threat, the request is blocked before it reaches the AI model."
   },
   "capabilities": {
     "title": "Core Capabilities",
@@ -86,7 +86,7 @@
   },
   "agentic_security": {
     "title": "Agentic AI Security",
-    "description": "Force Field includes an MCP proxy gateway that sits between AI agents and tools. Every tool call is evaluated against security policies before execution. The system tracks multi-step agent workflows and detects escalation patterns, data gathering attacks, and privilege escalation -- with quantitative benchmarks published.",
+    "description": "ForceField includes an MCP proxy gateway that sits between AI agents and tools. Every tool call is evaluated against security policies before execution. The system tracks multi-step agent workflows and detects escalation patterns, data gathering attacks, and privilege escalation -- with quantitative benchmarks published.",
     "items": [
       "Tool call authorization with allow/deny/require-approval policies",
       "Multi-agent orchestration security with trust levels and delegation management",

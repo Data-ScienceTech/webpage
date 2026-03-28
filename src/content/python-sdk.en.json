@@ -2,7 +2,7 @@
   "meta": {
     "title": "ForceField Python SDK -- AI Security in 3 Lines of Code | Data Science Technologies",
     "description": "Open-source Python SDK for prompt injection detection, PII redaction, and LLM security. Install with pip, protect your AI app in minutes.",
-    "keywords": "Python SDK, AI security, prompt injection detection, PII redaction, LLM firewall, pip install, ONNX, guardrails, open source, forcefield, content safety, rate limiting, abuse detection, tool governance"
+    "keywords": "Python SDK, AI security, prompt injection detection, PII redaction, LLM firewall, pip install, ONNX, guardrails, open source, forcefield, content safety, rate limiting, abuse detection, tool governance, command scanning, file protection, Sentinel Mode, vibe coding security, protected paths, AI agent guard"
   },
   "hero": {
     "title": "ForceField Python SDK",
@@ -96,6 +96,21 @@
         "title": "Tool Governance",
         "description": "Policy-driven tool call security with pre-call and post-call inspection. Configurable allow/block/require-approval policies, secret and PII detection in tool results.",
         "icon": "Settings"
+      },
+      {
+        "title": "Command Scanning",
+        "description": "Classify terminal commands for 22 dangerous patterns: rm -rf, curl | sh, chmod 777, reverse shells, credential exfiltration, privilege escalation, crontab persistence, and more. Powers Sentinel Mode in the VS Code extension.",
+        "icon": "Terminal"
+      },
+      {
+        "title": "Filename Scanning",
+        "description": "Detect dangerous file operations on 12 sensitive file patterns: .env, id_rsa, secrets.json, authorized_keys, .pem, shadow, and more. Flags create, delete, and rename operations by severity.",
+        "icon": "FileWarning"
+      },
+      {
+        "title": "Protected Paths",
+        "description": "Designate files and folders as immutable. ProtectedPathSet supports exact, glob, and directory-recursive matching. Integrates with VS Code Sentinel Mode to block agent modifications to critical files.",
+        "icon": "ShieldCheck"
       }
     ]
   },
@@ -125,7 +140,9 @@
       { "cmd": "forcefield scan \"your text here\"", "description": "Scan a single prompt from the terminal" },
       { "cmd": "forcefield selftest", "description": "Run 121 built-in attack prompts and verify detection" },
       { "cmd": "forcefield test https://your-api.com/chat", "description": "Red-team your LLM endpoint with 50+ attacks" },
-      { "cmd": "forcefield audit policy.yaml", "description": "Validate your security policy configuration" }
+      { "cmd": "forcefield audit policy.yaml", "description": "Validate your security policy configuration" },
+      { "cmd": "forcefield scan-command \"rm -rf /\"", "description": "Classify a terminal command for dangerous patterns" },
+      { "cmd": "forcefield scan-filename .env --operation delete", "description": "Check if a file operation is dangerous" }
     ]
   },
   "extras": {
@@ -143,7 +160,7 @@
     "description": "Add ForceField to your CI/CD pipeline. Scans your codebase for prompt injection, PII leaks, and security vulnerabilities on every push.",
     "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
     "marketplace_label": "View on GitHub Marketplace",
-    "code": "- uses: Data-ScienceTech/forcefield@v0.4.0\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
+    "code": "- uses: Data-ScienceTech/forcefield@v0.5.1\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"
   },
   "cta": {
     "pypi": "View on PyPI",
@@ -171,7 +188,7 @@
       ["Latency", "< 1ms (regex), ~5ms (ML)", "~25ms (full pipeline)"],
       ["PII Redaction", "Regex-based", "Regex + NLP + Luhn"],
       ["Streaming Scan", "--", "Real-time SSE interception"],
-      ["Agentic Security", "--", "MCP proxy + tool interception"],
+      ["Agentic Security", "Command + file scanning, Sentinel Mode (VS Code)", "MCP proxy + tool interception"],
       ["Content Safety", "Azure-compatible (Hate/Violence/Sexual/SelfHarm)", "Azure Content Safety integration"],
       ["Rate Limiting", "In-memory token bucket", "Redis-backed distributed"],
       ["Abuse Detection", "Keyword heuristics + optional embeddings", "Embedding anomaly detector"],

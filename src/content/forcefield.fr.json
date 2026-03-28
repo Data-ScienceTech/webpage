@@ -1,18 +1,18 @@
 {
   "meta": {
-    "title": "Force Field Passerelle de Sécurité IA Entreprise — Protection Runtime Prête pour la Production | Data Science Technologies",
-    "description": "Force Field est une passerelle de sécurité prête pour la production qui fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils.",
+    "title": "ForceField Passerelle de Sécurité IA Entreprise — Protection Runtime Prête pour la Production | Data Science Technologies",
+    "description": "ForceField est une passerelle de sécurité prête pour la production qui fournit une inspection, un contrôle et une application en temps réel pour les prompts, les actions des agents et l'utilisation des outils.",
     "keywords": "Passerelle de Sécurité IA Entreprise, Sécurité IA, Détection Injection de Prompts, Protection Runtime, Sécurité IA Agnostique, Sécurité IA Zero-Trust, Sécurité MCP, Proxy MCP, Sécurité Agents IA, Benchmark Passerelle Sécurité IA, Sécurité Streaming LLM, Interception Appels d'Outils IA, Rédaction PII LLM, Sécurité Sorties Structurées, Détection de Menaces DeBERTa"
   },
   "hero": {
-    "title": "Force Field Passerelle de Sécurité IA Entreprise",
+    "title": "ForceField Passerelle de Sécurité IA Entreprise",
     "subtitle": "Sécurisez les Agents IA à l'Exécution"
   },
-  "intro": "Force Field est une passerelle de sécurité prête pour la production avec un pipeline d'inspection en 10 étapes et un ensemble de détection IA à 6 couches (regex, ML, analyse de tokens, embeddings, transformeur DeBERTa et LLM-as-judge). Testé sur 2 188 échantillons de validation : 98,9 % de détection d'attaques, 100 % de prévention des fuites de données, 0,6 % de taux de faux positifs. Traitement de sécurité en ~ 1 ms P99. Plus de 1 650 tests réussis.",
+  "intro": "ForceField est une passerelle de sécurité prête pour la production avec un pipeline d'inspection en 10 étapes et un ensemble de détection IA à 6 couches (regex, ML, analyse de tokens, embeddings, transformeur DeBERTa et LLM-as-judge). Testé sur 2 188 échantillons de validation : 98,9 % de détection d'attaques, 100 % de prévention des fuites de données, 0,6 % de taux de faux positifs. Traitement de sécurité en ~ 1 ms P99. Plus de 1 650 tests réussis.",
   "intro_closing": "C'est la couche fondamentale de l'autorité runtime.",
   "mcp_onramp": {
     "title": "Zero Trust par Défaut",
-    "description": "Chaque requête est authentifiée, chaque prompt est inspecté, chaque réponse est analysée. Force Field applique une posture de sécurité fail-closed -- si l'une des 10 étapes du pipeline signale une menace, la requête est bloquée avant d'atteindre le modèle IA."
+    "description": "Chaque requête est authentifiée, chaque prompt est inspecté, chaque réponse est analysée. ForceField applique une posture de sécurité fail-closed -- si l'une des 10 étapes du pipeline signale une menace, la requête est bloquée avant d'atteindre le modèle IA."
   },
   "capabilities": {
     "title": "Capacités Principales",
@@ -86,7 +86,7 @@
   },
   "agentic_security": {
     "title": "Sécurité de l'IA Agentique",
-    "description": "Force Field inclut une passerelle proxy MCP qui s'interpose entre les agents IA et les outils. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution. Le système suit les workflows multi-étapes des agents et détecte les schémas d'escalade, les attaques de collecte de données et l'escalade de privilèges -- avec des benchmarks quantitatifs publiés.",
+    "description": "ForceField inclut une passerelle proxy MCP qui s'interpose entre les agents IA et les outils. Chaque appel d'outil est évalué selon les politiques de sécurité avant exécution. Le système suit les workflows multi-étapes des agents et détecte les schémas d'escalade, les attaques de collecte de données et l'escalade de privilèges -- avec des benchmarks quantitatifs publiés.",
     "items": [
       "Autorisation des appels d'outils avec politiques autoriser/refuser/approbation requise",
       "Sécurité d'orchestration multi-agents avec niveaux de confiance et gestion de la délégation",

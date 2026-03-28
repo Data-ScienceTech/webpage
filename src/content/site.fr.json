@@ -106,6 +106,7 @@
       "sdk": "Python SDK",
       "benchmarks": "Benchmarks",
       "pricing": "Tarifs",
+      "vscode": "Extension VS Code",
       "docs": "Documentation",
       "privacy": "Confidentialité ForceField",
       "terms": "Conditions ForceField",
@@ -125,6 +126,7 @@
     "sdk": "Python SDK",
     "benchmarks": "Benchmarks",
     "why": "Autorité Runtime",
+    "vscode": "Extension VS Code",
     "agentic": "Sécurité Agentique",
     "architecture": "Architecture",
     "security": "Sécurité",
@@ -133,7 +135,7 @@
   },
   "meta": {
     "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des passerelles de sécurité IA entreprise à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",
-    "keywords": "autorité runtime, sécurité IA agentique, passerelle de sécurité IA entreprise, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité IA zero-trust, sécurité IA entreprise, sécurité MCP, proxy MCP, sécurité agents IA, détection injection de prompts, interception appels d'outils IA, rédaction PII LLM, sécurité streaming LLM"
+    "keywords": "autorité runtime, sécurité IA agentique, passerelle de sécurité IA entreprise, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité IA zero-trust, sécurité IA entreprise, sécurité MCP, proxy MCP, sécurité agents IA, détection injection de prompts, interception appels d'outils IA, rédaction PII LLM, sécurité streaming LLM, sécurité vibe coding, moniteur agents codage IA, mode Sentinelle, sécurité IA VS Code"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

@@ -23,6 +23,7 @@ const { lang, content } = Astro.props;
         <a href="https://forcefield.datasciencetech.ca" class="nav-link font-semibold">{content.nav.product}</a>
         <a href="https://forcefield.datasciencetech.ca/demo-lab" class="nav-link">{content.nav.demo}</a>
         <a href="https://forcefield.datasciencetech.ca/python-sdk" class="nav-link">{content.nav.sdk}</a>
+        <a href={`/${lang === 'en' ? 'en/vscode-extension' : 'fr/extension-vscode'}`} class="nav-link">{content.nav.vscode}</a>
         <a href="https://forcefield.datasciencetech.ca/benchmarks" class="nav-link">{content.nav.benchmarks}</a>
         <a href="https://forcefield.datasciencetech.ca/pricing" class="nav-link">{content.nav.pricing}</a>
         <a href="https://forcefield.datasciencetech.ca/demo-lab" class="btn-primary text-sm !py-2 !px-4">{content.nav.cta}</a>
@@ -66,6 +67,7 @@ const { lang, content } = Astro.props;
         <a href="https://forcefield.datasciencetech.ca" class="nav-link font-semibold">{content.nav.product}</a>
         <a href="https://forcefield.datasciencetech.ca/demo-lab" class="nav-link">{content.nav.demo}</a>
         <a href="https://forcefield.datasciencetech.ca/python-sdk" class="nav-link">{content.nav.sdk}</a>
+        <a href={`/${lang === 'en' ? 'en/vscode-extension' : 'fr/extension-vscode'}`} class="nav-link">{content.nav.vscode}</a>
         <a href="https://forcefield.datasciencetech.ca/benchmarks" class="nav-link">{content.nav.benchmarks}</a>
         <a href="https://forcefield.datasciencetech.ca/pricing" class="nav-link">{content.nav.pricing}</a>
         <a href="https://forcefield.datasciencetech.ca/demo-lab" class="btn-primary text-sm text-center !py-2">{content.nav.cta}</a>

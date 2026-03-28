@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Force Field Benchmark Results — Verified Security Performance | Data Science Technologies",
-    "description": "Published benchmark results for Force Field Enterprise AI Security Gateway: 98.9% attack detection, 100% data leak prevention, 0.3% false positive rate, and sub-millisecond security processing.",
-    "keywords": "AI Security Gateway Benchmark, AI Security Benchmark, Prompt Injection Detection Rate, MCP Security Benchmark, AI Agent Security Testing, DeBERTa Threat Detection, Force Field Performance"
+    "title": "ForceField Benchmark Results — Verified Security Performance | Data Science Technologies",
+    "description": "Published benchmark results for ForceField Enterprise AI Security Gateway: 98.9% attack detection, 100% data leak prevention, 0.3% false positive rate, and sub-millisecond security processing.",
+    "keywords": "AI Security Gateway Benchmark, AI Security Benchmark, Prompt Injection Detection Rate, MCP Security Benchmark, AI Agent Security Testing, DeBERTa Threat Detection, ForceField Performance"
   },
   "hero": {
     "title": "Benchmark Results",
@@ -63,6 +63,6 @@
   },
   "cta": {
     "title": "See It in Action",
-    "description": "Request access to Force Field and verify these numbers against your own workloads."
+    "description": "Request access to ForceField and verify these numbers against your own workloads."
   }
 }

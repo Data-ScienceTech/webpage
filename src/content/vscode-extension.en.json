@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "ForceField for VS Code -- Sentinel Mode for AI Coding Agents | Data Science Technologies",
+    "description": "Real-time security monitor for AI coding agents inside VS Code. Sentinel Mode watches file edits, terminal commands, and dangerous operations by Cursor, Cline, Codex, and other AI agents. Powered by the ForceField Python SDK.",
+    "keywords": "VS Code extension, AI coding agent security, Sentinel Mode, vibe coding security, Cursor agent monitor, Cline security, AI agent file protection, terminal command scanning, protected paths, ForceField VS Code, AI code review, dangerous command detection"
+  },
+  "hero": {
+    "title": "ForceField for VS Code",
+    "subtitle": "Sentinel Mode for AI Coding Agents",
+    "tagline": "Real-time security monitoring for Cursor, Cline, Codex, and every AI agent that writes code in your editor.",
+    "badges": ["Free", "Python 3.9+", "Apache 2.0"]
+  },
+  "stats": [
+    { "value": "22", "label": "Dangerous command patterns" },
+    { "value": "12", "label": "Sensitive file patterns" },
+    { "value": "20+", "label": "Commands available" },
+    { "value": "0", "label": "Telemetry by default" }
+  ],
+  "sentinel": {
+    "title": "Sentinel Mode",
+    "subtitle": "Your AI agent writes code. Sentinel watches everything it does.",
+    "description": "AI coding agents operate inside VS Code -- creating files, running shell commands, and modifying your codebase. Sentinel Mode passively monitors all of this in real-time and alerts you to dangerous activity before it causes damage.",
+    "features": [
+      {
+        "title": "File Edit Monitoring",
+        "description": "Scans every file change (debounced) for PII insertion, prompt injection payloads, and credential leaks.",
+        "icon": "FileEdit"
+      },
+      {
+        "title": "File Operation Interception",
+        "description": "Flags dangerous file creates, deletes, and renames: .env, id_rsa, secrets.json, .pem, authorized_keys, and 12 more patterns.",
+        "icon": "FileWarning"
+      },
+      {
+        "title": "Terminal Command Scanning",
+        "description": "Classifies every shell command for rm -rf, curl | sh, chmod 777, reverse shells, credential exfiltration, privilege escalation, and 22 total dangerous patterns.",
+        "icon": "Terminal"
+      },
+      {
+        "title": "Auto-Kill Dangerous Commands",
+        "description": "Optionally sends Ctrl+C to the terminal the instant a critical command is detected -- before it finishes executing. Then asks you to review.",
+        "icon": "XCircle"
+      }
+    ]
+  },
+  "protection_levels": {
+    "title": "Three Protection Levels",
+    "levels": [
+      {
+        "name": "Monitor",
+        "description": "Log everything, no blocking. See what your AI agent is doing without interrupting it.",
+        "default": true
+      },
+      {
+        "name": "Confirm",
+        "description": "Require human confirmation for all file deletions, renames, and dangerous file creates. Recommended when using AI agents.",
+        "default": false
+      },
+      {
+        "name": "Strict",
+        "description": "Require human confirmation for all file deletions, renames, AND all file creates. Maximum oversight.",
+        "default": false
+      }
+    ]
+  },
+  "protected_paths": {
+    "title": "Protected Paths",
+    "subtitle": "Designate files and folders as untouchable.",
+    "description": "While Sentinel is active, protected paths are unconditionally blocked from deletion and rename -- no dialog, just blocked. Content modifications trigger a save-blocking dialog with an override option.",
+    "examples": [".env", ".gitignore", "*.pem", "src/config/**", "id_rsa", "docker-compose.yml"],
+    "features": [
+      "Works at any protection level, including Monitor",
+      "Exact, glob, and directory-recursive matching",
+      "External changes detected via FileSystemWatcher",
+      "Lock icon in editor title bar for protected files"
+    ]
+  },
+  "scanning": {
+    "title": "Scanning & Detection",
+    "items": [
+      {
+        "title": "Scan Current File",
+        "description": "Detect prompt injection, data exfiltration, jailbreak attempts, and PII with inline diagnostics.",
+        "shortcut": "Ctrl+Shift+F5"
+      },
+      {
+        "title": "Redact PII",
+        "description": "Find and replace SSN, credit card, email, phone, IP, IBAN, and 12 more PII types. Five redaction strategies.",
+        "shortcut": "Ctrl+Shift+F6"
+      },
+      {
+        "title": "Moderate Content",
+        "description": "Check LLM outputs for hate speech, violence, self-harm, malware code, credential leaks, and jailbreak indicators."
+      },
+      {
+        "title": "Content Safety Check",
+        "description": "Azure Content Safety-compatible scoring for Hate, Violence, Sexual, and SelfHarm categories."
+      },
+      {
+        "title": "Validate Chat Template",
+        "description": "Detect backdoored Jinja2 chat templates per ICLR 2026 research: hardcoded instructions, base64 payloads, suspicious macros."
+      },
+      {
+        "title": "Self-Test Report",
+        "description": "Run 121 attack prompts and see results in a rich webview with detection rate, per-attack results, and risk scores."
+      }
+    ]
+  },
+  "gateway": {
+    "title": "Cloud Gateway Integration",
+    "description": "Connect to the ForceField Gateway for DeBERTa transformer-powered detection. Sign in directly from VS Code, manage API keys, and auto-configure the gateway -- all without leaving the editor.",
+    "features": [
+      "Sign in / create account from the Command Palette",
+      "API key management (list, create, revoke)",
+      "Auto-configure gateway or set manually",
+      "Falls back to local scanning if gateway is unreachable"
+    ]
+  },
+  "architecture": {
+    "title": "How It Works",
+    "items": [
+      "Persistent Python daemon over JSON-RPC -- no cold starts",
+      "Powered by the ForceField SDK (same scan_command / scan_filename APIs)",
+      "Inline diagnostics with severity-appropriate highlighting",
+      "PII highlighted with exact character positions and hover tooltips",
+      "Sentinel state survives VS Code restarts (last 500 events, cumulative stats)"
+    ]
+  },
+  "telemetry": {
+    "title": "Privacy-Safe Telemetry",
+    "description": "When signed in, privacy-safe telemetry is batched and synced every 60 seconds. No filenames, file content, or raw commands are ever sent -- only event types, severities, counts, and hashes. Disable with one setting."
+  },
+  "cta": {
+    "marketplace": "Install from VS Code Marketplace",
+    "marketplace_url": "https://marketplace.visualstudio.com/items?itemName=DataScienceTech.forcefield",
+    "sdk": "Powered by ForceField Python SDK",
+    "sdk_url": "/en/python-sdk",
+    "gateway": "Connect to ForceField Gateway",
+    "gateway_url": "/en/force-field"
+  }
+}

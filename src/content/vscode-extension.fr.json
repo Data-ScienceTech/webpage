@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "ForceField pour VS Code -- Mode Sentinelle pour agents de codage IA | Data Science Technologies",
+    "description": "Moniteur de securite en temps reel pour les agents de codage IA dans VS Code. Le mode Sentinelle surveille les modifications de fichiers, les commandes terminal et les operations dangereuses effectuees par Cursor, Cline, Codex et autres agents IA.",
+    "keywords": "extension VS Code, securite agents codage IA, mode Sentinelle, securite vibe coding, moniteur agent Cursor, securite Cline, protection fichiers agent IA, analyse commandes terminal, chemins proteges, ForceField VS Code, revue code IA, detection commandes dangereuses"
+  },
+  "hero": {
+    "title": "ForceField pour VS Code",
+    "subtitle": "Mode Sentinelle pour agents de codage IA",
+    "tagline": "Surveillance de securite en temps reel pour Cursor, Cline, Codex et chaque agent IA qui ecrit du code dans votre editeur.",
+    "badges": ["Gratuit", "Python 3.9+", "Apache 2.0"]
+  },
+  "stats": [
+    { "value": "22", "label": "Motifs de commandes dangereuses" },
+    { "value": "12", "label": "Motifs de fichiers sensibles" },
+    { "value": "20+", "label": "Commandes disponibles" },
+    { "value": "0", "label": "Telemetrie par defaut" }
+  ],
+  "sentinel": {
+    "title": "Mode Sentinelle",
+    "subtitle": "Votre agent IA ecrit du code. Sentinelle surveille tout ce qu'il fait.",
+    "description": "Les agents de codage IA operent a l'interieur de VS Code -- creant des fichiers, executant des commandes shell et modifiant votre base de code. Le mode Sentinelle surveille passivement tout cela en temps reel et vous alerte des activites dangereuses avant qu'elles ne causent des dommages.",
+    "features": [
+      {
+        "title": "Surveillance des modifications",
+        "description": "Analyse chaque modification de fichier pour l'insertion de DPI, les charges utiles d'injection de prompts et les fuites d'identifiants.",
+        "icon": "FileEdit"
+      },
+      {
+        "title": "Interception des operations",
+        "description": "Signale les creations, suppressions et renommages dangereux : .env, id_rsa, secrets.json, .pem, authorized_keys et 12 autres motifs.",
+        "icon": "FileWarning"
+      },
+      {
+        "title": "Analyse des commandes terminal",
+        "description": "Classifie chaque commande shell pour rm -rf, curl | sh, chmod 777, reverse shells, exfiltration d'identifiants, escalade de privileges et 22 motifs dangereux au total.",
+        "icon": "Terminal"
+      },
+      {
+        "title": "Arret automatique des commandes",
+        "description": "Envoie optionnellement Ctrl+C au terminal des qu'une commande critique est detectee -- avant qu'elle ne finisse de s'executer. Puis vous demande de verifier.",
+        "icon": "XCircle"
+      }
+    ]
+  },
+  "protection_levels": {
+    "title": "Trois niveaux de protection",
+    "levels": [
+      {
+        "name": "Surveillance",
+        "description": "Tout journaliser, aucun blocage. Voyez ce que votre agent IA fait sans l'interrompre.",
+        "default": true
+      },
+      {
+        "name": "Confirmation",
+        "description": "Exiger une confirmation humaine pour toutes les suppressions, renommages et creations de fichiers dangereux. Recommande avec les agents IA.",
+        "default": false
+      },
+      {
+        "name": "Strict",
+        "description": "Exiger une confirmation humaine pour toutes les suppressions, renommages ET toutes les creations de fichiers. Surveillance maximale.",
+        "default": false
+      }
+    ]
+  },
+  "protected_paths": {
+    "title": "Chemins proteges",
+    "subtitle": "Designez des fichiers et dossiers comme intouchables.",
+    "description": "Pendant que Sentinelle est actif, les chemins proteges sont inconditionnellement bloques contre la suppression et le renommage -- pas de dialogue, juste bloque. Les modifications de contenu declenchent un dialogue de blocage de sauvegarde avec une option de remplacement.",
+    "examples": [".env", ".gitignore", "*.pem", "src/config/**", "id_rsa", "docker-compose.yml"],
+    "features": [
+      "Fonctionne a tous les niveaux de protection, y compris Surveillance",
+      "Correspondance exacte, glob et recursive par repertoire",
+      "Changements externes detectes via FileSystemWatcher",
+      "Icone de cadenas dans la barre de titre pour les fichiers proteges"
+    ]
+  },
+  "scanning": {
+    "title": "Analyse et detection",
+    "items": [
+      {
+        "title": "Analyser le fichier courant",
+        "description": "Detecter l'injection de prompts, l'exfiltration de donnees, les tentatives de jailbreak et les DPI avec des diagnostics en ligne.",
+        "shortcut": "Ctrl+Shift+F5"
+      },
+      {
+        "title": "Rediger les DPI",
+        "description": "Trouver et remplacer NAS, carte de credit, courriel, telephone, IP, IBAN et 12 autres types de DPI. Cinq strategies de redaction.",
+        "shortcut": "Ctrl+Shift+F6"
+      },
+      {
+        "title": "Moderer le contenu",
+        "description": "Verifier les sorties LLM pour les discours haineux, la violence, l'automutilation, le code malveillant, les fuites d'identifiants et les indicateurs de jailbreak."
+      },
+      {
+        "title": "Verification de securite du contenu",
+        "description": "Notation compatible Azure Content Safety pour les categories Haine, Violence, Sexuel et Automutilation."
+      },
+      {
+        "title": "Valider le modele de chat",
+        "description": "Detecter les modeles de chat Jinja2 compromis selon la recherche ICLR 2026 : instructions codees en dur, charges base64, macros suspectes."
+      },
+      {
+        "title": "Rapport d'auto-test",
+        "description": "Executer 121 prompts d'attaque et voir les resultats dans un webview riche avec taux de detection, resultats par attaque et scores de risque."
+      }
+    ]
+  },
+  "gateway": {
+    "title": "Integration passerelle cloud",
+    "description": "Connectez-vous a la passerelle ForceField pour une detection alimentee par le transformeur DeBERTa. Connectez-vous directement depuis VS Code, gerez les cles API et configurez automatiquement la passerelle -- le tout sans quitter l'editeur.",
+    "features": [
+      "Connexion / creation de compte depuis la palette de commandes",
+      "Gestion des cles API (lister, creer, revoquer)",
+      "Configuration automatique ou manuelle de la passerelle",
+      "Repli sur l'analyse locale si la passerelle est injoignable"
+    ]
+  },
+  "architecture": {
+    "title": "Comment ca fonctionne",
+    "items": [
+      "Daemon Python persistant via JSON-RPC -- aucun demarrage a froid",
+      "Alimente par le SDK ForceField (memes API scan_command / scan_filename)",
+      "Diagnostics en ligne avec mise en evidence adaptee a la severite",
+      "DPI mis en evidence avec positions exactes et infobulles au survol",
+      "L'etat Sentinelle survit aux redemarrages de VS Code (500 derniers evenements, statistiques cumulatives)"
+    ]
+  },
+  "telemetry": {
+    "title": "Telemetrie respectueuse de la vie privee",
+    "description": "Lorsque connecte, la telemetrie anonymisee est regroupee et synchronisee toutes les 60 secondes. Aucun nom de fichier, contenu ou commande brute n'est jamais envoye -- seulement les types d'evenements, severites, compteurs et hachages. Desactivable en un parametre."
+  },
+  "cta": {
+    "marketplace": "Installer depuis le VS Code Marketplace",
+    "marketplace_url": "https://marketplace.visualstudio.com/items?itemName=DataScienceTech.forcefield",
+    "sdk": "Alimente par le SDK Python ForceField",
+    "sdk_url": "/fr/python-sdk",
+    "gateway": "Connecter a la passerelle ForceField",
+    "gateway_url": "/fr/force-field"
+  }
+}
