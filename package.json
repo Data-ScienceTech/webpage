@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,astro,json,css,md}\""
   },
-  "packageManager": "pnpm@8.15.0",
+  "packageManager": "pnpm@9.12.3",
   "dependencies": {
     "@astrojs/react": "^3.6.2",
     "@astrojs/sitemap": "3.1.6",

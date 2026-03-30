@@ -1,0 +1,14 @@
+node_modules
+.git
+.github
+.netlify
+.astro
+.venv
+dist
+*.md
+*.docx
+*.txt
+.editorconfig
+.eslintrc.cjs
+.prettierrc.json
+netlify.toml
