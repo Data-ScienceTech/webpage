@@ -107,6 +107,7 @@
       "benchmarks": "Benchmarks",
       "pricing": "Pricing",
       "vscode": "VS Code Extension",
+      "jetbrains": "JetBrains Plugin",
       "docs": "Documentation",
       "privacy": "ForceField Privacy",
       "terms": "ForceField Terms",
@@ -127,6 +128,7 @@
     "benchmarks": "Benchmarks",
     "why": "Why Runtime Authority",
     "vscode": "VS Code Extension",
+    "jetbrains": "JetBrains Plugin",
     "agentic": "Agentic Security",
     "architecture": "Architecture",
     "security": "Security",
@@ -135,7 +137,7 @@
   },
   "meta": {
     "description": "Data Science Technologies provides runtime authority for agentic AI — from enterprise AI security gateways to execution-level orchestration and governance. Production-ready AI security for the enterprise.",
-    "keywords": "runtime authority, agentic AI security, enterprise AI security gateway, AI execution control, AI governance, AI control plane, zero-trust AI security, enterprise AI security, MCP security, MCP proxy, AI agent security, prompt injection detection, AI tool call interception, PII redaction LLM, streaming LLM security, vibe coding security, AI coding agent monitor, Sentinel Mode, VS Code AI security"
+    "keywords": "runtime authority, agentic AI security, enterprise AI security gateway, AI execution control, AI governance, AI control plane, zero-trust AI security, enterprise AI security, MCP security, MCP proxy, AI agent security, prompt injection detection, AI tool call interception, PII redaction LLM, streaming LLM security, vibe coding security, AI coding agent monitor, Sentinel Mode, VS Code AI security, JetBrains plugin, PyCharm AI security, IntelliJ AI security, WebStorm AI security"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

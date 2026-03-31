@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "ForceField pour les IDE JetBrains -- Scanner de securite IA | Data Science Technologies",
+    "description": "Detectez les injections de prompts, fuites de DPI, jailbreaks et attaques LLM directement dans PyCharm, IntelliJ, WebStorm et tous les IDE JetBrains. Analysez des selections, auditez des fichiers, lancez des evaluations de securite. Tout en local -- aucune donnee ne quitte votre machine.",
+    "keywords": "plugin JetBrains, securite IA PyCharm, securite IA IntelliJ, securite IA WebStorm, detection injection prompts IDE, scanner DPI IDE, detection attaques LLM, detection jailbreak, scanner securite IA, ForceField JetBrains, audit code IA, evaluation securite IDE"
+  },
+  "hero": {
+    "title": "ForceField pour les IDE JetBrains",
+    "subtitle": "Scanner de securite IA pour PyCharm, IntelliJ, WebStorm et plus",
+    "tagline": "Detectez les injections de prompts, fuites de DPI, jailbreaks et attaques LLM directement dans votre IDE. Toute l'analyse est locale -- aucune donnee ne quitte votre machine.",
+    "badges": ["Gratuit", "Tous les IDE JetBrains", "Apache 2.0", "0 Telemetrie"]
+  },
+  "stats": [
+    { "value": "116", "label": "Prompts d'attaque integres" },
+    { "value": "18", "label": "Types de DPI detectes" },
+    { "value": "13+", "label": "Categories d'attaques" },
+    { "value": "0", "label": "Donnees envoyees" }
+  ],
+  "features": {
+    "title": "Tout le necessaire pour securiser le code IA",
+    "subtitle": "Six outils integres dans votre flux de travail IDE.",
+    "items": [
+      {
+        "title": "Analyser la selection",
+        "description": "Clic droit sur n'importe quel texte pour scanner les injections de prompts, l'escalade de roles, l'exfiltration de donnees et 13+ categories d'attaques instantanement.",
+        "icon": "scan"
+      },
+      {
+        "title": "Auditer le fichier",
+        "description": "Analysez le fichier courant pour les prompts codes en dur, les DPI (NAS, cartes de credit, cles API, emails) et les problemes de securite.",
+        "icon": "file"
+      },
+      {
+        "title": "Auditer le projet",
+        "description": "Analysez l'integralite de votre repertoire de projet en un clic. Obtenez un rapport complet de chaque probleme de securite dans tous les fichiers.",
+        "icon": "folder"
+      },
+      {
+        "title": "Auto-test",
+        "description": "Executez 116 prompts d'attaque integres pour verifier la detection. Atteint 100% de taux de detection avec l'analyse ML.",
+        "icon": "check"
+      },
+      {
+        "title": "Evaluation de securite",
+        "description": "Lancez la suite d'evaluation de securite complete avec des rapports par categorie sur toutes les 13+ categories d'attaques.",
+        "icon": "shield"
+      },
+      {
+        "title": "Panneau de resultats",
+        "description": "Fenetre d'outils dediee avec sortie code couleur. Visualisez la categorie de menace, la severite et les details en un coup d'oeil.",
+        "icon": "panel"
+      }
+    ]
+  },
+  "detection": {
+    "title": "Ce qu'il detecte",
+    "categories": [
+      {
+        "name": "Injection de prompts",
+        "description": "10 categories regex, 60+ motifs, ensemble ML TF-IDF pour une detection haute precision."
+      },
+      {
+        "name": "Exposition des DPI",
+        "description": "18 types : NAS, carte de credit, email, telephone, IBAN, JWT, cles API, adresses IP et plus."
+      },
+      {
+        "name": "Jailbreak et escalade de roles",
+        "description": "Motifs DAN, detournement de persona, remplacement d'autorite et 13+ variantes d'escalade de roles."
+      },
+      {
+        "name": "Extraction de prompts systeme",
+        "description": "Detecte les tentatives de fuite de prompts systeme, fichiers d'instructions et secrets de configuration."
+      },
+      {
+        "name": "Exfiltration de donnees",
+        "description": "Charges JSON, destinations obfusquees, donnees encodees et motifs d'acheminement d'exfiltration."
+      },
+      {
+        "name": "Anti-obfuscation",
+        "description": "Caracteres zero-largeur, homonymes visuels, leetspeak, evasion base64 et attaques de normalisation Unicode."
+      }
+    ]
+  },
+  "how_it_works": {
+    "title": "Comment ca fonctionne",
+    "items": [
+      "Encapsule le CLI Python ForceField -- le meme moteur qui alimente la passerelle cloud ForceField",
+      "Toute l'analyse s'execute localement : aucun prompt, code ou DPI ne quitte jamais votre machine",
+      "Necessite Python 3.9+ avec forcefield installe : pip install forcefield[ml]",
+      "Accessible via le menu Outils > ForceField ou le menu contextuel clic droit",
+      "Les resultats s'affichent en temps reel dans une fenetre d'outils dediee"
+    ]
+  },
+  "setup": {
+    "title": "Demarrer en 3 etapes",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Installer le SDK Python",
+        "code": "pip install forcefield[ml]"
+      },
+      {
+        "number": "2",
+        "title": "Installer le plugin JetBrains",
+        "description": "Recherchez 'ForceField AI Security Scanner' dans Parametres > Plugins > Marketplace"
+      },
+      {
+        "number": "3",
+        "title": "Commencer a analyser",
+        "description": "Ouvrez n'importe quel fichier et utilisez Outils > ForceField, ou clic droit sur le texte selectionne"
+      }
+    ]
+  },
+  "compatible_ides": {
+    "title": "Fonctionne dans tous les IDE JetBrains",
+    "description": "Compatibilite totale avec JetBrains 2024.1 et versions ulterieures sur toutes les gammes de produits.",
+    "ides": [
+      "PyCharm", "IntelliJ IDEA", "WebStorm", "GoLand", "Rider",
+      "CLion", "RubyMine", "PhpStorm", "DataGrip", "DataSpell"
+    ]
+  },
+  "also_available": {
+    "title": "Aussi disponible sur",
+    "links": [
+      { "label": "Extension VS Code", "url": "/fr/extension-vscode", "description": "Mode Sentinelle -- surveillance d'agents en temps reel" },
+      { "label": "SDK Python", "url": "https://pypi.org/project/forcefield/", "description": "pip install forcefield" },
+      { "label": "Passerelle ForceField", "url": "/fr/force-field", "description": "Pipeline de securite IA a l'echelle cloud" }
+    ]
+  },
+  "cta": {
+    "marketplace": "Installer depuis JetBrains Marketplace",
+    "marketplace_url": "https://plugins.jetbrains.com/plugin/30985-forcefield-ai-security-scanner",
+    "sdk": "Alimente par le SDK Python ForceField",
+    "sdk_url": "/fr/python-sdk",
+    "gateway": "Connecter a la passerelle ForceField",
+    "gateway_url": "/fr/force-field",
+    "vscode": "Aussi disponible pour VS Code",
+    "vscode_url": "/fr/extension-vscode"
+  }
+}

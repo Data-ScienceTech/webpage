@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "ForceField for JetBrains IDEs -- AI Security Scanner | Data Science Technologies",
+    "description": "Detect prompt injection, PII leaks, jailbreaks, and LLM attacks directly in PyCharm, IntelliJ, WebStorm, and every JetBrains IDE. Scan selections, audit files, run security evals. All local -- no data leaves your machine.",
+    "keywords": "JetBrains plugin, PyCharm AI security, IntelliJ AI security, WebStorm AI security, prompt injection detection IDE, PII scanner IDE, LLM attack detection, jailbreak detection, AI security scanner, ForceField JetBrains, AI code audit, security eval IDE"
+  },
+  "hero": {
+    "title": "ForceField for JetBrains IDEs",
+    "subtitle": "AI Security Scanner for PyCharm, IntelliJ, WebStorm and beyond",
+    "tagline": "Detect prompt injection, PII leaks, jailbreaks, and LLM attacks directly in your IDE. All scanning is local -- no data leaves your machine.",
+    "badges": ["Free", "All JetBrains IDEs", "Apache 2.0", "0 Telemetry"]
+  },
+  "stats": [
+    { "value": "116", "label": "Built-in attack prompts" },
+    { "value": "18", "label": "PII types detected" },
+    { "value": "13+", "label": "Attack categories" },
+    { "value": "0", "label": "Data leaves machine" }
+  ],
+  "features": {
+    "title": "Everything You Need to Secure AI Code",
+    "subtitle": "Six tools built into your IDE workflow.",
+    "items": [
+      {
+        "title": "Scan Selection",
+        "description": "Right-click any text to scan for prompt injection, role escalation, data exfiltration, and 13+ attack categories instantly.",
+        "icon": "scan"
+      },
+      {
+        "title": "Audit File",
+        "description": "Scan the current file for hardcoded prompts, PII (SSN, credit cards, API keys, emails), and security issues in one action.",
+        "icon": "file"
+      },
+      {
+        "title": "Audit Project",
+        "description": "Scan your entire project directory in one click. Get a full report of every security issue across all files.",
+        "icon": "folder"
+      },
+      {
+        "title": "Selftest",
+        "description": "Run 116 built-in attack prompts to verify detection. Achieves 100% detection rate with ML-powered scanning.",
+        "icon": "check"
+      },
+      {
+        "title": "Security Eval",
+        "description": "Run the full security evaluation suite with per-category reporting across all 13+ attack categories.",
+        "icon": "shield"
+      },
+      {
+        "title": "Results Panel",
+        "description": "Dedicated tool window with color-coded output. See threat category, severity, and details at a glance.",
+        "icon": "panel"
+      }
+    ]
+  },
+  "detection": {
+    "title": "What It Detects",
+    "categories": [
+      {
+        "name": "Prompt Injection",
+        "description": "10 regex categories, 60+ patterns, TF-IDF ML ensemble for high-accuracy detection."
+      },
+      {
+        "name": "PII Exposure",
+        "description": "18 types: SSN, credit card, email, phone, IBAN, JWT, API keys, IP addresses, and more."
+      },
+      {
+        "name": "Jailbreak & Role Escalation",
+        "description": "DAN patterns, persona hijacking, authority override, and 13+ role escalation variants."
+      },
+      {
+        "name": "System Prompt Extraction",
+        "description": "Detects attempts to leak system prompts, instruction files, and configuration secrets."
+      },
+      {
+        "name": "Data Exfiltration",
+        "description": "JSON payloads, obfuscated destinations, encoded data, and exfiltration routing patterns."
+      },
+      {
+        "name": "Anti-Obfuscation",
+        "description": "Zero-width chars, homoglyphs, leetspeak, base64 evasion, and Unicode normalization attacks."
+      }
+    ]
+  },
+  "how_it_works": {
+    "title": "How It Works",
+    "items": [
+      "Wraps the ForceField Python CLI -- the same engine powering the ForceField cloud gateway",
+      "All scanning runs locally: no prompts, code, or PII ever leaves your machine",
+      "Requires Python 3.9+ with forcefield installed: pip install forcefield[ml]",
+      "Works through Tools > ForceField menu or right-click context menu",
+      "Results stream into a dedicated tool window in real time"
+    ]
+  },
+  "setup": {
+    "title": "Get Started in 3 Steps",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Install the Python SDK",
+        "code": "pip install forcefield[ml]"
+      },
+      {
+        "number": "2",
+        "title": "Install the JetBrains Plugin",
+        "description": "Search 'ForceField AI Security Scanner' in Settings > Plugins > Marketplace"
+      },
+      {
+        "number": "3",
+        "title": "Start Scanning",
+        "description": "Open any file and use Tools > ForceField, or right-click selected text"
+      }
+    ]
+  },
+  "compatible_ides": {
+    "title": "Works in Every JetBrains IDE",
+    "description": "Full compatibility with JetBrains 2024.1 and newer across all product lines.",
+    "ides": [
+      "PyCharm", "IntelliJ IDEA", "WebStorm", "GoLand", "Rider",
+      "CLion", "RubyMine", "PhpStorm", "DataGrip", "DataSpell"
+    ]
+  },
+  "also_available": {
+    "title": "Also Available On",
+    "links": [
+      { "label": "VS Code Extension", "url": "/en/vscode-extension", "description": "Sentinel Mode -- real-time agent monitoring" },
+      { "label": "Python SDK", "url": "https://pypi.org/project/forcefield/", "description": "pip install forcefield" },
+      { "label": "ForceField Gateway", "url": "/en/force-field", "description": "Cloud-scale AI security pipeline" }
+    ]
+  },
+  "cta": {
+    "marketplace": "Install from JetBrains Marketplace",
+    "marketplace_url": "https://plugins.jetbrains.com/plugin/30985-forcefield-ai-security-scanner",
+    "sdk": "Powered by ForceField Python SDK",
+    "sdk_url": "/en/python-sdk",
+    "gateway": "Connect to ForceField Gateway",
+    "gateway_url": "/en/force-field",
+    "vscode": "Also available for VS Code",
+    "vscode_url": "/en/vscode-extension"
+  }
+}

@@ -136,6 +136,8 @@
     "sdk": "Powered by ForceField Python SDK",
     "sdk_url": "/en/python-sdk",
     "gateway": "Connect to ForceField Gateway",
-    "gateway_url": "/en/force-field"
+    "gateway_url": "/en/force-field",
+    "jetbrains": "Also available for JetBrains IDEs",
+    "jetbrains_url": "/en/jetbrains-plugin"
   }
 }
