@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Legal Documents | Data Science Technologies",
+    "description": "Privacy policies, terms of service, acceptable use policy, and responsible disclosure for ForceField and Data Science Technologies products."
+  },
+  "hero": {
+    "badge": "Legal & Compliance",
+    "title": "Legal Documents",
+    "subtitle": "All legal documents for ForceField and Data Science Technologies products, organized by category."
+  },
+  "categories": [
+    {
+      "id": "privacy",
+      "title": "Privacy",
+      "icon": "shield",
+      "documents": [
+        {
+          "title": "ForceField Privacy Policy",
+          "description": "How Force Field collects, uses, and protects personal data processed through the AI security gateway.",
+          "href": "/en/privacy",
+          "tag": "Privacy"
+        },
+        {
+          "title": "Scanner Privacy Addendum",
+          "description": "Additional privacy terms specific to the ForceField Scanner service and how scan data is handled.",
+          "href": "/en/scanner-privacy",
+          "tag": "Privacy"
+        },
+        {
+          "title": "Website Privacy Policy",
+          "description": "Privacy practices for this website, including cookies, analytics, and contact form data.",
+          "href": "/en/privacy-policy",
+          "tag": "Privacy"
+        }
+      ]
+    },
+    {
+      "id": "terms",
+      "title": "Terms of Service",
+      "icon": "document",
+      "documents": [
+        {
+          "title": "ForceField Terms of Service",
+          "description": "Terms governing use of the ForceField AI security gateway, API, and platform services.",
+          "href": "/en/terms",
+          "tag": "Terms"
+        },
+        {
+          "title": "Scanner Terms of Service",
+          "description": "Terms specific to the ForceField Scanner service, including scan limits and data retention.",
+          "href": "/en/scanner-terms",
+          "tag": "Terms"
+        },
+        {
+          "title": "Website Terms of Use",
+          "description": "Terms governing your use of this website and its content.",
+          "href": "/en/terms-of-use",
+          "tag": "Terms"
+        }
+      ]
+    },
+    {
+      "id": "policies",
+      "title": "Policies",
+      "icon": "check",
+      "documents": [
+        {
+          "title": "Acceptable Use Policy",
+          "description": "Rules governing appropriate and prohibited uses of ForceField products and services.",
+          "href": "/en/acceptable-use",
+          "tag": "Policy"
+        },
+        {
+          "title": "Responsible Disclosure",
+          "description": "How to report security vulnerabilities in ForceField products and our commitment to security researchers.",
+          "href": "/en/responsible-disclosure",
+          "tag": "Security"
+        }
+      ]
+    }
+  ],
+  "entity": {
+    "label": "Legal Entity",
+    "name": "9558-6616 Québec Inc.",
+    "contact_label": "Legal inquiries",
+    "contact": "legal@datasciencetech.ca"
+  }
+}

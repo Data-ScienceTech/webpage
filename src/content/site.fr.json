@@ -109,14 +109,8 @@
       "vscode": "Extension VS Code",
       "jetbrains": "Plugin JetBrains",
       "docs": "Documentation",
-      "privacy": "Confidentialité ForceField",
-      "terms": "Conditions ForceField",
-      "scannerTerms": "Conditions du Scanner",
-      "scannerPrivacy": "Confidentialité du Scanner",
-      "aup": "Utilisation acceptable",
-      "disclosure": "Divulgation responsable",
-      "websitePrivacy": "Politique de confidentialité du site",
-      "websiteTerms": "Conditions d'utilisation du site"
+      "legalHeading": "Légal",
+      "legal": "Documents légaux"
     },
     "copyright": "© 2026 Data Science Technologies. Tous droits réservés."
   },

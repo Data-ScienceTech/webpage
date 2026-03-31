@@ -109,14 +109,8 @@
       "vscode": "VS Code Extension",
       "jetbrains": "JetBrains Plugin",
       "docs": "Documentation",
-      "privacy": "ForceField Privacy",
-      "terms": "ForceField Terms",
-      "scannerTerms": "Scanner Terms",
-      "scannerPrivacy": "Scanner Privacy Addendum",
-      "aup": "Acceptable Use Policy",
-      "disclosure": "Responsible Disclosure",
-      "websitePrivacy": "Website Privacy Policy",
-      "websiteTerms": "Website Terms of Use"
+      "legalHeading": "Legal",
+      "legal": "Legal Documents"
     },
     "copyright": "© 2026 Data Science Technologies. All rights reserved."
   },

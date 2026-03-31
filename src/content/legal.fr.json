@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Documents Légaux | Data Science Technologies",
+    "description": "Politiques de confidentialité, conditions d'utilisation, politique d'utilisation acceptable et divulgation responsable pour les produits ForceField et Data Science Technologies."
+  },
+  "hero": {
+    "badge": "Légal & Conformité",
+    "title": "Documents Légaux",
+    "subtitle": "Tous les documents légaux pour les produits ForceField et Data Science Technologies, organisés par catégorie."
+  },
+  "categories": [
+    {
+      "id": "confidentialite",
+      "title": "Confidentialité",
+      "icon": "shield",
+      "documents": [
+        {
+          "title": "Politique de confidentialité ForceField",
+          "description": "Comment Force Field collecte, utilise et protège les données personnelles traitées via la passerelle de sécurité IA.",
+          "href": "/fr/confidentialite",
+          "tag": "Confidentialité"
+        },
+        {
+          "title": "Addendum de confidentialité du Scanner",
+          "description": "Conditions de confidentialité supplémentaires spécifiques au service ForceField Scanner et à la gestion des données de scan.",
+          "href": "/fr/confidentialite-scanner",
+          "tag": "Confidentialité"
+        },
+        {
+          "title": "Politique de confidentialité du site",
+          "description": "Pratiques de confidentialité pour ce site web, incluant les cookies, les analyses et les données de formulaire de contact.",
+          "href": "/fr/politique-de-confidentialite",
+          "tag": "Confidentialité"
+        }
+      ]
+    },
+    {
+      "id": "conditions",
+      "title": "Conditions d'utilisation",
+      "icon": "document",
+      "documents": [
+        {
+          "title": "Conditions d'utilisation ForceField",
+          "description": "Conditions régissant l'utilisation de la passerelle de sécurité IA ForceField, de l'API et des services de la plateforme.",
+          "href": "/fr/conditions",
+          "tag": "Conditions"
+        },
+        {
+          "title": "Conditions d'utilisation du Scanner",
+          "description": "Conditions spécifiques au service ForceField Scanner, incluant les limites de scan et la rétention des données.",
+          "href": "/fr/conditions-scanner",
+          "tag": "Conditions"
+        },
+        {
+          "title": "Conditions d'utilisation du site",
+          "description": "Conditions régissant votre utilisation de ce site web et de son contenu.",
+          "href": "/fr/conditions-dutilisation",
+          "tag": "Conditions"
+        }
+      ]
+    },
+    {
+      "id": "politiques",
+      "title": "Politiques",
+      "icon": "check",
+      "documents": [
+        {
+          "title": "Politique d'utilisation acceptable",
+          "description": "Règles régissant les utilisations appropriées et interdites des produits et services ForceField.",
+          "href": "/fr/utilisation-acceptable",
+          "tag": "Politique"
+        },
+        {
+          "title": "Divulgation responsable",
+          "description": "Comment signaler des vulnérabilités de sécurité dans les produits ForceField et notre engagement envers les chercheurs en sécurité.",
+          "href": "/fr/divulgation-responsable",
+          "tag": "Sécurité"
+        }
+      ]
+    }
+  ],
+  "entity": {
+    "label": "Entité légale",
+    "name": "9558-6616 Québec Inc.",
+    "contact_label": "Demandes légales",
+    "contact": "legal@datasciencetech.ca"
+  }
+}
