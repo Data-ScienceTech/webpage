@@ -21,7 +21,7 @@
         "title": "6-Layer Threat Detection",
         "items": [
           "352 WAF patterns across 11 attack types",
-          "ML classifier (TF-IDF) + DeBERTa transformer (184M params)",
+          "ML classifier (TF-IDF) + fine-tuned DistilBERT injection classifier (tool results) + DeBERTa transformer (184M params)",
           "LLM-as-judge for novel/uncertain attacks",
           "Fail-closed: any layer flags it, prompt is blocked"
         ],
@@ -73,9 +73,9 @@
     "title": "10-Step Security Pipeline",
     "steps": [
       { "number": 1, "name": "Token Budget", "description": "Enforce per-key usage limits" },
-      { "number": 2, "name": "Tool Result Inspection", "description": "Scan tool/function results for PII, secrets, injection" },
+      { "number": 2, "name": "Tool Result Inspection", "description": "Scan tool/function results for PII, secrets, injection — powered by a fine-tuned DistilBERT classifier (F1=0.992, FPR=0.8%)" },
       { "number": 3, "name": "Image Scanner", "description": "Detect attacks hidden in images (OCR, steganography)" },
-      { "number": 4, "name": "6-Layer AI Detection", "description": "Regex + ML + DeBERTa + LLM-as-judge ensemble" },
+      { "number": 4, "name": "6-Layer AI Detection", "description": "Regex + ML + DistilBERT injection classifier + DeBERTa + LLM-as-judge ensemble" },
       { "number": 5, "name": "Streaming Security", "description": "Scan responses in real-time, halt mid-stream" },
       { "number": 6, "name": "Tool Call Interception", "description": "Block unauthorized AI agent actions" },
       { "number": 7, "name": "PII Redaction", "description": "Strip personal data from responses" },
@@ -93,7 +93,7 @@
       "Chain-of-action attack detection (4 pattern types: data exfil, privilege escalation, recon, rapid tool calls)",
       "Per-agent, per-tool rate limiting (token bucket)",
       "Schema validation for tool inputs",
-      "Result inspection: PII, secrets, and injection scanning in tool outputs",
+      "Result inspection: PII, secrets, and injection scanning in tool outputs (fine-tuned DistilBERT, 99.2% recall, 0.8% FPR on 7 evasion categories)",
       "OpenShell sandbox integration: graduated enforcement routes risky tools to isolated containers"
     ]
   },

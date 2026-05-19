@@ -21,7 +21,7 @@
         "title": "Détection de Menaces à 6 Couches",
         "items": [
           "352 règles WAF couvrant 11 types d'attaques",
-          "Classifieur ML (TF-IDF) + transformeur DeBERTa (184M paramètres)",
+          "Classifieur ML (TF-IDF) + classifieur d'injection DistilBERT affiné (résultats d'outils) + transformeur DeBERTa (184M paramètres)",
           "LLM-as-judge pour les attaques nouvelles/incertaines",
           "Fail-closed : toute couche qui détecte bloque le prompt"
         ],
@@ -73,9 +73,9 @@
     "title": "Pipeline de Sécurité en 10 Étapes",
     "steps": [
       { "number": 1, "name": "Budget de Tokens", "description": "Appliquer les limites d'utilisation par clé" },
-      { "number": 2, "name": "Inspection des Résultats d'Outils", "description": "Analyser les résultats d'outils pour PII, secrets, injection" },
+      { "number": 2, "name": "Inspection des Résultats d'Outils", "description": "Analyser les résultats d'outils pour PII, secrets, injection — propulsé par un classifieur DistilBERT affiné (F1=0,992, FPR=0,8 %)" },
       { "number": 3, "name": "Scanner d'Images", "description": "Détecter les attaques cachées dans les images (OCR, stéganographie)" },
-      { "number": 4, "name": "Détection IA à 6 Couches", "description": "Ensemble regex + ML + DeBERTa + LLM-as-judge" },
+      { "number": 4, "name": "Détection IA à 6 Couches", "description": "Ensemble regex + ML + classifieur d'injection DistilBERT + DeBERTa + LLM-as-judge" },
       { "number": 5, "name": "Sécurité du Streaming", "description": "Analyser les réponses en temps réel, interrompre en cours de flux" },
       { "number": 6, "name": "Interception des Appels d'Outils", "description": "Bloquer les actions non autorisées des agents IA" },
       { "number": 7, "name": "Rédaction des PII", "description": "Supprimer les données personnelles des réponses" },
@@ -93,7 +93,7 @@
       "Détection d'attaques par chaîne d'actions (4 types : exfiltration de données, escalade de privilèges, reconnaissance, appels d'outils rapides)",
       "Limitation de débit par agent et par outil (token bucket)",
       "Validation de schéma pour les entrées d'outils",
-      "Inspection des résultats : analyse des PII, secrets et injections dans les sorties d'outils",
+      "Inspection des résultats : analyse des PII, secrets et injections dans les sorties d'outils (DistilBERT affiné, rappel 99,2 %, FPR 0,8 % sur 7 catégories d'évasion)",
       "Intégration bac à sable OpenShell : l'application graduée achemine les outils risqués vers des conteneurs isolés"
     ]
   },
