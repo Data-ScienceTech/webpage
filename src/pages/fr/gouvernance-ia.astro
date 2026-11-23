@@ -9,7 +9,7 @@ import site from '../../content/site.fr.json';
 const lang = 'fr';
 ---
 
-<MainLayout title={content.meta.title} description={content.meta.description} lang={lang}>
+<MainLayout title={content.meta.title} description={content.meta.description} lang={lang} ogImage={content.meta.og_image}>
   <Header lang={lang} content={site} />
   <main>
     <ServicePage lang={lang} content={content} />

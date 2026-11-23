@@ -12,7 +12,7 @@ const pageTitle = siteContent.meta.title;
 <MainLayout
   title={pageTitle}
   description={siteContent.meta.description}
-  lang={lang}
+  lang={lang} ogImage={siteContent.meta.og_image}
 >
   <Header lang={lang} content={siteContent} />
 
@@ -140,7 +140,7 @@ const pageTitle = siteContent.meta.title;
     </section>
 
     <!-- About -->
-    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+    <section id="practice" class="section-padding bg-secondary-50 dark:bg-secondary-900">
       <div class="container-custom">
         <div class="mx-auto max-w-3xl">
           <h2 class="mb-6 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{siteContent.about.title}</h2>
@@ -152,7 +152,7 @@ const pageTitle = siteContent.meta.title;
     </section>
 
     <!-- Contact -->
-    <section class="section-padding bg-white dark:bg-secondary-800">
+    <section id="contact" class="section-padding bg-white dark:bg-secondary-800">
       <div class="container-custom text-center">
         <h2 class="mb-4 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">{siteContent.contact.title}</h2>
         <p class="mb-6 text-lg text-secondary-500 dark:text-secondary-400 max-w-xl mx-auto">

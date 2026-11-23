@@ -12,33 +12,36 @@ const links = [
   { href: lang === 'en' ? '/en/bi-audit' : '/fr/audit-bi', label: content.nav.bi_audit },
   { href: lang === 'en' ? '/en/ai-governance' : '/fr/gouvernance-ia', label: content.nav.ai_governance },
   { href: `/${lang}/open-forcefield`, label: content.nav.open_forcefield, semibold: true },
-  { href: `/${lang}/benchmarks`, label: content.nav.benchmarks },
-  { href: lang === 'en' ? '/en/vscode-extension' : '/fr/extension-vscode', label: content.nav.vscode },
-  { href: lang === 'en' ? '/en/jetbrains-plugin' : '/fr/plugin-jetbrains', label: content.nav.jetbrains },
-  { href: 'https://forcefield.datasciencetech.ca', label: content.nav.demo, external: true },
+  { href: `/${lang}/#practice`, label: content.nav.practice },
 ];
 const alt = alternates(Astro.url.pathname) ?? { en: '/en/', fr: '/fr/' };
+const a11y = {
+  mainNav: lang === 'fr' ? 'Navigation principale' : 'Main navigation',
+  theme: lang === 'fr' ? 'Basculer le mode sombre' : 'Toggle dark mode',
+  menu: lang === 'fr' ? 'Ouvrir le menu' : 'Toggle mobile menu',
+};
 ---
 
 <header class="sticky top-0 z-50 border-b border-secondary-200 bg-white/95 backdrop-blur-sm dark:border-secondary-700 dark:bg-secondary-900/95">
-  <nav class="container-custom py-5 md:py-6" aria-label="Main navigation">
+  <nav class="container-custom py-4 lg:py-5" aria-label={a11y.mainNav}>
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <a href={`/${lang}`} class="flex items-center space-x-2 transition-opacity hover:opacity-80">
-        <img src="/logo.svg" alt={content.company} class="h-16 w-auto md:h-20 lg:h-24 dark:hidden" />
-        <img src="/logo-dark.svg" alt={content.company} class="hidden h-16 w-auto md:h-20 lg:h-24 dark:block" />
+        <img src="/ag-mark.svg" alt={content.company} class="h-9 w-auto sm:hidden" />
+        <img src="/logo.svg" alt={content.company} class="hidden h-10 w-auto sm:block lg:h-12 dark:sm:hidden" />
+        <img src="/logo-dark.svg" alt={content.company} class="hidden h-10 w-auto lg:h-12 dark:sm:block" />
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden items-center space-x-8 md:flex">
+      <div class="hidden items-center space-x-6 lg:flex">
         {links.map((link) => (
           <a
             href={link.href}
-            class={`nav-link ${link.semibold ? 'font-semibold' : ''}`}
+            class={`nav-link whitespace-nowrap ${link.semibold ? 'font-semibold' : ''}`}
             {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           >{link.label}</a>
         ))}
-        <a href={`mailto:${content.contact.email}`} class="btn-primary text-sm !py-2 !px-4">{content.nav.cta}</a>
+        <a href={`mailto:${content.contact.email}`} class="btn-primary whitespace-nowrap text-sm !py-2 !px-4">{content.nav.cta}</a>
       </div>
 
       <!-- Right side: Language Switch + Dark Mode -->
@@ -47,7 +50,7 @@ const alt = alternates(Astro.url.pathname) ?? { en: '/en/', fr: '/fr/' };
         <button
           id="theme-toggle"
           type="button"
-          aria-label="Toggle dark mode"
+          aria-label={a11y.theme}
           class="rounded-lg p-2 text-secondary-600 hover:bg-secondary-100 dark:text-secondary-300 dark:hover:bg-secondary-800"
         >
           <svg class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,9 +65,9 @@ const alt = alternates(Astro.url.pathname) ?? { en: '/en/', fr: '/fr/' };
         <button
           id="mobile-menu-toggle"
           type="button"
-          aria-label="Toggle mobile menu"
+          aria-label={a11y.menu}
           aria-expanded="false"
-          class="rounded-lg p-2 text-secondary-600 hover:bg-secondary-100 md:hidden dark:text-secondary-300 dark:hover:bg-secondary-800"
+          class="rounded-lg p-2 text-secondary-600 hover:bg-secondary-100 lg:hidden dark:text-secondary-300 dark:hover:bg-secondary-800"
         >
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -74,7 +77,7 @@ const alt = alternates(Astro.url.pathname) ?? { en: '/en/', fr: '/fr/' };
     </div>
 
     <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden pt-4 md:hidden">
+    <div id="mobile-menu" class="hidden pt-4 lg:hidden">
       <div class="flex flex-col space-y-4">
         {links.map((link) => (
           <a

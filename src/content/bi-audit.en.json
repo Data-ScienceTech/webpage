@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "BI & Data Warehouse Audit | Agentic Governance",
-    "description": "A BI and data warehouse audit traces a management number from source to report — grain, joins, history, reconciliation, ownership — and returns a prioritized findings register you can act on."
+    "description": "A BI and data warehouse audit traces a management number from source to report — grain, joins, history, reconciliation, ownership — and returns a prioritized findings register you can act on.",
+    "og_image": "/og/og-bi-audit-en-v2.png"
   },
   "eyebrow": "BI & Data Warehouse Audit",
   "title": "Can you reproduce this number — and explain where it changes?",
@@ -16,7 +17,7 @@
   },
   "method": {
     "heading": "How a review runs",
-    "intro": "The method is deliberately narrow: one indicator, one reference total, one trace.",
+    "intro": "The method is deliberately narrow: one indicator, one reference total, one trace. The worked example uses a single figure; the agreed sample is set with you per decision and can extend to architecture, data quality, history, load controls, documentation, and your team's capacity to maintain the flows.",
     "steps": [
       "Select a management indicator and its reference total (for example, a freight or revenue figure Finance relies on).",
       "Trace it from source systems through transformations — SQL Server queries, ETL steps, semantic models — into the report, e.g. a Power BI dataset.",

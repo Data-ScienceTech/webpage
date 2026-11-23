@@ -41,7 +41,7 @@
     "items": [
       {
         "name": "From a BI audit",
-        "text": "An executive summary, a source-to-report trace of one indicator, and a findings register your team can work from — for example, freight counted per order line that triples a report total."
+        "text": "An executive summary, a source-to-report trace of one indicator, and a findings register your team can work from — for example, a report showing $44 in freight charges for two orders whose freight totals $20."
       },
       {
         "name": "From an AI review",
@@ -75,7 +75,7 @@
     "cta_demo": "Live demo"
   },
   "about": {
-    "title": "About",
+    "title": "The practice",
     "paragraphs": [
       "Agentic Governance is an independent consulting practice in data and AI. The work centers on one discipline: following an actual number or decision through a system — a warehouse, a report, an agentic workflow — and showing the owner what to fix first.",
       "We build in the open: Open ForceField, the VS Code and JetBrains extensions, and the published benchmarks are the working toolkit behind our engagements."
@@ -91,6 +91,7 @@
     "bi_audit": "BI Audit",
     "ai_governance": "AI Governance",
     "open_forcefield": "Open ForceField",
+    "practice": "The practice",
     "benchmarks": "Benchmarks",
     "vscode": "VS Code",
     "jetbrains": "JetBrains",
@@ -120,6 +121,7 @@
   "meta": {
     "title": "Agentic Governance — BI audits & AI governance consulting",
     "description": "Independent data & AI advisory: BI and data warehouse audits that trace a number from source to report, and AI governance reviews for agentic workflows. Home of Open ForceField, the open-source AI control toolkit.",
+    "og_image": "/og/og-home-en-v2.png",
     "keywords": "BI audit, data warehouse audit, Power BI audit, SQL Server review, AI governance, agentic AI governance, LLM cost control, hallucination prevention, local-first AI, MCP governance, AI consulting Québec, Open ForceField"
   },
   "social": {

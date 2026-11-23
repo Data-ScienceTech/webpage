@@ -1,22 +1,23 @@
 {
   "meta": {
     "title": "Audit BI et entrepôt de données | Agentic Governance",
-    "description": "Un audit BI et entrepôt de données remonte un chiffre de gestion de la source jusqu'au rapport — granularité, jointures, historique, rapprochement, responsabilité — et livre un registre de constats priorisé et actionnable."
+    "description": "Un audit BI et entrepôt de données remonte un chiffre de gestion de la source jusqu'au rapport — granularité, jointures, historique, rapprochement, responsabilité — et livre un registre de constats priorisé et actionnable.",
+    "og_image": "/og/og-bi-audit-fr-v2.png"
   },
   "eyebrow": "Audit BI et entrepôt de données",
   "title": "Pouvez-vous reproduire ce chiffre — et expliquer où il change?",
-  "intro": "Quand deux rapports divergent ou qu'un entrepôt de données est hérité, le chemin le plus rapide consiste à suivre un vrai chiffre à travers le système. Nous remontons un indicateur de gestion de ses sources jusqu'au rapport, et livrons les preuves, l'exposition et une liste de correctifs priorisée.",
+  "intro": "Lorsque deux rapports divergent ou que votre équipe reprend un entrepôt de données, le chemin le plus rapide consiste à suivre un vrai chiffre à travers le système. Nous remontons un indicateur de gestion de ses sources jusqu'au rapport, et livrons les preuves, l'exposition et une liste de correctifs priorisée.",
   "triggers": {
     "heading": "Situations typiques",
     "items": [
-      "Un responsable BI hérite d'un entrepôt et personne ne peut dire quels chiffres font autorité.",
+      "Un responsable BI reprend un entrepôt existant et personne ne peut dire quels chiffres font autorité.",
       "Deux rapports présentent le même indicateur avec des totaux différents, alors que les finances préparent une consolidation.",
       "Une migration de plateforme ou un changement d'ERP s'en vient et le bilan de reporting doit d'abord être fiable."
     ]
   },
   "method": {
     "heading": "Déroulement d'une revue",
-    "intro": "La méthode est volontairement étroite : un indicateur, un total de référence, une traçabilité.",
+    "intro": "La méthode est volontairement étroite : un indicateur, un total de référence, une traçabilité. L'exemple présenté porte sur un seul chiffre; l'échantillon convenu est fixé avec vous selon la décision et peut s'étendre à l'architecture, à la qualité des données, à l'historique, aux contrôles de chargement, à la documentation et à la capacité de votre équipe à maintenir les flux.",
     "steps": [
       "Choisir un indicateur de gestion et son total de référence (par exemple, un montant de fret ou de revenus sur lequel les finances s'appuient).",
       "Le remonter des systèmes sources à travers les transformations — requêtes SQL Server, étapes ETL, modèles sémantiques — jusqu'au rapport, p. ex. un jeu de données Power BI.",
@@ -36,7 +37,7 @@
   "deliverables": {
     "heading": "Ce que vous recevez",
     "items": [
-      "Un résumé exécutif rédigé pour le décideur budgétaire, pas pour l'équipe technique.",
+      "Un sommaire pour la direction, rédigé pour le décideur budgétaire plutôt que pour l'équipe technique.",
       "Une traçabilité source-à-rapport de l'indicateur choisi, avec les preuves à chaque étape.",
       "Un registre de constats priorisé : preuves, exposition et effort estimé par élément.",
       "Un accompagnement optionnel pendant que votre équipe applique les correctifs retenus."

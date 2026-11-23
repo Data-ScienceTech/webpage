@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "AI Governance & Architecture Review | Agentic Governance",
-    "description": "An AI governance and architecture review examines one agentic workflow — inputs, outputs, tool permissions, human approvals, cost per task — and delivers a control map, evaluation gaps, and a prioritized action plan."
+    "description": "An AI governance and architecture review examines one agentic workflow — inputs, outputs, tool permissions, human approvals, cost per task — and delivers a control map, evaluation gaps, and a prioritized action plan.",
+    "og_image": "/og/og-ai-governance-en-v2.png"
   },
   "eyebrow": "AI Governance & Architecture Review",
   "title": "Can you explain what the system did, how you evaluated it, and when a person steps in?",
@@ -31,7 +32,7 @@
       { "label": "Scenario", "text": "An internal assistant drafts purchase requests: it reads a free-text request, looks up a supplier, fills the form fields, and can submit to the ERP." },
       { "label": "Human approval decision", "text": "Any request above a defined amount, any new supplier, or any low-confidence field extraction requires a person before submission. Everything else can auto-submit with an audit trail." },
       { "label": "Output quality measure", "text": "A request counts as valid when every extracted field matches the source and a reviewer would approve it without edits — measured on a weekly sample, not on a demo set." },
-      { "label": "Cost measure", "text": "Cost per accepted request = model spend divided by requests approved without correction, tracked per workflow so spend maps to completed work." }
+      { "label": "Model cost measure", "text": "Model spend per accepted request — model spend divided by requests approved without correction, tracked per workflow so spend maps to completed work. When a full process cost is needed, the remaining measurable categories are scoped with you: infrastructure, tooling, rework, and human review time." }
     ]
   },
   "deliverables": {

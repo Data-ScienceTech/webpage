@@ -41,7 +41,7 @@
     "items": [
       {
         "name": "D'un audit BI",
-        "text": "Un résumé exécutif, une traçabilité source-à-rapport d'un indicateur et un registre de constats exploitable — par exemple, des frais de transport comptabilisés par ligne de commande qui triplent le total du rapport."
+        "text": "Un sommaire pour la direction, une traçabilité source-à-rapport d'un indicateur et un registre de constats exploitable — par exemple, un rapport qui affiche 44 $ de frais de transport pour deux commandes qui en totalisent 20 $."
       },
       {
         "name": "D'une revue de l'IA",
@@ -75,10 +75,10 @@
     "cta_demo": "Démo en direct"
   },
   "about": {
-    "title": "À propos",
+    "title": "La pratique",
     "paragraphs": [
       "Agentic Governance est une pratique de consultation indépendante en données et en IA. Le travail s'articule autour d'une même discipline : suivre un chiffre ou une décision réelle à travers un système — un entrepôt, un rapport, un flux agentique — et montrer au responsable quoi corriger en premier.",
-      "Nous construisons en ouvert : Open ForceField, les extensions VS Code et JetBrains, ainsi que les benchmarks publiés constituent la boîte à outils de nos mandats."
+      "Nous publions nos outils en code source ouvert : Open ForceField, les extensions VS Code et JetBrains, ainsi que les benchmarks publiés constituent la boîte à outils de nos mandats."
     ]
   },
   "contact": {
@@ -91,6 +91,7 @@
     "bi_audit": "Audit BI",
     "ai_governance": "Gouvernance IA",
     "open_forcefield": "Open ForceField",
+    "practice": "La pratique",
     "benchmarks": "Benchmarks",
     "vscode": "VS Code",
     "jetbrains": "JetBrains",
@@ -120,6 +121,7 @@
   "meta": {
     "title": "Agentic Governance — Audit BI et conseil en gouvernance de l'IA",
     "description": "Conseil indépendant en données et en IA : audits BI et entrepôts de données qui remontent un chiffre de la source au rapport, et revues de gouvernance pour flux agentiques. Domicile d'Open ForceField, la boîte à outils de contrôle IA open source.",
+    "og_image": "/og/og-home-fr-v2.png",
     "keywords": "audit BI, audit entrepôt de données, revue Power BI, revue SQL Server, gouvernance IA, gouvernance IA agentique, contrôle coûts LLM, prévention hallucinations, IA locale, gouvernance MCP, conseil IA Québec, Open ForceField"
   },
   "social": {
