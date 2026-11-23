@@ -6,13 +6,14 @@ interface Props {
   description: string;
   lang: 'en' | 'fr';
   canonical?: string;
+  ogImage?: string;
 }
 
 import { alternates } from '../i18n/routes';
 
-const { title, description, lang, canonical } = Astro.props;
+const { title, description, lang, canonical, ogImage } = Astro.props;
 const currentUrl = canonical || new URL(Astro.url.pathname, Astro.site).toString();
-const ogImageUrl = new URL('/og-image.png', Astro.site).toString();
+const ogImageUrl = new URL(ogImage ?? '/og-image.png', Astro.site).toString();
 const alt = alternates(Astro.url.pathname);
 const withSlash = (p: string) => (p.endsWith('/') ? p : p + '/');
 const enUrl = alt ? new URL(withSlash(alt.en), Astro.site).toString() : null;
@@ -35,7 +36,7 @@ const frUrl = alt ? new URL(withSlash(alt.fr), Astro.site).toString() : null;
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-GX40M4TQB6"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){window.dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-GX40M4TQB6');
     </script>
