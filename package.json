@@ -1,7 +1,7 @@
 {
-  "name": "data-science-technologies",
+  "name": "agentic-governance-site",
   "version": "1.0.0",
-  "description": "Data Science Technologies - AI, analytics, and automation landing site",
+  "description": "Agentic Governance \u2014 independent consulting for agentic AI + home of Open ForceField (open-source LLM/agent control toolkit)",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340">
+  <defs>
+    <linearGradient id="agGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#agGrad)">
+    <!-- Left bracket -->
+    <path d="M26 92 L156 58 L156 86 L66 108 L66 232 L156 254 L156 282 L26 248 Z"/>
+    <!-- Right bracket -->
+    <path d="M534 92 L404 58 L404 86 L494 108 L494 232 L404 254 L404 282 L534 248 Z"/>
+    <!-- Left node -->
+    <circle cx="198" cy="170" r="17"/>
+    <!-- Right node -->
+    <circle cx="362" cy="170" r="17"/>
+    <!-- Connectors -->
+    <rect x="215" y="165" width="19" height="10" rx="3"/>
+    <rect x="326" y="165" width="19" height="10" rx="3"/>
+    <!-- Checkpoint diamond with circular hole -->
+    <path fill-rule="evenodd" d="M280 124 L326 170 L280 216 L234 170 Z M280 157 A13 13 0 1 0 280 183 A13 13 0 1 0 280 157 Z"/>
+  </g>
+</svg>

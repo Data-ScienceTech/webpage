@@ -1,137 +1,136 @@
 {
-  "company": "Data Science Technologies",
-  "tagline": "Passerelle de sécurité IA pour applications et agents",
+  "company": "Agentic Governance",
+  "tagline": "Conseil pour systèmes d'IA agentique",
   "hero": {
-    "title": "Voyez ForceField bloquer une attaque en temps réel",
-    "subtitle": "Regardez l'injection de prompts, l'exfiltration de données et les appels d'outils non sécurisés être stoppés en direct. Puis scannez votre propre application gratuitement.",
-    "cta_primary": "Voir en action",
-    "cta_secondary": "Scanner votre app"
+    "eyebrow": "Conseil indépendant — Québec, Canada",
+    "title": "L'IA agentique, sous votre contrôle",
+    "subtitle": "J'aide les organisations à déployer des systèmes LLM et agents avec des contrôles de coûts, des garde-fous contre les hallucinations et des architectures locales — pour une automatisation qui reste imputable.",
+    "cta_primary": "Réserver une consultation",
+    "cta_secondary": "Découvrir Open ForceField"
   },
-  "funnel_steps": {
-    "title": "Demo Lab. Scanner. Passerelle.",
-    "subtitle": "Trois étapes de la curiosité à la sécurité en production.",
-    "steps": [
+  "services": {
+    "title": "Comment je peux aider",
+    "subtitle": "Des mandats ciblés pour les équipes qui mettent des LLM et des agents en production.",
+    "items": [
       {
-        "number": "1",
-        "name": "Demo Lab",
-        "hook": "Voir les attaques bloquées",
-        "description": "Regardez ForceField intercepter l'injection de prompts, l'exfiltration de données et les appels d'outils non sécurisés dans une démo interactive en direct. Aucune inscription requise.",
-        "cta": "Essayer Demo Lab",
-        "color": "primary"
-      },
-      {
-        "number": "2",
-        "name": "Scanner",
-        "hook": "Scanner votre propre app",
-        "description": "Pointez le scanner vers votre endpoint LLM et obtenez un tableau de bord de sécurité personnalisé sur 12 catégories d'attaques en moins d'une minute.",
-        "cta": "Lancer un scan",
-        "color": "blue"
-      },
-      {
-        "number": "3",
-        "name": "Passerelle",
-        "hook": "Déployer la protection runtime",
-        "description": "Placez ForceField devant votre stack IA. Pipeline en 10 étapes, détection à 6 couches, proxy MCP, piste d'audit. Une clé API, prêt pour la production.",
-        "cta": "Déployer la passerelle",
-        "color": "purple"
-      }
-    ]
-  },
-  "secure_at_runtime": {
-    "title": "Sécurisez l'IA à l'Exécution",
-    "pillars": [
-      {
-        "name": "Passerelle de Sécurité IA",
-        "items": [
-          "Pipeline de sécurité en 10 étapes",
-          "Ensemble de détection IA à 6 couches",
-          "98,9 % de détection d'attaques, < 1 ms P99",
-          "352 règles WAF, 18 types de PII"
+        "name": "Contrôle des coûts LLM",
+        "description": "Identifiez où va l'argent, puis plafonnez-le — sans sacrifier la qualité.",
+        "points": [
+          "Audit des dépenses et attribution par fonction",
+          "Budgets de jetons, quotas et alertes",
+          "Routage de modèles, cache et optimisation de prompts",
+          "Économie unitaire et prévision des coûts"
         ]
       },
       {
-        "name": "Orchestration Runtime",
-        "items": [
-          "Passerelle proxy MCP pour agents IA",
-          "Interception des appels d'outils + application des politiques",
-          "Suivi de chaîne à travers les workflows multi-étapes",
-          "Limitation de débit et permissions par agent"
+        "name": "Contrôle des hallucinations et des sorties",
+        "description": "Des pipelines d'évaluation et des vérifications d'ancrage qui interceptent les mauvaises sorties avant vos utilisateurs.",
+        "points": [
+          "Suites d'évaluation et de tests adverses",
+          "Vérification d'ancrage et de citations",
+          "Validation de sorties structurées",
+          "Tests de régression de prompts en CI"
         ]
       },
       {
-        "name": "Gouvernance Active",
-        "items": [
-          "Portes d'approbation humaine pour les actions sensibles",
-          "Piste d'audit de conformité (export JSONL/CSV)",
-          "Contrôles de budget de tokens par clé API",
-          "Suites de tests red team automatisées (7 catégories d'attaques)"
+        "name": "Systèmes agentiques locaux",
+        "description": "Des agents qui s'exécutent entièrement dans votre périmètre — aucune donnée ne quitte votre réseau.",
+        "points": [
+          "Déploiement de modèles locaux et ouverts",
+          "Gouvernance d'outils MCP en environnement isolé",
+          "Architectures RAG sur site",
+          "Révisions d'architecture axées confidentialité"
+        ]
+      },
+      {
+        "name": "Cadres de gouvernance agentique",
+        "description": "Politiques, portes d'approbation et pistes d'audit pour agents autonomes — ancrés dans la recherche actuelle.",
+        "points": [
+          "Modèles de permissions et de capacités d'agents",
+          "Portes d'approbation humaine",
+          "Journalisation d'audit et imputabilité",
+          "Évaluation des risques et conception de politiques"
         ]
       }
     ]
   },
-  "why_us": {
-    "title": "Pourquoi Data Science Technologies",
-    "items": [
-      "Détection IA à 6 couches avec transformeur DeBERTa et LLM-as-judge -- 98,9 % de précision sur les données de validation",
-      "Seule passerelle avec sécurité agentique prête pour la production -- proxy MCP, interception d'outils, suivi de chaîne avec benchmarks publiés",
-      "Pipeline fail-closed en 10 étapes analysant prompts, réponses, flux, images, sorties JSON et appels d'outils d'agents",
-      "Stack de conformité complète -- pistes d'audit, rédaction PII, budgets de tokens, prêt RGPD/CCPA/HIPAA",
-      "Plus de 1 650 tests réussis -- unitaires, intégration, E2E, sécurité, charge, chaos et pénétration",
-      "Bâti sur le zero-trust -- authentification par jeton, liaison session-agent, vérification d'intégrité des instructions"
-    ]
+  "open_forcefield": {
+    "badge": "Code ouvert — Apache 2.0",
+    "title": "Open ForceField",
+    "description": "Ma boîte à outils open source pour le contrôle des LLM et des agents — les mêmes primitives que je déploie chez mes clients, gratuites sur PyPI.",
+    "install": "pip install forcefield",
+    "points": [
+      "Détection d'injection de prompts sur 12 catégories d'attaques",
+      "Détection et rédaction de RCP (données personnelles)",
+      "Modération de contenu et analyse des sorties",
+      "Limitation de débit et budgets de jetons",
+      "Gouvernance des appels d'outils pour agents (MCP)",
+      "Évaluations de sécurité — aucune dépendance requise"
+    ],
+    "links": {
+      "github": "https://github.com/Data-ScienceTech/forcefield",
+      "pypi": "https://pypi.org/project/forcefield/",
+      "benchmarks": "/fr/benchmarks",
+      "demo": "https://forcefield.datasciencetech.ca",
+      "page": "/fr/open-forcefield"
+    },
+    "cta_github": "GitHub",
+    "cta_pypi": "PyPI",
+    "cta_page": "Page du projet",
+    "cta_demo": "Démo en direct"
   },
-  "trust_bar": {
-    "title": "Construit avec la sécurité zéro-trust"
-  },
-  "metrics_banner": {
-    "items": [
-      { "value": "98,9 %", "label": "Attaques bloquées" },
-      { "value": "100 %", "label": "Prévention des fuites de données" },
-      { "value": "~ 1 ms", "label": "Traitement de sécurité P99" },
-      { "value": "1 650+", "label": "Tests réussis" }
+  "about": {
+    "title": "À propos",
+    "paragraphs": [
+      "Agentic Governance est la pratique indépendante d'un chercheur et bâtisseur qui travaille sur la façon dont les organisations déploient et gouvernent les agents IA — et ce qu'il faut pour les garder fiables, abordables et imputables.",
+      "Je construis en ouvert : Open ForceField, les extensions VS Code et JetBrains et les benchmarks publiés constituent la boîte à outils derrière mes mandats."
     ]
   },
   "contact": {
-    "email": "info@datasciencetech.ca"
+    "title": "Discutons",
+    "subtitle": "Mandats de conseil, révisions d'architecture et ateliers — en français ou en anglais.",
+    "email": "info@datasciencetech.ca",
+    "cta": "Écrivez-moi"
   },
-  "footer": {
-    "description": "Autorité runtime pour l'IA agentique. Nous construisons des solutions d'application, d'orchestration et de gouvernance prêtes pour la production pour la prochaine génération de systèmes d'IA.",
-    "tagline": "Du filtrage de prompts au contrôle actif d'exécution.",
-    "languages": "Opérations multilingues : anglais, français",
-    "links": {
-      "company": "Produit",
-      "demo": "Demo Lab",
-      "scanner": "Scanner",
-      "product": "ForceField",
-      "sdk": "Python SDK",
-      "benchmarks": "Benchmarks",
-      "pricing": "Tarifs",
-      "vscode": "Extension VS Code",
-      "jetbrains": "Plugin JetBrains",
-      "docs": "Documentation",
-      "legalHeading": "Légal",
-      "legal": "Documents légaux"
-    },
-    "copyright": "© 2026 Data Science Technologies. Tous droits réservés."
+  "metrics_banner": {
+    "items": [
+      { "value": "98,9 %", "label": "Détection d'attaques" },
+      { "value": "100 %", "label": "Prévention des fuites de données" },
+      { "value": "< 1 ms", "label": "Latence d'analyse (regex)" },
+      { "value": "0", "label": "Dépendances requises" }
+    ]
   },
   "nav": {
-    "demo": "Demo Lab",
-    "scanner": "Scanner",
-    "product": "ForceField",
-    "sdk": "Python SDK",
+    "open_forcefield": "Open ForceField",
     "benchmarks": "Benchmarks",
-    "why": "Autorité Runtime",
-    "vscode": "Extension VS Code",
-    "jetbrains": "Plugin JetBrains",
-    "agentic": "Sécurité Agentique",
-    "architecture": "Architecture",
-    "security": "Sécurité",
-    "pricing": "Tarifs",
-    "cta": "Voir en action"
+    "vscode": "VS Code",
+    "jetbrains": "JetBrains",
+    "demo": "Démo en direct",
+    "cta": "Discutons"
+  },
+  "footer": {
+    "description": "Conseil indépendant pour l'IA agentique — contrôle des coûts LLM, garde-fous contre les hallucinations et systèmes d'agents locaux.",
+    "tagline": "L'IA agentique, sous votre contrôle.",
+    "languages": "Français et anglais",
+    "links": {
+      "projectHeading": "Open ForceField",
+      "project": "Page du projet",
+      "github": "GitHub",
+      "pypi": "PyPI",
+      "benchmarks": "Benchmarks",
+      "vscode": "Extension VS Code",
+      "jetbrains": "Plugin JetBrains",
+      "demo": "Démo en direct",
+      "legalHeading": "Site",
+      "privacy": "Politique de confidentialité",
+      "disclosure": "Divulgation responsable"
+    },
+    "copyright": "© 2026 Agentic Governance. Tous droits réservés."
   },
   "meta": {
-    "description": "Data Science Technologies fournit l'autorité runtime pour l'IA agentique — des passerelles de sécurité IA entreprise à l'orchestration et la gouvernance au niveau de l'exécution. Sécurité IA prête pour la production en entreprise.",
-    "keywords": "autorité runtime, sécurité IA agentique, passerelle de sécurité IA entreprise, contrôle d'exécution IA, gouvernance IA, plan de contrôle IA, sécurité IA zero-trust, sécurité IA entreprise, sécurité MCP, proxy MCP, sécurité agents IA, détection injection de prompts, interception appels d'outils IA, rédaction PII LLM, sécurité streaming LLM, sécurité vibe coding, moniteur agents codage IA, mode Sentinelle, sécurité IA VS Code, plugin JetBrains, sécurité IA PyCharm, sécurité IA IntelliJ, sécurité IA WebStorm"
+    "title": "Agentic Governance — contrôle des coûts LLM, garde-fous anti-hallucination, IA agentique locale",
+    "description": "Conseil indépendant pour l'IA agentique : contrôle des coûts LLM, garde-fous contre les hallucinations et les sorties, systèmes d'agents locaux et cadres de gouvernance. Maison d'Open ForceField, la boîte à outils open source de contrôle IA.",
+    "keywords": "gouvernance IA agentique, contrôle coûts LLM, prévention hallucinations, IA locale, LLM sur site, sécurité agents, gouvernance MCP, conseil IA Québec, injection de prompts, rédaction RCP, Open ForceField"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

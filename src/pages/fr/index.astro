@@ -6,7 +6,7 @@ import Footer from '../../components/Footer.astro';
 import siteContent from '../../content/site.fr.json';
 
 const lang = 'fr';
-const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
+const pageTitle = siteContent.meta.title;
 ---
 
 <MainLayout
@@ -20,173 +20,58 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
     <!-- Hero -->
     <section class="relative overflow-hidden py-16 md:py-20 lg:py-28 bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
       <div class="absolute inset-0 opacity-5">
-        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]" viewBox="0 0 200 200" fill="none">
-          <path d="M100 10 L180 50 L180 110 C180 150 145 185 100 195 C55 185 20 150 20 110 L20 50 Z" stroke="currentColor" stroke-width="1" class="text-primary-400"/>
+        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]" viewBox="0 0 560 340" fill="none">
+          <path d="M26 92 L156 58 L156 86 L66 108 L66 232 L156 254 L156 282 L26 248 Z" stroke="currentColor" stroke-width="4" class="text-primary-400"/>
+          <path d="M534 92 L404 58 L404 86 L494 108 L494 232 L404 254 L404 282 L534 248 Z" stroke="currentColor" stroke-width="4" class="text-primary-400"/>
+          <path d="M280 124 L326 170 L280 216 L234 170 Z" stroke="currentColor" stroke-width="4" class="text-primary-400"/>
         </svg>
       </div>
       <div class="container-custom relative">
         <div class="mx-auto max-w-4xl text-center">
-          <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-400">Data Science Technologies</p>
+          <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-400">{siteContent.hero.eyebrow}</p>
           <h1 class="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
-            Autorite runtime pour l'IA agentique
+            {siteContent.hero.title}
           </h1>
           <p class="mb-10 text-xl md:text-2xl text-secondary-300 max-w-3xl mx-auto">
-            Nous construisons des infrastructures de securite, d'orchestration et de gouvernance pretes pour la production, pour la prochaine generation de systemes d'IA.
+            {siteContent.hero.subtitle}
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://forcefield.datasciencetech.ca"
+              href={`mailto:${siteContent.contact.email}`}
               class="btn-accent inline-flex items-center gap-2 text-lg px-8 py-4"
             >
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              Explorer ForceField
+              {siteContent.hero.cta_primary}
             </a>
             <a
-              href="https://forcefield.datasciencetech.ca/demo-lab"
+              href={siteContent.open_forcefield.links.page}
               class="btn inline-flex items-center gap-2 border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
             >
-              Voir en action
+              {siteContent.hero.cta_secondary}
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Soutenu par -->
-    <section class="border-b border-secondary-200 bg-secondary-50 dark:border-secondary-700 dark:bg-secondary-900 py-6">
-      <div class="container-custom">
-        <p class="mb-5 text-center text-xs font-semibold uppercase tracking-widest text-secondary-400 dark:text-secondary-500">
-          Soutenu par
-        </p>
-        <div class="flex flex-wrap items-center justify-center gap-10">
-          <!-- Google for Startups -->
-          <a
-            href="https://startup.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Google for Startups"
-            class="flex items-center gap-2 opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"
-          >
-            <svg class="h-6 w-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-            </svg>
-            <span class="font-semibold text-secondary-700 dark:text-secondary-300 text-sm">Google for Startups</span>
-          </a>
-          <!-- MongoDB for Startups -->
-          <a
-            href="https://www.mongodb.com/startups"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="MongoDB for Startups"
-            class="flex items-center gap-2 opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"
-          >
-            <svg class="h-6 w-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C9.5 2 7.3 3.7 6.6 6.1c-.4 1.4-.3 2.9.3 4.2L12 22l5.1-11.7c.6-1.3.7-2.8.3-4.2C16.7 3.7 14.5 2 12 2zm0 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="#13AA52"/>
-            </svg>
-            <span class="font-semibold text-secondary-700 dark:text-secondary-300 text-sm">MongoDB for Startups</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Etapes du parcours : Demo Lab -> Scanner -> Passerelle -->
+    <!-- Services -->
     <section class="section-padding bg-white dark:bg-secondary-800">
       <div class="container-custom">
         <div class="mx-auto max-w-4xl text-center mb-12">
-          <h2 class="mb-3 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">{siteContent.funnel_steps.title}</h2>
-          <p class="text-lg text-secondary-500 dark:text-secondary-400">{siteContent.funnel_steps.subtitle}</p>
+          <h2 class="mb-3 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">{siteContent.services.title}</h2>
+          <p class="text-lg text-secondary-500 dark:text-secondary-400">{siteContent.services.subtitle}</p>
         </div>
-        <div class="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
-          {siteContent.funnel_steps.steps.map((step) => {
-            const borderColor = step.color === 'primary' ? 'border-primary-400' : step.color === 'blue' ? 'border-blue-400' : 'border-purple-400';
-            const numBg = step.color === 'primary' ? 'bg-primary-500' : step.color === 'blue' ? 'bg-blue-500' : 'bg-purple-500';
-            return (
-              <div class={`relative rounded-2xl border-2 ${borderColor} bg-white dark:bg-secondary-900 p-6 flex flex-col`}>
-                <div class={`inline-flex items-center justify-center w-10 h-10 rounded-full ${numBg} text-white font-bold text-lg mb-4`}>{step.number}</div>
-                <h3 class="text-xl font-bold text-secondary-900 dark:text-white mb-1">{step.name}</h3>
-                <p class="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-3">{step.hook}</p>
-                <p class="text-sm text-secondary-600 dark:text-secondary-300 mb-6 flex-grow">{step.description}</p>
-                <a
-                  href={step.number === '1' ? 'https://forcefield.datasciencetech.ca/demo-lab' : step.number === '2' ? 'https://forcefield.datasciencetech.ca/scan/start' : 'https://forcefield.datasciencetech.ca'}
-                  class="inline-flex items-center gap-1 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:underline"
-                >
-                  {step.cta} &rarr;
-                </a>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-
-    <!-- Notre produit -->
-    <section class="section-padding bg-white dark:bg-secondary-800">
-      <div class="container-custom">
-        <div class="mx-auto max-w-4xl">
-          <h2 class="mb-4 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">ForceField</h2>
-          <p class="mb-10 text-lg text-secondary-500 dark:text-secondary-400 text-center max-w-2xl mx-auto">
-            Passerelle de securite IA pour applications et agents. Protegez chaque prompt, chaque reponse, chaque appel d'outil.
-          </p>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
-            <a href="https://forcefield.datasciencetech.ca/python-sdk" class="group rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
-              <h3 class="mb-2 text-lg font-bold text-secondary-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Python SDK</h3>
-              <p class="text-sm text-secondary-600 dark:text-secondary-300 mb-3">SDK open-source. pip install forcefield. Apache 2.0.</p>
-              <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">Gratuit &rarr;</span>
-            </a>
-            <a href="https://forcefield.datasciencetech.ca" class="group rounded-2xl border-2 border-primary-300 dark:border-primary-600 bg-primary-50 dark:bg-primary-900/20 p-6 hover:border-primary-400 dark:hover:border-primary-500 transition-colors">
-              <h3 class="mb-2 text-lg font-bold text-secondary-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Gateway</h3>
-              <p class="text-sm text-secondary-600 dark:text-secondary-300 mb-3">Pipeline de securite cloud en 10 etapes. Proxy OpenAI compatible.</p>
-              <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">Gratuit (temps limite) &rarr;</span>
-            </a>
-            <a href="/fr/extension-vscode" class="group rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
-              <h3 class="mb-2 text-lg font-bold text-secondary-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Extension VS Code</h3>
-              <p class="text-sm text-secondary-600 dark:text-secondary-300 mb-3">Mode Sentinelle. Surveillez les agents IA en temps reel. Chemins proteges.</p>
-              <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">Gratuit &rarr;</span>
-            </a>
-            <a href="https://forcefield.datasciencetech.ca/enterprise-contact" class="group rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
-              <h3 class="mb-2 text-lg font-bold text-secondary-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Entreprise</h3>
-              <p class="text-sm text-secondary-600 dark:text-secondary-300 mb-3">Deploiement sur site. Instance dediee. Regles de securite personnalisees.</p>
-              <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">Contacter les ventes &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Banniere de metriques -->
-    <section class="py-12 bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800">
-      <div class="container-custom">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
-          {siteContent.metrics_banner.items.map((metric) => (
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-white mb-1">{metric.value}</p>
-              <p class="text-sm text-primary-100 uppercase tracking-wide font-medium">{metric.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Securiser l'IA a l'execution -->
-    <section class="section-padding bg-white dark:bg-secondary-800">
-      <div class="container-custom">
-        <h2 class="mb-12 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{siteContent.secure_at_runtime.title}</h2>
-        <div class="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
-          {siteContent.secure_at_runtime.pillars.map((pillar) => (
+        <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+          {siteContent.services.items.map((service: any) => (
             <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 p-6">
-              <h3 class="text-lg font-bold text-secondary-900 dark:text-white mb-4">{pillar.name}</h3>
+              <h3 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">{service.name}</h3>
+              <p class="text-sm text-secondary-600 dark:text-secondary-400 mb-4">{service.description}</p>
               <ul class="space-y-2">
-                {pillar.items.map((item: string) => (
+                {service.points.map((point: string) => (
                   <li class="flex items-start gap-2 text-sm text-secondary-600 dark:text-secondary-300">
                     <svg class="mt-0.5 h-4 w-4 text-primary-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    {item}
+                    {point}
                   </li>
                 ))}
               </ul>
@@ -196,63 +81,84 @@ const pageTitle = `${siteContent.company} | ${siteContent.tagline}`;
       </div>
     </section>
 
-    <!-- Pourquoi nous -->
-    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
+    <!-- Metrics Banner -->
+    <section class="py-12 bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800">
       <div class="container-custom">
-        <h2 class="mb-10 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">
-          {siteContent.why_us.title}
-        </h2>
-        <div class="mx-auto max-w-3xl space-y-4">
-          {siteContent.why_us.items.map((item: string) => (
-            <div class="flex items-start gap-3">
-              <svg class="mt-1 h-5 w-5 text-primary-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <p class="text-secondary-700 dark:text-secondary-300">{item}</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+          {siteContent.metrics_banner.items.map((metric: any) => (
+            <div>
+              <p class="text-3xl md:text-4xl font-bold text-white mb-1">{metric.value}</p>
+              <p class="text-sm text-primary-100 uppercase tracking-wide font-medium">{metric.label}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- Trust Bar -->
-    <section class="border-y border-secondary-200 bg-white py-10 dark:border-secondary-700 dark:bg-secondary-800">
+    <!-- Open ForceField -->
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
       <div class="container-custom">
-        <p class="mb-6 text-center text-sm font-semibold uppercase tracking-wide text-secondary-600 dark:text-secondary-400">
-          {siteContent.trust_bar.title}
-        </p>
-        <div class="flex flex-wrap items-center justify-center gap-8 opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0">
-          {['GCP Cloud Run', 'Firebase Auth', 'Go', 'Python', 'Redis', 'Docker'].map((tech) => (
-            <div class="text-secondary-600 dark:text-secondary-400 font-semibold text-lg">
-              {tech}
+        <div class="mx-auto max-w-4xl">
+          <div class="text-center mb-10">
+            <span class="inline-flex items-center rounded-full bg-primary-100 dark:bg-primary-900/40 border border-primary-300 dark:border-primary-700 px-4 py-1.5 text-sm font-semibold text-primary-700 dark:text-primary-300 mb-4">
+              {siteContent.open_forcefield.badge}
+            </span>
+            <h2 class="mb-4 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">{siteContent.open_forcefield.title}</h2>
+            <p class="text-lg text-secondary-500 dark:text-secondary-400 max-w-2xl mx-auto">
+              {siteContent.open_forcefield.description}
+            </p>
+          </div>
+          <div class="grid gap-8 md:grid-cols-2 items-start">
+            <div class="rounded-2xl border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-secondary-800 p-6">
+              <ul class="space-y-3">
+                {siteContent.open_forcefield.points.map((point: string) => (
+                  <li class="flex items-start gap-3 text-sm text-secondary-700 dark:text-secondary-300">
+                    <svg class="mt-0.5 h-4 w-4 text-primary-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </div>
+            <div class="space-y-6">
+              <div class="bg-secondary-900 dark:bg-secondary-950 border border-secondary-700 rounded-xl px-6 py-4 font-mono text-primary-300 text-lg select-all text-center">
+                $ {siteContent.open_forcefield.install}
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href={siteContent.open_forcefield.links.page} class="btn-primary text-sm text-center !py-3">{siteContent.open_forcefield.cta_page}</a>
+                <a href={siteContent.open_forcefield.links.github} target="_blank" rel="noopener" class="btn-secondary text-sm text-center !py-3">{siteContent.open_forcefield.cta_github}</a>
+                <a href={siteContent.open_forcefield.links.pypi} target="_blank" rel="noopener" class="btn-secondary text-sm text-center !py-3">{siteContent.open_forcefield.cta_pypi}</a>
+                <a href={siteContent.open_forcefield.links.demo} target="_blank" rel="noopener" class="btn-secondary text-sm text-center !py-3">{siteContent.open_forcefield.cta_demo}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section-padding bg-white dark:bg-secondary-800">
+      <div class="container-custom">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="mb-6 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white text-center">{siteContent.about.title}</h2>
+          {siteContent.about.paragraphs.map((p: string) => (
+            <p class="mb-4 text-lg text-secondary-600 dark:text-secondary-300">{p}</p>
           ))}
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="section-padding bg-white dark:bg-secondary-800">
+    <section class="section-padding bg-secondary-50 dark:bg-secondary-900">
       <div class="container-custom text-center">
-        <h2 class="mb-4 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">Contactez-nous</h2>
+        <h2 class="mb-4 text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white">{siteContent.contact.title}</h2>
         <p class="mb-6 text-lg text-secondary-500 dark:text-secondary-400 max-w-xl mx-auto">
-          Demandes entreprise, partenariats et questions generales.
+          {siteContent.contact.subtitle}
         </p>
-        <a href="mailto:info@datasciencetech.ca" class="text-primary-600 dark:text-primary-400 font-semibold text-lg hover:underline">info@datasciencetech.ca</a>
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="https://forcefield.datasciencetech.ca"
-            class="btn-accent inline-flex items-center gap-2 px-6 py-3"
-          >
-            Explorer ForceField
-          </a>
-          <a
-            href="https://forcefield.datasciencetech.ca/enterprise-contact"
-            class="btn inline-flex items-center gap-2 border-2 border-secondary-300 dark:border-secondary-600 text-secondary-700 dark:text-secondary-300 hover:bg-secondary-100 dark:hover:bg-secondary-700 px-6 py-3"
-          >
-            Contact Entreprise
-          </a>
-        </div>
+        <a href={`mailto:${siteContent.contact.email}`} class="btn-accent inline-flex items-center gap-2 px-8 py-4 text-lg">
+          {siteContent.contact.cta} — {siteContent.contact.email}
+        </a>
       </div>
     </section>
   </main>

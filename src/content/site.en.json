@@ -1,137 +1,136 @@
 {
-  "company": "Data Science Technologies",
-  "tagline": "AI Security Gateway for Apps and Agents",
+  "company": "Agentic Governance",
+  "tagline": "Consulting for agentic AI systems",
   "hero": {
-    "title": "Watch ForceField block an attack in real time",
-    "subtitle": "See prompt injection, data exfiltration, and unsafe tool calls stopped live. Then scan your own app for free.",
-    "cta_primary": "See it in action",
-    "cta_secondary": "Scan your app free"
+    "eyebrow": "Independent consulting — Québec, Canada",
+    "title": "Agentic AI, under your control",
+    "subtitle": "I help organizations deploy LLM and agent systems with cost controls, hallucination guardrails, and local-first architectures — so automation stays accountable.",
+    "cta_primary": "Book a consultation",
+    "cta_secondary": "Explore Open ForceField"
   },
-  "funnel_steps": {
-    "title": "Demo Lab. Scanner. Gateway.",
-    "subtitle": "Three steps from curiosity to production security.",
-    "steps": [
+  "services": {
+    "title": "What I help with",
+    "subtitle": "Focused engagements for teams putting LLMs and agents into production.",
+    "items": [
       {
-        "number": "1",
-        "name": "Demo Lab",
-        "hook": "See it block attacks",
-        "description": "Watch ForceField intercept prompt injection, data exfiltration, and unsafe tool calls in a live interactive demo. No signup required.",
-        "cta": "Try Demo Lab",
-        "color": "primary"
-      },
-      {
-        "number": "2",
-        "name": "Scanner",
-        "hook": "Scan your own app",
-        "description": "Point the scanner at your LLM endpoint and get a personalized security scorecard across 12 attack categories in under a minute.",
-        "cta": "Run Free Scan",
-        "color": "blue"
-      },
-      {
-        "number": "3",
-        "name": "Gateway",
-        "hook": "Deploy runtime protection",
-        "description": "Drop ForceField in front of your AI stack. 10-step pipeline, 6-layer detection, MCP proxy, audit trail. One API key, production-ready.",
-        "cta": "Deploy Gateway",
-        "color": "purple"
-      }
-    ]
-  },
-  "secure_at_runtime": {
-    "title": "Secure AI at Runtime",
-    "pillars": [
-      {
-        "name": "AI Security Gateway",
-        "items": [
-          "10-step security pipeline",
-          "6-layer AI detection ensemble",
-          "98.9% attack detection, < 1ms P99",
-          "352 WAF patterns, 18 PII types"
+        "name": "LLM Cost Control",
+        "description": "Find where the money goes, then cap it — without gutting quality.",
+        "points": [
+          "Spend audit and per-feature attribution",
+          "Token budgets, quotas, and alerts",
+          "Model routing, caching, and prompt optimization",
+          "Unit economics and spend forecasting"
         ]
       },
       {
-        "name": "Runtime Orchestration",
-        "items": [
-          "MCP proxy gateway for AI agents",
-          "Tool call interception + policy enforcement",
-          "Chain tracking across multi-step workflows",
-          "Per-agent rate limiting and permissions"
+        "name": "Hallucination & Output Control",
+        "description": "Evaluation pipelines and grounding checks that catch bad outputs before users do.",
+        "points": [
+          "Evaluation and red-team test suites",
+          "Grounding and citation verification",
+          "Structured output validation",
+          "Prompt regression testing in CI"
         ]
       },
       {
-        "name": "Active Governance",
-        "items": [
-          "Human-approval gates for sensitive actions",
-          "Compliance audit trail (JSONL/CSV export)",
-          "Token budget controls per API key",
-          "Automated red team test suites (7 attack categories)"
+        "name": "Local-First Agentic Systems",
+        "description": "Agents that run entirely inside your perimeter — no data leaves your network.",
+        "points": [
+          "Local and open-weight model deployment",
+          "Air-gapped MCP tool governance",
+          "On-premise RAG architectures",
+          "Privacy-by-design system reviews"
+        ]
+      },
+      {
+        "name": "Agentic Governance Frameworks",
+        "description": "Policies, approval gates, and audit trails for autonomous agents — grounded in current research.",
+        "points": [
+          "Agent permission and capability models",
+          "Human-in-the-loop approval gates",
+          "Audit logging and accountability trails",
+          "Risk assessment and policy design"
         ]
       }
     ]
   },
-  "why_us": {
-    "title": "Why Data Science Technologies",
-    "items": [
-      "6-layer AI detection with DeBERTa transformer and LLM-as-judge -- 98.9% accuracy on held-out data",
-      "Only gateway with production-ready agentic security -- MCP proxy, tool interception, chain tracking with published benchmarks",
-      "10-step fail-closed pipeline scanning prompts, responses, streams, images, JSON outputs, and agent tool calls",
-      "Full compliance stack -- audit trails, PII redaction, token budgets, GDPR/CCPA/HIPAA-ready",
-      "1,650+ tests passing -- unit, integration, E2E, security, load, chaos, and penetration tests",
-      "Built on zero-trust -- bearer token authentication, session-agent binding, instruction integrity verification"
-    ]
+  "open_forcefield": {
+    "badge": "Open Source — Apache 2.0",
+    "title": "Open ForceField",
+    "description": "My open-source toolkit for LLM and agent control — the same primitives I deploy in client work, free on PyPI.",
+    "install": "pip install forcefield",
+    "points": [
+      "Prompt-injection detection across 12 attack categories",
+      "PII detection and redaction",
+      "Content moderation and output scanning",
+      "Rate limiting and token budgets",
+      "Tool-call governance for agents (MCP)",
+      "Security evals — zero dependencies required"
+    ],
+    "links": {
+      "github": "https://github.com/Data-ScienceTech/forcefield",
+      "pypi": "https://pypi.org/project/forcefield/",
+      "benchmarks": "/en/benchmarks",
+      "demo": "https://forcefield.datasciencetech.ca",
+      "page": "/en/open-forcefield"
+    },
+    "cta_github": "GitHub",
+    "cta_pypi": "PyPI",
+    "cta_page": "Project page",
+    "cta_demo": "Live demo"
   },
-  "trust_bar": {
-    "title": "Built with zero-trust security"
-  },
-  "metrics_banner": {
-    "items": [
-      { "value": "98.9%", "label": "Attacks Blocked" },
-      { "value": "100%", "label": "Data Leak Prevention" },
-      { "value": "~ 1ms", "label": "Security Processing P99" },
-      { "value": "1,650+", "label": "Tests Passing" }
+  "about": {
+    "title": "About",
+    "paragraphs": [
+      "Agentic Governance is the independent practice of a researcher and builder working on how organizations deploy and govern AI agents — and what it takes to keep them reliable, affordable, and accountable.",
+      "I build in the open: Open ForceField, the VS Code and JetBrains extensions, and the published benchmarks are the working toolkit behind my engagements."
     ]
   },
   "contact": {
-    "email": "info@datasciencetech.ca"
+    "title": "Let's talk",
+    "subtitle": "Consulting engagements, architecture reviews, and workshops — in English or French.",
+    "email": "info@datasciencetech.ca",
+    "cta": "Email me"
   },
-  "footer": {
-    "description": "Runtime authority for agentic AI. We build production-ready enforcement, orchestration, and governance for the next generation of AI systems.",
-    "tagline": "From prompt filtering to active execution control.",
-    "languages": "Multilingual operations: English, French",
-    "links": {
-      "company": "Product",
-      "demo": "Demo Lab",
-      "scanner": "Scanner",
-      "product": "ForceField",
-      "sdk": "Python SDK",
-      "benchmarks": "Benchmarks",
-      "pricing": "Pricing",
-      "vscode": "VS Code Extension",
-      "jetbrains": "JetBrains Plugin",
-      "docs": "Documentation",
-      "legalHeading": "Legal",
-      "legal": "Legal Documents"
-    },
-    "copyright": "© 2026 Data Science Technologies. All rights reserved."
+  "metrics_banner": {
+    "items": [
+      { "value": "98.9%", "label": "Attack detection" },
+      { "value": "100%", "label": "Data leak prevention" },
+      { "value": "< 1ms", "label": "Scan latency (regex)" },
+      { "value": "0", "label": "Required dependencies" }
+    ]
   },
   "nav": {
-    "demo": "Demo Lab",
-    "scanner": "Scanner",
-    "product": "ForceField",
-    "sdk": "Python SDK",
+    "open_forcefield": "Open ForceField",
     "benchmarks": "Benchmarks",
-    "why": "Why Runtime Authority",
-    "vscode": "VS Code Extension",
-    "jetbrains": "JetBrains Plugin",
-    "agentic": "Agentic Security",
-    "architecture": "Architecture",
-    "security": "Security",
-    "pricing": "Pricing",
-    "cta": "See it in action"
+    "vscode": "VS Code",
+    "jetbrains": "JetBrains",
+    "demo": "Live Demo",
+    "cta": "Let's talk"
+  },
+  "footer": {
+    "description": "Independent consulting for agentic AI — LLM cost control, hallucination guardrails, and local-first agent systems.",
+    "tagline": "Agentic AI, under your control.",
+    "languages": "English and French",
+    "links": {
+      "projectHeading": "Open ForceField",
+      "project": "Project page",
+      "github": "GitHub",
+      "pypi": "PyPI",
+      "benchmarks": "Benchmarks",
+      "vscode": "VS Code Extension",
+      "jetbrains": "JetBrains Plugin",
+      "demo": "Live Demo",
+      "legalHeading": "Site",
+      "privacy": "Privacy Policy",
+      "disclosure": "Responsible Disclosure"
+    },
+    "copyright": "© 2026 Agentic Governance. All rights reserved."
   },
   "meta": {
-    "description": "Data Science Technologies provides runtime authority for agentic AI — from enterprise AI security gateways to execution-level orchestration and governance. Production-ready AI security for the enterprise.",
-    "keywords": "runtime authority, agentic AI security, enterprise AI security gateway, AI execution control, AI governance, AI control plane, zero-trust AI security, enterprise AI security, MCP security, MCP proxy, AI agent security, prompt injection detection, AI tool call interception, PII redaction LLM, streaming LLM security, vibe coding security, AI coding agent monitor, Sentinel Mode, VS Code AI security, JetBrains plugin, PyCharm AI security, IntelliJ AI security, WebStorm AI security"
+    "title": "Agentic Governance — LLM cost control, hallucination guardrails, local-first agentic AI",
+    "description": "Independent consulting for agentic AI: LLM cost control, hallucination and output guardrails, local-first agent systems, and governance frameworks. Home of Open ForceField, the open-source AI control toolkit.",
+    "keywords": "agentic AI governance, LLM cost control, hallucination prevention, local-first AI, on-premise LLM, agent security, MCP governance, AI consulting Québec, prompt injection, PII redaction, Open ForceField"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

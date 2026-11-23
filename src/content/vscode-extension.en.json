@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "ForceField for VS Code -- Sentinel Mode for AI Coding Agents | Data Science Technologies",
+    "title": "Open ForceField for VS Code — Sentinel Mode for AI Coding Agents | Agentic Governance",
     "description": "Real-time security monitor for AI coding agents inside VS Code. Sentinel Mode watches file edits, terminal commands, and dangerous operations by Cursor, Cline, Codex, and other AI agents. Powered by the ForceField Python SDK.",
     "keywords": "VS Code extension, AI coding agent security, Sentinel Mode, vibe coding security, Cursor agent monitor, Cline security, AI agent file protection, terminal command scanning, protected paths, ForceField VS Code, AI code review, dangerous command detection"
   },
   "hero": {
-    "title": "ForceField for VS Code",
+    "title": "Open ForceField for VS Code",
     "subtitle": "Sentinel Mode for AI Coding Agents",
     "tagline": "Real-time security monitoring for Cursor, Cline, Codex, and every AI agent that writes code in your editor.",
     "badges": ["Free", "Python 3.9+", "Apache 2.0"]
@@ -120,7 +120,7 @@
     "title": "How It Works",
     "items": [
       "Persistent Python daemon over JSON-RPC -- no cold starts",
-      "Powered by the ForceField SDK (same scan_command / scan_filename APIs)",
+      "Powered by the Open ForceField SDK (same scan_command / scan_filename APIs)",
       "Inline diagnostics with severity-appropriate highlighting",
       "PII highlighted with exact character positions and hover tooltips",
       "Sentinel state survives VS Code restarts (last 500 events, cumulative stats)"
@@ -133,10 +133,10 @@
   "cta": {
     "marketplace": "Install from VS Code Marketplace",
     "marketplace_url": "https://marketplace.visualstudio.com/items?itemName=DataScienceTech.forcefield",
-    "sdk": "Powered by ForceField Python SDK",
+    "sdk": "Powered by the Open ForceField Python SDK",
     "sdk_url": "/en/python-sdk",
     "gateway": "Connect to ForceField Gateway",
-    "gateway_url": "/en/force-field",
+    "gateway_url": "https://forcefield.datasciencetech.ca",
     "jetbrains": "Also available for JetBrains IDEs",
     "jetbrains_url": "/en/jetbrains-plugin"
   }

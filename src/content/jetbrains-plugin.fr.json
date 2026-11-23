@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "ForceField pour les IDE JetBrains -- Scanner de securite IA | Data Science Technologies",
+    "title": "Open ForceField pour les IDE JetBrains — Scanner de securite IA | Agentic Governance",
     "description": "Detectez les injections de prompts, fuites de DPI, jailbreaks et attaques LLM directement dans PyCharm, IntelliJ, WebStorm et tous les IDE JetBrains. Analysez des selections, auditez des fichiers, lancez des evaluations de securite. Tout en local -- aucune donnee ne quitte votre machine.",
     "keywords": "plugin JetBrains, securite IA PyCharm, securite IA IntelliJ, securite IA WebStorm, detection injection prompts IDE, scanner DPI IDE, detection attaques LLM, detection jailbreak, scanner securite IA, ForceField JetBrains, audit code IA, evaluation securite IDE"
   },
   "hero": {
-    "title": "ForceField pour les IDE JetBrains",
+    "title": "Open ForceField pour les IDE JetBrains",
     "subtitle": "Scanner de securite IA pour PyCharm, IntelliJ, WebStorm et plus",
     "tagline": "Detectez les injections de prompts, fuites de DPI, jailbreaks et attaques LLM directement dans votre IDE. Toute l'analyse est locale -- aucune donnee ne quitte votre machine.",
     "badges": ["Gratuit", "Tous les IDE JetBrains", "Apache 2.0", "0 Telemetrie"]
@@ -124,16 +124,16 @@
     "links": [
       { "label": "Extension VS Code", "url": "/fr/extension-vscode", "description": "Mode Sentinelle -- surveillance d'agents en temps reel" },
       { "label": "SDK Python", "url": "https://pypi.org/project/forcefield/", "description": "pip install forcefield" },
-      { "label": "Passerelle ForceField", "url": "/fr/force-field", "description": "Pipeline de securite IA a l'echelle cloud" }
+      { "label": "Open ForceField", "url": "/fr/open-forcefield", "description": "Boite a outils open source de controle LLM et agents" }
     ]
   },
   "cta": {
     "marketplace": "Installer depuis JetBrains Marketplace",
     "marketplace_url": "https://plugins.jetbrains.com/plugin/30985-forcefield-ai-security-scanner",
-    "sdk": "Alimente par le SDK Python ForceField",
+    "sdk": "Alimente par le SDK Python Open ForceField",
     "sdk_url": "/fr/python-sdk",
     "gateway": "Connecter a la passerelle ForceField",
-    "gateway_url": "/fr/force-field",
+    "gateway_url": "https://forcefield.datasciencetech.ca",
     "vscode": "Aussi disponible pour VS Code",
     "vscode_url": "/fr/extension-vscode"
   }

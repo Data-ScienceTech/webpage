@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "ForceField for JetBrains IDEs -- AI Security Scanner | Data Science Technologies",
+    "title": "Open ForceField for JetBrains IDEs — AI Security Scanner | Agentic Governance",
     "description": "Detect prompt injection, PII leaks, jailbreaks, and LLM attacks directly in PyCharm, IntelliJ, WebStorm, and every JetBrains IDE. Scan selections, audit files, run security evals. All local -- no data leaves your machine.",
     "keywords": "JetBrains plugin, PyCharm AI security, IntelliJ AI security, WebStorm AI security, prompt injection detection IDE, PII scanner IDE, LLM attack detection, jailbreak detection, AI security scanner, ForceField JetBrains, AI code audit, security eval IDE"
   },
   "hero": {
-    "title": "ForceField for JetBrains IDEs",
+    "title": "Open ForceField for JetBrains IDEs",
     "subtitle": "AI Security Scanner for PyCharm, IntelliJ, WebStorm and beyond",
     "tagline": "Detect prompt injection, PII leaks, jailbreaks, and LLM attacks directly in your IDE. All scanning is local -- no data leaves your machine.",
     "badges": ["Free", "All JetBrains IDEs", "Apache 2.0", "0 Telemetry"]
@@ -124,16 +124,16 @@
     "links": [
       { "label": "VS Code Extension", "url": "/en/vscode-extension", "description": "Sentinel Mode -- real-time agent monitoring" },
       { "label": "Python SDK", "url": "https://pypi.org/project/forcefield/", "description": "pip install forcefield" },
-      { "label": "ForceField Gateway", "url": "/en/force-field", "description": "Cloud-scale AI security pipeline" }
+      { "label": "Open ForceField", "url": "/en/open-forcefield", "description": "Open-source LLM & agent control toolkit" }
     ]
   },
   "cta": {
     "marketplace": "Install from JetBrains Marketplace",
     "marketplace_url": "https://plugins.jetbrains.com/plugin/30985-forcefield-ai-security-scanner",
-    "sdk": "Powered by ForceField Python SDK",
+    "sdk": "Powered by the Open ForceField Python SDK",
     "sdk_url": "/en/python-sdk",
     "gateway": "Connect to ForceField Gateway",
-    "gateway_url": "/en/force-field",
+    "gateway_url": "https://forcefield.datasciencetech.ca",
     "vscode": "Also available for VS Code",
     "vscode_url": "/en/vscode-extension"
   }

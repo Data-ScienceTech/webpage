@@ -17,47 +17,40 @@ export default function LangSwitch({ lang }: Props) {
     // Get current path without language prefix
     const currentPath = window.location.pathname.replace(/^\/(en|fr)/, '');
     
-    // Map routes between languages
+    // Map routes between languages (pages whose slugs differ across locales;
+    // identical slugs like /open-forcefield and /benchmarks use the default prefix swap)
     const routeMap: Record<string, Record<string, string>> = {
-      '/privacy': {
-        'en': '/en/privacy',
-        'fr': '/fr/confidentialite'
+      '/privacy-policy': {
+        'en': '/en/privacy-policy',
+        'fr': '/fr/politique-de-confidentialite'
       },
-      '/confidentialite': {
-        'en': '/en/privacy',
-        'fr': '/fr/confidentialite'
+      '/politique-de-confidentialite': {
+        'en': '/en/privacy-policy',
+        'fr': '/fr/politique-de-confidentialite'
       },
-      '/terms': {
-        'en': '/en/terms',
-        'fr': '/fr/conditions'
+      '/responsible-disclosure': {
+        'en': '/en/responsible-disclosure',
+        'fr': '/fr/divulgation-responsable'
       },
-      '/conditions': {
-        'en': '/en/terms',
-        'fr': '/fr/conditions'
+      '/divulgation-responsable': {
+        'en': '/en/responsible-disclosure',
+        'fr': '/fr/divulgation-responsable'
       },
-      '/signup': {
-        'en': '/en/signup',
-        'fr': '/fr/inscription'
+      '/vscode-extension': {
+        'en': '/en/vscode-extension',
+        'fr': '/fr/extension-vscode'
       },
-      '/inscription': {
-        'en': '/en/signup',
-        'fr': '/fr/inscription'
+      '/extension-vscode': {
+        'en': '/en/vscode-extension',
+        'fr': '/fr/extension-vscode'
       },
-      '/why-runtime-authority': {
-        'en': '/en/why-runtime-authority',
-        'fr': '/fr/pourquoi-autorite-runtime'
+      '/jetbrains-plugin': {
+        'en': '/en/jetbrains-plugin',
+        'fr': '/fr/plugin-jetbrains'
       },
-      '/pourquoi-autorite-runtime': {
-        'en': '/en/why-runtime-authority',
-        'fr': '/fr/pourquoi-autorite-runtime'
-      },
-      '/security': {
-        'en': '/en/security',
-        'fr': '/fr/securite'
-      },
-      '/securite': {
-        'en': '/en/security',
-        'fr': '/fr/securite'
+      '/plugin-jetbrains': {
+        'en': '/en/jetbrains-plugin',
+        'fr': '/fr/plugin-jetbrains'
       }
     };
     

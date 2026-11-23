@@ -9,24 +9,71 @@ const lang = 'fr';
 
 <MainLayout
   title={`Politique de confidentialité du site | ${siteContent.company}`}
-  description="Politique de confidentialité du site Web de Data Science Technologies — comment nous gérons les cookies, l'analytique et vos données de navigation."
+  description="Politique de confidentialité du site d'Agentic Governance — comment ce site gère les témoins, l'analytique et vos données de navigation."
   lang={lang}
 >
   <Header lang={lang} content={siteContent} />
 
-  <main class="section-padding">
-    <div class="container-custom">
-      <div class="mx-auto max-w-4xl">
-        <div name="termly-embed" data-id="dd385e42-a1f6-4b88-aee3-a259534bbbf3"></div>
-        <script is:inline type="text/javascript">(function(d, s, id) {
-          var js, tjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "https://app.termly.io/embed-policy.min.js";
-          tjs.parentNode.insertBefore(js, tjs);
-        }(document, 'script', 'termly-jssdk'));</script>
+  <main>
+    <section class="bg-gradient-to-br from-secondary-900 to-secondary-800 py-16">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Politique de confidentialité</h1>
+          <p class="text-xl text-secondary-300">
+            Comment ce site gère les témoins, l'analytique et vos données.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="mx-auto max-w-4xl">
+          <div class="mb-8 p-6 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800">
+            <p class="text-sm text-secondary-600 dark:text-secondary-400">
+              <strong class="text-secondary-900 dark:text-white">Dernière mise à jour :</strong> 23 novembre 2026<br />
+              <strong class="text-secondary-900 dark:text-white">English version:</strong> <a href="/en/privacy-policy" class="text-primary-600 dark:text-primary-400 hover:underline">Privacy Policy</a>
+            </p>
+          </div>
+
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">En bref</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Ceci est un site Web statique d'information. Il n'y a ni comptes, ni formulaires de contact, ni traqueurs publicitaires. Les seules données collectées proviennent d'une analytique Web respectueuse de la vie privée et des journaux serveur standards.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Analytique</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Ce site utilise Google Analytics (GA4) pour comprendre les tendances de fréquentation — pages vues, géographie approximative, type d'appareil. Les témoins d'analytique ne sont déposés qu'après votre consentement via la bannière (fournie par Termly). Vous pouvez modifier votre choix en tout temps via le lien « Préférences de consentement » au pied de page.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Stockage local</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Vos préférences de thème (clair/sombre) et de langue sont conservées dans le localStorage de votre navigateur. Ces données ne quittent jamais votre appareil.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Journaux serveur</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Le site est servi via Google Cloud Run derrière un répartiteur de charge Google. Les journaux d'infrastructure standards (adresse IP, agent utilisateur, horodatage) sont conservés temporairement par Google Cloud pour les opérations et la sécurité.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Courriel</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Si vous écrivez à <a href="mailto:info@datasciencetech.ca" class="text-primary-600 dark:text-primary-400 hover:underline">info@datasciencetech.ca</a>, votre message et votre adresse servent uniquement à vous répondre. Ils ne sont ajoutés à aucune liste d'envoi ni partagés avec des tiers.
+            </p>
+
+            <h2 class="mt-8 text-2xl font-bold text-secondary-900 dark:text-white">Vos droits</h2>
+            <p class="text-secondary-700 dark:text-secondary-300">
+              Vous pouvez demander l'accès, la correction ou la suppression de vos données personnelles en écrivant à <a href="mailto:info@datasciencetech.ca" class="text-primary-600 dark:text-primary-400 hover:underline">info@datasciencetech.ca</a>.
+            </p>
+
+            <p class="mt-8 text-secondary-500 dark:text-secondary-500 text-sm">
+              &copy; 2026 Agentic Governance
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer lang={lang} content={siteContent} />
