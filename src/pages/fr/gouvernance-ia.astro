@@ -1,0 +1,18 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServicePage from '../../components/ServicePage.astro';
+import content from '../../content/ai-governance.fr.json';
+import site from '../../content/site.fr.json';
+
+const lang = 'fr';
+---
+
+<MainLayout title={content.meta.title} description={content.meta.description} lang={lang}>
+  <Header lang={lang} content={site} />
+  <main>
+    <ServicePage lang={lang} content={content} />
+  </main>
+  <Footer lang={lang} content={site} />
+</MainLayout>

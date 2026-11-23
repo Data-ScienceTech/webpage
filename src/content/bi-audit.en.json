@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "BI & Data Warehouse Audit | Agentic Governance",
+    "description": "A BI and data warehouse audit traces a management number from source to report — grain, joins, history, reconciliation, ownership — and returns a prioritized findings register you can act on."
+  },
+  "eyebrow": "BI & Data Warehouse Audit",
+  "title": "Can you reproduce this number — and explain where it changes?",
+  "intro": "When two reports disagree or a warehouse is inherited, the fastest way forward is to follow one real number through the system. We trace a management indicator from its sources, through transformations, to the report — and hand back evidence, exposure, and a prioritized fix list.",
+  "triggers": {
+    "heading": "Recognizable situations",
+    "items": [
+      "A BI lead inherits a warehouse and nobody can say which numbers are authoritative.",
+      "Two reports present the same KPI with different totals, and Finance is preparing to consolidate reporting.",
+      "A platform migration or ERP change is coming and the reporting baseline needs to be trusted first."
+    ]
+  },
+  "method": {
+    "heading": "How a review runs",
+    "intro": "The method is deliberately narrow: one indicator, one reference total, one trace.",
+    "steps": [
+      "Select a management indicator and its reference total (for example, a freight or revenue figure Finance relies on).",
+      "Trace it from source systems through transformations — SQL Server queries, ETL steps, semantic models — into the report, e.g. a Power BI dataset.",
+      "Inspect grain, join keys, slowly changing history, reconciliation points, and ownership.",
+      "Deliver a findings register: what breaks, the evidence, the exposure, and the estimated effort to fix."
+    ]
+  },
+  "example": {
+    "heading": "A worked finding",
+    "label": "Illustrative example · fictitious data",
+    "fields": [
+      { "label": "Decision", "text": "Can Finance use the report's freight total?" },
+      { "label": "Evidence", "text": "Two orders have freight charges of $12 and $8. The first has three lines, the second has one. After the join to order lines, the report adds $12 three times and $8 once, for $44. The order register totals $20." },
+      { "label": "Finding and action", "text": "Freight is recorded per order. Aggregate at order level before combining totals, then reconcile to the register. The example passes when the report returns $20 and the detail still shows four lines." }
+    ]
+  },
+  "deliverables": {
+    "heading": "What you receive",
+    "items": [
+      "An executive summary written for the budget holder, not the engineering team.",
+      "A source-to-report trace of the selected indicator, with the evidence at each hop.",
+      "A prioritized findings register: evidence, exposure, and estimated effort per item.",
+      "Optional coaching while your team applies selected corrections."
+    ]
+  },
+  "provides": {
+    "heading": "What we need from you",
+    "items": [
+      "Read access to the warehouse and the report in scope (read-only is sufficient).",
+      "A named owner who can answer questions about the indicator's definition.",
+      "One representative number that currently causes disagreement."
+    ]
+  },
+  "cta": {
+    "heading": "Discuss a project",
+    "text": "Fixed scope can be quoted once a representative sample, access assumptions, and deliverables are defined. Email to start the conversation.",
+    "button": "Email about a BI audit",
+    "subject": "BI audit inquiry"
+  }
+}
