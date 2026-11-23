@@ -1,63 +1,58 @@
 {
   "company": "Agentic Governance",
-  "tagline": "Consulting for agentic AI systems",
+  "tagline": "Data & AI advisory",
   "hero": {
-    "eyebrow": "Independent consulting — Québec, Canada",
-    "title": "Agentic AI, under your control",
-    "subtitle": "I help organizations deploy LLM and agent systems with cost controls, hallucination guardrails, and local-first architectures — so automation stays accountable.",
-    "cta_primary": "Book a consultation",
-    "cta_secondary": "Explore Open ForceField"
+    "eyebrow": "Data & AI advisory — independent consulting, Québec, Canada",
+    "title": "BI audits and AI governance",
+    "subtitle": "We help BI and finance teams trace the numbers behind their reports — and we help teams deploying AI agents evaluate outputs, control costs, and decide when a person should step in.",
+    "cta_primary": "Explore a BI audit",
+    "cta_secondary": "Explore an AI governance review"
   },
   "services": {
-    "title": "What I help with",
-    "subtitle": "Focused engagements for teams putting LLMs and agents into production.",
+    "title": "Two ways we work",
+    "subtitle": "The same method on both sides: follow a real number or decision through the system, examine the evidence, and show you what to fix first.",
     "items": [
       {
-        "name": "LLM Cost Control",
-        "description": "Find where the money goes, then cap it — without gutting quality.",
+        "name": "BI & Data Warehouse Audit",
+        "description": "When two reports disagree or a warehouse is inherited, we trace a management indicator from source to report and hand back a prioritized findings register.",
         "points": [
-          "Spend audit and per-feature attribution",
-          "Token budgets, quotas, and alerts",
-          "Model routing, caching, and prompt optimization",
-          "Unit economics and spend forecasting"
-        ]
+          "Source-to-report trace of a management indicator",
+          "Grain, joins, history, reconciliation, and ownership review",
+          "Prioritized findings register: evidence, exposure, effort"
+        ],
+        "href": "/en/bi-audit",
+        "cta": "Explore a BI audit"
       },
       {
-        "name": "Hallucination & Output Control",
-        "description": "Evaluation pipelines and grounding checks that catch bad outputs before users do.",
+        "name": "AI Governance & Architecture Review",
+        "description": "Before an agent or assistant reaches production, we examine one workflow end to end — permissions, evaluation gaps, human approvals, and cost per task.",
         "points": [
-          "Evaluation and red-team test suites",
-          "Grounding and citation verification",
-          "Structured output validation",
-          "Prompt regression testing in CI"
-        ]
+          "Workflow and control map with approval checkpoints",
+          "Evaluation gaps and hallucination guardrails",
+          "Cost per completed task and practical monitoring"
+        ],
+        "href": "/en/ai-governance",
+        "cta": "Explore an AI governance review"
+      }
+    ]
+  },
+  "receive": {
+    "title": "What you receive",
+    "items": [
+      {
+        "name": "From a BI audit",
+        "text": "An executive summary, a source-to-report trace of one indicator, and a findings register your team can work from — for example, freight counted per order line that triples a report total."
       },
       {
-        "name": "Local-First Agentic Systems",
-        "description": "Agents that run entirely inside your perimeter — no data leaves your network.",
-        "points": [
-          "Local and open-weight model deployment",
-          "Air-gapped MCP tool governance",
-          "On-premise RAG architectures",
-          "Privacy-by-design system reviews"
-        ]
-      },
-      {
-        "name": "Agentic Governance Frameworks",
-        "description": "Policies, approval gates, and audit trails for autonomous agents — grounded in current research.",
-        "points": [
-          "Agent permission and capability models",
-          "Human-in-the-loop approval gates",
-          "Audit logging and accountability trails",
-          "Risk assessment and policy design"
-        ]
+        "name": "From an AI review",
+        "text": "A control map showing which actions run unsupervised, where human approval belongs, and how cost per accepted task is measured — for example, which purchase requests an assistant may submit alone."
       }
     ]
   },
   "open_forcefield": {
     "badge": "Open Source — Apache 2.0",
     "title": "Open ForceField",
-    "description": "My open-source toolkit for LLM and agent control — the same primitives I deploy in client work, free on PyPI.",
+    "description": "Our open-source toolkit for LLM and agent control — the same primitives we deploy in client work, free on PyPI.",
     "install": "pip install forcefield",
     "points": [
       "Prompt-injection detection across 12 attack categories",
@@ -82,25 +77,19 @@
   "about": {
     "title": "About",
     "paragraphs": [
-      "Agentic Governance is the independent practice of a researcher and builder working on how organizations deploy and govern AI agents — and what it takes to keep them reliable, affordable, and accountable.",
-      "I build in the open: Open ForceField, the VS Code and JetBrains extensions, and the published benchmarks are the working toolkit behind my engagements."
+      "Agentic Governance is an independent consulting practice in data and AI. The work centers on one discipline: following an actual number or decision through a system — a warehouse, a report, an agentic workflow — and showing the owner what to fix first.",
+      "We build in the open: Open ForceField, the VS Code and JetBrains extensions, and the published benchmarks are the working toolkit behind our engagements."
     ]
   },
   "contact": {
-    "title": "Let's talk",
-    "subtitle": "Consulting engagements, architecture reviews, and workshops — in English or French.",
+    "title": "Discuss a project",
+    "subtitle": "BI audits, AI governance reviews, and architecture engagements — in English or French.",
     "email": "info@datasciencetech.ca",
-    "cta": "Email me"
-  },
-  "metrics_banner": {
-    "items": [
-      { "value": "98.9%", "label": "Attack detection" },
-      { "value": "100%", "label": "Data leak prevention" },
-      { "value": "< 1ms", "label": "Scan latency (regex)" },
-      { "value": "0", "label": "Required dependencies" }
-    ]
+    "cta": "Email us"
   },
   "nav": {
+    "bi_audit": "BI Audit",
+    "ai_governance": "AI Governance",
     "open_forcefield": "Open ForceField",
     "benchmarks": "Benchmarks",
     "vscode": "VS Code",
@@ -109,8 +98,8 @@
     "cta": "Let's talk"
   },
   "footer": {
-    "description": "Independent consulting for agentic AI — LLM cost control, hallucination guardrails, and local-first agent systems.",
-    "tagline": "Agentic AI, under your control.",
+    "description": "Independent data & AI advisory — BI and data warehouse audits, AI governance reviews, and the Open ForceField toolkit.",
+    "tagline": "Data & AI advisory.",
     "languages": "English and French",
     "links": {
       "projectHeading": "Open ForceField",
@@ -123,14 +112,15 @@
       "demo": "Live Demo",
       "legalHeading": "Site",
       "privacy": "Privacy Policy",
-      "disclosure": "Responsible Disclosure"
+      "disclosure": "Responsible Disclosure",
+      "consent": "Consent Preferences"
     },
     "copyright": "© 2026 Agentic Governance. All rights reserved."
   },
   "meta": {
-    "title": "Agentic Governance — LLM cost control, hallucination guardrails, local-first agentic AI",
-    "description": "Independent consulting for agentic AI: LLM cost control, hallucination and output guardrails, local-first agent systems, and governance frameworks. Home of Open ForceField, the open-source AI control toolkit.",
-    "keywords": "agentic AI governance, LLM cost control, hallucination prevention, local-first AI, on-premise LLM, agent security, MCP governance, AI consulting Québec, prompt injection, PII redaction, Open ForceField"
+    "title": "Agentic Governance — BI audits & AI governance consulting",
+    "description": "Independent data & AI advisory: BI and data warehouse audits that trace a number from source to report, and AI governance reviews for agentic workflows. Home of Open ForceField, the open-source AI control toolkit.",
+    "keywords": "BI audit, data warehouse audit, Power BI audit, SQL Server review, AI governance, agentic AI governance, LLM cost control, hallucination prevention, local-first AI, MCP governance, AI consulting Québec, Open ForceField"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",

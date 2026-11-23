@@ -1,67 +1,62 @@
 {
   "company": "Agentic Governance",
-  "tagline": "Conseil pour systèmes d'IA agentique",
+  "tagline": "Conseil en données et en IA",
   "hero": {
-    "eyebrow": "Conseil indépendant — Québec, Canada",
-    "title": "L'IA agentique, sous votre contrôle",
-    "subtitle": "J'aide les organisations à déployer des systèmes LLM et agents avec des contrôles de coûts, des garde-fous contre les hallucinations et des architectures locales — pour une automatisation qui reste imputable.",
-    "cta_primary": "Réserver une consultation",
-    "cta_secondary": "Découvrir Open ForceField"
+    "eyebrow": "Conseil en données et en IA — consultation indépendante, Québec, Canada",
+    "title": "Audit BI et gouvernance de l'IA",
+    "subtitle": "Nous aidons les équipes BI et finances à remonter des chiffres d'un rapport jusqu'aux données sources — et nous accompagnons les équipes qui déploient des agents d'IA pour évaluer leurs réponses, contrôler leurs coûts et déterminer quand une personne doit intervenir.",
+    "cta_primary": "Découvrir l'audit BI",
+    "cta_secondary": "Découvrir la revue de gouvernance de l'IA"
   },
   "services": {
-    "title": "Comment je peux aider",
-    "subtitle": "Des mandats ciblés pour les équipes qui mettent des LLM et des agents en production.",
+    "title": "Deux façons de travailler",
+    "subtitle": "La même méthode des deux côtés : suivre un chiffre ou une décision réelle à travers le système, examiner les preuves et montrer quoi corriger en premier.",
     "items": [
       {
-        "name": "Contrôle des coûts LLM",
-        "description": "Identifiez où va l'argent, puis plafonnez-le — sans sacrifier la qualité.",
+        "name": "Audit BI et entrepôt de données",
+        "description": "Quand deux rapports divergent ou qu'un entrepôt est hérité, nous remontons un indicateur de gestion de la source au rapport et livrons un registre de constats priorisé.",
         "points": [
-          "Audit des dépenses et attribution par fonction",
-          "Budgets de jetons, quotas et alertes",
-          "Routage de modèles, cache et optimisation de prompts",
-          "Économie unitaire et prévision des coûts"
-        ]
+          "Traçabilité source-à-rapport d'un indicateur de gestion",
+          "Revue de la granularité, des jointures, de l'historique, du rapprochement et de la responsabilité",
+          "Registre de constats priorisé : preuves, exposition, effort"
+        ],
+        "href": "/fr/audit-bi",
+        "cta": "Découvrir l'audit BI"
       },
       {
-        "name": "Contrôle des hallucinations et des sorties",
-        "description": "Des pipelines d'évaluation et des vérifications d'ancrage qui interceptent les mauvaises sorties avant vos utilisateurs.",
+        "name": "Revue de gouvernance de l'IA et d'architecture",
+        "description": "Avant qu'un agent ou un assistant n'atteigne la production, nous examinons un flux de travail de bout en bout — permissions, lacunes d'évaluation, approbations humaines et coût par tâche.",
         "points": [
-          "Suites d'évaluation et de tests adverses",
-          "Vérification d'ancrage et de citations",
-          "Validation de sorties structurées",
-          "Tests de régression de prompts en CI"
-        ]
+          "Carte du flux et des contrôles avec points d'approbation",
+          "Lacunes d'évaluation et garde-fous contre les hallucinations",
+          "Coût par tâche complétée et surveillance pratique"
+        ],
+        "href": "/fr/gouvernance-ia",
+        "cta": "Découvrir la revue de gouvernance de l'IA"
+      }
+    ]
+  },
+  "receive": {
+    "title": "Ce que vous recevez",
+    "items": [
+      {
+        "name": "D'un audit BI",
+        "text": "Un résumé exécutif, une traçabilité source-à-rapport d'un indicateur et un registre de constats exploitable — par exemple, des frais de transport comptabilisés par ligne de commande qui triplent le total du rapport."
       },
       {
-        "name": "Systèmes agentiques locaux",
-        "description": "Des agents qui s'exécutent entièrement dans votre périmètre — aucune donnée ne quitte votre réseau.",
-        "points": [
-          "Déploiement de modèles locaux et ouverts",
-          "Gouvernance d'outils MCP en environnement isolé",
-          "Architectures RAG sur site",
-          "Révisions d'architecture axées confidentialité"
-        ]
-      },
-      {
-        "name": "Cadres de gouvernance agentique",
-        "description": "Politiques, portes d'approbation et pistes d'audit pour agents autonomes — ancrés dans la recherche actuelle.",
-        "points": [
-          "Modèles de permissions et de capacités d'agents",
-          "Portes d'approbation humaine",
-          "Journalisation d'audit et imputabilité",
-          "Évaluation des risques et conception de politiques"
-        ]
+        "name": "D'une revue de l'IA",
+        "text": "Une carte des contrôles montrant quelles actions s'exécutent sans supervision, où placer l'approbation humaine et comment mesurer le coût par tâche acceptée — par exemple, quelles demandes d'achat un assistant peut soumettre seul."
       }
     ]
   },
   "open_forcefield": {
     "badge": "Code ouvert — Apache 2.0",
     "title": "Open ForceField",
-    "description": "Ma boîte à outils open source pour le contrôle des LLM et des agents — les mêmes primitives que je déploie chez mes clients, gratuites sur PyPI.",
+    "description": "Notre boîte à outils open source pour le contrôle des LLM et des agents — les mêmes primitives que nous déployons chez nos clients, gratuites sur PyPI.",
     "install": "pip install forcefield",
     "points": [
-      "Détection d'injection de prompts sur 12 catégories d'attaques",
-      "Détection et rédaction de RCP (données personnelles)",
+      "Détection d'injection de prompt sur 12 catégories d'attaques",
+      "Détection et masquage des renseignements personnels",
       "Modération de contenu et analyse des sorties",
       "Limitation de débit et budgets de jetons",
       "Gouvernance des appels d'outils pour agents (MCP)",
@@ -82,35 +77,29 @@
   "about": {
     "title": "À propos",
     "paragraphs": [
-      "Agentic Governance est la pratique indépendante d'un chercheur et bâtisseur qui travaille sur la façon dont les organisations déploient et gouvernent les agents IA — et ce qu'il faut pour les garder fiables, abordables et imputables.",
-      "Je construis en ouvert : Open ForceField, les extensions VS Code et JetBrains et les benchmarks publiés constituent la boîte à outils derrière mes mandats."
+      "Agentic Governance est une pratique de consultation indépendante en données et en IA. Le travail s'articule autour d'une même discipline : suivre un chiffre ou une décision réelle à travers un système — un entrepôt, un rapport, un flux agentique — et montrer au responsable quoi corriger en premier.",
+      "Nous construisons en ouvert : Open ForceField, les extensions VS Code et JetBrains, ainsi que les benchmarks publiés constituent la boîte à outils de nos mandats."
     ]
   },
   "contact": {
-    "title": "Discutons",
-    "subtitle": "Mandats de conseil, révisions d'architecture et ateliers — en français ou en anglais.",
+    "title": "Discuter d'un mandat",
+    "subtitle": "Audits BI, revues de gouvernance de l'IA et mandats d'architecture — en français ou en anglais.",
     "email": "info@datasciencetech.ca",
-    "cta": "Écrivez-moi"
-  },
-  "metrics_banner": {
-    "items": [
-      { "value": "98,9 %", "label": "Détection d'attaques" },
-      { "value": "100 %", "label": "Prévention des fuites de données" },
-      { "value": "< 1 ms", "label": "Latence d'analyse (regex)" },
-      { "value": "0", "label": "Dépendances requises" }
-    ]
+    "cta": "Nous écrire"
   },
   "nav": {
+    "bi_audit": "Audit BI",
+    "ai_governance": "Gouvernance IA",
     "open_forcefield": "Open ForceField",
     "benchmarks": "Benchmarks",
     "vscode": "VS Code",
     "jetbrains": "JetBrains",
     "demo": "Démo en direct",
-    "cta": "Discutons"
+    "cta": "Nous écrire"
   },
   "footer": {
-    "description": "Conseil indépendant pour l'IA agentique — contrôle des coûts LLM, garde-fous contre les hallucinations et systèmes d'agents locaux.",
-    "tagline": "L'IA agentique, sous votre contrôle.",
+    "description": "Conseil indépendant en données et en IA — audits BI et entrepôts de données, revues de gouvernance de l'IA, et la boîte à outils Open ForceField.",
+    "tagline": "Conseil en données et en IA.",
     "languages": "Français et anglais",
     "links": {
       "projectHeading": "Open ForceField",
@@ -123,14 +112,15 @@
       "demo": "Démo en direct",
       "legalHeading": "Site",
       "privacy": "Politique de confidentialité",
-      "disclosure": "Divulgation responsable"
+      "disclosure": "Divulgation responsable",
+      "consent": "Préférences de consentement"
     },
     "copyright": "© 2026 Agentic Governance. Tous droits réservés."
   },
   "meta": {
-    "title": "Agentic Governance — contrôle des coûts LLM, garde-fous anti-hallucination, IA agentique locale",
-    "description": "Conseil indépendant pour l'IA agentique : contrôle des coûts LLM, garde-fous contre les hallucinations et les sorties, systèmes d'agents locaux et cadres de gouvernance. Maison d'Open ForceField, la boîte à outils open source de contrôle IA.",
-    "keywords": "gouvernance IA agentique, contrôle coûts LLM, prévention hallucinations, IA locale, LLM sur site, sécurité agents, gouvernance MCP, conseil IA Québec, injection de prompts, rédaction RCP, Open ForceField"
+    "title": "Agentic Governance — Audit BI et conseil en gouvernance de l'IA",
+    "description": "Conseil indépendant en données et en IA : audits BI et entrepôts de données qui remontent un chiffre de la source au rapport, et revues de gouvernance pour flux agentiques. Domicile d'Open ForceField, la boîte à outils de contrôle IA open source.",
+    "keywords": "audit BI, audit entrepôt de données, revue Power BI, revue SQL Server, gouvernance IA, gouvernance IA agentique, contrôle coûts LLM, prévention hallucinations, IA locale, gouvernance MCP, conseil IA Québec, Open ForceField"
   },
   "social": {
     "github": "https://github.com/Data-ScienceTech",
