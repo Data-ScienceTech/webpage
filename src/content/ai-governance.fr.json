@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "Revue de gouvernance de l'IA et d'architecture | Agentic Governance",
-    "description": "Une revue de gouvernance de l'IA examine un flux de travail agentique — entrées, sorties, permissions d'outils, approbations humaines, coût par tâche — et livre une carte des contrôles, les lacunes d'évaluation et un plan d'action priorisé."
+    "description": "Une revue de gouvernance de l'IA examine un flux de travail agentique — entrées, sorties, permissions d'outils, approbations humaines, coût par tâche — et livre une carte des contrôles, les lacunes d'évaluation et un plan d'action priorisé.",
+    "og_image": "/og/og-ai-governance-fr-v2.png"
   },
   "eyebrow": "Revue de gouvernance de l'IA et d'architecture",
   "title": "Pouvez-vous expliquer ce que le système a fait, comment vous l'avez évalué, et quand une personne intervient?",
@@ -31,7 +32,7 @@
       { "label": "Scénario", "text": "Un assistant interne prépare des demandes d'achat : il lit une demande en texte libre, consulte un fournisseur, remplit les champs du formulaire et peut soumettre à l'ERP." },
       { "label": "Décision d'approbation humaine", "text": "Toute demande dépassant un montant défini, tout nouveau fournisseur ou toute extraction de champ à faible confiance exige une personne avant soumission. Le reste peut être soumis automatiquement avec piste d'audit." },
       { "label": "Mesure de la qualité des sorties", "text": "Une demande est comptée comme valide lorsque chaque champ extrait correspond à la source et qu'un réviseur l'approuverait sans retouche — mesuré sur un échantillon hebdomadaire, pas sur un jeu de démo." },
-      { "label": "Mesure des coûts", "text": "Coût par demande acceptée = dépenses de modèle divisées par les demandes approuvées sans correction, suivi par flux pour que les dépenses correspondent au travail complété." }
+      { "label": "Mesure du coût du modèle", "text": "Dépenses de modèle par demande acceptée — dépenses de modèle divisées par les demandes approuvées sans correction, suivi par flux pour que les dépenses correspondent au travail complété. Si un coût complet du processus est requis, les autres catégories mesurables sont convenues avec vous : infrastructure, outils, reprises et temps de révision humaine." }
     ]
   },
   "deliverables": {

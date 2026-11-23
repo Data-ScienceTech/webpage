@@ -131,7 +131,7 @@
     "marketplace": "Install from JetBrains Marketplace",
     "marketplace_url": "https://plugins.jetbrains.com/plugin/30985-forcefield-ai-security-scanner",
     "sdk": "Powered by the Open ForceField Python SDK",
-    "sdk_url": "/en/python-sdk",
+    "sdk_url": "/en/open-forcefield",
     "gateway": "Connect to ForceField Gateway",
     "gateway_url": "https://forcefield.datasciencetech.ca",
     "vscode": "Also available for VS Code",

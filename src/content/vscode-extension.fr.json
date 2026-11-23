@@ -1,25 +1,25 @@
 {
   "meta": {
     "title": "Open ForceField pour VS Code — Mode Sentinelle pour agents de codage IA | Agentic Governance",
-    "description": "Moniteur de securite en temps reel pour les agents de codage IA dans VS Code. Le mode Sentinelle surveille les modifications de fichiers, les commandes terminal et les operations dangereuses effectuees par Cursor, Cline, Codex et autres agents IA.",
-    "keywords": "extension VS Code, securite agents codage IA, mode Sentinelle, securite vibe coding, moniteur agent Cursor, securite Cline, protection fichiers agent IA, analyse commandes terminal, chemins proteges, ForceField VS Code, revue code IA, detection commandes dangereuses"
+    "description": "Moniteur de sécurité en temps réel pour les agents de codage IA dans VS Code. Le mode Sentinelle surveille les modifications de fichiers, les commandes terminal et les opérations dangereuses effectuées par Cursor, Cline, Codex et autres agents IA.",
+    "keywords": "extension VS Code, sécurité agents codage IA, mode Sentinelle, sécurité vibe coding, moniteur agent Cursor, sécurité Cline, protection fichiers agent IA, analyse commandes terminal, chemins proteges, ForceField VS Code, revue code IA, détection commandes dangereuses"
   },
   "hero": {
     "title": "Open ForceField pour VS Code",
     "subtitle": "Mode Sentinelle pour agents de codage IA",
-    "tagline": "Surveillance de securite en temps reel pour Cursor, Cline, Codex et chaque agent IA qui ecrit du code dans votre editeur.",
+    "tagline": "Surveillance de sécurité en temps réel pour Cursor, Cline, Codex et chaque agent IA qui écrit du code dans votre éditeur.",
     "badges": ["Gratuit", "Python 3.9+", "Apache 2.0"]
   },
   "stats": [
     { "value": "22", "label": "Motifs de commandes dangereuses" },
     { "value": "12", "label": "Motifs de fichiers sensibles" },
     { "value": "20+", "label": "Commandes disponibles" },
-    { "value": "0", "label": "Telemetrie par defaut" }
+    { "value": "0", "label": "Télémétrie par défaut" }
   ],
   "sentinel": {
     "title": "Mode Sentinelle",
-    "subtitle": "Votre agent IA ecrit du code. Sentinelle surveille tout ce qu'il fait.",
-    "description": "Les agents de codage IA operent a l'interieur de VS Code -- creant des fichiers, executant des commandes shell et modifiant votre base de code. Le mode Sentinelle surveille passivement tout cela en temps reel et vous alerte des activites dangereuses avant qu'elles ne causent des dommages.",
+    "subtitle": "Votre agent IA écrit du code. Sentinelle surveille tout ce qu'il fait.",
+    "description": "Les agents de codage IA opèrent à l'intérieur de VS Code -- créant des fichiers, exécutant des commandes shell et modifiant votre base de code. Le mode Sentinelle surveille passivement tout cela en temps réel et vous alerte des activités dangereuses avant qu'elles ne causent des dommages.",
     "features": [
       {
         "title": "Surveillance des modifications",
@@ -27,7 +27,7 @@
         "icon": "FileEdit"
       },
       {
-        "title": "Interception des operations",
+        "title": "Interception des opérations",
         "description": "Signale les creations, suppressions et renommages dangereux : .env, id_rsa, secrets.json, .pem, authorized_keys et 12 autres motifs.",
         "icon": "FileWarning"
       },
@@ -37,8 +37,8 @@
         "icon": "Terminal"
       },
       {
-        "title": "Arret automatique des commandes",
-        "description": "Envoie optionnellement Ctrl+C au terminal des qu'une commande critique est detectee -- avant qu'elle ne finisse de s'executer. Puis vous demande de verifier.",
+        "title": "Arrêt automatique des commandes",
+        "description": "Envoie optionnellement Ctrl+C au terminal dès qu'une commande critique est détectée -- avant qu'elle ne finisse de s'exécuter. Puis vous demande de vérifier.",
         "icon": "XCircle"
       }
     ]
@@ -66,52 +66,52 @@
   "protected_paths": {
     "title": "Chemins proteges",
     "subtitle": "Designez des fichiers et dossiers comme intouchables.",
-    "description": "Pendant que Sentinelle est actif, les chemins proteges sont inconditionnellement bloques contre la suppression et le renommage -- pas de dialogue, juste bloque. Les modifications de contenu declenchent un dialogue de blocage de sauvegarde avec une option de remplacement.",
+    "description": "Pendant que Sentinelle est actif, les chemins proteges sont inconditionnellement bloqués contre la suppression et le renommage -- pas de dialogue, juste bloqué. Les modifications de contenu declenchent un dialogue de blocage de sauvegarde avec une option de remplacement.",
     "examples": [".env", ".gitignore", "*.pem", "src/config/**", "id_rsa", "docker-compose.yml"],
     "features": [
       "Fonctionne a tous les niveaux de protection, y compris Surveillance",
-      "Correspondance exacte, glob et recursive par repertoire",
-      "Changements externes detectes via FileSystemWatcher",
+      "Correspondance exacte, glob et recursive par répertoire",
+      "Changements externes détectés via FileSystemWatcher",
       "Icone de cadenas dans la barre de titre pour les fichiers proteges"
     ]
   },
   "scanning": {
-    "title": "Analyse et detection",
+    "title": "Analyse et détection",
     "items": [
       {
         "title": "Analyser le fichier courant",
-        "description": "Detecter l'injection de prompts, l'exfiltration de donnees, les tentatives de jailbreak et les DPI avec des diagnostics en ligne.",
+        "description": "Détecter l'injection de prompts, l'exfiltration de données, les tentatives de jailbreak et les DPI avec des diagnostics en ligne.",
         "shortcut": "Ctrl+Shift+F5"
       },
       {
-        "title": "Rediger les DPI",
-        "description": "Trouver et remplacer NAS, carte de credit, courriel, telephone, IP, IBAN et 12 autres types de DPI. Cinq strategies de redaction.",
+        "title": "Rédiger les DPI",
+        "description": "Trouver et remplacer NAS, carte de crédit, courriel, téléphone, IP, IBAN et 12 autres types de DPI. Cinq stratégies de masquage.",
         "shortcut": "Ctrl+Shift+F6"
       },
       {
         "title": "Moderer le contenu",
-        "description": "Verifier les sorties LLM pour les discours haineux, la violence, l'automutilation, le code malveillant, les fuites d'identifiants et les indicateurs de jailbreak."
+        "description": "Vérifier les sorties LLM pour les discours haineux, la violence, l'automutilation, le code malveillant, les fuites d'identifiants et les indicateurs de jailbreak."
       },
       {
-        "title": "Verification de securite du contenu",
-        "description": "Notation compatible Azure Content Safety pour les categories Haine, Violence, Sexuel et Automutilation."
+        "title": "Vérification de sécurité du contenu",
+        "description": "Notation compatible Azure Content Safety pour les catégories Haine, Violence, Sexuel et Automutilation."
       },
       {
-        "title": "Valider le modele de chat",
-        "description": "Detecter les modeles de chat Jinja2 compromis selon la recherche ICLR 2026 : instructions codees en dur, charges base64, macros suspectes."
+        "title": "Valider le modèle de chat",
+        "description": "Détecter les modèles de chat Jinja2 compromis selon la recherche ICLR 2026 : instructions codées en dur, charges base64, macros suspectées."
       },
       {
         "title": "Rapport d'auto-test",
-        "description": "Executer 121 prompts d'attaque et voir les resultats dans un webview riche avec taux de detection, resultats par attaque et scores de risque."
+        "description": "Exécuter 121 prompts d'attaque et voir les résultats dans un webview riche avec taux de détection, résultats par attaque et scores de risque."
       }
     ]
   },
   "gateway": {
-    "title": "Integration passerelle cloud",
-    "description": "Connectez-vous a la passerelle ForceField pour une detection alimentee par le transformeur DeBERTa. Connectez-vous directement depuis VS Code, gerez les cles API et configurez automatiquement la passerelle -- le tout sans quitter l'editeur.",
+    "title": "Intégration passerelle cloud",
+    "description": "Connectez-vous à la passerelle ForceField pour une détection alimentée par le transformeur DeBERTa. Connectez-vous directement depuis VS Code, gerez les clés API et configurez automatiquement la passerelle -- le tout sans quitter l'éditeur.",
     "features": [
-      "Connexion / creation de compte depuis la palette de commandes",
-      "Gestion des cles API (lister, creer, revoquer)",
+      "Connexion / création de compte depuis la palette de commandes",
+      "Gestion des clés API (lister, créer, revoquer)",
       "Configuration automatique ou manuelle de la passerelle",
       "Repli sur l'analyse locale si la passerelle est injoignable"
     ]
@@ -119,23 +119,23 @@
   "architecture": {
     "title": "Comment ca fonctionne",
     "items": [
-      "Daemon Python persistant via JSON-RPC -- aucun demarrage a froid",
-      "Alimente par le SDK Open ForceField (memes API scan_command / scan_filename)",
-      "Diagnostics en ligne avec mise en evidence adaptee a la severite",
-      "DPI mis en evidence avec positions exactes et infobulles au survol",
-      "L'etat Sentinelle survit aux redemarrages de VS Code (500 derniers evenements, statistiques cumulatives)"
+      "Daemon Python persistant via JSON-RPC -- aucun démarrage a froid",
+      "Alimenté par le SDK Open ForceField (mêmes API scan_command / scan_filename)",
+      "Diagnostics en ligne avec mise en évidence adaptée à la sévérité",
+      "DPI mis en évidence avec positions exactes et infobulles au survol",
+      "L'état Sentinelle survit aux redemarrages de VS Code (500 derniers événements, statistiques cumulatives)"
     ]
   },
   "telemetry": {
-    "title": "Telemetrie respectueuse de la vie privee",
-    "description": "Lorsque connecte, la telemetrie anonymisee est regroupee et synchronisee toutes les 60 secondes. Aucun nom de fichier, contenu ou commande brute n'est jamais envoye -- seulement les types d'evenements, severites, compteurs et hachages. Desactivable en un parametre."
+    "title": "Télémétrie respectueuse de la vie privée",
+    "description": "Lorsque connecté, la télémétrie anonymisée est regroupée et synchronisée toutes les 60 secondes. Aucun nom de fichier, contenu ou commande brute n'est jamais envoyé -- seulement les types d'événements, sévérités, compteurs et hachages. Désactivable en un paramètre."
   },
   "cta": {
     "marketplace": "Installer depuis le VS Code Marketplace",
     "marketplace_url": "https://marketplace.visualstudio.com/items?itemName=DataScienceTech.forcefield",
-    "sdk": "Alimente par le SDK Python Open ForceField",
-    "sdk_url": "/fr/python-sdk",
-    "gateway": "Connecter a la passerelle ForceField",
+    "sdk": "Alimenté par le SDK Python Open ForceField",
+    "sdk_url": "/fr/open-forcefield",
+    "gateway": "Connecter à la passerelle ForceField",
     "gateway_url": "https://forcefield.datasciencetech.ca",
     "jetbrains": "Aussi disponible pour les IDE JetBrains",
     "jetbrains_url": "/fr/plugin-jetbrains"

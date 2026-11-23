@@ -2,16 +2,16 @@
   "meta": {
     "title": "Open ForceField — Contrôle des LLM et agents en 3 lignes de Python | Agentic Governance",
     "description": "Boîte à outils open source pour la détection d'injections de prompts, la rédaction de RCP, la modération de sorties, la limitation de débit et la gouvernance d'outils d'agents. pip install forcefield — Apache 2.0, zéro dépendance.",
-    "keywords": "Python SDK, securite IA, detection injection de prompts, redaction DPI, pare-feu LLM, pip install, ONNX, guardrails, open source, forcefield, securite de contenu, limitation de debit, detection d'abus, gouvernance d'outils"
+    "keywords": "Python SDK, sécurité IA, détection injection de prompts, masquage de DPI, pare-feu LLM, pip install, ONNX, guardrails, open source, forcefield, sécurité de contenu, limitation de débit, détection d'abus, gouvernance d'outils"
   },
   "hero": {
     "title": "Open ForceField",
     "subtitle": "pip install forcefield",
-    "tagline": "Securite IA en 3 lignes de Python. Aucune cle API, aucune dependance cloud, aucun verrouillage fournisseur.",
+    "tagline": "Sécurité IA en 3 lignes de Python. Aucune clé API, aucune dépendance cloud, aucun verrouillage fournisseur.",
     "badges": [
       "Apache 2.0",
       "Python 3.9-3.13",
-      "100% detection avec ML"
+      "100% détection avec ML"
     ]
   },
   "install": {
@@ -22,8 +22,8 @@
     "conda": "conda install -c conda-forge forcefield",
     "brew": "brew install forcefield",
     "basic_label": "Base (regex + heuristiques)",
-    "ml_label": "+ Modele ML ONNX + detection d'abus par embeddings",
-    "all_label": "Tout (ML + cloud + integrations)",
+    "ml_label": "+ Modèle ML ONNX + détection d'abus par embeddings",
+    "all_label": "Tout (ML + cloud + intégrations)",
     "conda_label": "conda-forge (SDK uniquement)",
     "brew_label": "Homebrew (macOS / Linux)"
   },
@@ -34,11 +34,11 @@
   "stats": [
     {
       "value": "100%",
-      "label": "Taux de detection avec ML"
+      "label": "Taux de détection avec ML"
     },
     {
       "value": "235 Ko",
-      "label": "Taille du modele ONNX"
+      "label": "Taille du modèle ONNX"
     },
     {
       "value": "< 1ms",
@@ -46,7 +46,7 @@
     },
     {
       "value": "0",
-      "label": "Dependances externes requises"
+      "label": "Dépendances externes requises"
     },
     {
       "value": "Apache 2.0",
@@ -57,18 +57,18 @@
     "title": "Contenu du SDK",
     "items": [
       {
-        "title": "Detection d'injection de prompts",
-        "description": "12 categories d'attaques : contournement d'instructions, jailbreaks, changement de role, contrebande de tokens, fractionnement de payload, extraction de donnees, injection indirecte, et plus.",
+        "title": "Détection d'injection de prompts",
+        "description": "12 catégories d'attaques : contournement d'instructions, jailbreaks, changement de rôle, contrebande de tokens, fractionnement de payload, extraction de données, injection indirecte, et plus.",
         "icon": "Shield"
       },
       {
         "title": "Scoring par ML",
-        "description": "Modele TF-IDF + Regression Logistique integre, exporte en ONNX (235 Ko). Classifie les prompts en benin, injection, jailbreak ou exfiltration.",
+        "description": "Modèle TF-IDF + Régression Logistique intégré, exporté en ONNX (235 Ko). Classifie les prompts en bénin, injection, jailbreak ou exfiltration.",
         "icon": "Brain"
       },
       {
-        "title": "Detection et redaction de DPI",
-        "description": "Detectez et masquez les courriels, numeros de telephone, NAS, cartes de credit, adresses IP et plus. Quatre strategies : masquer, hacher, supprimer, partiel.",
+        "title": "Détection et masquage de DPI",
+        "description": "Détectez et masquez les courriels, numéros de téléphone, NAS, cartes de crédit, adresses IP et plus. Quatre stratégies : masquer, hacher, supprimer, partiel.",
         "icon": "Eye"
       },
       {
@@ -78,78 +78,78 @@
       },
       {
         "title": "Moderation des sorties LLM",
-        "description": "Analysez les reponses IA pour detecter les discours haineux, la violence, l'automutilation, les informations dangereuses, les fuites d'identifiants et les indicateurs de jailbreak reussi.",
+        "description": "Analysez les réponses IA pour détecter les discours haineux, la violence, l'automutilation, les informations dangereuses, les fuites d'identifiants et les indicateurs de jailbreak réussi.",
         "icon": "Filter"
       },
       {
         "title": "Suivi de session",
-        "description": "Detection d'attaques multi-tours. Suit le risque conversationnel et detecte les sequences d'escalade comme les schemas sonde-puis-injecte.",
+        "description": "Détection d'attaques multi-tours. Suit le risque conversationnel et détecte les séquences d'escalade comme les schémas sonde-puis-injecte.",
         "icon": "Activity"
       },
       {
-        "title": "Validation de modeles",
-        "description": "Detectez les modeles de chat Jinja2 compromis : instructions codees en dur, payloads base64, tokens speciaux integres, macros suspectes.",
+        "title": "Validation de modèles",
+        "description": "Détectez les modèles de chat Jinja2 compromis : instructions codées en dur, payloads base64, tokens spéciaux intégrés, macros suspectées.",
         "icon": "FileCheck"
       },
       {
-        "title": "Scanner de points d'acces",
-        "description": "Commande CLI pour tester vos propres points d'acces LLM. Execute 50+ prompts d'attaque dans 7 categories et genere un rapport de securite.",
+        "title": "Scanner de points d'accès",
+        "description": "Commande CLI pour tester vos propres points d'accès LLM. Exécute 50+ prompts d'attaque dans 7 catégories et génère un rapport de sécurité.",
         "icon": "Crosshair"
       },
       {
-        "title": "Securite de contenu",
-        "description": "API compatible Azure Content Safety retournant des scores de severite 0/2/4/6 pour Haine, Violence, Sexuel et Automutilation. Remplacement direct avec seuils configurables par categorie.",
+        "title": "Sécurité de contenu",
+        "description": "API compatible Azure Content Safety retournant des scores de sévérité 0/2/4/6 pour Haine, Violence, Sexuel et Automutilation. Remplacement direct avec seuils configurables par catégorie.",
         "icon": "ShieldAlert"
       },
       {
-        "title": "Limitation de debit",
-        "description": "Limiteur de debit en memoire par seau de jetons avec support multi-niveaux (par utilisateur, par session, global). Thread-safe, zero dependance, avec nettoyage automatique.",
+        "title": "Limitation de débit",
+        "description": "Limiteur de débit en mémoire par seau de jetons avec support multi-niveaux (par utilisateur, par session, global). Thread-safe, zero dépendance, avec nettoyage automatique.",
         "icon": "Gauge"
       },
       {
-        "title": "Detection d'abus",
-        "description": "Detecte les sorties hostiles, les personnalites desequilibrees, les succes de jailbreak et les deviations de persona. Heuristiques par defaut, similarite cosinus par embeddings avec forcefield[ml].",
+        "title": "Détection d'abus",
+        "description": "Détecte les sorties hostiles, les personnalites desequilibrees, les succès de jailbreak et les deviations de persona. Heuristiques par défaut, similarite cosinus par embeddings avec forcefield[ml].",
         "icon": "AlertTriangle"
       },
       {
         "title": "Gouvernance d'outils",
-        "description": "Securite des appels d'outils pilotee par politiques avec inspection pre-appel et post-appel. Politiques configurables autoriser/bloquer/approbation requise, detection de secrets et DPI dans les resultats.",
+        "description": "Sécurité des appels d'outils pilotée par politiques avec inspection pre-appel et post-appel. Politiques configurables autoriser/bloquer/approbation requise, détection de secrets et DPI dans les résultats.",
         "icon": "Settings"
       },
       {
         "title": "Analyse de commandes",
-        "description": "Classifie les commandes terminal pour 22 motifs dangereux : rm -rf, curl | sh, chmod 777, reverse shells, exfiltration d'identifiants, escalade de privileges, persistance crontab, et plus. Alimente le mode Sentinelle dans l'extension VS Code.",
+        "description": "Classifie les commandes terminal pour 22 motifs dangereux : rm -rf, curl | sh, chmod 777, reverse shells, exfiltration d'identifiants, escalade de privileges, persistance crontab, et plus. Alimenté le mode Sentinelle dans l'extension VS Code.",
         "icon": "Terminal"
       },
       {
         "title": "Analyse de noms de fichiers",
-        "description": "Detecte les operations dangereuses sur 12 motifs de fichiers sensibles : .env, id_rsa, secrets.json, authorized_keys, .pem, shadow, et plus. Signale les operations de creation, suppression et renommage par severite.",
+        "description": "Détecte les opérations dangereuses sur 12 motifs de fichiers sensibles : .env, id_rsa, secrets.json, authorized_keys, .pem, shadow, et plus. Signale les opérations de création, suppression et renommage par sévérité.",
         "icon": "FileWarning"
       },
       {
         "title": "Chemins proteges",
-        "description": "Designez des fichiers et dossiers comme immuables. ProtectedPathSet supporte la correspondance exacte, glob et recursive par repertoire. S'integre avec le mode Sentinelle VS Code pour bloquer les modifications d'agents sur les fichiers critiques.",
+        "description": "Designez des fichiers et dossiers comme immuables. ProtectedPathSet supporte la correspondance exacte, glob et recursive par répertoire. S'intégré avec le mode Sentinelle VS Code pour bloquer les modifications d'agents sur les fichiers critiques.",
         "icon": "ShieldCheck"
       }
     ]
   },
   "integrations": {
-    "title": "Integrations directes",
+    "title": "Intégrations directes",
     "items": [
       {
         "name": "OpenAI",
-        "code": "from forcefield.integrations.openai import SafeOpenAI\nclient = SafeOpenAI()",
-        "description": "Encapsule le client OpenAI. Analyse les prompts avant l'envoi, modere les reponses apres."
+        "code": "from forcefield.intégrations.openai import SafeOpenAI\nclient = SafeOpenAI()",
+        "description": "Encapsule le client OpenAI. Analyse les prompts avant l'envoi, modéré les réponses après."
       },
       {
         "name": "FastAPI",
-        "code": "from forcefield.integrations.fastapi import ForceFieldMiddleware\napp.add_middleware(ForceFieldMiddleware)",
-        "description": "Middleware ASGI qui analyse automatiquement tous les corps de requetes entrantes."
+        "code": "from forcefield.intégrations.fastapi import ForceFieldMiddleware\napp.add_middleware(ForceFieldMiddleware)",
+        "description": "Middleware ASGI qui analyse automatiquement tous les corps de requêtes entrantes."
       },
       {
         "name": "LangChain",
-        "code": "from forcefield.integrations.langchain import ForceFieldCallbackHandler\ncallbacks = [ForceFieldCallbackHandler()]",
-        "description": "Gestionnaire de callbacks qui analyse les prompts et les sorties a chaque etape de la chaine."
+        "code": "from forcefield.intégrations.langchain import ForceFieldCallbackHandler\ncallbacks = [ForceFieldCallbackHandler()]",
+        "description": "Gestionnaire de callbacks qui analyse les prompts et les sorties a chaque étape de la chaine."
       }
     ]
   },
@@ -162,23 +162,23 @@
       },
       {
         "cmd": "forcefield selftest",
-        "description": "Executer 121 prompts d'attaque integres et verifier la detection"
+        "description": "Exécuter 121 prompts d'attaque intégrés et vérifier la détection"
       },
       {
         "cmd": "forcefield test https://votre-api.com/chat",
-        "description": "Tester votre point d'acces LLM avec 50+ attaques"
+        "description": "Tester votre point d'accès LLM avec 50+ attaques"
       },
       {
         "cmd": "forcefield audit policy.yaml",
-        "description": "Valider votre configuration de politique de securite"
+        "description": "Valider votre configuration de politique de sécurité"
       },
       {
         "cmd": "forcefield scan-command \"rm -rf /\"",
         "description": "Classifier une commande terminal pour les motifs dangereux"
       },
       {
-        "cmd": "forcefield scan-filename .env --operation delete",
-        "description": "Verifier si une operation sur fichier est dangereuse"
+        "cmd": "forcefield scan-filename .env --opération delete",
+        "description": "Vérifier si une opération sur fichier est dangereuse"
       }
     ]
   },
@@ -187,7 +187,7 @@
     "items": [
       {
         "name": "forcefield[ml]",
-        "description": "ONNX Runtime + sentence-transformers pour detection ML et detection d'abus par embeddings"
+        "description": "ONNX Runtime + sentence-transformers pour détection ML et détection d'abus par embeddings"
       },
       {
         "name": "forcefield[cloud]",
@@ -195,11 +195,11 @@
       },
       {
         "name": "forcefield[langchain]",
-        "description": "Integration du gestionnaire de callbacks LangChain"
+        "description": "Intégration du gestionnaire de callbacks LangChain"
       },
       {
         "name": "forcefield[fastapi]",
-        "description": "Integration du middleware FastAPI"
+        "description": "Intégration du middleware FastAPI"
       },
       {
         "name": "forcefield[all]",
@@ -209,7 +209,7 @@
   },
   "github_action": {
     "title": "GitHub Action",
-    "description": "Ajoutez ForceField a votre pipeline CI/CD. Analyse votre code pour les injections de prompts, les fuites de DPI et les vulnerabilites de securite a chaque push.",
+    "description": "Ajoutez ForceField à votre pipeline CI/CD. Analyse votre code pour les injections de prompts, les fuites de DPI et les vulnérabilités de sécurité a chaque push.",
     "marketplace_url": "https://github.com/marketplace/actions/forcefield-ai-security-scanner",
     "marketplace_label": "Voir sur GitHub Marketplace",
     "code": "- uses: Data-ScienceTech/forcefield@v0.5.1\n  with:\n    mode: 'both'\n    sensitivity: 'medium'"

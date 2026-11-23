@@ -2,7 +2,7 @@
   "meta": {
     "title": "Résultats des Benchmarks Open ForceField — Performance de Sécurité Vérifiée | Agentic Governance",
     "description": "Résultats de benchmarks publiés pour Open ForceField : 98,9 % de détection d'attaques, 100 % de prévention des fuites de données, 0,6 % de taux de faux positifs et traitement de sécurité en ~ 1 ms P99.",
-    "keywords": "Benchmark Passerelle Sécurité IA, Benchmark Sécurité IA, Taux Détection Injection Prompts, Benchmark Sécurité MCP, Tests Sécurité Agents IA, Détection Menaces DeBERTa, Performance ForceField"
+    "keywords": "Repère Passerelle Sécurité IA, Repère Sécurité IA, Taux Détection Injection Prompts, Repère Sécurité MCP, Tests Sécurité Agents IA, Détection Menaces DeBERTa, Performance ForceField"
   },
   "hero": {
     "title": "Résultats des Benchmarks",

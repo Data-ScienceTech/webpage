@@ -134,7 +134,7 @@
     "marketplace": "Install from VS Code Marketplace",
     "marketplace_url": "https://marketplace.visualstudio.com/items?itemName=DataScienceTech.forcefield",
     "sdk": "Powered by the Open ForceField Python SDK",
-    "sdk_url": "/en/python-sdk",
+    "sdk_url": "/en/open-forcefield",
     "gateway": "Connect to ForceField Gateway",
     "gateway_url": "https://forcefield.datasciencetech.ca",
     "jetbrains": "Also available for JetBrains IDEs",
