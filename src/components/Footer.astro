@@ -1,5 +1,6 @@
 ---
 import LangSwitch from './LangSwitch';
+import { alternates } from '../i18n/routes';
 
 interface Props {
   lang: 'en' | 'fr';
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { lang, content } = Astro.props;
+const alt = alternates(Astro.url.pathname) ?? { en: '/en/', fr: '/fr/' };
 const currentYear = new Date().getFullYear();
 const L = content.footer.links;
 
@@ -102,7 +104,7 @@ const siteLinks = [
             </li>
           ))}
           <li>
-            <a href="#" class="termly-display-preferences footer-link">{L.consent}</a>
+            <button type="button" class="termly-display-preferences footer-link">{L.consent}</button>
           </li>
           <li>
             <a href={`mailto:${content.contact.email}`} class="footer-link">{content.contact.email}</a>
@@ -117,7 +119,7 @@ const siteLinks = [
         {content.footer.copyright}
       </p>
       <div class="mt-4 md:mt-0">
-        <LangSwitch lang={lang} client:load />
+        <LangSwitch lang={lang} enHref={alt.en} frHref={alt.fr} client:load />
       </div>
     </div>
   </div>

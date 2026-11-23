@@ -19,6 +19,12 @@ module.exports = {
   plugins: ['@typescript-eslint', 'jsx-a11y'],
   overrides: [
     {
+      files: ['*.d.ts'],
+      rules: {
+        '@typescript-eslint/triple-slash-reference': 'off',
+      },
+    },
+    {
       files: ['*.astro'],
       parser: 'astro-eslint-parser',
       parserOptions: {
