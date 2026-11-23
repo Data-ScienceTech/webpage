@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "AI Governance & Architecture Review | Agentic Governance",
+    "description": "An AI governance and architecture review examines one agentic workflow — inputs, outputs, tool permissions, human approvals, cost per task — and delivers a control map, evaluation gaps, and a prioritized action plan."
+  },
+  "eyebrow": "AI Governance & Architecture Review",
+  "title": "Can you explain what the system did, how you evaluated it, and when a person steps in?",
+  "intro": "Moving an AI assistant or agent into production raises three questions: what it may do, how its outputs are evaluated, and what it costs per completed task. We review one workflow end to end under your real operating conditions — and leave a control map and an action plan behind.",
+  "triggers": {
+    "heading": "Recognizable situations",
+    "items": [
+      "A copilot or agent is moving from pilot to production and nobody has defined what it may do unsupervised.",
+      "LLM costs are growing faster than usage, and nobody can attribute spend to completed work.",
+      "Outputs look plausible in demos but hallucinate on the inputs your users actually send."
+    ]
+  },
+  "method": {
+    "heading": "How a review runs",
+    "intro": "One workflow, traced end to end — same discipline as a number through a warehouse.",
+    "steps": [
+      "Select one agentic workflow and the decision your team needs to make about it.",
+      "Examine inputs, outputs, tool permissions, human approval points, cost per completed task, and the traces available.",
+      "Run scenarios that reflect your actual operating conditions — not benchmark trivia.",
+      "Deliver a workflow and control map, observed evaluation gaps, a prioritized action plan, and a practical approach to monitoring cost and quality."
+    ]
+  },
+  "example": {
+    "heading": "A worked example",
+    "label": "Illustrative example · fictitious system",
+    "fields": [
+      { "label": "Scenario", "text": "An internal assistant drafts purchase requests: it reads a free-text request, looks up a supplier, fills the form fields, and can submit to the ERP." },
+      { "label": "Human approval decision", "text": "Any request above a defined amount, any new supplier, or any low-confidence field extraction requires a person before submission. Everything else can auto-submit with an audit trail." },
+      { "label": "Output quality measure", "text": "A request counts as valid when every extracted field matches the source and a reviewer would approve it without edits — measured on a weekly sample, not on a demo set." },
+      { "label": "Cost measure", "text": "Cost per accepted request = model spend divided by requests approved without correction, tracked per workflow so spend maps to completed work." }
+    ]
+  },
+  "deliverables": {
+    "heading": "What you receive",
+    "items": [
+      "A workflow and control map: which actions run autonomously, which require review, and why.",
+      "Observed evaluation gaps — where outputs are trusted but not verified.",
+      "A prioritized action plan for approvals, guardrails, and human checkpoints.",
+      "A practical monitoring plan for cost and output quality, plus architecture or local-first advice where the use case warrants it."
+    ]
+  },
+  "provides": {
+    "heading": "What we need from you",
+    "items": [
+      "One workflow and a contact who can walk through it.",
+      "Access to representative traces, logs, or session exports — anonymized is fine.",
+      "The decision you are trying to make: ship, gate, redesign, or measure."
+    ]
+  },
+  "proof": {
+    "heading": "See the controls implemented",
+    "text": "Open ForceField — our open-source toolkit — implements several of the patterns this review recommends: prompt-injection detection, PII redaction, tool governance, and cost controls.",
+    "link": "Explore Open ForceField"
+  },
+  "cta": {
+    "heading": "Discuss a review",
+    "text": "Scope is defined around a workflow, a deployment stage, and the decision your team needs to make. Email to start the conversation.",
+    "button": "Email about an AI review",
+    "subject": "AI governance review inquiry"
+  }
+}

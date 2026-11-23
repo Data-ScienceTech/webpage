@@ -1,5 +1,6 @@
 ---
 import LangSwitch from './LangSwitch';
+import { alternates } from '../i18n/routes';
 
 interface Props {
   lang: 'en' | 'fr';
@@ -8,12 +9,15 @@ interface Props {
 
 const { lang, content } = Astro.props;
 const links = [
+  { href: lang === 'en' ? '/en/bi-audit' : '/fr/audit-bi', label: content.nav.bi_audit },
+  { href: lang === 'en' ? '/en/ai-governance' : '/fr/gouvernance-ia', label: content.nav.ai_governance },
   { href: `/${lang}/open-forcefield`, label: content.nav.open_forcefield, semibold: true },
   { href: `/${lang}/benchmarks`, label: content.nav.benchmarks },
   { href: lang === 'en' ? '/en/vscode-extension' : '/fr/extension-vscode', label: content.nav.vscode },
   { href: lang === 'en' ? '/en/jetbrains-plugin' : '/fr/plugin-jetbrains', label: content.nav.jetbrains },
   { href: 'https://forcefield.datasciencetech.ca', label: content.nav.demo, external: true },
 ];
+const alt = alternates(Astro.url.pathname) ?? { en: '/en/', fr: '/fr/' };
 ---
 
 <header class="sticky top-0 z-50 border-b border-secondary-200 bg-white/95 backdrop-blur-sm dark:border-secondary-700 dark:bg-secondary-900/95">
@@ -39,7 +43,7 @@ const links = [
 
       <!-- Right side: Language Switch + Dark Mode -->
       <div class="flex items-center space-x-4">
-        <LangSwitch lang={lang} client:load />
+        <LangSwitch lang={lang} enHref={alt.en} frHref={alt.fr} client:load />
         <button
           id="theme-toggle"
           type="button"

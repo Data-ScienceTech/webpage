@@ -9,6 +9,8 @@ Built with Astro 4 (static output), React 18 (language switcher island), TypeScr
 | Page | EN | FR |
 |------|----|----|
 | Home (consulting) | `/en/` | `/fr/` |
+| BI & data warehouse audit | `/en/bi-audit` | `/fr/audit-bi` |
+| AI governance review | `/en/ai-governance` | `/fr/gouvernance-ia` |
 | Open ForceField (OSS project) | `/en/open-forcefield` | `/fr/open-forcefield` |
 | Benchmarks | `/en/benchmarks` | `/fr/benchmarks` |
 | VS Code extension | `/en/vscode-extension` | `/fr/extension-vscode` |

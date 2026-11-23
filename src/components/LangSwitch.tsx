@@ -1,95 +1,34 @@
-import { useEffect, useState } from 'react';
-
 interface Props {
   lang: 'en' | 'fr';
+  enHref: string;
+  frHref: string;
 }
 
-export default function LangSwitch({ lang }: Props) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const handleSwitch = (newLang: 'en' | 'fr') => {
+export default function LangSwitch({ lang, enHref, frHref }: Props) {
+  const remember = (newLang: 'en' | 'fr') => () => {
     localStorage.setItem('lang', newLang);
-    
-    // Get current path without language prefix
-    const currentPath = window.location.pathname.replace(/^\/(en|fr)/, '');
-    
-    // Map routes between languages (pages whose slugs differ across locales;
-    // identical slugs like /open-forcefield and /benchmarks use the default prefix swap)
-    const routeMap: Record<string, Record<string, string>> = {
-      '/privacy-policy': {
-        'en': '/en/privacy-policy',
-        'fr': '/fr/politique-de-confidentialite'
-      },
-      '/politique-de-confidentialite': {
-        'en': '/en/privacy-policy',
-        'fr': '/fr/politique-de-confidentialite'
-      },
-      '/responsible-disclosure': {
-        'en': '/en/responsible-disclosure',
-        'fr': '/fr/divulgation-responsable'
-      },
-      '/divulgation-responsable': {
-        'en': '/en/responsible-disclosure',
-        'fr': '/fr/divulgation-responsable'
-      },
-      '/vscode-extension': {
-        'en': '/en/vscode-extension',
-        'fr': '/fr/extension-vscode'
-      },
-      '/extension-vscode': {
-        'en': '/en/vscode-extension',
-        'fr': '/fr/extension-vscode'
-      },
-      '/jetbrains-plugin': {
-        'en': '/en/jetbrains-plugin',
-        'fr': '/fr/plugin-jetbrains'
-      },
-      '/plugin-jetbrains': {
-        'en': '/en/jetbrains-plugin',
-        'fr': '/fr/plugin-jetbrains'
-      }
-    };
-    
-    // Check if we have a mapped route
-    if (routeMap[currentPath]) {
-      window.location.href = routeMap[currentPath][newLang];
-    } else {
-      // Default: just change language prefix
-      window.location.href = `/${newLang}${currentPath || ''}`;
-    }
   };
-
-  if (!mounted) {
-    return (
-      <div className="flex items-center space-x-1 rounded-lg border border-secondary-300 p-1 dark:border-secondary-600">
-        <button className="lang-btn lang-btn-active">EN</button>
-        <button className="lang-btn">FR</button>
-      </div>
-    );
-  }
 
   return (
     <div className="flex items-center space-x-1 rounded-lg border border-secondary-300 p-1 dark:border-secondary-600">
-      <button
-        onClick={() => handleSwitch('en')}
+      <a
+        href={enHref}
+        onClick={remember('en')}
         className={`lang-btn ${lang === 'en' ? 'lang-btn-active' : ''}`}
         aria-label="Switch to English"
         aria-current={lang === 'en' ? 'true' : 'false'}
       >
         EN
-      </button>
-      <button
-        onClick={() => handleSwitch('fr')}
+      </a>
+      <a
+        href={frHref}
+        onClick={remember('fr')}
         className={`lang-btn ${lang === 'fr' ? 'lang-btn-active' : ''}`}
         aria-label="Passer au français"
         aria-current={lang === 'fr' ? 'true' : 'false'}
       >
         FR
-      </button>
+      </a>
     </div>
   );
 }

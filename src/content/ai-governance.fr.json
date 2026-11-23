@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Revue de gouvernance de l'IA et d'architecture | Agentic Governance",
+    "description": "Une revue de gouvernance de l'IA examine un flux de travail agentique — entrées, sorties, permissions d'outils, approbations humaines, coût par tâche — et livre une carte des contrôles, les lacunes d'évaluation et un plan d'action priorisé."
+  },
+  "eyebrow": "Revue de gouvernance de l'IA et d'architecture",
+  "title": "Pouvez-vous expliquer ce que le système a fait, comment vous l'avez évalué, et quand une personne intervient?",
+  "intro": "Passer un assistant ou un agent d'IA en production soulève trois questions : ce qu'il peut faire, comment ses réponses sont évaluées, et ce qu'il coûte par tâche complétée. Nous examinons un flux de travail de bout en bout dans vos conditions réelles — et laissons une carte des contrôles et un plan d'action.",
+  "triggers": {
+    "heading": "Situations typiques",
+    "items": [
+      "Un copilote ou un agent passe du pilote à la production sans que personne n'ait défini ce qu'il peut faire sans supervision.",
+      "Les coûts LLM croissent plus vite que l'usage, et personne ne peut attribuer les dépenses au travail complété.",
+      "Les réponses semblent plausibles en démo, mais hallucinent sur les entrées que vos utilisateurs envoient réellement."
+    ]
+  },
+  "method": {
+    "heading": "Déroulement d'une revue",
+    "intro": "Un flux de travail, examiné de bout en bout — la même discipline qu'un chiffre remonté dans un entrepôt.",
+    "steps": [
+      "Choisir un flux de travail agentique et la décision que votre équipe doit prendre à son sujet.",
+      "Examiner les entrées, les sorties, les permissions d'outils, les points d'approbation humaine, le coût par tâche complétée et les traces disponibles.",
+      "Exécuter des scénarios qui reflètent vos conditions réelles d'exploitation — pas des anecdotes de benchmark.",
+      "Livrer une carte du flux et des contrôles, les lacunes d'évaluation observées, un plan d'action priorisé et une approche pratique de surveillance des coûts et de la qualité."
+    ]
+  },
+  "example": {
+    "heading": "Un exemple concret",
+    "label": "Exemple illustratif · système fictif",
+    "fields": [
+      { "label": "Scénario", "text": "Un assistant interne prépare des demandes d'achat : il lit une demande en texte libre, consulte un fournisseur, remplit les champs du formulaire et peut soumettre à l'ERP." },
+      { "label": "Décision d'approbation humaine", "text": "Toute demande dépassant un montant défini, tout nouveau fournisseur ou toute extraction de champ à faible confiance exige une personne avant soumission. Le reste peut être soumis automatiquement avec piste d'audit." },
+      { "label": "Mesure de la qualité des sorties", "text": "Une demande est comptée comme valide lorsque chaque champ extrait correspond à la source et qu'un réviseur l'approuverait sans retouche — mesuré sur un échantillon hebdomadaire, pas sur un jeu de démo." },
+      { "label": "Mesure des coûts", "text": "Coût par demande acceptée = dépenses de modèle divisées par les demandes approuvées sans correction, suivi par flux pour que les dépenses correspondent au travail complété." }
+    ]
+  },
+  "deliverables": {
+    "heading": "Ce que vous recevez",
+    "items": [
+      "Une carte du flux et des contrôles : quelles actions s'exécutent en autonomie, lesquelles exigent une revue, et pourquoi.",
+      "Les lacunes d'évaluation observées — où les sorties sont crues sans être vérifiées.",
+      "Un plan d'action priorisé pour les approbations, les garde-fous et les points de contrôle humain.",
+      "Un plan pratique de surveillance des coûts et de la qualité, avec conseils d'architecture ou d'approche locale si le cas d'usage le justifie."
+    ]
+  },
+  "provides": {
+    "heading": "Ce dont nous avons besoin",
+    "items": [
+      "Un flux de travail et un contact pouvant le parcourir avec nous.",
+      "Accès à des traces, journaux ou exports de session représentatifs — anonymisés au besoin.",
+      "La décision que vous essayez de prendre : lancer, encadrer, reconcevoir ou mesurer."
+    ]
+  },
+  "proof": {
+    "heading": "Voir les contrôles en action",
+    "text": "Open ForceField — notre boîte à outils open source — implémente plusieurs des patrons recommandés par cette revue : détection d'injection de prompt, masquage des renseignements personnels, gouvernance des outils et contrôle des coûts.",
+    "link": "Explorer Open ForceField"
+  },
+  "cta": {
+    "heading": "Discuter d'une revue",
+    "text": "Le périmètre se définit autour d'un flux de travail, d'une étape de déploiement et de la décision à prendre. Écrivez-nous pour démarrer la conversation.",
+    "button": "Écrire au sujet d'une revue de l'IA",
+    "subject": "Demande de revue de gouvernance de l'IA"
+  }
+}

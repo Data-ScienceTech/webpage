@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Audit BI et entrepôt de données | Agentic Governance",
+    "description": "Un audit BI et entrepôt de données remonte un chiffre de gestion de la source jusqu'au rapport — granularité, jointures, historique, rapprochement, responsabilité — et livre un registre de constats priorisé et actionnable."
+  },
+  "eyebrow": "Audit BI et entrepôt de données",
+  "title": "Pouvez-vous reproduire ce chiffre — et expliquer où il change?",
+  "intro": "Quand deux rapports divergent ou qu'un entrepôt de données est hérité, le chemin le plus rapide consiste à suivre un vrai chiffre à travers le système. Nous remontons un indicateur de gestion de ses sources jusqu'au rapport, et livrons les preuves, l'exposition et une liste de correctifs priorisée.",
+  "triggers": {
+    "heading": "Situations typiques",
+    "items": [
+      "Un responsable BI hérite d'un entrepôt et personne ne peut dire quels chiffres font autorité.",
+      "Deux rapports présentent le même indicateur avec des totaux différents, alors que les finances préparent une consolidation.",
+      "Une migration de plateforme ou un changement d'ERP s'en vient et le bilan de reporting doit d'abord être fiable."
+    ]
+  },
+  "method": {
+    "heading": "Déroulement d'une revue",
+    "intro": "La méthode est volontairement étroite : un indicateur, un total de référence, une traçabilité.",
+    "steps": [
+      "Choisir un indicateur de gestion et son total de référence (par exemple, un montant de fret ou de revenus sur lequel les finances s'appuient).",
+      "Le remonter des systèmes sources à travers les transformations — requêtes SQL Server, étapes ETL, modèles sémantiques — jusqu'au rapport, p. ex. un jeu de données Power BI.",
+      "Examiner la granularité, les clés de jointure, l'historisation, les points de rapprochement et la responsabilité.",
+      "Livrer un registre de constats : ce qui brise, les preuves, l'exposition et l'effort estimé de correction."
+    ]
+  },
+  "example": {
+    "heading": "Un constat concret",
+    "label": "Exemple illustratif · données fictives",
+    "fields": [
+      { "label": "Décision", "text": "Les finances peuvent-elles utiliser le total des frais de transport du rapport?" },
+      { "label": "Preuve", "text": "Deux commandes ont des frais de transport de 12 $ et de 8 $. La première compte trois lignes, la deuxième une seule. Après la jointure, le rapport additionne trois fois 12 $ et une fois 8 $, soit 44 $. Le registre des commandes totalise 20 $." },
+      { "label": "Constat et action", "text": "Les frais sont enregistrés par commande. Calculer le total à ce niveau, puis le rapprocher du registre. Le résultat attendu est de 20 $, avec quatre lignes toujours visibles dans le détail." }
+    ]
+  },
+  "deliverables": {
+    "heading": "Ce que vous recevez",
+    "items": [
+      "Un résumé exécutif rédigé pour le décideur budgétaire, pas pour l'équipe technique.",
+      "Une traçabilité source-à-rapport de l'indicateur choisi, avec les preuves à chaque étape.",
+      "Un registre de constats priorisé : preuves, exposition et effort estimé par élément.",
+      "Un accompagnement optionnel pendant que votre équipe applique les correctifs retenus."
+    ]
+  },
+  "provides": {
+    "heading": "Ce dont nous avons besoin",
+    "items": [
+      "Un accès en lecture à l'entrepôt et au rapport visé (la lecture seule suffit).",
+      "Un responsable identifié pouvant répondre aux questions sur la définition de l'indicateur.",
+      "Un chiffre représentatif qui fait actuellement l'objet d'un désaccord."
+    ]
+  },
+  "cta": {
+    "heading": "Discuter d'un mandat",
+    "text": "Un périmètre fixe peut être chiffré une fois qu'un échantillon représentatif, les accès et les livrables sont définis. Écrivez-nous pour démarrer la conversation.",
+    "button": "Écrire au sujet d'un audit BI",
+    "subject": "Demande d'audit BI"
+  }
+}
